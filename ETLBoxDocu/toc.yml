@@ -1,0 +1,12 @@
+- name: Getting started
+  href: articles/
+- name: API Documentation
+  href: api/
+  homepage: api/index.md
+- name: Pricing
+  href: articles/pricing/pricing.md
+  homepage: articles/pricing/pricing.md
+- name: Contact
+  href: articles/pricing/contact.md
+  homepage: articles/pricing/contact.md
+

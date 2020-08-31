@@ -1,0 +1,112 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox\\ETLBox"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.Csv"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.Excel"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.Json"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.MySql"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.Odbc"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.Postgres"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.SQLite"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.SqlServer"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.SSAS"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.Xml"
+                }
+            ],
+            "dest": "api"
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "files": [
+                    "api/**.yml",
+                    "api/index.md"
+                ]
+            },
+            {
+                "files": [
+                    "articles/**.md",
+                    "articles/**/toc.yml",
+                    "toc.yml",
+                    "*.md"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [
+                    "images/**",
+                    "CNAME",
+                    "resources/**"
+                ]
+            }
+        ],
+        "dest": "_site",
+        "template": [
+            "statictoc",
+            "templates"
+        ],
+        "globalMetadata": {
+            "_appTitle": "ETLBox - a lightweight ETL library for C#.",
+            "_appFooter": "<span>Crafted with &lt;3 in Berlin<br/>\r\n<a href=\"https://etlbox.net/articles/imprint.html\">Contact & legal information</a></span>"
+        },
+        "markdownEngineName": "markdig"
+    }
+}
