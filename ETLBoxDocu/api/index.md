@@ -3,7 +3,7 @@
 ## Welcome 
 
 Welcome to the API documentation of ETLBox. This will give you access to all class and interface definitions that come with ETLBox.
-Check the [Github page](https://github.com/roadrunnerlenny/etlbox) to see the full source code.
+Check the [Github page](https://github.com/etlbox/etlbox) to see the full source code.
 Please note that connection managers are now closed source. 
 
 ## .NET Standard App

@@ -12,6 +12,12 @@
                     "files": [
                         "**.csproj"
                     ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.AnalysisServices"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
                     "src": "..\\..\\etlbox.connectors\\ETLBox.Csv"
                 },
                 {
@@ -30,13 +36,31 @@
                     "files": [
                         "**.csproj"
                     ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.MariaDb"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
                     "src": "..\\..\\etlbox.connectors\\ETLBox.MySql"
                 },
                 {
                     "files": [
                         "**.csproj"
                     ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.OleDb"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
                     "src": "..\\..\\etlbox.connectors\\ETLBox.Odbc"
+                },
+                {
+                    "files": [
+                        "**.csproj"
+                    ],
+                    "src": "..\\..\\etlbox.connectors\\ETLBox.Oracle"
                 },
                 {
                     "files": [
@@ -55,12 +79,6 @@
                         "**.csproj"
                     ],
                     "src": "..\\..\\etlbox.connectors\\ETLBox.SqlServer"
-                },
-                {
-                    "files": [
-                        "**.csproj"
-                    ],
-                    "src": "..\\..\\etlbox.connectors\\ETLBox.SSAS"
                 },
                 {
                     "files": [

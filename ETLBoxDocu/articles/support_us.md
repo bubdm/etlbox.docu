@@ -10,7 +10,7 @@ problems.
 ### Improving this software
 
 Feel free to send me suggestions how to improve this software. If you find a bug, ćame up with a new feature
-or have any other question, please contact me directly or raise a new issue on the [GitHub page](https://github.com/roadrunnerlenny/etlbox).
+or have any other question, please contact me directly or raise a new issue on the [GitHub page](https://github.com/etlbox/etlbox).
 
 ## Getting professional help
 

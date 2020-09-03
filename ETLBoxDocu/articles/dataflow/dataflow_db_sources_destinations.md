@@ -225,7 +225,7 @@ is going to be a separate pool
 This behavior - returning connections back to the pool when the work is done - does work very well in a scenario 
 with concurrent tasks. There may be a use-case where you don't won't to query your database in parallel and you 
 want to leave the connection open, avoiding the pooling. [For this scenario you can use the `LeaveOpen` property
-on the connection managers.](https://github.com/roadrunnerlenny/etlbox/issues/39)
+on the connection managers.](https://github.com/etlbox/etlbox/issues/39)
 
 
 ### Table Definitions

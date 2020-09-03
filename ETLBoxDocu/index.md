@@ -60,7 +60,7 @@
     <div class="buttons-unit-small">
       <a class="version-link" href="https://www.youtube.com/watch?v=CsWZuRpl6PA"><i class="glyphicon glyphicon-film"></i>See the video</a><span> 
       | 
-      </span><a class="github-link" href="https://github.com/roadrunnerlenny/etlbox"><i class="glyphicon glyphicon-file"></i>View in Github</a>
+      </span><a class="github-link" href="https://github.com/etlbox/etlbox"><i class="glyphicon glyphicon-file"></i>View in Github</a>
     </div>
     <div class="minitext">
     A lightweight ETL (extract, transform, load) toolbox and data integration library for .NET

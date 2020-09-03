@@ -1,16 +1,15 @@
 ﻿# Legal Disclosure
 
-Information in accordance with Section 5 TMG .
-
 ## Contact information
 
+ETLBox Office <br />
 Andreas Lennartz  <br />
 Landsberger Str. 216B  <br />
 12623 Berlin  <br />
 Germany  <br />
 
 Phone: +49 151 228 42181  <br />
-E-Mail: andreas.lennartz@gmail.com  <br />
+E-Mail: mail@etlbox.net  <br />
 Internet address: www.etlbox.net  <br />
 
 ## Disclaimer

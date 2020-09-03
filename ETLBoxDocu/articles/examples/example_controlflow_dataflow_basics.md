@@ -188,5 +188,5 @@ You'll see that the data was successfully copied into the database table.
 
 ## Code on Github
 
-[The whole code for this example is available on GitHub](https://github.com/roadrunnerlenny/etlboxdemo/tree/master/ControlDataFlowBasics). 
+[The whole code for this example is available on GitHub](https://github.com/etlbox/etlboxdemo/tree/main/ControlDataFlowBasics). 
 

@@ -384,22 +384,6 @@ List<LoadProcess> allLoadProcesses = ReadLoadProcessTableTask.ReadAll();
 List<LogEntry> allLogEntries = ReadLogTableTask.Read(connection);
 ```
 
-## ETLBox Logviewer 
-
-**Warning**: ETLBox Logviewer is still in BETA, and not made for a productive use yet. Any support to improve this tool is highly appreciated. 
-
-Once you have data in these log tables, you could use the [ETLBox LogViewer](https://github.com/roadrunnerlenny/etlboxlogviewer) to 
-access and analyze your logs.
-
-Here are some screenshots to give you the idea:
-
-<span>
-    <img src="https://github.com/roadrunnerlenny/etlbox/raw/master/docs/images/logviewer_screen1.png" width=350 alt="Process Overview of ETLBox LogViewer" />
-    <img src="https://github.com/roadrunnerlenny/etlbox/raw/master/docs/images/logviewer_screen2.png" width=350 alt="Process Details of ETLBox LogViewer" />
-</span>
-
-
-
 
 
 

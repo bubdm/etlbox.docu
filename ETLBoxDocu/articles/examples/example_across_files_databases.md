@@ -238,5 +238,5 @@ on-the-fly. This is one simple example of an ETL process (Extract, Transform, Lo
 
 ## Code on Github
 
-[The whole code for this example is available on GitHub](https://github.com/roadrunnerlenny/etlboxdemo/tree/master/AcrossFilesAndDatabases). 
+[The whole code for this example is available on GitHub](https://github.com/etlbox/etlboxdemo/tree/main/AcrossFilesAndDatabases). 
 

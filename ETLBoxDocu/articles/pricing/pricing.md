@@ -11,7 +11,7 @@
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li><a href="https://github.com/roadrunnerlenny/etlbox">ETLBox Core</a> (without Connectors) under <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/LICENSE" target="_blank">MIT license</a>
+                        <li><a href="https://github.com/etlbox/etlbox">ETLBox Core</a> (without Connectors) under <a href="https://github.com/etlbox/etlbox/blob/main/LICENSE" target="_blank">MIT license</a>
                         </li>
                         <li>Connectors for personal use only</li>
                         <li>Only 10.000 rows for each source/destination</li>
@@ -40,7 +40,7 @@
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
                         <li>
-                            <a href="https://github.com/roadrunnerlenny/etlbox">ETLBox Core</a> under <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/LICENSE" target="_blank">MIT license</a>
+                            <a href="https://github.com/etlbox/etlbox">ETLBox Core</a> under <a href="https://github.com/etlbox/etlbox/blob/main/LICENSE" target="_blank">MIT license</a>
                         </li>
                         <li>All connectors (all databases and other types) under <a href="eula.md">Standard EULA</a></li>
                         <li>Annual license</li>
@@ -76,7 +76,7 @@
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
                         <li>
-                            <a href="https://github.com/roadrunnerlenny/etlbox">ETLBox Core</a> under <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/LICENSE" target="_blank">MIT license</a>
+                            <a href="https://github.com/etlbox/etlbox">ETLBox Core</a> under <a href="https://github.com/etlbox/etlbox/blob/main/LICENSE" target="_blank">MIT license</a>
                         </li>
                         <li>All connectors (All databases and other types) under <a href="eula.md">Standard EULA</a></li>
                         <li>Annual license</li>
@@ -116,7 +116,7 @@
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
                         <li>
-                            <a href="https://github.com/roadrunnerlenny/etlbox">ETLBox Core</a> under <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/LICENSE" target="_blank">MIT license</a>
+                            <a href="https://github.com/etlbox/etlbox">ETLBox Core</a> under <a href="https://github.com/etlbox/etlbox/blob/main/LICENSE" target="_blank">MIT license</a>
                         </li>
                         <li>All connectors (all databases and other types) under <a href="eula.md">Standard EULA</a></li>
                         <li>Annual license</li>
