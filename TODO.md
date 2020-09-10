@@ -9,6 +9,8 @@
 
 - From PoC: Aggregation supports currently MIN/MAX/COUNT/SUM. What about strings? Something like "FirstValue" or "LastValue" or FirstNonEmpty or LastNonEmpty?
 
+- From issue #75: it would be good if the columnMapping for a db destination could be passed into the destination, so that this column mapping could be used instead a row transformation that changes the naming. This could also be true for other destinations and source (a generic column mapping?) This would mean that the current mappings (ColumnName etc.) would be overwritten?
+
 ## Refactoring
 
 - Remove SqlTask: Add task name & Comments before sql code Make sql task name optional
@@ -29,6 +31,7 @@ It would be good if the connection manager would return the code how to find if 
 
 - CopyTableDefinitionTask - uses TableDefinition to retrieve the current table definiton and the creates a new table. 
 Very good for testing purposes.
+- 
 
 
 # Oracle
@@ -45,3 +48,12 @@ throw an exception - itstead, it should use the InputDataDict to reinsert the re
 but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
 
 
+# Ideas
+
+- Release notes page?
+- Roadmap page? 
+- CachedRowTransformation - could be userd by lookup as partial lookup
+- RistValue / LastValue for Aggregation
+- FirstNonEmpty / LastNonEmpty for Aggregation
+- Csv: ReleaseGCPressure needs to go away
+- Excel IngoreBlankRows without Range - infinite loop?

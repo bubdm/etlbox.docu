@@ -67,7 +67,7 @@
     </div>
     <div class="buttons-unit">
       <a href="articles/overview.md" class="button"><i class="glyphicon glyphicon-pencil"></i>Getting Started</a>
-      <a href="https://www.nuget.org/packages/ETLBox" class="button"><i class="glyphicon glyphicon-download"></i>Download Latest</a>
+      <a href="https://www.nuget.org/packages?q=etlbox" class="button"><i class="glyphicon glyphicon-download"></i>Download Latest</a>
     </div>
   </div>
 </div>
