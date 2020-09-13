@@ -56,11 +56,11 @@ Now we can read the data from the source with a generic object:
 DbSource<MySimpleRow> source = new DbSource<MySimpleRow>("SourceTable");
 ```
 
-ETLBox will autamtically extract missing meta information during runtime from the source table and the involved types. In our example, the source table has
+ETLBox will automatically extract missing meta information during runtime from the source table and the involved types. In our example, the source table has
 the exact same columns as the object - ETLBox will check this and write data from the Id column into the Id property, and data from the column Value into the Value property.
 Each record in the source will be a new object that is created and then passed to the connected components. 
 
-Of course the properties in the object and the columsn can differ - ETLBox will only load columns from a source where it can find the right property. If the data type is different,
+Of course the properties in the object and the columns can differ - ETLBox will only load columns from a source where it can find the right property. If the data type is different,
 ETLBox will try to automatically convert the data. If the names are different, you can use the attribute ColumnMap to define the matching columns name for a property. 
 In our example, we could replace the property Id with a property Key - in order to still read data from the Id column, we add the ColumnMap attribute. Also, if we change
 the data type to string, ETLBox will automatically convert the integer values into a string. 

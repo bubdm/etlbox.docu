@@ -32,7 +32,7 @@ It will wait until all data has reached the transformation block - then it will 
 
 The RowTransformation is the simplest but most powerful transformation in ETLBox. The generic transformation has two types 
 - the type of the input data and the type of the output data. When creating a RowTransformation, you pass a delegate
-describing how each record in the dataflow is transformed. Here you can add any C# code that you like. 
+describing how each record in the data flow is transformed. Here you can add any C# code that you like. 
 
 The RowTransformation is a non blocking transformation, so it won't use up much memory even for high amounts of data.
 
@@ -263,34 +263,15 @@ multicast.LinkTo(destination2, row => row[0] < 0);
 Please note: Make sure when using predicate that always all rows arrive at a destination. Use a `VoidDestination`
 for records that you don't want to keep. See more about this in the [article about Predicates](dataflow_linking_execution.md).
 
-### Merging data
+### Merging data with MergeJoin
 
-If you want to merge data in your dataflow, you can use the `MergeJoin`. This basically joins the outcome
+If you want to merge data in your data flow, you can use the `MergeJoin`. This basically joins the outcome
  of two sources or transformations into one data record.
 
-#### MergeJoin
-
 The MergeJoin accepts two inputs and has one output. A function describes how the two inputs are combined into one output. 
-E.g. you can link two sources with the MergeJoin, define 
-a method how to combine these records and produce a new merged output. The data type of the 
-output and the inputs can be different, as long as you handle it in the join function.
-MergeJoin is a non blocking transformation. 
+E.g. you can link two sources with the MergeJoin, define  a method how to combine these records and produce a new merged output. If needed, you can define a comparison function which describes if two records should be joined if a match condition is met. MergeJoin is a non blocking transformation. 
 
-```C#
-DbSource<MyInputRowType1> source1 = new DbSource<MyInputRowType1>(Connection, "MergeJoinSource1");
-DbSource<MyInputRowType2> source2 = new DbSource<MyInputRowType2>(Connection, "MergeJoinSource2");
-DbDestination<MyOutputRowType> dest = new DbDestination<MyOutputRowType>(Connection, "MergeJoinDestination");
-
-MergeJoin<MyInputRowType1, MyInputRowType2, MyOutputRowType> join = new MergeJoin<MyInputRowType1, MyInputRowType2, MyOutputRowType>(
-    (inputRow1, inputRow2) => {
-        return new MyOutputRowType() {
-            Value = inputRow1.Value + inputRow2.Value
-        };
-    });
-source1.LinkTo(join.Target1);
-source2.LinkTo(join.Target2);
-join.LinkTo(dest);
-```
+[Read more about the MergeJoin here.](../transformations/mergejoin.md) 
 
 ### Aggregation
 
@@ -324,7 +305,7 @@ source.LinkTo(agg);
 agg.LinkTo(dest);
 ```
 
-To achieve the same behaviour with your own functions, you could create the Aggregation like this: 
+To achieve the same behavior with your own functions, you could create the Aggregation like this: 
 
 ```C#
 Aggregation<MyRow, MyAggRow> agg = new Aggregation<MyRow, MyAggRow>(

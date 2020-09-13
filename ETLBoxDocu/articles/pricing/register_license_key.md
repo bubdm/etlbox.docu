@@ -1,6 +1,6 @@
 ﻿# Register an ETLBox license key
 
-If you have received a license file (normally name "etlbox.lic") from us, you need to make sure that ETLBox can read this license. 
+If you have received a license file (normally named "etlbox.lic") from us, you need to make sure that ETLBox can read this license. 
 
 You have two options here:
 
@@ -14,4 +14,4 @@ If you add it to the sources of your project, make sure that the option "Copy to
 
 Set up a user-wide or machine-wide environment variable. The name of the Environment variable must be "etlbox" (without quotes).
 
-Copy the conent of your license file into an environment variable called "etlbox". No license file is required then. 
+Copy the content of your license file into an environment variable called "etlbox". No license file is required then. 

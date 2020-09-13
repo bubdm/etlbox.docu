@@ -2,14 +2,14 @@
 
 ## Resource Type and Web Requests
 
-All  sources and destinations in this artice can be set to work either with a file
-or to use data from a webservice. If you want to access a file on your drive or a network share,
-use the componenten with the `ResourceType.File` option.
+All  sources and destinations in this article can be set to work either with a file
+or to use data from a web service. If you want to access a file on your drive or a network share,
+use the component with the `ResourceType.File` option.
 This is default for CsvSource/CsvDestination, but not for the XmlSource/XmlDestination or JsonSource/JsonDestination.
 The other option is `ResourceType.Http` - and allows you to read data from a web service. 
-Instead of a filename just provide a Url. Furthermore, the components also have 
+Instead of a filename just provide a url. Furthermore, the components also have 
 a `[HttpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=netframework-4.8)` property 
-that can be used to configure the Http request, e.g. to add authentication or use https instead.
+that can be used to configure the http request, e.g. to add authentication or use https instead.
 
 ## Csv 
 
@@ -28,7 +28,7 @@ source.Configuration.Delimiter = ";";
 source.Configuration.IgnoreBlankLines = true;
 ```
 
-This will creata a source component that reads the data from a "Demo.csv" file. This file could look like this:
+This will create a source component that reads the data from a "Demo.csv" file. This file could look like this:
 
 ```csv
 Row_Nr;Value
@@ -193,7 +193,7 @@ Like this:
 ```
 
 ETLBox automatically scans the incoming json file and starts reading (and deserializing) after the 
-first occurence of the begin of an array (which is the "[" symbol).
+first occurrence of the begin of an array (which is the "[" symbol).
 
 ### Working with JsonSerializer
 
@@ -282,7 +282,7 @@ would result in the following json:
 ]
 ```
 
-Like the JsonSource you can modify the exposed `JsonSerializer` to modfiy the serializing behaviour.
+Like the JsonSource you can modify the exposed `JsonSerializer` to modify the serializing behavior.
 [`JsonSerializer` belongs to Newtonsoft.Json](https://www.newtonsoft.com/json/help/html/SerializingJSON.htm)  
 
 ### Using Json with arrays
@@ -350,7 +350,7 @@ Let's assume your xml file looks like this:
 </Root>
 ```
 
-Xml reading is based on the Micrsoft XmlSerializer (using System.Xml.Serialization). You can make use of the default xml attribute 
+Xml reading is based on the Microsoft XmlSerializer (using System.Xml.Serialization). You can make use of the default xml attribute 
 annotations to influence how data is read by the XmlSerializer. For the example xml above, the following code could read the xml file:
 
 ```C#
@@ -368,7 +368,7 @@ XmlSource<MyRow> source = new XmlSource<MyRow>("source.xml", ResourceType.File);
 #### Using dynamic objects
 
 XmlSource does also support the dynamic ExpandoObject. If you want to use it, you can define an ElementName that contains the data you actually
-want to parse - as you normally are not interested in your root element. ETLBox then will look for this Element and parse every occurence of
+want to parse - as you normally are not interested in your root element. ETLBox then will look for this Element and parse every occurrence of
 it into an ExpandoObject and send it into the connected components. 
 
 Here is an example. If your xml looks like this:
@@ -387,7 +387,7 @@ Here is an example. If your xml looks like this:
 <Root>
 ```
 
-You can parse the two elements <MySimpleRow> with the follwoing code:
+You can parse the two elements <MySimpleRow> with the following code:
 
 ```C#
 XmlSource source = new XmlSource("demo2.xml", ResourceType.File)
@@ -459,7 +459,7 @@ public class ExcelData {
 ExcelSource<ExcelData> source = new ExcelSource<ExcelData> ("src/DataFlow/ExcelDataFile.xlsx");
 ```
 
-You can change this behaviour with the Attribute `ExcelColumn`.
+You can change this behavior with the Attribute `ExcelColumn`.
 Here you can either define a different header name used for matching for a property.
 Or you can set the column index for the property - the first column would be 0, the 2nd column 1, ...
 When you using the column index, you can read also from ExcelFile that have no header row. 
@@ -498,7 +498,7 @@ are ignored when reading data from your source.
 
 #### Using dynamic objects
 
-The ExcelSource comes like all other components with with the abitilty to work with dynamic object. 
+The ExcelSource comes like all other components with the ability to work with dynamic object. 
 
 Just define your ExcelSource like this:
 

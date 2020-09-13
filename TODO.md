@@ -19,6 +19,7 @@
 
 - PrimaryKeyConstrainName now is part of TableDefinition, but not read from "GetTableDefinitionFrom"
 - GCPressure was detected on CSVSource - verify if CSVSource really is the root cause. (See performance tests, improve tests that uses memory as source) 
+- Check if license file is correctly read from same folder if using a "classic" .NET project (or nunit test project) - 
 
 # Improved Odbc support:
 
@@ -53,7 +54,7 @@ but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
 - Release notes page?
 - Roadmap page? 
 - CachedRowTransformation - could be userd by lookup as partial lookup
-- RistValue / LastValue for Aggregation
+- FRistValue / LastValue for Aggregation
 - FirstNonEmpty / LastNonEmpty for Aggregation
 - Csv: ReleaseGCPressure needs to go away
 - Excel IngoreBlankRows without Range - infinite loop?

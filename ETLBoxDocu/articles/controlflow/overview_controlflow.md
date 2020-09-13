@@ -102,7 +102,7 @@ MySqlConnectionManager connectionManager = new MySqlConnectionManager("Server=10
 #### CreateTables Task
 
 CreateTableTask will help you to create a table on the database. You can pass either a `TableDefinition` object
-or a table name and a list of table colums.
+or a table name and a list of table columns.
 
 Here is an example with passing the table name and a list of table columns
 
@@ -120,7 +120,7 @@ CreateTableTask.Create(connectionManager, "tablename", columns);
 A table column describe the column in the database with the most used attributes: Name, Data type (use the data type
 which you are most familiar with, there will be an attempt to convert the database type into the right database specific format),
 if the column is nullable, if the column is a primary key and if the column is used as identity column. (Serial for Postgres or
-auto increment for MySql). Additionaly, you could specify if the column is a computed column or if it has a default value. 
+auto increment for MySql). Additionally, you could specify if the column is a computed column or if it has a default value. 
 
 Here is an example for creating a `TableDefinition` and pass it to the CreateTableTask:
 
@@ -135,7 +135,7 @@ CreateTableTask.Create(connectionManager, CustomerTableDef);
 
 *Implicit data type conversions*:
 
-CreateTableTask will automatically try to convert the given data type into a type that your database actually understands. E.g., if you pass "DATETIME" as datatype for a column, and you want to create your table on a Postgres connection manager, CreateTableTask will automatically convert "DATETIME" into "TIMESTAMP". 
+CreateTableTask will automatically try to convert the given data type into a type that your database actually understands. E.g., if you pass "DATETIME" as data type for a column, and you want to create your table on a Postgres connection manager, CreateTableTask will automatically convert "DATETIME" into "TIMESTAMP". 
 
 *Adding your own data type conversion*
 
@@ -308,7 +308,7 @@ SqlTask always expects a descriptive name when you use it - this name is used fo
 
 ```C#
 SqlTask.ExecuteNonQuery(connectionManager, "Insert data",
-   $@"insert into demo.table1 (value) select * from (values ('Ein Text'), ('Noch mehr Text')) as data(v)");
+   $@"insert into demo.table1 (value) select * from (values ('Text'), ('More text')) as data(v)");
 ```
 
 ExecuteNonQuery will just execute the sql code without reading any results from the database. 
@@ -339,7 +339,7 @@ object result = SqlTask.ExecuteScalar(connectionManager, "Execute scalar",
     $@"SELECT 'Hallo Welt' AS ScalarResult");
 
 //with type conversion
-double? result = SqlTask.ExecuteScalar<double>(connectionManager,"Execute scalar with datatype",
+double? result = SqlTask.ExecuteScalar<double>(connectionManager,"Execute scalar with data type",
     $@"SELECT CAST(1.343 AS NUMERIC(4,3)) AS ScalarResult"));
 ```
 
@@ -418,8 +418,8 @@ select cast(sum([rows]) as int) from sys.partitions where [object_id] = object_i
 
 ## Why not Entitiy Framework
 
-ETLBox was designed to be used as an ETL object library. Therefore, the user normally deals with big data, some kind of datawarehouse structures and is used to
+ETLBox was designed to be used as an ETL object library. Therefore, the user normally deals with big data, some kind of data warehouse structures and is used to
 have full control over the database. With the underlying power of ADO.NET - which is used by ETLBox - you have full access to the database and basically can do anything 
 you are used to do with sql on the server. As EF (Entity Framework) is a high sophisticated ORM tool, it comes with the downside that you can only do things on a database that
-EF allows you to do. But as EF does not incorporate all the possibilities that you can do with SQL and ADO.NET on a Sql Server, Entitity Framework normally isn't a 
+EF allows you to do. But as EF does not incorporate all the possibilities that you can do with SQL and ADO.NET on a Sql Server, Entity Framework normally isn't a 
 good choice for creating ETL jobs. This is also true for other ORM tools.

@@ -14,11 +14,11 @@ and destination components for loading.
 
 ### Source components
 
-All dataflow pipelines will need at least one or more sources. Sources are basically everything that can read data from someplace 
+All data flow pipelines will need at least one or more sources. Sources are basically everything that can read data from someplace 
 (e.g. CSV file or database table) and then post this data into the pipeline. All sources are able to read data asynchronously. 
 That means, while the component reads data from the source, it simultaneously sends the already processed data to components that are connected to source.
 This is crucial when you operate with big amounts of data - you want be able to process chunks of sources and avoid to load your whole source data into memory first. 
-There are be some exceptions to this behaviour, depending on your transformation type. 
+There are be some exceptions to this behavior, depending on your transformation type. 
 
 There are different build-in data sources in ETLBox, e.g.: `CsvSource`, `DbSource` or `ExelSource` that can be easily use to connect to your data. 
 If you are in need of another source component, you can extend the `CustomSource`. 
@@ -33,7 +33,7 @@ sources, and the output can connect to other transformations or to destinations.
 The purpose of a transformation component is to take the data from its input(s) and post the transformed data to its output(s). 
 This is done on a row-by-row basis for non-blocking transformation, some batches stored in memory for partially blocking transformations 
 or on the complete set of data for blocking transformations.
-Every transfomation has some buffer for it's input(s) and output(s) in order to improve performance. 
+Every transformation has some buffer for it's input(s) and output(s) in order to improve performance. 
 As soon as there is any data in the input, non-blocking transformation will start processing and post the result to the output. 
 
 ### Destination components 
@@ -47,7 +47,7 @@ it into the database using a bulk insert.
 
 ## A simple dataflow
 
-Let's look at a simple dataflow like this:
+Let's look at a simple data flow like this:
 
 Csv File (Source) --> Row transformation --> Database destination.
 
@@ -68,7 +68,7 @@ It should simulate orders for clothing. All data is separated with a ",", and th
 We want to store the data from the file in a destination table in Sql Server. 
 The destination table will look like this:
 
-ColumnName|Data Type|Contraints
+ColumnName|Data Type|Constraints
 ----------|---------|----------
 Id|INT|PK,Identity (auto increment)
 Item|NVARCHAR(50)|
@@ -158,7 +158,7 @@ Now we will give the source the command to start reading data.
 
 This code will execute as an synchronous task - though the data flow itself will run in it's own thread.
 This method will continue execution when all data was read from the source and posted into the data flow. This does not mean that your data has arrived at the destination
-yet - but reading from the source was done successfully when this method returns. To operate totally asynchrounously, you can use the `ExecuteAsync()` method. 
+yet - but reading from the source was done successfully when this method returns. To operate totally asynchronously, you can use the `ExecuteAsync()` method. 
 
 
 Now we want to wait for the Data Flow pipeline to finish. So we add this line to our code
@@ -167,12 +167,12 @@ Now we want to wait for the Data Flow pipeline to finish. So we add this line to
 dest.Wait();
 ```
 
-When `dest.Wait()` returns, all data was read from the source and written into the database table.  To operate totally asynchrounously, you can use the `Completion` property to 
+When `dest.Wait()` returns, all data was read from the source and written into the database table.  To operate totally asynchronously, you can use the `Completion` property to 
 receive a Task object for further handling. 
 
 *If you are new to the .NET Task parallel library (TPL) and asynchronous programming, I recommend to use the `Execute()` & `Wait()` pattern to run your data flows. 
-If you want to use `ExecuteAsny()` and `Completion`, learn more abouti [Asynchronous programming with async and await here.](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
+If you want to use `ExecuteAsny()` and `Completion`, learn more about [Asynchronous programming with async and await here.](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
 
 ## View the full code
 
-This demo code is available online - [view the full code on github](https://github.com/etlbox/etlboxdemo/tree/main/SimpleFlow).
+This demo code is available online - [view the full code on Github](https://github.com/etlbox/etlboxdemo/tree/main/SimpleFlow).

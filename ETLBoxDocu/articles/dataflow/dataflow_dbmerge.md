@@ -31,7 +31,7 @@ Or it could be that deletions are not transferred at all, either because they do
 
 Both scenarios are supported with ETLBox. The `DBMerge` component can be used to tackle this problem
 
-The `DBMerge` is a destination component and is created on a destination table in your dataflow.
+The `DBMerge` is a destination component and is created on a destination table in your data flow.
 It will wait for all data from the flow to arrive, and then either insert, 
 update or delete the data in the destination table. 
 Deletion is optional (by default turned on) , and can be disabled with the property 
@@ -189,7 +189,7 @@ truncate the destination table and then write all changes back into the database
 if you expect a lot of deletions, but you will always read all data from the destination table and write it back.
 Unfortunately, there is no general recommendation when to use this approach. 
 
-Also, if you don't specify any Id columns with teh `IdColumn` attribute, the DbMerge will use the truncate method automatically. 
+Also, if you don't specify any Id columns with the `IdColumn` attribute, the DbMerge will use the truncate method automatically. 
 
 ### Delta mode
 

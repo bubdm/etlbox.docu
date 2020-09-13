@@ -5,8 +5,8 @@
 Almost all components in ETLBox can be defined with a POCO (Plain old component object), which is a very simple
 object describing your data and data types. This object can be used to store your data in your data flow. 
 
-Almost all sources provide a column name for every data column. In a CSV file, you nomrally have a header at the top row
-with names for each column. In a database table, there is always a column name as well as a data tyep defined. 
+Almost all sources provide a column name for every data column. In a CSV file, you normally have a header at the top row
+with names for each column. In a database table, there is always a column name as well as a data type defined. 
 
 If you define an object in C#, the name of the column in the source must be mapped to the right property in your object. 
 By default, the mapping of column names to properties is resolved by the property name itself. E.g. a column named Value1 
@@ -151,13 +151,13 @@ sampleObject.test = "Dynamic Property";
 ///Sample object now has a property "test" of type string with the value "Dynamic Property"
 ```
 
-[The Microsoft documentation gives you a good explanation of the possibilites of the ExpandoObject and also more details about
+[The Microsoft documentation gives you a good explanation of the possibilities of the ExpandoObject and also more details about
 the use of `dynamic`.](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=netframework-4.8)
 
 ### ETLBox support for ExpandoObject
 
-In order to use the ExpandoObject and dynmic objects with ETLBox, you simple type your data flow with this object. 
-Alternatively, you just use the non generic object - which automitically will use the ExpandoObject.
+In order to use the ExpandoObject and dynamic objects with ETLBox, you simple type your data flow with this object. 
+Alternatively, you just use the non generic object - which automatically will use the ExpandoObject.
 The following two lines will do the same:
 
 ```C#
@@ -193,10 +193,10 @@ DbDestination dest = new DbDestination("destTable");
 In this example code, the data is read from a DbSource into an ExpandoObject. The properties SourceCol1 and SourceCol2 
 are created automatically, because ETLBox will recognize that it is an ExpandoObject and add a property 
 for each column in the source.
-In the RowTransformation, you can convert the ExpandoObject into a dynamic object first, so that you don't get any errros
+In the RowTransformation, you can convert the ExpandoObject into a dynamic object first, so that you don't get any errors
 message when you compile your code. Now we can assign a new property to the (same) ExpandoObject - in this case, it's called 
 DestColSum as a sum of the properties SourceCol1 and SourceCol2.
-Now when we write into the destination, ETLBox will see that there is one property on the ExpandoObject which name mathces
+Now when we write into the destination, ETLBox will see that there is one property on the ExpandoObject which name matches
 with the destination column: "DestColSum". The other two properties (SourceCol1 and SourceCol2) will be ignored, and data
 from DestColSum will be written into the target.
 
@@ -205,9 +205,9 @@ property DestColSum.
 
 ## Working with Arrays
 
-Wworking with dynamic types can sometimes be a hazzle. ETLBox offers a third way to create your data flow without
+Working with dynamic types can sometimes be a hassle. ETLBox offers a third way to create your data flow without
 defining object types and the need to create a POCO for your data. Simple use an array as data type - either an array
-of type object or string. An string array could have advantages if you read data from json or csvs, object could work better
+of type object or string. An string array could have advantages if you read data from json or csv, object could work better
 when reading from databases. 
 
 Here is an example for reading data from a file.

@@ -58,7 +58,7 @@ CustomDestination<MySimpleRow> dest = new CustomDestination<MySimpleRow>(
 ### Memory Source
 
 A Memory source is a simple source component that accepts a .NET list or enumerable. Use this component
-within your dataflow if you already have a collection containing your data available in memory.
+within your data flow if you already have a collection containing your data available in memory.
 When you execute the flow, the memory destination will iterate through the list and 
 asynchronously post record by record into the flow.
 

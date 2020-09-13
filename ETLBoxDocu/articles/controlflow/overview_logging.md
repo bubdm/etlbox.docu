@@ -284,7 +284,7 @@ Additionally to the traditional nlog setup where log information is send to any 
 ETLBox comes with a set of Tasks to control your ETL processes - so called "Load processes".
 
 The use case for a load process table is simple - if you have one log table, this table will store a log messages for an ETL job.
-If the job run agains, more or less the same log information is written in the log table - with different timestamps of course. If you
+If the job run again, more or less the same log information is written in the log table - with different timestamps of course. If you
 need to identify which log entry relates to which job run, there are some information missing. This is where the load process table comes in.
 
 You can use the task `CreateLoadProcessTableTask` to have ETLBox created a load process table. 
@@ -293,7 +293,7 @@ You can use the task `CreateLoadProcessTableTask` to have ETLBox created a load 
 CreateLoadProcessTableTask.Create(connection);
 ```
 
-By default this will create a talbe "etlbox_loadprocess". This table will look like this:
+By default this will create a table "etlbox_loadprocess". This table will look like this:
 
 Column name     |Data type|Remarks|
 ----------------|---------|-------|
@@ -349,7 +349,7 @@ You can change this by passing the table name to the `CreateLoadProcessTableTask
 Table name in the static property LoadProcessTable of the ControlFlow class
 
 ```C#
-//Wil set the ControlFlow.CurrentLoadProcess property automatically:
+//Will set the ControlFlow.CurrentLoadProcess property automatically:
 CreateLoadProcessTableTask.Create(SqlConnection, "myloadprocesstable");
  
 //If CreateLoadProcessTableTask was not executed:

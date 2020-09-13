@@ -43,7 +43,7 @@ Here are a few things you can do with ETLBox:
 ### Data integration
 
 Data integration solves the problem of moving, transforming, and consolidating information from various sources like 
-databases, applications, files, and web services. Bringing them together enables you to cleanse, standarize, 
+databases, applications, files, and web services. Bringing them together enables you to cleanse, standardize, 
 de-duplicate, manipulate, and synchronize them. 
 Data integration can play an important role in any project, and it can be critical to have a rock-solid solution in place
 that is able to integrate numerous applications, services and databases. 
@@ -83,14 +83,14 @@ Being built on .NET Core means it can run on all servers, operating systems, and
 ### Works with Big Data
 
 ETLBox as an ETL tool was designed to handle big amounts of data and therefore you won't encounter any issues 
-when you need to handle big data.Any dataflow can have a source, a transformation and a destination. 
+when you need to handle big data.Any data flow can have a source, a transformation and a destination. 
 While the source starts reading, it will post the data into it's output while continue reading the data. 
 As soon as a connected component retrieves any data in, it will start with the further processing 
 and subsequently send any processed data further down the line. Any destination will start writing data in the moment where 
 it receives it - sometimes in Batches, sometimes for every records, depending of the destination type.
-To achieve this, every compoment has its own set of buffers. So when you start to process big data, that won't mean
+To achieve this, every component has its own set of buffers. So when you start to process big data, that won't mean
 that everything needs to fit into memory - only as much data is stored in memory as you need to keep the buffers filled 
-so that there is always enought data available to write into the destination.
+so that there is always enough data available to write into the destination.
 
 ## Continue learning
 

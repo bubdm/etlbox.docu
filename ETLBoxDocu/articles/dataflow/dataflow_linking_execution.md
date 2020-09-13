@@ -45,11 +45,11 @@ source.LinkTo<OutputType>(row).LinkTo(dest)
 
 ## Predicates
 
-Whenever you link components in a dataflow, you can add a filter expression to the link -
+Whenever you link components in a data flow, you can add a filter expression to the link -
 this is called a predicate for the link.
 The filter expression is evaluated for every row that goes through the link.
 If the evaluated expression is true, data will pass into the linked component.
-If evaluated to false, the dataflow will try the next link to send its data through.
+If evaluated to false, the data flow will try the next link to send its data through.
 
 **Note:** Data will be send only into one of the connected links. If there is more than one link,
 the first link that either has no predicate or which predicate returns true is used.
@@ -93,12 +93,12 @@ At the end, only records where the Value column is greater 0 will be written int
 
 ## Linking errors
 
-By default, exception won't be handled within you dataflow components. Whenever within a source, transformation or 
+By default, exception won't be handled within you data flow components. Whenever within a source, transformation or 
 a destination an error occurs, this exception will be thrown in your user code. You can use the normal try/catch block to handle
 these exceptions.
 
-If you want to handle exceptions within your dataflow, some components offer the ability to redirect errors.
-Beside the normal `LinkTo` method, you can use the  `LinkErrorTo` to redirect erroronous records into a separate pipeline.
+If you want to handle exceptions within your data flow, some components offer the ability to redirect errors.
+Beside the normal `LinkTo` method, you can use the  `LinkErrorTo` to redirect erroneous records into a separate pipeline.
 
 Here an example for a database source, where error records are linked into a MemoryDestination:
 
@@ -114,8 +114,8 @@ errorDest.Wait();
 ```
 
 `LinkErrorTo` only accepts transformations or destinations that have the input type `ETLBoxError`. It will contain
-the exception itself and an exception message, the time the error occured, and the faulted record as json (if it was
-possible to connvert it).
+the exception itself and an exception message, the time the error occurred, and the faulted record as json (if it was
+possible to convert it).
 
 ETLBoxError is defined like this:
 
@@ -146,7 +146,7 @@ create you own table.
 There is no restriction on the amount of inputs that a destination or transformation can have. Instead of having
 only single source, you can have multiple source for every component that can be linked.
 
-E.g. this is possible graph for you dataflow:
+E.g. this is possible graph for you data flow:
 
 ```
 DbSource1 ---> RowTransformation1 -|
@@ -164,12 +164,12 @@ RowTransformation1 & RowTransformation2. The DbDestination will complete when da
 
 ## Synchronous Execution
 
-The easiest way to execute a dataflow is synchronous. That means that execution of your program is paused
+The easiest way to execute a data flow is synchronous. That means that execution of your program is paused
 until all data was read from sources and written into all destinations. Using the synchronous execution also makes
 debugging a lot easier, as you don't have to deal with async programming and the specialties of exception
 handling with tasks.
 
-Please note: In the background, the dataflow is always executed asynchronous! The underlying dataflow engine
+Please note: In the background, the data flow is always executed asynchronous! The underlying data flow engine
 is based on `Microsoft.TPL.Dataflow`. ETLBox will wrap this behavior into synchronous methods. 
 
 ### Example sync execution
@@ -188,14 +188,14 @@ source.Execute();
 dest.Wait(); 
 ```
 
-The Execute() method on the source will block execution until data is read from the source and posted into the dataflow.
+The Execute() method on the source will block execution until data is read from the source and posted into the data flow.
 
 The Wait() method on the destination will block execution until all data arrived at the destination. Under the hood,
-this method will call the Wait() method of the Task from the underlying dataflow.
+this method will call the Wait() method of the Task from the underlying data flow.
 
 ## Asynchronous execution
 
-If you are familiar with async programming, you can also execute the dataflow asynchronous. This means that
+If you are familiar with async programming, you can also execute the data flow asynchronous. This means that
 execution of your program will continue while the data is read from the source and written into the destinations 
 in separate task(s) in the background. 
 
@@ -220,6 +220,6 @@ try
 }
 ```
 
-The `ExecuteAsync()` method will return a Task which completes when all data is read from the source and posted in the dataflow.
+The `ExecuteAsync()` method will return a Task which completes when all data is read from the source and posted in the data flow.
 The `Completion` property will return a Task which completes when all data has arrived at the destination.
 
