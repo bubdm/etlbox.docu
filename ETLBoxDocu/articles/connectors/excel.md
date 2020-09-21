@@ -16,6 +16,12 @@ By default, a header column is expected in the first row. The name of the header
  is used to map the column with the object - if the property is equal the header name, the value of
  subsequent rows is written into the property.
 
+### 3rd party libraries
+
+The excel connector package [uses the 3rd party library `ExcelDataReader`](https://github.com/ExcelDataReader/ExcelDataReader). 
+
+#### Example 
+
 Let's consider an example. If your excel file looks like this:
 
 Col1|Col2
@@ -86,6 +92,3 @@ ExcelSource source = new ExcelSource("src/DataFlow/ExcelDataFile.xlsx");
 This will internally create an ExpandoObject for further processing. The property name will automatically be determined by the header column. If you don't have a header column, the property names would be `Column1` for the first, `Column2` for the second column and so on. 
 
 
-### 3rd party libraries
-
-The excel connector package [uses the 3rd party library `ExcelDataReader`](https://github.com/ExcelDataReader/ExcelDataReader). 

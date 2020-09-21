@@ -118,8 +118,7 @@ public string HashValue => HashHelper.Encrypt_Char40(this.Key);
 When you write into a database table that has a column named "Hash", the column mappings will map the result of the HashValue -property
 to this column. Every record is then stored in the table as an encrypted hash value of the property "Key". 
 
-You can use this mapping behavior for some basic data type transformations. If transformations become more complex, you should have a look at 
-the [existing transformations](dataflow_transformations.md) to modify your data. 
+You can use this mapping behavior for some basic data type transformations. If transformations become more complex, you should have a look at the [existing transformations](transformations_overview.md) to modify your data. 
 
 ### Automatic data type conversion
 

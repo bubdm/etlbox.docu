@@ -232,7 +232,7 @@ The aggregation has an input and output buffer. You can't restrict the number of
   
 ### Error Linking
 
-This transformation allows you to redirect erroneous records. By default, any exception in your flow would bubble up into your application the stop the flow. If you want to redirect data rows that would raise an exception, use the `LinkErrorTo` method to send the faulted rows into an error data flow. [Read more about error linking](../dataflow/dataflow_linking_execution.md).
+This transformation allows you to redirect erroneous records. By default, any exception in your flow would bubble up into your application the stop the flow. If you want to redirect data rows that would raise an exception, use the `LinkErrorTo` method to send the faulted rows into an error data flow. [Read more about error linking](../dataflow/linking_execution.md).
 
 ### Aggregation Api documentation
 

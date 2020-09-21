@@ -6,7 +6,7 @@ ETL is the foundation of modern Business Intelligence application.
 It separates the analysis part from everything that comes before it. ETL stands for extract, transform 
 and load, and describes a three-step process:
 
-![Source Systems -> Extract, Transform, Load -> Data Warehouse](../images/source_etl_dwh.png)
+![Source Systems -> Extract, Transform, Load -> Data Warehouse](../../images/source_etl_dwh.png)
 
 *Extracting* data is about acquiring it from a particular source and doing so in a way that all relevant data 
 is collected. For ETL to work well, data needs to come directly from the source and in its rawest form.
@@ -27,7 +27,7 @@ This engine runs inside your applications, APIs, and jobs to extract, filter, tr
 ETLBox speeds up your development by providing an easy-to-use toolbox for integrating your data from 
 different sources within your app and load them into any target you like. 
 
-![Sources -> Transform, Validate, Harmonize, Clean, Deduplicate -> Destinations](../images/sources_harmonize_clean.png)
+![Sources -> Transform, Validate, Harmonize, Clean, Deduplicate -> Destinations](../../images/sources_harmonize_clean.png)
 
 ### What you can do with ETLBox
 
@@ -94,28 +94,28 @@ so that there is always enough data available to write into the destination.
 
 ## Continue learning
 
-### More about data flows
+#### More about data flows
 
 All components in the Data Flow allow you to create your ETL (Extract, Transform, Load) pipeline - 
 where data is extracted from the source(s), asynchronously transformed and then loaded into your destinations.
-Please start with the [simple DataFlow example](dataflow/dataflow_simple_flow.md) to get started. 
+Please start with the [simple DataFlow example](../dataflow/simple_flow.md) to get started. 
 This is the main component of ETLBox, hence you'll find the most examples and articles about this topic. 
 
-### More about control flows
+#### More about control flows
 
 ControlFlow tasks are designed to simplify the way how you run common tasks on the database. E.g., ControlFlow tasks allow
 you to run a Sql query with a single line or having objects to create or alter tables, views, procedures etc. on the database. 
-You will find an introduction into the Control Flow Tasks [in the article Overview Control Flow](controlflow/overview_controlflow.md).
+You will find an introduction into the Control Flow Tasks [in the article Overview Control Flow](../controlflow/overview_controlflow.md).
 ControlFlow tasks can be very useful when you want to create some database independent tests or you just want to avoid all the ADO.NET boilerplate
 code when accessing the database. 
 
-### More about logging
+#### More about logging
 
 Some tasks in the Control Flow part are for logging purposes only. 
 As there are advanced logging capabilities in ETLBox, logging itself is treated in separate articles. 
 All Control Flow and Data Flow Tasks come with the ability to produce log. 
 There are also some special task that enables you to create or query the log tables easily. 
-To get an introduction into logging, [please have a look at the Overview Logging](controlflow/overview_logging.md)
+To get an introduction into logging, [please have a look at the Overview Logging](../controlflow/overview_logging.md)
 All logging capabilities are based on nlog. You can [visit the NLog homepage](https://nlog-project.org) if you are interested in more details how to set up and configure NLog.
 
 

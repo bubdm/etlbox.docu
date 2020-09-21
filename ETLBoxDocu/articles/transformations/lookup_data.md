@@ -206,7 +206,7 @@ It will always take as much memory as the lookup table needs to be loaded fully 
   
 ### Error Linking
 
-This transformation allows you to redirect erroneous records. By default, any exception in your flow would bubble up into your application the stop the flow. If you want to redirect data rows that would raise an exception, use the `LinkErrorTo` method to send the faulted rows into an error data flow. [Read more about error linking](../dataflow/dataflow_linking_execution.md).
+This transformation allows you to redirect erroneous records. By default, any exception in your flow would bubble up into your application the stop the flow. If you want to redirect data rows that would raise an exception, use the `LinkErrorTo` method to send the faulted rows into an error data flow. [Read more about error linking](../dataflow/linking_execution.md).
 
 ### LookupTransformation Api documentation
 

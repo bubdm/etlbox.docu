@@ -8,6 +8,13 @@ A CcsvSource simple reads data from a CSV file.
 In the following examples, you will learn how to configure the CsvReader to your needs.
 See the documentation of CsvHelper to learn more about the configuration options for the CsvReader itself.
 
+### 3rd party library
+
+The csv connector package is based on the [library CsvHelper created by Josh Close](https://joshclose.github.io/CsvHelper/).
+
+
+#### Example 
+
 Let's start with a simple example:
 
 ```C#
@@ -123,6 +130,3 @@ Header1,Header2
 If you use the ExpandoObject, the header names will be derived from the property names. In most cases, this will work as expected. 
 If you use an array, e.g. `CsvDestination<string[]>`, you won't get a header column.
 
-### 3rd party library
-
-The csv connector package is based on the [library CsvHelper created by Josh Close](https://joshclose.github.io/CsvHelper/).

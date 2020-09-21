@@ -160,7 +160,7 @@ RowTransformation1 & RowTransformation2. The DbDestination will complete when da
 
 *Note*: When you want to merge you data of multiple source before any further processing, consider using the 
 `MergeJoin`. If you want to split your data, you can use the `Multicast`. 
-[Read more about these transformations here.](dataflow_transformations.md)
+[Read more about these transformations here.](../transformations/broadcast_merge_join.md)
 
 ## Synchronous Execution
 

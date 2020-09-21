@@ -4,10 +4,10 @@
 
 This article will give you an overview of all transformations that currently exist in ETLBox. If you already know what kind of transformation you are looking for, you can visit directly the article that goes more into the details.
 
-- [Read more about row transformations, duplication and manipulations](row_manipulations.md)
-- [Read more about data retrieval](lookup_data.md)
-- [Read more about broadcasting, joining, splitting or merging data](broadcast_merge_join.md)
-- [Read more about aggregating data and block transformation](aggregating_data.md)
+- [Read more about row transformations, duplication and manipulations](../transformations/row_manipulations.md)
+- [Read more about data retrieval](../transformations/lookup_data.md)
+- [Read more about broadcasting, joining, splitting or merging data](../transformations/broadcast_merge_join.md)
+- [Read more about aggregating data and block transformation](../transformations/aggregating_data.md)
 
 ## Transformation concepts
 
@@ -141,7 +141,7 @@ written into another. Or you like to split up data based on some conditions. For
 The `Multicast` is a component that broadcasts your data into all linked components. It has one input and two or more outputs.
 The Multicast is a non-blocking operation. 
 
-If you want to split data, you can use Predicates which allow you to let only certain rows pass to a linked destination.  See more about this in the [article about Predicates and linking](dataflow_linking_execution.md)
+If you want to split data, you can use Predicates which allow you to let only certain rows pass to a linked destination.  See more about this in the [article about Predicates and linking](linking_execution.md)
 
 ```C#
 Multicast<MyDataRow> multicast = new Multicast<MyDataRow>();

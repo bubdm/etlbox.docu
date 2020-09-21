@@ -3,25 +3,47 @@
     - name: What is ETLBox
       href: overview.md
     - name: Core concepts
-      href: getting_started.md
-- name: DataFlow Tutorial
-  items:
+      href: dataflow/core_concepts.md
     - name: A simple data flow
-      href: dataflow/dataflow_simple_flow.md
-    - name: Integrate databases
-      href: dataflow/dataflow_db_sources_destinations.md
-    - name: Integrate flat files and web services
-      href: dataflow/dataflow_file_sources_destinations.md
+      href: dataflow/simple_flow.md
+    - name: Sources and destinations
+      href: dataflow/sources_destinations.md    
     - name: Transformations
-      href: transformation/transformations_overview.md
+      href: dataflow/transformations_overview.md
     - name: Linking and execution
-      href: dataflow/dataflow_linking_execution.md
+      href: dataflow/linking_execution.md
     - name: Working with data types
-      href: dataflow/dataflow_generic_nongeneric.md
+      href: dataflow/generic_nongeneric.md    
+- name: Going further
+  items:
+    - name: Row manipulations
+      href: transformations/row_manipulations.md
+    - name: Lookup
+      href: transformations/lookup_data.md
+    - name: Broadcast - joins - split
+      href: transformations/broadcast_merge_join.md
+    - name: Aggregating data
+      href: transformations/aggregating_data.md
     - name: Syncing tables with Merge
-      href: dataflow/dataflow_dbmerge.md
-    - name: Other sources and destinations
-      href: dataflow/dataflow_other_sources_destinations.md
+      href: connectors/syncing_merge.md    
+- name: Connectors
+  items:
+    - name: Databases
+      href: connectors/databases.md
+    - name: Csv data
+      href: connectors/csv.md
+    - name: Json data
+      href: connectors/json.md
+    - name: Excel
+      href: connectors/excel.md
+    - name: In memory
+      href: connectors/memory.md
+    - name: Xml
+      href: connectors/xml.md
+    - name: Text
+      href: connectors/text.md
+    - name: Custom code
+      href: connectors/custom.md
 - name: ControlFlow and Logging
   items:
     - name: ControlFlow tasks

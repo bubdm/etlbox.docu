@@ -103,11 +103,11 @@ public static void Main()
 *Please note*: make sure when using predicates that always all rows arrive at any kind of destination. Use a `VoidDestination`
 for records that you don't want to keep. 
 
-[Read more about predicates and linking.](dataflow_linking_execution.md).
+[Read more about predicates and linking.](../dataflow/linking_execution.md).
 
 ### Error Linking
 
-This transformation allows you to redirect erroneous records. By default, any exception in your flow would bubble up into your application the stop the flow. If you want to redirect data rows that would raise an exception, use the `LinkErrorTo` method to send the faulted rows into an error data flow. [Read more about error linking](../dataflow/dataflow_linking_execution.md).
+This transformation allows you to redirect erroneous records. By default, any exception in your flow would bubble up into your application the stop the flow. If you want to redirect data rows that would raise an exception, use the `LinkErrorTo` method to send the faulted rows into an error data flow. 
 
 ### Non blocking transformation
 
@@ -368,7 +368,7 @@ public static void Main()
 
 ### Error Linking
 
-This transformation allows you to redirect erroneous records. By default, any exception in your flow would bubble up into your application the stop the flow. If you want to redirect data rows that would raise an exception, use the `LinkErrorTo` method to send the faulted rows into an error data flow. [Read more about error linking](../dataflow/dataflow_linking_execution.md).
+This transformation allows you to redirect erroneous records. By default, any exception in your flow would bubble up into your application the stop the flow. If you want to redirect data rows that would raise an exception, use the `LinkErrorTo` method to send the faulted rows into an error data flow. [Read more about error linking](../dataflow/linking_execution.md).
 
 ### Partial blocking transformation
 

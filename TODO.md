@@ -9,8 +9,11 @@
 
 - From PoC: Aggregation supports currently MIN/MAX/COUNT/SUM. What about strings? Something like "FirstValue" or "LastValue" or FirstNonEmpty or LastNonEmpty?
 
-- From issue #75: Option1) Create a RenameProperty Transformation, so that properties can be renamed in a dataflow. Input could be an object or Expando, output would also be an expando. 
-Option 2: it would be good if the columnMapping for a db destination could be passed into the destination, so that this column mapping could be used instead a row transformation that changes the naming. This could also be true for other destinations and source (a generic column mapping?) This would mean that the current mappings (ColumnName etc.) would be overwritten?
+- From issue #75: 
+Solution 1: Create a RenameProperty Transformation, so that properties can be renamed in a dataflow. Input could be an object or Expando, output would also be an expando. 
+Solution 2: it would be good if the columnMapping for a db destination could be passed into the destination, so that this column mapping could be used instead a row transformation that changes the naming. This could also be true for other destinations and source (a generic column mapping?) This would mean that the current mappings (ColumnName etc.) would be overwritten?
+Actually solution 1 and 2 shouldn't be hard to implement. For solution 2, there are already ColumnMap attributes in place, which are doing basically the same as desired. Perhaps this can be extended that they are passed as a value to the DbDestination, and that it works with Objects and ExpandoObjects as well?
+
 
 ## Refactoring
 
