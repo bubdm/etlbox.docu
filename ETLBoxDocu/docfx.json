@@ -123,7 +123,7 @@
         ],
         "globalMetadata": {
             "_appTitle": "ETLBox - a lightweight ETL library for C#.",
-            "_appFooter": "<span>Crafted with &lt;3 in Berlin<br/>\r\n<a href=\"https://etlbox.net/articles/imprint.html\">Contact & legal information</a></span>",
+            "_appFooter": "<span>Crafted with &lt;3 in Berlin<br/>\r\n<a href=\"https://etlbox.net/articles/legals.html\">Contact & legal notice</a></span>",
             "_disableContribution": true
         },
         "markdownEngineName": "markdig"

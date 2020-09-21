@@ -1,5 +1,7 @@
 ﻿# Legal Disclosure
 
+(C) 2020 ETLBox Office Andreas Lennartz
+
 ## Contact information
 
 ETLBox Office <br />
@@ -11,6 +13,8 @@ Germany  <br />
 Phone: +49 151 228 42181  <br />
 E-Mail: mail@etlbox.net  <br />
 Internet address: www.etlbox.net  <br />
+
+Crafted with <: in Berlin.
 
 ## Disclaimer
 

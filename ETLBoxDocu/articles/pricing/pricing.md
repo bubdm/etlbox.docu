@@ -1,5 +1,11 @@
 ﻿# Pricing
 
+<div>
+<p>
+All prices are net without VAT. These prices are only valid for business customers.  
+</p>
+</div>
+
 <div class="row">
  <link rel="stylesheet" href="../../styles/bootstrap.extract.css">
     <div class="col-lg-3 col-md-3 col-sm-6">
@@ -160,20 +166,27 @@ purchase date.</p>
    
 <h3>Is there a trial version?</h3>
 If you download the official nuget package of ETLBox, you can already set it up and use it for testing purposes. The database and flat file connectors are limited to 10.000 rows. For further testing, you can request a trial valid for 30 days. If you need a renewal of the trial period, no problem, just contact us. 
-</div>
+
+<h3>What about VAT?</h3>
+
+All prices are net without VAT or other local taxes that may apply.
+
+<h3>What if I am not a company?</h3>
+If you are not a company, please <a href=contact.md">contact us</a> and tell us your country you are residing. There will be different pricing (normally the net price plus VAT), depending on your region. 
 
 <h3>OEM, Educational, Non-Profit, and Custom Licenses</h3>
 
 If you are interested in other licensing options, please contact us describing your specific needs.
     
 <h3>How many licenses do I need to buy?</h3>
-Licensing is based on the amount of developer that are developing or working with ETLBox.
+Licensing is based on the amount of developers who are working with code that uses ETLBox. No additional licensing is needed. (You can deploy ETLBox on as many servers and virtual machines as you like, independent of the sizing of the usage of the systems).
 
 <h3>Are there perpetual licenses</h3>
-We want to make sure that you always have access to the latest version and features of ETLBox. To guarantee continued support and development, we only offer annual licenses.
+We want to make sure that you always have access to the latest version and features of ETLBox. To guarantee continued support and development, we only offer annual licenses. 
 
 <h3>What if I need to change a subscription?</h3>
 
 Not a problem. Just let us know, and we'll create a custom invoice so that you only pay the difference.
 You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
 
+</div>

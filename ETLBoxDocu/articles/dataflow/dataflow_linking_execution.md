@@ -124,7 +124,7 @@ public class ETLBoxError
 {
     public string ErrorText { get; set; }
     public DateTime ReportTime { get; set; }
-    public Exception Exception { get; set; }
+    public string ExceptionType { get; set; }
     public string RecordAsJson { get; set; }
 }
 ```

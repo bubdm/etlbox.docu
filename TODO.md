@@ -9,7 +9,8 @@
 
 - From PoC: Aggregation supports currently MIN/MAX/COUNT/SUM. What about strings? Something like "FirstValue" or "LastValue" or FirstNonEmpty or LastNonEmpty?
 
-- From issue #75: it would be good if the columnMapping for a db destination could be passed into the destination, so that this column mapping could be used instead a row transformation that changes the naming. This could also be true for other destinations and source (a generic column mapping?) This would mean that the current mappings (ColumnName etc.) would be overwritten?
+- From issue #75: Option1) Create a RenameProperty Transformation, so that properties can be renamed in a dataflow. Input could be an object or Expando, output would also be an expando. 
+Option 2: it would be good if the columnMapping for a db destination could be passed into the destination, so that this column mapping could be used instead a row transformation that changes the naming. This could also be true for other destinations and source (a generic column mapping?) This would mean that the current mappings (ColumnName etc.) would be overwritten?
 
 ## Refactoring
 
@@ -19,7 +20,8 @@
 
 - PrimaryKeyConstrainName now is part of TableDefinition, but not read from "GetTableDefinitionFrom"
 - GCPressure was detected on CSVSource - verify if CSVSource really is the root cause. (See performance tests, improve tests that uses memory as source) 
-- Check if license file is correctly read from same folder if using a "classic" .NET project (or nunit test project) - 
+- Check if license file is correctly read from same folder if using a "classic" .NET project (or nunit test project) 
+- Double check if the waiting for the buffercompletion/preprocessor completion makes sense, or can be simplified (looks like that always the buffercompletion and predecesssor completion is included, sometimes twice?)
 
 # Improved Odbc support:
 
@@ -58,3 +60,6 @@ but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
 - FirstNonEmpty / LastNonEmpty for Aggregation
 - Csv: ReleaseGCPressure needs to go away
 - Excel IngoreBlankRows without Range - infinite loop?
+- RowTransformation: Add Parallelization
+- Currently no ErrorHandling in Aggregation - add missing try/catch
+- Blocking transformation can't have an LinkErrorTo() - throw an exception if this is called
