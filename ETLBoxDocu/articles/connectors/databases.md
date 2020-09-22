@@ -130,6 +130,17 @@ DbDestination<string[]> dest = new DbDestination<string[]>(connMan, "Destination
 
 The data is written into the columns in the same order as they are stored in the array. E.g., if your string array has three values, these values are stored into the first, second and third column of your destination table. If your destination table has more columns, these will be ignored. Identity columns (or auto increment / serial values) are ignored. 
 
+### Batch Size
+
+By default, the DbDestination will create batches of data that then are inserted in whole into the database. This is faster than creating a single insert for each incoming row. So the DbDestination is a little bit different from the other destinations: It will always wait until it has received the full amount of rows needed for a batch, and then do the insert. The default batch size is 1000. 
+You can play around with the batch size to gain higher performance. 1000 rows per batch is a solid value for most operations.
+If you encounter the issue that inserted the data into the destinations takes to long, try to reduce the batch size significantly. 
+
+#### Odbc and OleDb connections
+
+If you leave the default value for batch size set, it will be changed to 100 rows for Odbc and OleDb connections. As the connection here is much slower than "native" connections, and bulk inserts need to be translated into "INSERT INTO" statements, 100 rows per batch leads to a much better performance than 1000 rows. 
+
+
 ## Default ConnectionManager
 
 Every component or task related to a database operation needs to have a connection managers set in order
