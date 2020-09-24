@@ -355,3 +355,40 @@ public static void Main()
 }
 ```
 
+### ColumnRename
+
+This transformation let you rename the properties names of your ingoing data. 
+
+You should always provide a column mapping.
+The ColumnMapping contains information about the renaming - this should be the old and the new name for each column (except arrays). If you don't provide a mapping, ColumnRename will try to retrieve the mapping automatically from existing ColumnMap attributes on your object. If this is not possible, it will just convert your ingoing data type into an ExpandoObject.  
+
+This transformation works with objects, ExpandoObjects and arrays as input data type. It will always output an ExpandoObject with the new mapped property names.    
+
+If you have an array as input type, instead of providing the old name you need to enter the array index and the new name. 
+
+#### Example
+
+```
+var source = new DbSource<MyInputRow>();
+var map = new ColumnRename<MyInputRow>();
+map.ColumnMapping = new List<ColumnMapping>()
+{
+    new ColumnMapping("OldCol1","Col1"),
+    new ColumnMapping("OldCol2","Col2"),
+};
+var dest = new DbDestination(SqlConnection, "ColumnRenameDest");
+
+source.LinkTo<ExpandoObject>(map).LinkTo(dest);
+```
+
+### Non Blocking transformation 
+
+The ColumnRename is a non blocking transformation and has an input buffer for incoming data. To restrict the number of rows stored in the input buffer, set the `MaxBufferSize` property to a value greater than 0.
+
+### ColumnRename Api documentation
+
+The full class documentation can be found in the Api documentation.
+
+- If the input types is an array or object, [use the RowMultiplication that accepts one data type](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename-1.html).
+- If the input type is an ExpandoObject, [use the default implementation](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename.html).
+

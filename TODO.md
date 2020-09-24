@@ -66,3 +66,4 @@ but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
 - RowTransformation: Add Parallelization
 - Currently no ErrorHandling in Aggregation - add missing try/catch
 - Blocking transformation can't have an LinkErrorTo() - throw an exception if this is called
+- New transformation: Distinct (as partial blocking) which only let the first row through, but keeps a hash value to identify similar rows

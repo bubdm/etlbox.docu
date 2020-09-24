@@ -319,7 +319,7 @@ public static void Main()
 ### Blocking transformation 
 
 The BlockTransformation is a real blocking transformation. It will block processing until all records arrived, and use up as much memory as needed to store the incoming rows. After this, all rows are written into the output. 
-The BlockTransformation has an input and output buffer. You can't restrict the number of rows stored in the input buffer. But you can restrict the amount of records in the output buffer - set the `MaxBufferSize` property to a value greater than 0. Restricting the output buffer is not recommended.
+The BlockTransformation has an input and output buffer. You can't restrict the number of rows stored in the input buffer. But you can restrict the amount of records in the output buffer - set the `MaxBufferSize` property to a value greater than 0. 
   
 ### Error Linking
 

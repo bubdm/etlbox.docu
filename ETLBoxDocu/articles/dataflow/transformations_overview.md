@@ -94,6 +94,28 @@ source.LinkTo(multiplication);
 multiplication.LinkTo(dest);
 ```
 
+### ColumnRename
+
+ColumnRename allows you to rename the column or properties names of your ingoing data. 
+You can provide a column mapping with the old and the new name for each column. The mapping can also be automatically retrieved from existing ColumnMap attributes. 
+
+This transformation works with objects, ExpandoObjects and arrays as input data type. It will always output an ExpandoObject with the new mapped property names.    
+
+If you have an array as input type, instead of providing the old name you need to enter the array index and the new name. 
+
+```
+var source = new DbSource<MyInputRow>();
+var map = new ColumnRename<MyInputRow>();
+map.ColumnMapping = new List<ColumnMapping>()
+{
+    new ColumnMapping("OldCol1","Col1"),
+    new ColumnMapping("OldCol2","Col2"),
+};
+var dest = new DbDestination(SqlConnection, "ColumnRenameDest");
+
+source.LinkTo<ExpandoObject>(map).LinkTo(dest);
+```
+
 ## Data lookup
 
 ### LookupTransformation
