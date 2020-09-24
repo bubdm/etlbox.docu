@@ -262,6 +262,7 @@ Comparison<MySimpleRow> comp = new Comparison<MySimpleRow>(
 Sort<MySimpleRow> block = new Sort<MySimpleRow>(comp);
 ```
 
+- [Read more about the sort and other transformations](../transformations/other.md)
 
 ### XmlSchemaValidation
 
@@ -275,3 +276,5 @@ source.LinkTo(schemaValidation);
 schemaValidation.LinkTo(dest);
 schemaValidation.LinkErrorTo(error);
 ```
+
+- [Read more about the xml connector and xml validation](../connectors/xml.md)

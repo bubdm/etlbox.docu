@@ -18,8 +18,4 @@ This is a blocking transformation, because data can only be sorted when all reco
 The Sort has an input and output buffer. You can't restrict the number of rows stored in the input buffer. But you can restrict the amount of records in the output buffer - set the `MaxBufferSize` property to a value greater than 0. 
 
 
-## ColumnRename
-
-The ColumnRename let you rename the columns or properties of your input data. 
-
 
