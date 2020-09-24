@@ -99,37 +99,73 @@
                             <a href="../overview.html" title="What is ETLBox" class="">What is ETLBox</a>
                           </li>
                           <li class="">
-                            <a href="../getting_started.html" title="Core concepts" class="">Core concepts</a>
+                            <a href="../dataflow/core_concepts.html" title="Core concepts" class="">Core concepts</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/sources_destinations.html" title="Sources and destinations" class="">Sources and destinations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/transformations_overview.html" title="Transformations" class="">Transformations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
                           </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
-                      <a class="">DataFlow Tutorial</a>
+                      <a class="">Going further</a>
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="../dataflow/dataflow_simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                            <a href="../transformations/row_manipulations.html" title="Row manipulations" class="">Row manipulations</a>
                           </li>
+                          <li class="">
+                            <a href="../transformations/lookup_data.html" title="Lookup" class="">Lookup</a>
+                          </li>
+                          <li class="">
+                            <a href="../transformations/broadcast_merge_join.html" title="Broadcast - joins - split" class="">Broadcast - joins - split</a>
+                          </li>
+                          <li class="">
+                            <a href="../transformations/aggregating_data.html" title="Aggregating data" class="">Aggregating data</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/syncing_merge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Connectors</a>
+                        
+                        <ul class="nav level2">
                           <li class="active">
-                            <a href="../dataflow/dataflow_db_sources_destinations.html" title="Integrate databases" class="active">Integrate databases</a>
+                            <a href="../connectors/databases.html" title="Databases" class="active">Databases</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_file_sources_destinations.html" title="Integrate flat files and web services" class="">Integrate flat files and web services</a>
+                            <a href="../connectors/csv.html" title="Csv data" class="">Csv data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_transformations.html" title="Transformations" class="">Transformations</a>
+                            <a href="../connectors/json.html" title="Json data" class="">Json data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                            <a href="../connectors/excel.html" title="Excel" class="">Excel</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
+                            <a href="../connectors/memory.html" title="In memory" class="">In memory</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_dbmerge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                            <a href="../connectors/xml.html" title="Xml" class="">Xml</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_other_sources_destinations.html" title="Other sources and destinations" class="">Other sources and destinations</a>
+                            <a href="../connectors/text.html" title="Text" class="">Text</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/custom.html" title="Custom code" class="">Custom code</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -172,106 +208,94 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="database-integration">Database integration</h1>
 
-<p>There a numerous database sources and destinations that come with ETLBox. In short, you can extract data
-from and load data into the following databases: Sql Server, MySql, Postgres, SQLite and Microsoft Access.</p>
-<h2 id="dbsource">DbSource</h2>
-<p>The DbSource is the most common data source for a data flow. It basically connects to a database via ADO.NET and executes a SELECT-statement to start reading the data.
-While data is read from the source, it is simultaneously posted into the dataflow pipe. This enables the DbSource also to handle big amount of data - it constantly can
-read data from a big table while already read data can be processed by the connected componentens.</p>
-<p>To initialize a DbSource, you can simply pass a table (or view) name or a SQL-statement. The DbSource also accepts a connection manager.</p>
-<p>The following code would read all data from the table <code>SourceTable</code> and use the default connection manager:</p>
-<pre><code class="lang-C#">DbSource source = new DbSource(&quot;SourceTable&quot;);
-</code></pre>
-<p>For the <code>DbSource</code>, you can also specify some Sql code to retrieve your data:</p>
-<pre><code class="lang-C#">DbSource source = new DbSource() {
-    Sql = &quot;SELECT * FROM SourceTable&quot;
-};
-</code></pre>
-<h3 id="working-with-types">Working with types</h3>
-<p>In the examples above we used a  object without a type.
-This will let ETLBox work internally with an <code>ExpandoObject</code> which is a dynamic .NET object type.
-Let's assume that SouceTable has two columns:</p>
-<table>
-<thead>
-<tr>
-<th>ColumnName</th>
-<th>Data Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Id</td>
-<td>INTEGER</td>
-</tr>
-<tr>
-<td>Value</td>
-<td>VARCHAR</td>
-</tr>
-</tbody>
-</table>
-<p>Reading from this table using the DbSource without type will internally create a dynamic object with two properties: Id of type int and Value of type string.</p>
-<p>Working with dynamic objects has some drawbacks, as .NET is a strongly typed language. Of course you can also use a generic object
-to type the DbSource.</p>
-<p>Let's assume we create a POCO (Plain old component object) <code>MySimpleRow</code> that looks like this:</p>
-<pre><code class="lang-C#">public class MySimpleRow {
-    public int Id { get; set;}
-    public string Value { get; set;}
-}
-</code></pre>
-<p>Now we can read the data from the source with a generic object:</p>
-<pre><code class="lang-C#">DbSource&lt;MySimpleRow&gt; source = new DbSource&lt;MySimpleRow&gt;(&quot;SourceTable&quot;);
-</code></pre>
-<p>ETLBox will autamtically extract missing meta information during runtime from the source table and the involved types. In our example, the source table has
-the exact same columns as the object - ETLBox will check this and write data from the Id column into the Id property, and data from the column Value into the Value property.
-Each record in the source will be a new object that is created and then passed to the connected components.</p>
-<p>Of course the properties in the object and the columsn can differ - ETLBox will only load columns from a source where it can find the right property. If the data type is different,
-ETLBox will try to automatically convert the data. If the names are different, you can use the attribute ColumnMap to define the matching columns name for a property.
-In our example, we could replace the property Id with a property Key - in order to still read data from the Id column, we add the ColumnMap attribute. Also, if we change
-the data type to string, ETLBox will automatically convert the integer values into a string.</p>
-<pre><code class="lang-C#">[ColumnMap(&quot;Id&quot;)]
-public string Key { get;set; }
-</code></pre>
-<h2 id="dbdestination">DbDestination</h2>
-<p>Like the <code>DbSource</code>, the <code>DbDestination</code> is the common component for sending data into a database. It is initialized with a table name.
-Unlike other Destinations, the DbDestination inserts data into the database in batches. The default batch size is 1000 rows - the DbDestination waits
-until it's input buffer has reached the batch size before it bulk inserts the data into the database.</p>
-<p>The following example would transfer data from the destination to the source:</p>
-<pre><code class="lang-C#">DbSource source = new DbSource(&quot;SourceTable&quot;);
-DbDestination dest = new DbDestination(&quot;DestinationTable&quot;);
-//Link everything together
-source.LinkTo(dest);
-//Start the data flow
-source.Execute();
-dest.Wait()
-</code></pre>
-<h2 id="connection-manager">Connection manager</h2>
-<h3 id="connection-strings">Connection strings</h3>
-<p>To connect to your database of choice, you will need a string that contains all information needed to connect
-to your database (e.g., the network address of the database, user name and password). The specific connection string syntax
-for each provider is defined by the ADO.NET framework. If you need assistance
-to create such a connection string, <a href="https://www.connectionstrings.com" target="_blank">have a look at this website that
-provide example strings for almost every database</a>.</p>
-<h3 id="database-connections">Database Connections</h3>
-<p>The <code>DbSource</code> and <code>DbDestination</code> can be used to connect via ADO.NET to a database server.
-To do so, it will need the correct connection manager and either a raw connection string or a <code>ConnectionString</code> object.
-The easiest way is to directly pass a raw connection string and create with it a connection manager.</p>
-<p>Here is an example creating a connection manager for Sql Server and pass it to a DbSource:</p>
-<pre><code class="lang-C#">DbSource source = DbSource (
-    new SqlConnectionManager(&quot;Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;&quot;)
-    , &quot;SourceTable&quot;
-);
-</code></pre>
-<p>For other databases the code looks very similar. Please be aware that the connection string might look different.</p>
-<p>This is how you create a connection manager for MySql:</p>
-<pre><code class="lang-C#">MySqlConnectionManager connectionManager = new MySqlConnectionManager(&quot;Server=10.37.128.2;Database=ETLBox_ControlFlow;Uid=etlbox;Pwd=etlboxpassword;&quot;;
-</code></pre>
+<h2 id="supported-databases">Supported databases</h2>
+<p>These database are currently supported with ETLBox:</p>
+<ul>
+<li>Sql Server (Native, Odbc, OleDb)</li>
+<li>Postgres (Native, Odbc)</li>
+<li>SQLite (Native, Odbc)</li>
+<li>Oracle (Native, Odbc)</li>
+<li>MySql (Native, Odbc)</li>
+<li>MariaDb (Native, Odbc)</li>
+<li>Microsoft Access (only Odbc)</li>
+</ul>
+<p>There is a limited support for other databases as well - you can use the generic Odbc or OleDb driver to access these databaes.</p>
+<h2 id="connection-manager">Connection Manager</h2>
+<p>While you will always have access to the DbSource and DbDestination when you added ETLBox as package reference, you can't do much with them as you will need the right connection manager to connect with your database.  For Sql Server you would need the SqlConnectionManager, and for MySql the MySqlConnectionManager.</p>
 <p>Here the example code for creating a connection manager for Postgres:</p>
 <pre><code class="lang-C#">PostgresConnectionManager connectionManager = new PostgresConnectionManager(&quot;Server=10.37.128.2;Database=ETLBox_DataFlow;User Id=postgres;Password=etlboxpassword;&quot;);
 </code></pre>
 <p>Creation of a connection manager for SQLite:</p>
 <pre><code class="lang-C#">SQLiteConnectionManager connectionManager = new SQLiteConnectionManager(&quot;Data Source=.\\db\\SQLiteControlFlow.db;Version=3;&quot;);
 </code></pre>
-<h3 id="default-connectionmanager">Default ConnectionManager</h3>
+<p>There is also an OracleConnectionManager, MariaDbConnectionManager and an AccessOdbcConnectionManager.</p>
+<h2 id="dbsource">DbSource</h2>
+<p>The DbSource give you access to any database table or with your database. Or you can directly pass an sql statement that is used as source.
+The use of the DbSource is very straight forward. You simple pass a connection manager (the right one for your database) and a table name</p>
+<pre><code class="lang-C#">public class MyRow
+{
+    public int Id { get; set; }
+    public string Value { get; set; }
+}
+SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;&quot;);
+DbSource&lt;MyRow&gt; source = new DbSource&lt;MyRow&gt;(connMan, &quot;SourceTable&quot;);
+</code></pre>
+<p>If you table that you connect with has the columns Id and/or Value, the data will be read from this columns and passed into the connected component.</p>
+<h3 id="sql-code">Sql Code</h3>
+<p>For the <code>DbSource</code>, you can also specify some Sql code to retrieve your data:</p>
+<pre><code class="lang-C#">DbSource&lt;MyRow&gt; source = new DbSource&lt;MyRow&gt;() {
+    ConnectionManager = connMan, 
+    Sql = &quot;SELECT Id, Value FROM SourceTable&quot;
+};
+</code></pre>
+<h3 id="using-dynamic-object">Using dynamic object</h3>
+<p>The default implementation of DbSource will use an ExpandoObject. This dynamic object will then properties with the same names as the columns in your source.</p>
+<pre><code class="lang-C#">DbSource source = new DbSource(connMan, &quot;SourceTable&quot;);
+</code></pre>
+<p>No object is need when using this. Make sure that all other components also either use the default implementation, or alternatively you cast the ExpandoObject into an object or array of your choice. This can be done e.g. with a RowTransformation</p>
+<h3 id="using-string-arrays">Using string arrays</h3>
+<p>Also you can use the DbSource to read your data directly into an array. This could be a string array. The order of the columns of your table or you sql code is then equals the order in your array. Also, you don't need any other object definition then.</p>
+<pre><code class="lang-C#">DbSource&lt;string[]&gt; source = new DbSource&lt;string[]&gt;(connMan, &quot;SourceTable&quot;);
+</code></pre>
+<h2 id="dbdestination">DbDestination</h2>
+<p>The DbDestination will write that data from your flow into the a table. Like the DbSource, you need to pass a connection manager and the destination table name. For any property in your object, the data will be written into the table if the column names match with the property name.</p>
+<pre><code class="lang-C#">public class MyRow
+{
+    public int Id { get; set; }
+    public string Value { get; set; }
+}
+SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;&quot;);
+DbDestination&lt;MyRow&gt; dest = new DbDestination&lt;MyRow&gt;(connMan, &quot;DestinationTable&quot;);
+</code></pre>
+<p>If your table has the columns Id and/or Value, the data of your flow will be written into this columns.</p>
+<h3 id="column-mapping">Column Mapping</h3>
+<p>Of course the properties in the object and the columns can differ - ETLBox will only load columns from a source where it can find the right property. If the data type is different,
+ETLBox will try to automatically convert the data. If the names are different, you can use the attribute ColumnMap to define the matching columns name for a property.
+In our example, we could replace the property Id with a property Key - in order to still read data from the Id column, we add the ColumnMap attribute. Also, if we change
+the data type to string, ETLBox will automatically convert the integer values into a string.</p>
+<pre><code class="lang-C#">[ColumnMap(&quot;Id&quot;)]
+public string Key { get;set; }
+</code></pre>
+<h3 id="using-dynamic-objects">Using dynamic objects</h3>
+<p>Of course you can also use the default implementation of the DbDestination to write data into a table.</p>
+<pre><code class="lang-C#">SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;&quot;);
+DbDestination dest = new DbDestination(connMan, &quot;DestinationTable&quot;);
+</code></pre>
+<p>Like with an object, the properties of the ExpandoObject are used to map the values to the right columns. Only if the ExpandoObject object has a property with the same name as the column in the destination table, data is written into this column.
+Unfortunately, the Column mapping attributes are not working here.</p>
+<h3 id="using-arrays">Using arrays</h3>
+<p>You can also use the DbDestination with array.</p>
+<pre><code class="lang-C#">SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;&quot;);
+DbDestination&lt;string[]&gt; dest = new DbDestination&lt;string[]&gt;(connMan, &quot;DestinationTable&quot;);
+</code></pre>
+<p>The data is written into the columns in the same order as they are stored in the array. E.g., if your string array has three values, these values are stored into the first, second and third column of your destination table. If your destination table has more columns, these will be ignored. Identity columns (or auto increment / serial values) are ignored.</p>
+<h3 id="batch-size">Batch Size</h3>
+<p>By default, the DbDestination will create batches of data that then are inserted in whole into the database. This is faster than creating a single insert for each incoming row. So the DbDestination is a little bit different from the other destinations: It will always wait until it has received the full amount of rows needed for a batch, and then do the insert. The default batch size is 1000.
+You can play around with the batch size to gain higher performance. 1000 rows per batch is a solid value for most operations.
+If you encounter the issue that inserted the data into the destinations takes to long, try to reduce the batch size significantly.</p>
+<h4 id="odbc-and-oledb-connections">Odbc and OleDb connections</h4>
+<p>If you leave the default value for batch size set, it will be changed to 100 rows for Odbc and OleDb connections. As the connection here is much slower than &quot;native&quot; connections, and bulk inserts need to be translated into &quot;INSERT INTO&quot; statements, 100 rows per batch leads to a much better performance than 1000 rows.</p>
+<h2 id="default-connectionmanager">Default ConnectionManager</h2>
 <p>Every component or task related to a database operation needs to have a connection managers set in order
 to connect to the right database. Sometimes it can be cumbersome to pass the same connection manager over and over
 again. To avoid this, there is a static <code>ControlFlow</code> class that contains the property <code>DefaultDbConnection</code>.
@@ -322,6 +346,40 @@ Microsoft: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=132
 very limited - if it too high, you will the error message 'Query to complex'. Try to reduce the batch size to solve this.</p>
 <p><em>Note</em>: Please note that the AccessOdbcConnectionManager will create a &quot;temporary&quot; dummy table containing one record in your database when doing the bulk insert. After completion it will delete the table again.
 This is necessary to simulate a bulk insert with Access-like Sql.</p>
+<h3 id="generic-odbc-and-oledb-conenctions">Generic Odbc and OleDb conenctions</h3>
+<p>As ETLBox has some database specific code in different components, you normally would choose an Odbc or OleDb connector that fits to your database.</p>
+<p>But if your database is not supported yet, you can use the generic Odbc or OleDb connection manager to connection with <em>any</em> database.
+Make sure you reference the Odbc or OleDb connector package.</p>
+<ul>
+<li><a href="https://www.nuget.org/packages/ETLBox.OleDb">OleDb connector package for ETLBox</a></li>
+<li><a href="https://www.nuget.org/packages/ETLBox.Odbc">Odbc connector package for ETLBox</a></li>
+</ul>
+<p>Unfortunately, this connector will have some limitations.</p>
+<ul>
+<li>if you use DbDestination or DbSource with this connector, you would need to pass a TableDefinition object. This object basically holds the table name and column names, because they can't be automatically extracted from the database.</li>
+<li>some ControlFlow components won't work (e.g. IfTableExistsTask). But SqlTask will work with the generic connection manager</li>
+<li>if you use special characters in your table or columns names, you need to set the quotation begin / quotation end properties QB &amp; QE that fit to your database (e.g. &quot;[&quot; and &quot;]&quot; for Sql Server or &quot;`&quot; for MySql)</li>
+</ul>
+<h4 id="example-with-sqlserver-olddb">Example with SqlServer OldDb</h4>
+<p>E.g. you can use the generic OleDb connection manager to connect with Sql Server via OleDb</p>
+<p>You will need an OleDb connection string,.</p>
+<pre><code class="lang-C#">var connString = @&quot;Provider=MSOLEDBSQL;Server=10.211.55.2;Database=ETLBox_DataFlow;UID=sa;PWD=YourStrong@Passw0rd;&quot;
+OleDbConnectionManager conn = new OleDbConnectionManager(connString);
+conn.QB = &quot;[&quot;; conn.QE = &quot;[&quot;; //not always needed, only for special characters
+SqlTask.ExecuteNonQuery(conn, , &quot;INSERT INTO...&quot;);
+</code></pre>
+<p>You can also use this connection manager with the DbSource or the DbDestination component. But please note that this will only work if you pass the TableDefinition manually, like this:</p>
+<pre><code class="lang-C#">var cols = new List&lt;TableColumn&gt;() {
+                new TableColumn(&quot;Col1&quot;, &quot;INT&quot;, allowNulls: false),
+                new TableColumn(&quot;Col2&quot;, &quot;VARCHAR(100)&quot;, allowNulls: true)
+};
+_sourcedef = new TableDefinition(&quot;TestTable&quot;, cols);
+DbSource&lt;MySimpleRow&gt; source = new DbSource&lt;MySimpleRow&gt;(conn)
+ {
+     SourceTableDefinition = _sourcedef
+};
+</code></pre>
+<p>Same for DbDestination - the property name is <code>DestinationTableDefinition</code> there.</p>
 <h3 id="connection-pooling">Connection Pooling</h3>
 <p>The implementation of all connection managers is based on Microsoft ADO.NET and makes use of the underlying
 connection pooling. <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-connection-pooling">Please see here for more details of connection pooling.</a>
@@ -360,13 +418,6 @@ var DbSource&lt;type&gt; = new DbSource&lt;type&gt;() {
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.docu/blob/main/ETLBoxDocu/articles/dataflow/dataflow_db_sources_destinations.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -383,7 +434,7 @@ var DbSource&lt;type&gt; = new DbSource&lt;type&gt;() {
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

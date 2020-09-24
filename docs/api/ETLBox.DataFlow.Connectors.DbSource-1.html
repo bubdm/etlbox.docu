@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -811,11 +820,11 @@ Multiple database are supported. Use the corresponding connection manager that f
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1001,7 +1010,7 @@ Multiple database are supported. Use the corresponding connection manager that f
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Connectors_DbSource_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DbSource&lt;TOutput&gt; : DataFlowExecutableSource&lt;TOutput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowExecutableSource&lt;TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource</code></pre>
+    <pre><code class="lang-csharp hljs">public class DbSource&lt;TOutput&gt; : DataFlowExecutableSource&lt;TOutput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowExecutableSource&lt;TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1025,13 +1034,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
 
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L84">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1__ctor" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.#ctor">DbSource()</h4>
   <div class="markdown level1 summary"></div>
@@ -1040,13 +1042,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public DbSource()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1__ctor_ETLBox_Connection_IConnectionManager_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.%23ctor(ETLBox.Connection.IConnectionManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L96">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1__ctor_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.#ctor(ETLBox.Connection.IConnectionManager)">DbSource(IConnectionManager)</h4>
   <div class="markdown level1 summary"></div>
@@ -1073,13 +1068,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1__ctor_ETLBox_Connection_IConnectionManager_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.%23ctor(ETLBox.Connection.IConnectionManager%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L103">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbSource(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1112,13 +1100,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1__ctor_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L90">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.#ctor(System.String)">DbSource(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1147,13 +1128,6 @@ DbSource&lt;MyRow> source = new DbSource&lt;MyRow>(connMan, &quot;dbo.table&quot
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_ColumnNames.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.ColumnNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L45">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_ColumnNames_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.ColumnNames*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_ColumnNames" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.ColumnNames">ColumnNames</h4>
   <div class="markdown level1 summary"><p>By default, column names are read from the table defition, extracted from the database or parsed from the sql query.
@@ -1180,13 +1154,6 @@ If you enter your own column name list, this will override any column names that
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_ConnectionManager.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.ConnectionManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L64">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_ConnectionManager_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.ConnectionManager*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_ConnectionManager" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.ConnectionManager">ConnectionManager</h4>
   <div class="markdown level1 summary"><p>The connection manager used to connect to the database - use the right connection manager for your database type.</p>
@@ -1211,13 +1178,6 @@ If you enter your own column name list, this will override any column names that
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_SourceTableDefinition.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.SourceTableDefinition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L38">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_SourceTableDefinition_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.SourceTableDefinition*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_SourceTableDefinition" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.SourceTableDefinition">SourceTableDefinition</h4>
   <div class="markdown level1 summary"><p>Pass a table definition that describe the source table.
@@ -1244,13 +1204,6 @@ or extracted from the sql query. If a TableDefinition is present, this will alwa
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_Sql.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.Sql%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L55">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_Sql_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.Sql*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_Sql" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.Sql">Sql</h4>
   <div class="markdown level1 summary"><p>A custom sql query to extract the data from the source.</p>
@@ -1275,13 +1228,6 @@ or extracted from the sql query. If a TableDefinition is present, this will alwa
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_TableName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.TableName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L50">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_TableName_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.TableName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_TableName" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.TableName">TableName</h4>
   <div class="markdown level1 summary"><p>The name of the database table to read data from.</p>
@@ -1306,13 +1252,6 @@ or extracted from the sql query. If a TableDefinition is present, this will alwa
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L30">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1342,13 +1281,6 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_CleanUpOnFaulted_System_Exception_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.CleanUpOnFaulted(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L128">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1376,13 +1308,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_CleanUpOnSuccess.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.CleanUpOnSuccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L123">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1393,13 +1318,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_OnExecutionDoAsyncWork.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.OnExecutionDoAsyncWork%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L117">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -1410,13 +1328,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1_OnExecutionDoSynchronousWork.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601.OnExecutionDoSynchronousWork%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L112">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.Connectors.DbSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -1432,9 +1343,6 @@ with a default name that can be overwritten.</p>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1446,21 +1354,14 @@ with a default name that can be overwritten.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbSource_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbSource%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbSource.cs/#L25" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1477,7 +1378,7 @@ with a default name that can be overwritten.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

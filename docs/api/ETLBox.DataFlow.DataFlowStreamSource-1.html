@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -813,12 +822,12 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowStreamSource-1.html">IDataFlowStreamSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1007,7 +1016,7 @@
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_DataFlowStreamSource_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class DataFlowStreamSource&lt;TOutput&gt; : DataFlowExecutableSource&lt;TOutput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowStreamSource&lt;TOutput&gt;, IDataFlowExecutableSource&lt;TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class DataFlowStreamSource&lt;TOutput&gt; : DataFlowExecutableSource&lt;TOutput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowStreamSource&lt;TOutput&gt;, IDataFlowExecutableSource&lt;TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1026,13 +1035,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_CurrentRequestUri.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.CurrentRequestUri%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L48">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_CurrentRequestUri_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.CurrentRequestUri*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_CurrentRequestUri" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.CurrentRequestUri">CurrentRequestUri</h4>
   <div class="markdown level1 summary"></div>
@@ -1056,13 +1058,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_GetNextUri.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.GetNextUri%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L30">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_GetNextUri_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.GetNextUri*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_GetNextUri" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.GetNextUri">GetNextUri</h4>
   <div class="markdown level1 summary"><p>This func returns the next url that is used for reading data. It will be called until <a class="xref" href="ETLBox.DataFlow.IDataFlowStreamSource-1.html#ETLBox_DataFlow_IDataFlowStreamSource_1_HasNextUri">HasNextUri</a> returns false.
@@ -1090,13 +1085,6 @@ This property can be used if you want to read multiple files or if you want to p
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_HasNextUri.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.HasNextUri%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L33">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_HasNextUri_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.HasNextUri*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_HasNextUri" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.HasNextUri">HasNextUri</h4>
   <div class="markdown level1 summary"><p>This func determines if another request is started to read additional data from the next uri.
@@ -1122,13 +1110,6 @@ This property can be used if you want to read multiple files or if you want to p
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_HttpClient.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.HttpClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L39">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_HttpClient_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.HttpClient*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_HttpClient" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.HttpClient">HttpClient</h4>
   <div class="markdown level1 summary"><p>The System.Net.Http.HttpClient uses for the request. Use this client if you want to
@@ -1154,13 +1135,6 @@ add or change the http request data, e.g. you can add your authorization informa
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_HttpRequestMessage.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.HttpRequestMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L42">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_HttpRequestMessage_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.HttpRequestMessage*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_HttpRequestMessage" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.HttpRequestMessage">HttpRequestMessage</h4>
   <div class="markdown level1 summary"><p>The System.Net.Http.HttpRequestMessage use for the request from the HttpClient. Add your request
@@ -1186,13 +1160,6 @@ message here, e.g. your POST body.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_ResourceType.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.ResourceType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L36">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_ResourceType_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.ResourceType*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_ResourceType" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.ResourceType">ResourceType</h4>
   <div class="markdown level1 summary"><p>Specifies the resource type. By default requests are made with HttpClient.
@@ -1218,13 +1185,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_StreamReader.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.StreamReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L49">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_StreamReader_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.StreamReader*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_StreamReader" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.StreamReader">StreamReader</h4>
   <div class="markdown level1 summary"></div>
@@ -1248,13 +1208,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedData.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.UnparsedData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L50">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedData_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.UnparsedData*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_UnparsedData" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.UnparsedData">UnparsedData</h4>
   <div class="markdown level1 summary"></div>
@@ -1278,13 +1231,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_Uri.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.Uri%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L14">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_Uri_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.Uri*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_Uri" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.Uri">Uri</h4>
   <div class="markdown level1 summary"><p>The Url of the webservice (e.g. <a href="https://test.com/foo">https://test.com/foo</a>) or the file name (relative or absolute).</p>
@@ -1311,13 +1257,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_CleanUpOnFaulted_System_Exception_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.CleanUpOnFaulted(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L80">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1345,13 +1284,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_CleanUpOnSuccess.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.CleanUpOnSuccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L74">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1362,13 +1294,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_CloseReader.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.CloseReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L131">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_CloseReader_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.CloseReader*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_CloseReader" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.CloseReader">CloseReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -1377,13 +1302,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void CloseReader()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_InitReader.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.InitReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L129">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_InitReader_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.InitReader*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_InitReader" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.InitReader">InitReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -1392,13 +1310,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void InitReader()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_OnExecutionDoAsyncWork.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.OnExecutionDoAsyncWork%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L61">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_OnExecutionDoAsyncWork_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.OnExecutionDoAsyncWork*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_OnExecutionDoAsyncWork" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.OnExecutionDoAsyncWork">OnExecutionDoAsyncWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -1409,13 +1320,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoAsyncWork()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_OnExecutionDoSynchronousWork.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.OnExecutionDoSynchronousWork%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L56">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_OnExecutionDoSynchronousWork_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.OnExecutionDoSynchronousWork*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_OnExecutionDoSynchronousWork" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.OnExecutionDoSynchronousWork">OnExecutionDoSynchronousWork()</h4>
   <div class="markdown level1 summary"></div>
@@ -1426,13 +1330,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;TOutput&gt;.OnExecutionDoSynchronousWork()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1_ReadAllRecords.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601.ReadAllRecords%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L130">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowStreamSource_1_ReadAllRecords_" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.ReadAllRecords*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowStreamSource_1_ReadAllRecords" data-uid="ETLBox.DataFlow.DataFlowStreamSource`1.ReadAllRecords">ReadAllRecords()</h4>
   <div class="markdown level1 summary"></div>
@@ -1444,9 +1341,6 @@ Specify ResourceType.File if you want to read from a json file.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
-  </div>
-  <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
   </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
@@ -1463,21 +1357,14 @@ Specify ResourceType.File if you want to read from a json file.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowStreamSource_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowStreamSource%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowStreamSource.cs/#L9" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1494,7 +1381,7 @@ Specify ResourceType.File if you want to read from a json file.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

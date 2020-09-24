@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -806,9 +815,14 @@
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.ColumnMap.html">ColumnMap</a></h4>
       <section><p>This attribute defines a column name to which the value of the property is mapped when writing or reading
-from a database.
+from a database or using the ColumnRename transformation.
 By default, when reading from a database source the mapping which property stores data of which column
-is resolved by the property names. Using this attribute, you can specify the column name that maps to a propety.</p>
+is resolved by the property names. Using this attribute, you can specify the column name that maps to a property.
+In the ColumnRename transformation, this property is used to rename a column</p>
+</section>
+      <h4><a class="xref" href="ETLBox.DataFlow.ColumnMapping.html">ColumnMapping</a></h4>
+      <section><p>Defines how columns are mapped to each other when renaming them.
+For arrays it defines which index in the is renamed. CurrentName can be left empty then.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.CompareColumn.html">CompareColumn</a></h4>
       <section><p>This attribute defines if the column is included in the comparison to identify
@@ -958,10 +972,6 @@ E.g. you can read Json data from a file or via http from a web service.</p>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -978,7 +988,7 @@ E.g. you can read Json data from a file or via http from a web service.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

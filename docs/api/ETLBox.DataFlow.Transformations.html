@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -829,34 +838,49 @@ is executed for the complete data and the result posted into the targets.
 The block transformations allows you to access all data in the flow in one generic collection.
 But as this block any processing until all data is buffered, it will also need to store the whole data in memory.</p>
 </section>
+      <h4><a class="xref" href="ETLBox.DataFlow.Transformations.ColumnRename.html">ColumnRename</a></h4>
+      <section><p>ColumnRename allows you to rename the column or properties names of your ingoing data.
+This transformation works with objects, ExpandoObjects and arrays as input data type.<br>
+Provide a column mapping with the old and the new name. The mapping can also be automatically retrieved from
+existing ColumnMap attributes. For arrays provide the array index and the new name.</p>
+</section>
+      <h4><a class="xref" href="ETLBox.DataFlow.Transformations.ColumnRename-1.html">ColumnRename&lt;TInput&gt;</a></h4>
+      <section><p>ColumnRename allows you to rename the column or properties names of your ingoing data.
+This transformation works with objects, ExpandoObjects and arrays as input data type.<br>
+Provide a column mapping with the old and the new name. The mapping can also be automatically retrieved from
+existing ColumnMap attributes. For arrays provide the array index and the new name.</p>
+</section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.CrossJoin.html">CrossJoin</a></h4>
-      <section><p>Will cross join data from the two inputs into one output. The input for the first table will be loaded into memory before the actual
-join can start. After this, every incoming row will be joined with every row of the InMemory-Table by the function CrossJoinFunc.
+      <section><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
 The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.CrossJoin-1.html">CrossJoin&lt;TInput&gt;</a></h4>
-      <section><p>Will cross join data from the two inputs into one output. The input for the first table will be loaded into memory before the actual
-join can start. After this, every incoming row will be joined with every row of the InMemory-Table by the function CrossJoinFunc.
+      <section><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
 The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.CrossJoin-3.html">CrossJoin&lt;TInput1, TInput2, TOutput&gt;</a></h4>
-      <section><p>Will cross join data from the two inputs into one output. The input for the first table will be loaded into memory before the actual
-join can start. After this, every incoming row will be joined with every row of the InMemory-Table by the function CrossJoinFunc.
+      <section><p>The CrossJoin allows you to combine every record from one input with every record from the other input.
+The input for the first table will be loaded into memory before join starts.
+Then every incoming row will be joined with every row of the InMemory-Table using the CrossJoinFunc function.
 The InMemory target should always be the target of the smaller amount of data to reduce memory consumption and processing time.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.CrossJoin-3.InMemoryDestination-1.html">CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation.html">LookupTransformation</a></h4>
-      <section><p>A lookup task - incoming rows can be enriched with data retrieved from the lookup source.
-For each rows that comes in, a matching records is search for in the lookup source. If one is found,
-the missing properties are filled with values from the source.
-Data is read from the lookup source when the first rows arrives in the LookupTransformation.</p>
+      <section><p>The lookup transformation enriches the incoming data with data from the lookup source.
+Data from the lookup source is read into memory when the first record arrives.
+For each incoming row, the lookup tries to find a matching record in the
+memory table and uses this record to add additional data to the ingoing row.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2.html">LookupTransformation&lt;TInput, TSourceOutput&gt;</a></h4>
-      <section><p>A lookup task - incoming rows can be enriched with data retrieved from the lookup source.
-For each rows that comes in, a matching records is search for in the lookup source. If one is found,
-the missing properties are filled with values from the source.
-Data is read from the lookup source when the first rows arrives in the LookupTransformation.</p>
+      <section><p>The lookup transformation enriches the incoming data with data from the lookup source.
+Data from the lookup source is read into memory when the first record arrives.
+For each incoming row, the lookup tries to find a matching record in the
+memory table and uses this record to add additional data to the ingoing row.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.MergeJoin.html">MergeJoin</a></h4>
       <section><p>Will join data from the two inputs into one output. Make sure both inputs are sorted or in the right order.
@@ -864,7 +888,7 @@ Each row from the left join target will be merged with a row from the right join
 If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
 <p>You can define a match condition that let you only merge matching records. This will change the
 match behavior a little bit.
-By assuming that the intput is sorted, not matching records will be joined with null then. This
+By assuming that the input is sorted, not matching records will be joined with null then. This
 can be compared with a left or right join.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.MergeJoin-1.html">MergeJoin&lt;TInput&gt;</a></h4>
@@ -873,7 +897,7 @@ Each row from the left join target will be merged with a row from the right join
 If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
 <p>You can define a match condition that let you only merge matching records. This will change the
 match behavior a little bit.
-By assuming that the intput is sorted, not matching records will be joined with null then. This
+By assuming that the input is sorted, not matching records will be joined with null then. This
 can be compared with a left or right join.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.MergeJoin-3.html">MergeJoin&lt;TInput1, TInput2, TOutput&gt;</a></h4>
@@ -882,7 +906,7 @@ Each row from the left join target will be merged with a row from the right join
 If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
 <p>You can define a match condition that let you only merge matching records. This will change the
 match behavior a little bit.
-By assuming that the intput is sorted, not matching records will be joined with null then. This
+By assuming that the input is sorted, not matching records will be joined with null then. This
 can be compared with a left or right join.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.Multicast.html">Multicast</a></h4>
@@ -896,10 +920,12 @@ Every linked component will receive a copy of the rows that the Multicast receiv
 There is no limit how many target the Multicast can be linked to.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.RowDuplication.html">RowDuplication</a></h4>
-      <section><p>Creates one or more duplicates of your incoming row.</p>
+      <section><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.RowDuplication-1.html">RowDuplication&lt;TInput&gt;</a></h4>
-      <section><p>Creates one or more duplicates of your incoming row.</p>
+      <section><p>Creates one or more duplicates of your incoming row. Use the CanDuplicate
+property if you want to duplicate only particular rows.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.RowMultiplication.html">RowMultiplication</a></h4>
       <section><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
@@ -911,27 +937,31 @@ There is no limit how many target the Multicast can be linked to.</p>
       <section><p>This transformation allow you to transform one row of your input data into multiple rows.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.RowTransformation.html">RowTransformation</a></h4>
-      <section><p>The RowTransformation will apply the TransformationFunc to each row of data once.</p>
+      <section><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.RowTransformation-1.html">RowTransformation&lt;TInput&gt;</a></h4>
-      <section><p>The RowTransformation will apply the TransformationFunc to each row of data once.</p>
+      <section><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.RowTransformation-2.html">RowTransformation&lt;TInput, TOutput&gt;</a></h4>
-      <section><p>The RowTransformation will apply the TransformationFunc to each row of data once.</p>
+      <section><p>The RowTransformation will apply the transformation function to each row of data.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.Sort.html">Sort</a></h4>
-      <section><p>Sort the incoming data with the given sort function.
+      <section><p>Sorts the incoming data with by the given comparison function.
 This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.Sort-1.html">Sort&lt;TInput&gt;</a></h4>
-      <section><p>Sort the incoming data with the given sort function.
+      <section><p>Sorts the incoming data with by the given comparison function.
 This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.XmlSchemaValidation.html">XmlSchemaValidation</a></h4>
-      <section><p>Verifies each incoming xml element by a given schema. Non valid xml throws an exception or is redirected into the error output.</p>
+      <section><p>Validate XML code in your incoming data against a XML schema definition.
+You need to define how the XML string can be read from your data row and the schema definition.
+Rows with a schema that is not valid are send to the error output..</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Transformations.XmlSchemaValidation-1.html">XmlSchemaValidation&lt;TInput&gt;</a></h4>
-      <section><p>Verifies each incoming xml element by a given schema. Non valid xml throws an exception or is redirected into the error output.</p>
+      <section><p>Validate XML code in your incoming data against a XML schema definition.
+You need to define how the XML string can be read from your data row and the schema definition.
+Rows with a schema that is not valid are send to the error output..</p>
 </section>
     <h3 id="enums">Enums
   </h3>
@@ -942,10 +972,6 @@ This is a blocking transformation - no output will be produced until all input d
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -962,7 +988,7 @@ This is a blocking transformation - no output will be produced until all input d
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

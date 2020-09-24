@@ -9,9 +9,9 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Example: Multicast to split data | ETLBox - a lightweight ETL library for C#. </title>
+    <title>Custom sources &amp; destinations | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Example: Multicast to split data | ETLBox - a lightweight ETL library for C#. ">
+    <meta name="title" content="Custom sources &amp; destinations | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -99,37 +99,73 @@
                             <a href="../overview.html" title="What is ETLBox" class="">What is ETLBox</a>
                           </li>
                           <li class="">
-                            <a href="../getting_started.html" title="Core concepts" class="">Core concepts</a>
+                            <a href="../dataflow/core_concepts.html" title="Core concepts" class="">Core concepts</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/sources_destinations.html" title="Sources and destinations" class="">Sources and destinations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/transformations_overview.html" title="Transformations" class="">Transformations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
                           </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
-                      <a class="">DataFlow Tutorial</a>
+                      <a class="">Going further</a>
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="../dataflow/dataflow_simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                            <a href="../transformations/row_manipulations.html" title="Row manipulations" class="">Row manipulations</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_db_sources_destinations.html" title="Integrate databases" class="">Integrate databases</a>
+                            <a href="../transformations/lookup_data.html" title="Lookup" class="">Lookup</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_file_sources_destinations.html" title="Integrate flat files and web services" class="">Integrate flat files and web services</a>
+                            <a href="../transformations/broadcast_merge_join.html" title="Broadcast - joins - split" class="">Broadcast - joins - split</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_transformations.html" title="Transformations" class="">Transformations</a>
+                            <a href="../transformations/aggregating_data.html" title="Aggregating data" class="">Aggregating data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                            <a href="../connectors/syncing_merge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Connectors</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../connectors/databases.html" title="Databases" class="">Databases</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
+                            <a href="../connectors/csv.html" title="Csv data" class="">Csv data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_dbmerge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                            <a href="../connectors/json.html" title="Json data" class="">Json data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_other_sources_destinations.html" title="Other sources and destinations" class="">Other sources and destinations</a>
+                            <a href="../connectors/excel.html" title="Excel" class="">Excel</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/memory.html" title="In memory" class="">In memory</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/xml.html" title="Xml" class="">Xml</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/text.html" title="Text" class="">Text</a>
+                          </li>
+                          <li class="active">
+                            <a href="../connectors/custom.html" title="Custom code" class="active">Custom code</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -170,103 +206,53 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="example-multicast-to-split-data">Example: Multicast to split data</h1>
+<h1 id="custom-sources--destinations">Custom sources &amp; destinations</h1>
 
-<h2 id="purpose">Purpose</h2>
-<p>The following examples shows how to use a Multicast to split data. We receive data from one flat file
-and we want to split up the data into two tables, each containing only a part of the data.</p>
-<h2 id="creating-the-flat-file">Creating the flat file</h2>
-<p>For this example we have a flat file containing a small example data set</p>
-<pre><code class="lang-CSV">Value1;Value2;Value3;Value4
-one;two;three;four
-five;six;seven;eight
-</code></pre>
-<h2 id="creating-the-pocos">Creating the POCOs</h2>
-<pre><code class="lang-C#">internal class TestPoco
-{
-    public string Value1 { get; set; }
-    public string Value2 { get; set; }
-    public string Value3 { get; set; }
-    public string Value4 { get; set; }
+<p>ETLBox allows you to write your own implementation of sources and destinations. This gives you a
+great flexibility if you need to integrate systems that are currently now included in the list of default
+connectors.</p>
+<h2 id="customsource">CustomSource</h2>
+<p>A custom source can generate any type of  output you need.
+It will accept tow function: One function that generates the your output, and another one that return true if you reached the end of your data.</p>
+<h3 id="simple-example">Simple example</h3>
+<p>Let's look at a simple example. Assuming we have a list of strings, and we want to return these string wrapped into an object data for our source.</p>
+<p>First we define an object</p>
+<pre><code class="lang-C#">public class MyRow {
+    public int Id { get; set; }
+    public string Value { get; set; }
 }
 
-internal class TestEntity1
-{
-    public string Col1 { get; set; }
-    public string Col3 { get; set; }
-}
+List&lt;string&gt; Data = new List&lt;string&gt;() { &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot; };
+int _readIndex = 0;
 
-internal class TestEntity2
-{
-    public string Col2 { get; set; }
-    public string Col4 { get; set; }
-}
-</code></pre>
-<h2 id="creating-the-destination-tables">Creating the destination tables</h2>
-<p>Now we create the destination tables.</p>
-<pre><code class="lang-C#">    private TableDefinition CreateTable(string tablename)
-    {
-        var def = new TableDefinition(tablename, new List&lt;TableColumn&gt;
+CustomSource&lt;MySimpleRow&gt; source = new CustomSource&lt;MySimpleRow&gt;(
+    () =&gt; {
+        return new MyRow()
         {
-        new TableColumn(&quot;Col1&quot;, &quot;nvarchar(100)&quot;, true),
-        new TableColumn(&quot;Col2&quot;, &quot;nvarchar(100)&quot;, true),
-        new TableColumn(&quot;Col3&quot;, &quot;nvarchar(100)&quot;, true),
-        new TableColumn(&quot;Col4&quot;, &quot;nvarchar(100)&quot;, true)
-        });
-        def.CreateTable();
-        return def;
+            Id = _readIndex++,
+            Value = Data[_readIndex]
+        };
+    }, 
+    () =&gt; _readIndex &gt;= Data.Count);
+</code></pre>
+<p>CustomSource also works with dynamic ExpandoObject and arrays.</p>
+<h2 id="custom-destination">Custom Destination</h2>
+<p>The use of a custom destination is even simpler - a custom destination
+just calls an action for every received record.</p>
+<p>Here is an example:</p>
+<pre><code class="lang-C#">CustomDestination&lt;MySimpleRow&gt; dest = new CustomDestination&lt;MySimpleRow&gt;(
+    row =&gt; {
+        SqlTask.ExecuteNonQuery(Connection, &quot;Insert row&quot;,
+            $&quot;INSERT INTO dbo.CustomDestination VALUES({row.Id},'{row.Value}')&quot;);
     }
+);
 </code></pre>
-<h2 id="creating-the-dataflow">Creating the dataflow</h2>
-<p>Now we create a dataflow that reads from the source and splits the data into Table1 and Table2.</p>
-<pre><code class="lang-C#">var tableDestination1 = this.CreateTable(&quot;test.Table1&quot;);
-var tableDestination2 = this.CreateTable(&quot;test.Table2&quot;);
-
-var row1 = new RowTransformation&lt;TestPoco, TestEntity1&gt;(input =&gt; {
-    return new TestEntity1
-    {
-        Col1 = input.Value1,
-        Col3 = input.Value3
-    };
-});
-var row2 = new RowTransformation&lt;TestPoco, TestEntity2&gt;(input =&gt; {
-    return new TestEntity2
-    {
-        Col2 = input.Value2,
-        Col4 = input.Value4
-    };
-});
-
-var source = new CsvSource&lt;TestPoco&gt;(&quot;src/DataFlowExamples/Issue5.csv&quot;) {
-    Configuration = new CsvHelper.Configuration.Configuration() { Delimiter = &quot;;&quot; }
-};
-var multicast = new Multicast&lt;TestPoco&gt;();
-var destination1 = new DbDestination&lt;TestEntity1&gt;(&quot;test.Table1&quot;);
-var destination2 = new DbDestination&lt;TestEntity2&gt;(&quot;test.Table2&quot;);
-
-source.LinkTo(multicast);
-multicast.LinkTo(row1);
-multicast.LinkTo(row2);
-
-row1.LinkTo(destination1);
-row2.LinkTo(destination2);
-
-source.Execute();
-destination1.Wait();
-destination2.Wait();
-</code></pre>
+<p>CustomDestination also works with dynamic ExpandoObject and arrays.</p>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.docu/blob/main/ETLBoxDocu/articles/examples/example_multicast.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -283,7 +269,7 @@ destination2.Wait();
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

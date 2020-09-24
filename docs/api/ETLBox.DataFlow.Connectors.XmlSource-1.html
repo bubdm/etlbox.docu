@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -811,13 +820,13 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
+    <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowStreamSource-1.html">IDataFlowStreamSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource</a>&lt;TOutput&gt;</div>
-    <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1042,7 +1051,7 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   <h6><strong>Assembly</strong>: ETLBox.Xml.dll</h6>
   <h5 id="ETLBox_DataFlow_Connectors_XmlSource_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class XmlSource&lt;TOutput&gt; : DataFlowStreamSource&lt;TOutput&gt;, IDataFlowComponent, IDataFlowLogging, IDataFlowStreamSource&lt;TOutput&gt;, IDataFlowExecutableSource&lt;TOutput&gt;, ILoggableTask, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource</code></pre>
+    <pre><code class="lang-csharp hljs">public class XmlSource&lt;TOutput&gt; : DataFlowStreamSource&lt;TOutput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowStreamSource&lt;TOutput&gt;, IDataFlowExecutableSource&lt;TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1064,13 +1073,6 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
 
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L45">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor">XmlSource()</h4>
   <div class="markdown level1 summary"></div>
@@ -1079,13 +1081,6 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public XmlSource()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1__ctor_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L52">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor(System.String)">XmlSource(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1111,13 +1106,6 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1__ctor_System_String_ETLBox_DataFlow_ResourceType_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.%23ctor(System.String%2CETLBox.DataFlow.ResourceType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L57">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.#ctor(System.String,ETLBox.DataFlow.ResourceType)">XmlSource(String, ResourceType)</h4>
   <div class="markdown level1 summary"></div>
@@ -1150,13 +1138,6 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1_ElementName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.ElementName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L39">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_ElementName_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ElementName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_ElementName" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ElementName">ElementName</h4>
   <div class="markdown level1 summary"><p>The element name of the document that contains an item of the data to be parsed</p>
@@ -1181,13 +1162,6 @@ By default, data is pulled via httpclient. Use the ResourceType property to read
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L29">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1215,13 +1189,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1_XmlSerializer.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.XmlSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L34">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_XmlSerializer_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.XmlSerializer*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_XmlSerializer" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.XmlSerializer">XmlSerializer</h4>
   <div class="markdown level1 summary"><p>The XmlSerializer used to deserialize the xml into the used data type.</p>
@@ -1248,13 +1215,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1_CloseReader.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.CloseReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L118">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_CloseReader_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.CloseReader*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_CloseReader" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.CloseReader">CloseReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -1265,13 +1225,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1_InitReader.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.InitReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L70">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_InitReader_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.InitReader*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_InitReader" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.InitReader">InitReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -1282,13 +1235,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.InitReader()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1_ReadAllRecords.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601.ReadAllRecords%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L75">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlSource_1_ReadAllRecords_" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ReadAllRecords*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlSource_1_ReadAllRecords" data-uid="ETLBox.DataFlow.Connectors.XmlSource`1.ReadAllRecords">ReadAllRecords()</h4>
   <div class="markdown level1 summary"></div>
@@ -1301,7 +1247,7 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+      <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
@@ -1313,29 +1259,19 @@ with a default name that can be overwritten.</p>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource&lt;TOutput&gt;</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource&lt;TOutput&gt;</a>
   </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
   </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlSource_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlSource%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlSource.cs/#L24" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1352,7 +1288,7 @@ with a default name that can be overwritten.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

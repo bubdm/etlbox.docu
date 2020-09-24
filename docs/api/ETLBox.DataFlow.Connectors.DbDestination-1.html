@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -810,11 +819,11 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowBatchDestination-1.html">IDataFlowBatchDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -841,9 +850,6 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowBatchDestination&lt;TInput&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_InternalInitBufferObjects">DataFlowBatchDestination&lt;TInput&gt;.InternalInitBufferObjects()</a>
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnSuccess">DataFlowBatchDestination&lt;TInput&gt;.CleanUpOnSuccess()</a>
@@ -1006,7 +1012,7 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Connectors_DbDestination_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DbDestination&lt;TInput&gt; : DataFlowBatchDestination&lt;TInput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowBatchDestination&lt;TInput&gt;, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class DbDestination&lt;TInput&gt; : DataFlowBatchDestination&lt;TInput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowBatchDestination&lt;TInput&gt;, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1026,13 +1032,6 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L66">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor">DbDestination()</h4>
   <div class="markdown level1 summary"></div>
@@ -1041,13 +1040,6 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public DbDestination()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1__ctor_ETLBox_Connection_IConnectionManager_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.%23ctor(ETLBox.Connection.IConnectionManager%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L80">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbDestination(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1080,13 +1072,6 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1__ctor_ETLBox_Connection_IConnectionManager_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.%23ctor(ETLBox.Connection.IConnectionManager%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L95">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_ETLBox_Connection_IConnectionManager_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(ETLBox.Connection.IConnectionManager,System.String,System.Int32)">DbDestination(IConnectionManager, String, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -1125,13 +1110,6 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1__ctor_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L73">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(System.String)">DbDestination(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1158,13 +1136,6 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1__ctor_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.%23ctor(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L87">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1__ctor_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.#ctor(System.String,System.Int32)">DbDestination(String, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -1197,15 +1168,32 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
       </tr>
     </tbody>
   </table>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_DEFAULT_BATCH_SIZE_ODBC_OLEDB" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.DEFAULT_BATCH_SIZE_ODBC_OLEDB">DEFAULT_BATCH_SIZE_ODBC_OLEDB</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DEFAULT_BATCH_SIZE_ODBC_OLEDB = 100</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertConnectionManager.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.BulkInsertConnectionManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L40">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertConnectionManager_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertConnectionManager*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertConnectionManager" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertConnectionManager">BulkInsertConnectionManager</h4>
   <div class="markdown level1 summary"><p>The connection manager used for the bulk inserts. This is a copy of the provided connection
@@ -1231,13 +1219,6 @@ manager.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1_ConnectionManager.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.ConnectionManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L49">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_ConnectionManager_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ConnectionManager*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_ConnectionManager" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ConnectionManager">ConnectionManager</h4>
   <div class="markdown level1 summary"><p>The connection manager used to connect to the database - use the right connection manager for your database type.</p>
@@ -1262,13 +1243,6 @@ manager.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1_DestinationTableDefinition.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.DestinationTableDefinition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L29">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_DestinationTableDefinition_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.DestinationTableDefinition*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_DestinationTableDefinition" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.DestinationTableDefinition">DestinationTableDefinition</h4>
   <div class="markdown level1 summary"><p>The table definition of the destination table. By default, the table definition is read from the database.
@@ -1295,13 +1269,6 @@ only to use the columns in the provided definition.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1_TableName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.TableName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L34">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_TableName_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TableName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_TableName" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TableName">TableName</h4>
   <div class="markdown level1 summary"><p>Name of the database table that receives the data from the data flow.</p>
@@ -1326,13 +1293,6 @@ only to use the columns in the provided definition.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L22">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1362,13 +1322,6 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1_FinishWrite.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.FinishWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L150">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_FinishWrite_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.FinishWrite*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_FinishWrite" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.FinishWrite">FinishWrite()</h4>
   <div class="markdown level1 summary"></div>
@@ -1379,13 +1332,16 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.FinishWrite()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.PrepareWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L117">View Source</a>
-  </span>
+  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.InternalInitBufferObjects*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InternalInitBufferObjects()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.InternalInitBufferObjects()</span></div>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareWrite*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareWrite">PrepareWrite()</h4>
   <div class="markdown level1 summary"></div>
@@ -1396,13 +1352,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.PrepareWrite()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1_TryBulkInsertData__0___.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601.TryBulkInsertData(%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L127">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_TryBulkInsertData_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TryBulkInsertData*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_TryBulkInsertData__0___" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TryBulkInsertData(`0[])">TryBulkInsertData(TInput[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1435,9 +1384,6 @@ with a default name that can be overwritten.</p>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1449,21 +1395,14 @@ with a default name that can be overwritten.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbDestination_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbDestination%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbDestination.cs/#L17" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1480,7 +1419,7 @@ with a default name that can be overwritten.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

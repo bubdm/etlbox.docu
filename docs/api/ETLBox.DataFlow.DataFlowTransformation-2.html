@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -806,6 +815,7 @@
       <div class="level5"><a class="xref" href="ETLBox.DataFlow.Connectors.DbMerge-1.html">DbMerge&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="ETLBox.DataFlow.Transformations.Aggregation-2.html">Aggregation&lt;TInput, TOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="ETLBox.DataFlow.Transformations.BlockTransformation-2.html">BlockTransformation&lt;TInput, TOutput&gt;</a></div>
+      <div class="level5"><a class="xref" href="ETLBox.DataFlow.Transformations.ColumnRename-1.html">ColumnRename&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2.html">LookupTransformation&lt;TInput, TSourceOutput&gt;</a></div>
       <div class="level5"><a class="xref" href="ETLBox.DataFlow.Transformations.Multicast-1.html">Multicast&lt;TInput&gt;</a></div>
       <div class="level5"><a class="xref" href="ETLBox.DataFlow.Transformations.RowDuplication-1.html">RowDuplication&lt;TInput&gt;</a></div>
@@ -817,13 +827,13 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;TInput, TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1009,7 +1019,7 @@
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_DataFlowTransformation_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class DataFlowTransformation&lt;TInput, TOutput&gt; : DataFlowSource&lt;TOutput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class DataFlowTransformation&lt;TInput, TOutput&gt; : DataFlowSource&lt;TOutput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1032,13 +1042,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowTransformation%602.TargetBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowTransformation.cs/#L12">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock_" data-uid="ETLBox.DataFlow.DataFlowTransformation`2.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock" data-uid="ETLBox.DataFlow.DataFlowTransformation`2.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -1068,9 +1071,6 @@
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1088,21 +1088,14 @@
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowTransformation_2.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowTransformation%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowTransformation.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1119,7 +1112,7 @@
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

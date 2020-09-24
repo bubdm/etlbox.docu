@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -839,13 +848,6 @@ various sql data types into the right database specific database or into a .NET 
   </div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_Helper_DataTypeConverter_GetDBType_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.Helper.DataTypeConverter.GetDBType(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Helper/DataTypeConverter.cs/#L99">View Source</a>
-  </span>
   <a id="ETLBox_Helper_DataTypeConverter_GetDBType_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_GetDBType_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetDBType(System.String)">GetDBType(String)</h4>
   <div class="markdown level1 summary"><p>Returns the ADO.NET System.Data.DbType object for a specific sql type.
@@ -890,13 +892,6 @@ E.g. the method would return the System.Data.DbType.String for the sql type 'CHA
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_Helper_DataTypeConverter_GetStringLengthFromCharString_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.Helper.DataTypeConverter.GetStringLengthFromCharString(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Helper/DataTypeConverter.cs/#L25">View Source</a>
-  </span>
   <a id="ETLBox_Helper_DataTypeConverter_GetStringLengthFromCharString_" data-uid="ETLBox.Helper.DataTypeConverter.GetStringLengthFromCharString*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_GetStringLengthFromCharString_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetStringLengthFromCharString(System.String)">GetStringLengthFromCharString(String)</h4>
   <div class="markdown level1 summary"><p>Returns the string length that a sql char datatype has in it's definition.
@@ -941,13 +936,6 @@ E.g. VARCHAR(40) would return 40, NVARCHAR2 ( 2 ) returns 2</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_Helper_DataTypeConverter_GetTypeObject_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.Helper.DataTypeConverter.GetTypeObject(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Helper/DataTypeConverter.cs/#L91">View Source</a>
-  </span>
   <a id="ETLBox_Helper_DataTypeConverter_GetTypeObject_" data-uid="ETLBox.Helper.DataTypeConverter.GetTypeObject*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_GetTypeObject_System_String_" data-uid="ETLBox.Helper.DataTypeConverter.GetTypeObject(System.String)">GetTypeObject(String)</h4>
   <div class="markdown level1 summary"><p>Returns the .NET type object for a specific sql type.
@@ -992,13 +980,6 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_System_String_ETLBox_Connection_ConnectionManagerType_.md&amp;value=---%0Auid%3A%20ETLBox.Helper.DataTypeConverter.TryConvertDbDataType(System.String%2CETLBox.Connection.ConnectionManagerType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Helper/DataTypeConverter.cs/#L113">View Source</a>
-  </span>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertDbDataType(String, ConnectionManagerType)</h4>
   <div class="markdown level1 summary"><p>Tries to convert the data type from the TableColumn into a database specific type.</p>
@@ -1048,13 +1029,6 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_System_String_ETLBox_Connection_ConnectionManagerType_.md&amp;value=---%0Auid%3A%20ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType(System.String%2CETLBox.Connection.ConnectionManagerType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Helper/DataTypeConverter.cs/#L123">View Source</a>
-  </span>
   <a id="ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_" data-uid="ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_TryGetDbSpecificType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryGetDbSpecificType(System.String,ETLBox.Connection.ConnectionManagerType)">TryGetDbSpecificType(String, ConnectionManagerType)</h4>
   <div class="markdown level1 summary"><p>Tries to convert the data type into a database specific type.
@@ -1114,16 +1088,6 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_Helper_DataTypeConverter.md&amp;value=---%0Auid%3A%20ETLBox.Helper.DataTypeConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Helper/DataTypeConverter.cs/#L12" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1140,7 +1104,7 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

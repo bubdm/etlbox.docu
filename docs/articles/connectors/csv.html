@@ -9,9 +9,9 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Integration of flat files  and web services | ETLBox - a lightweight ETL library for C#. </title>
+    <title>Csv | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Integration of flat files  and web services | ETLBox - a lightweight ETL library for C#. ">
+    <meta name="title" content="Csv | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -99,37 +99,73 @@
                             <a href="../overview.html" title="What is ETLBox" class="">What is ETLBox</a>
                           </li>
                           <li class="">
-                            <a href="../getting_started.html" title="Core concepts" class="">Core concepts</a>
+                            <a href="../dataflow/core_concepts.html" title="Core concepts" class="">Core concepts</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/sources_destinations.html" title="Sources and destinations" class="">Sources and destinations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/transformations_overview.html" title="Transformations" class="">Transformations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
                           </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
-                      <a class="">DataFlow Tutorial</a>
+                      <a class="">Going further</a>
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="../dataflow/dataflow_simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                            <a href="../transformations/row_manipulations.html" title="Row manipulations" class="">Row manipulations</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_db_sources_destinations.html" title="Integrate databases" class="">Integrate databases</a>
+                            <a href="../transformations/lookup_data.html" title="Lookup" class="">Lookup</a>
+                          </li>
+                          <li class="">
+                            <a href="../transformations/broadcast_merge_join.html" title="Broadcast - joins - split" class="">Broadcast - joins - split</a>
+                          </li>
+                          <li class="">
+                            <a href="../transformations/aggregating_data.html" title="Aggregating data" class="">Aggregating data</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/syncing_merge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Connectors</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../connectors/databases.html" title="Databases" class="">Databases</a>
                           </li>
                           <li class="active">
-                            <a href="../dataflow/dataflow_file_sources_destinations.html" title="Integrate flat files and web services" class="active">Integrate flat files and web services</a>
+                            <a href="../connectors/csv.html" title="Csv data" class="active">Csv data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_transformations.html" title="Transformations" class="">Transformations</a>
+                            <a href="../connectors/json.html" title="Json data" class="">Json data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                            <a href="../connectors/excel.html" title="Excel" class="">Excel</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
+                            <a href="../connectors/memory.html" title="In memory" class="">In memory</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_dbmerge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                            <a href="../connectors/xml.html" title="Xml" class="">Xml</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_other_sources_destinations.html" title="Other sources and destinations" class="">Other sources and destinations</a>
+                            <a href="../connectors/text.html" title="Text" class="">Text</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/custom.html" title="Custom code" class="">Custom code</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -170,29 +206,22 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="integration-of-flat-files--and-web-services">Integration of flat files  and web services</h1>
+<h1 id="csv">Csv</h1>
 
-<h2 id="resource-type-and-web-requests">Resource Type and Web Requests</h2>
-<p>All  sources and destinations in this artice can be set to work either with a file
-or to use data from a webservice. If you want to access a file on your drive or a network share,
-use the componenten with the <code>ResourceType.File</code> option.
-This is default for CsvSource/CsvDestination, but not for the XmlSource/XmlDestination or JsonSource/JsonDestination.
-The other option is <code>ResourceType.Http</code> - and allows you to read data from a web service.
-Instead of a filename just provide a Url. Furthermore, the components also have
-a <code>[HttpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=netframework-4.8)</code> property
-that can be used to configure the Http request, e.g. to add authentication or use https instead.</p>
-<h2 id="csv">Csv</h2>
+<h2 id="csv-connector-package">Csv connector package</h2>
 <h3 id="csvsource">CsvSource</h3>
 <p>A CcsvSource simple reads data from a CSV file.
-It is based on the <a href="https://joshclose.github.io/CsvHelper/">library CsvHelper created by Josh Close</a>.
 In the following examples, you will learn how to configure the CsvReader to your needs.
 See the documentation of CsvHelper to learn more about the configuration options for the CsvReader itself.</p>
+<h3 id="3rd-party-library">3rd party library</h3>
+<p>The csv connector package is based on the <a href="https://joshclose.github.io/CsvHelper/">library CsvHelper created by Josh Close</a>.</p>
+<h4 id="example">Example</h4>
 <p>Let's start with a simple example:</p>
 <pre><code class="lang-C#">CsvSource source = new CsvSource(&quot;Demo.csv&quot;);
 source.Configuration.Delimiter = &quot;;&quot;;
 source.Configuration.IgnoreBlankLines = true;
 </code></pre>
-<p>This will creata a source component that reads the data from a &quot;Demo.csv&quot; file. This file could look like this:</p>
+<p>This will create a source component that reads the data from a &quot;Demo.csv&quot; file. This file could look like this:</p>
 <pre><code class="lang-csv">Row_Nr;Value
 1;Test1
 2;Test2
@@ -270,332 +299,11 @@ CsvDestination&lt;MySimpleRow&gt; dest = new CsvDestination&lt;MySimpleRow&gt;(&
 </code></pre>
 <p>If you use the ExpandoObject, the header names will be derived from the property names. In most cases, this will work as expected.
 If you use an array, e.g. <code>CsvDestination&lt;string[]&gt;</code>, you won't get a header column.</p>
-<h2 id="json">Json</h2>
-<h3 id="jsonsource">JsonSource</h3>
-<p>Json Source let you read a json. It is based on the <code>Newtonsoft.Json</code> and the <code>JsonSerializer</code></p>
-<p>Here an example for a json file:</p>
-<pre><code class="lang-json">[
-  {
-    &quot;Col1&quot;: 1,
-    &quot;Col2&quot;: &quot;Test1&quot;
-  },
-  {
-    &quot;Col1&quot;: 2,
-    &quot;Col2&quot;: &quot;Test2&quot;
-  },
-  {
-    &quot;Col1&quot;: 3,
-    &quot;Col2&quot;: &quot;Test3&quot;
-  }
-]
-</code></pre>
-<p>Here is some code that would read that json (and deserialize it into the object type):</p>
-<pre><code class="lang-C#">public class MySimpleRow
-{
-    public int Col1 { get; set; }
-    public string Col2 { get; set; }
-}
-
-JsonSource&lt;MySimpleRow&gt; source = new JsonSource&lt;Todo&gt;(&quot;http://test.com/&quot;);
-</code></pre>
-<p>This code would then read the three entries from the source and post it into it's connected component.</p>
-<h3 id="nested-arrays">Nested arrays</h3>
-<p>The array doesn't need to be the top node of your json - it could be nested in your json file.
-Like this:</p>
-<pre><code class="lang-C#">{
-    &quot;data&quot;: {
-        &quot;array&quot;: [
-            {
-                &quot;Col1&quot;: 1,
-                &quot;Col2&quot;: &quot;Test1&quot;
-            },
-            ...
-        ]
-    }
-}
-</code></pre>
-<p>ETLBox automatically scans the incoming json file and starts reading (and deserializing) after the
-first occurence of the begin of an array (which is the &quot;[&quot; symbol).</p>
-<h3 id="working-with-jsonserializer">Working with JsonSerializer</h3>
-<p>Sometimes you have a more complex json structure. Here an example:</p>
-<pre><code class="lang-json">[
-    {
-        &quot;Column1&quot;: 1,
-        &quot;Column2&quot;: {
-            &quot;Id&quot;: &quot;A&quot;,
-            &quot;Value&quot;: &quot;Test1&quot;
-        }
-    },
-    ...
-]
-</code></pre>
-<p>If you defined your POCOs types to deserialize this json you would need to create objects like this:</p>
-<pre><code class="lang-C#">public class MyRow
-{
-    public int Column1 { get; set; }
-    public MyIdValueObject Column2 { get; set; }
-}
-
-public class MyIdValueObject
-{
-    public string Id { get; set; }
-    public string Value { get; set; }
-}
-</code></pre>
-<p>Sometimes you don't want to specify all objects that would map your json structure. To get around
-this the underlying JsonSerializer object that is used for deserialization
-is exposed by the JsonSource. <a href="https://www.newtonsoft.com/json/help/html/SerializingJSON.htm"><code>JsonSerializer</code> belongs to Newtonsoft.Json</a><br>
-You could add your own JsonConverter so that you could use JsonPath within your JsonProperty attributes.
-(Please note that the example JsonPathConverter is also part of ETLBox).</p>
-<pre><code class="lang-C#">[JsonConverter(typeof(JsonPathConverter))]
-public class MySimpleRow
-{
-    [JsonProperty(&quot;Column1&quot;)]
-    public int Col1 { get; set; }
-    [JsonProperty(&quot;Column2.Value&quot;)]
-    public string Col2 { get; set; }
-}
-
-JsonSource&lt;MySimpleRow&gt; source = new JsonSource&lt;MySimpleRow&gt;(&quot;res/JsonSource/NestedData.json&quot;, ResourceType.File);
-</code></pre>
-<h3 id="jsondestination">JsonDestination</h3>
-<p>The result of your pipeline can be written as json using a JsonDestination.</p>
-<p>The following code:</p>
-<pre><code class="lang-C#"> public class MySimpleRow
-{
-    public string Col2 { get; set; }
-    public int Col1 { get; set; }
-}
-
-JsonDestination&lt;MySimpleRow&gt; dest = new JsonDestination&lt;MySimpleRow&gt;(&quot;test.json&quot;, ResourceType.File);
-</code></pre>
-<p>would result in the following json:</p>
-<pre><code>[
-  {
-    &quot;Col1&quot;: 1,
-    &quot;Col2&quot;: &quot;Test1&quot;
-  },
-  {
-    &quot;Col1&quot;: 2,
-    &quot;Col2&quot;: &quot;Test2&quot;
-  },
-  {
-    &quot;Col1&quot;: 3,
-    &quot;Col2&quot;: &quot;Test3&quot;
-  }
-]
-</code></pre>
-<p>Like the JsonSource you can modify the exposed <code>JsonSerializer</code> to modfiy the serializing behaviour.
-<a href="https://www.newtonsoft.com/json/help/html/SerializingJSON.htm"><code>JsonSerializer</code> belongs to Newtonsoft.Json</a></p>
-<h3 id="using-json-with-arrays">Using Json with arrays</h3>
-<p>If you don't want to use objects, you can use arrays with your  <code>JsonSource</code>. Your code would look like this:</p>
-<pre><code class="lang-C#">JsonSource&lt;string[]&gt; source = new JsonSource&lt;string[]&gt;(&quot;https://jsonplaceholder.typicode.com/todos&quot;);
-</code></pre>
-<p>Now you either have to override the <code>JsonSerializer</code> yourself in order to properly convert the json into a string[].
-Or your incoming Json has to be in following format:</p>
-<pre><code class="lang-Json">[
-    [
-        &quot;1&quot;,
-        &quot;Test1&quot;
-    ],
-    ...
-]
-</code></pre>
-<h3 id="working-with-dynamic-objects">Working with dynamic objects</h3>
-<p>JsonSource and destination support the usage of dynamic object. This allows you to use
-a dynamic ExpandoObject instead of a POCO.</p>
-<pre><code class="lang-C#">JsonSource&lt;ExpandoObject&gt; source = new JsonSource&lt;ExpandoObject&gt;(&quot;res/JsonSource/TwoColumnsDifferentNames.json&quot;, ResourceType.File);
-
-RowTransformation&lt;ExpandoObject&gt; trans = new RowTransformation&lt;ExpandoObject&gt;(
-    row =&gt;
-    {
-        dynamic r = row as ExpandoObject;
-        r.Col1 = r.Value1;
-        r.Col2 = r.Value2;
-        return r;
-    });
-DbDestination&lt;ExpandoObject&gt; dest = new DbDestination&lt;ExpandoObject&gt;(Connection, &quot;DynamicJson&quot;);
-
-source.LinkTo(trans).LinkTo(dest);
-source.Execute();
-dest.Wait();
-</code></pre>
-<h2 id="xml">Xml</h2>
-<h3 id="xmlsource">XmlSource</h3>
-<p>The xml source let you read data from a xml source. It will use  <code>System.Xml</code> under the hood.</p>
-<p>Let's assume your xml file looks like this:</p>
-<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;Root&gt;
-    &lt;MySimpleRow Col1=&quot;1&quot;&gt;
-        &lt;Col2&gt;Test1&lt;/Col2&gt;
-    &lt;/MySimpleRow&gt;
-    &lt;MySimpleRow Col1=&quot;2&quot;&gt;
-        &lt;Col2&gt;Test2&lt;/Col2&gt;
-    &lt;/MySimpleRow&gt;
-&lt;/Root&gt;
-</code></pre>
-<p>Xml reading is based on the Micrsoft XmlSerializer (using System.Xml.Serialization). You can make use of the default xml attribute
-annotations to influence how data is read by the XmlSerializer. For the example xml above, the following code could read the xml file:</p>
-<pre><code class="lang-C#">[XmlRoot(&quot;MySimpleRow&quot;)]
-public class MyRow
-{
-    [XmlAttribute]
-    public int Col1 { get; set; }
-    public string Col2 { get; set; }
-}
-
-XmlSource&lt;MyRow&gt; source = new XmlSource&lt;MyRow&gt;(&quot;source.xml&quot;, ResourceType.File);
-</code></pre>
-<h4 id="using-dynamic-objects">Using dynamic objects</h4>
-<p>XmlSource does also support the dynamic ExpandoObject. If you want to use it, you can define an ElementName that contains the data you actually
-want to parse - as you normally are not interested in your root element. ETLBox then will look for this Element and parse every occurence of
-it into an ExpandoObject and send it into the connected components.</p>
-<p>Here is an example. If your xml looks like this:</p>
-<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;Root&gt;
-    &lt;MySimpleRow&gt;
-        &lt;Column1&gt;1&lt;/Column1&gt;
-        &lt;Column2&gt;Test1&lt;/Column2&gt;
-    &lt;/MySimpleRow&gt;
-    &lt;MySimpleRow&gt;
-        &lt;Column1&gt;2&lt;/Column1&gt;
-        &lt;Column2&gt;Test2&lt;/Column2&gt;
-    &lt;/MySimpleRow&gt;
-&lt;Root&gt;
-</code></pre>
-<p>You can parse the two elements <mysimplerow> with the follwoing code:<p>
-<pre><code class="lang-C#">XmlSource source = new XmlSource(&quot;demo2.xml&quot;, ResourceType.File)
-{
-    ElementName = &quot;MySimpleRow&quot;
-};
-</code></pre>
-<h3 id="xmldestination">XmlDestination</h3>
-<p>The xml destination will use the same XmlSerializer to serialize the data and write them into an xml file.</p>
-<p>Here is an example how to influence the XmlSerializer using attributes:</p>
-<pre><code class="lang-C#">[XmlRoot(&quot;MySimpleRow&quot;)]
-public class MyRow
-{
-    [XmlAttribute]
-    public int Col1 { get; set; }
-    [XmlAttribute]
-    public string Col2 { get; set; }
-}
-
-XmlDestination&lt;MyRow&gt; dest = new XmlDestination&lt;MyRow&gt;(&quot;dest.xml&quot;, ResourceType.File);
-</code></pre>
-<p>Could create an output that looks like this:</p>
-<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;Root&gt;
-  &lt;MySimpleRow Col1=&quot;1&quot; Col2=&quot;Test1&quot; /&gt;
-  &lt;MySimpleRow Col1=&quot;2&quot; /&gt;
-&lt;/Root&gt;
-</code></pre>
-<h2 id="excel">Excel</h2>
-<h3 id="excelsource">ExcelSource</h3>
-<p>An Excel source reads data from a xls or xlsx file.
-<a href="https://github.com/ExcelDataReader/ExcelDataReader">It is based the 3rd party library <code>ExcelDataReader</code></a>.
-By default the excel reader will try to read all data in the file. You can specify a sheet name and a range
-to restrict this behavior.</p>
-<p>By default, a header column is expected in the first row. The name of the header for each columns
-is used to map the column with the object - if the property is equal the header name, the value of
-subsequent rows is written into the property.</p>
-<p>Let's consider an example. If your excel file looks like this:</p>
-<table>
-<thead>
-<tr>
-<th>Col1</th>
-<th>Col2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Test1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Test2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Test3</td>
-</tr>
-</tbody>
-</table>
-<p>You can easily load this data with an object like this:</p>
-<pre><code class="lang-C#">
-public class ExcelData {
-    public string Col1 { get; set; }
-    public int Col2 { get; set; }
-}
-
-ExcelSource&lt;ExcelData&gt; source = new ExcelSource&lt;ExcelData&gt; (&quot;src/DataFlow/ExcelDataFile.xlsx&quot;);
-</code></pre>
-<p>You can change this behaviour with the Attribute <code>ExcelColumn</code>.
-Here you can either define a different header name used for matching for a property.
-Or you can set the column index for the property - the first column would be 0, the 2nd column 1, ...
-When you using the column index, you can read also from ExcelFile that have no header row.
-In this case, you need to set the property <code>HasNoHeader</code> to true when using the ExcelSource.</p>
-<p>Usage example for an excel file that contains no header. This could like this:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Test1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Test2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Test3</td>
-</tr>
-</tbody>
-</table>
-<p>This is the corresponding object creation:</p>
-<pre><code class="lang-C#">
-public class ExcelData {
-    [ExcelColumn(0)]
-    public string Col1 { get; set; }
-    [ExcelColumn(1)]
-    public int Col2 { get; set; }
-}
-
-ExcelSource&lt;ExcelData&gt; source = new ExcelSource&lt;ExcelData&gt;(&quot;src/DataFlow/ExcelDataFile.xlsx&quot;) {
-    Range = new ExcelRange(2, 4, 5, 9),
-    SheetName = &quot;Sheet2&quot;,
-    HasNoHeader = true
-};
-</code></pre>
-<p>The ExcelRange must not define the full range. It is sufficient if you just set the starting coordinates. The end of the
-data can be automatically determined from the underlying ExcelDataReader.</p>
-<p>The ExcelSource has a property <code>IgnoreBlankRows</code>. This can be set to true, and all rows which cells are completely empty
-are ignored when reading data from your source.</p>
-<h4 id="using-dynamic-objects-1">Using dynamic objects</h4>
-<p>The ExcelSource comes like all other components with with the abitilty to work with dynamic object.</p>
-<p>Just define your ExcelSource like this:</p>
-<pre><code class="lang-C#">ExcelSource source = new ExcelSource(&quot;src/DataFlow/ExcelDataFile.xlsx&quot;);
-</code></pre>
-<p>This will internally create an ExpandoObject for further processing. The property name will automatically be determined by the header column. If you don't have a header column, the property names would be <code>Column1</code> for the first, <code>Column2</code> for the second column and so on.</p>
-</mysimplerow></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.docu/blob/main/ETLBoxDocu/articles/dataflow/dataflow_file_sources_destinations.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -612,7 +320,7 @@ are ignored when reading data from your source.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -812,13 +821,13 @@ in all sheets will be processed.</p>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
+    <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowStreamSource-1.html">IDataFlowStreamSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource</a>&lt;TOutput&gt;</div>
-    <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1043,7 +1052,7 @@ in all sheets will be processed.</p>
   <h6><strong>Assembly</strong>: ETLBox.Excel.dll</h6>
   <h5 id="ETLBox_DataFlow_Connectors_ExcelSource_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ExcelSource&lt;TOutput&gt; : DataFlowStreamSource&lt;TOutput&gt;, IDataFlowComponent, IDataFlowLogging, IDataFlowStreamSource&lt;TOutput&gt;, IDataFlowExecutableSource&lt;TOutput&gt;, ILoggableTask, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource</code></pre>
+    <pre><code class="lang-csharp hljs">public class ExcelSource&lt;TOutput&gt; : DataFlowStreamSource&lt;TOutput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowStreamSource&lt;TOutput&gt;, IDataFlowExecutableSource&lt;TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1069,13 +1078,6 @@ in all sheets will be processed.</p>
 
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L67">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1__ctor" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.#ctor">ExcelSource()</h4>
   <div class="markdown level1 summary"></div>
@@ -1084,13 +1086,6 @@ in all sheets will be processed.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ExcelSource()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1__ctor_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L74">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.#ctor(System.String)">ExcelSource(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1119,13 +1114,6 @@ in all sheets will be processed.</p>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_ExcelFilePassword.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.ExcelFilePassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L39">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_ExcelFilePassword_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.ExcelFilePassword*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_ExcelFilePassword" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.ExcelFilePassword">ExcelFilePassword</h4>
   <div class="markdown level1 summary"><p>The password for the excel files.</p>
@@ -1150,13 +1138,6 @@ in all sheets will be processed.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_HasNoHeader.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.HasNoHeader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L61">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_HasNoHeader_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.HasNoHeader*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_HasNoHeader" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.HasNoHeader">HasNoHeader</h4>
   <div class="markdown level1 summary"><p>Indicates that the excel data doesn't has any header information.
@@ -1182,13 +1163,6 @@ If set to true, the ExcelSource works best with ExpandoObject or string[] arrays
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_IgnoreBlankRows.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.IgnoreBlankRows%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L55">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_IgnoreBlankRows_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.IgnoreBlankRows*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_IgnoreBlankRows" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.IgnoreBlankRows">IgnoreBlankRows</h4>
   <div class="markdown level1 summary"><p>If set to true, blank rows will be ignored. By default, the ExcelSource will stop reading after encountering the first blank row.
@@ -1214,13 +1188,6 @@ Be careful if you don't define a range and set this to true.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_Range.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.Range%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L44">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_Range_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.Range*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_Range" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.Range">Range</h4>
   <div class="markdown level1 summary"><p>The range in the excel where the data is located.</p>
@@ -1245,13 +1212,6 @@ Be careful if you don't define a range and set this to true.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_SheetName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.SheetName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L49">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_SheetName_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.SheetName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_SheetName" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.SheetName">SheetName</h4>
   <div class="markdown level1 summary"><p>The sheet name from which data should be read</p>
@@ -1276,13 +1236,6 @@ Be careful if you don't define a range and set this to true.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L34">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1312,13 +1265,6 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_CloseReader.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.CloseReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L210">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_CloseReader_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.CloseReader*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_CloseReader" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.CloseReader">CloseReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -1329,13 +1275,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.CloseReader()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_InitReader.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.InitReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L205">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_InitReader_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.InitReader*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_InitReader" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.InitReader">InitReader()</h4>
   <div class="markdown level1 summary"></div>
@@ -1346,13 +1285,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.InitReader()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1_ReadAllRecords.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601.ReadAllRecords%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L91">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_ExcelSource_1_ReadAllRecords_" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.ReadAllRecords*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_ExcelSource_1_ReadAllRecords" data-uid="ETLBox.DataFlow.Connectors.ExcelSource`1.ReadAllRecords">ReadAllRecords()</h4>
   <div class="markdown level1 summary"></div>
@@ -1365,7 +1297,7 @@ with a default name that can be overwritten.</p>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamSource&lt;TOutput&gt;.ReadAllRecords()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+      <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
@@ -1377,29 +1309,19 @@ with a default name that can be overwritten.</p>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource&lt;TOutput&gt;</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource&lt;TOutput&gt;</a>
   </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
   </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_ExcelSource_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.ExcelSource%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Excel/src/Toolbox/ExcelSource.cs/#L30" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1416,7 +1338,7 @@ with a default name that can be overwritten.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

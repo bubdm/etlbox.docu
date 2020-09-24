@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -799,7 +808,7 @@ Each row from the left join target will be merged with a row from the right join
 If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
 <p>You can define a match condition that let you only merge matching records. This will change the
 match behavior a little bit.
-By assuming that the intput is sorted, not matching records will be joined with null then. This
+By assuming that the input is sorted, not matching records will be joined with null then. This
 can be compared with a left or right join.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -816,12 +825,12 @@ can be compared with a left or right join.</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-1.html">IDataFlowTransformation</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TOutput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -992,7 +1001,7 @@ can be compared with a left or right join.</p>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MergeJoin&lt;TInput1, TInput2, TOutput&gt; : DataFlowSource&lt;TOutput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowTransformation&lt;TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class MergeJoin&lt;TInput1, TInput2, TOutput&gt; : DataFlowSource&lt;TOutput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowTransformation&lt;TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1021,20 +1030,19 @@ can be compared with a left or right join.</p>
     </tbody>
   </table>
   <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3_examples"><strong>Examples</strong></h5>
-  <pre><code>MergeJoin&lt;MyDataRow1, MyDataRow2, MyDataRow1> join = new MergeJoin&lt;MyDataRow1, MyDataRow2, MyDataRow1>(Func&lt;TInput1, TInput2, TOutput> mergeJoinFunc);
-source1.LinkTo(join.LeftJoinTarget);
-source2.LinkTo(join.RightJoinTarget);
+  <pre><code>MergeJoin&lt;InputType1, InputType2, OutputType> join = new MergeJoin&lt;InputType1, InputType2, OutputType>();
+join.MergeJoinFunc =  (leftRow, rightRow) => {
+    return new OutputType()
+    {
+        Result = leftRow.Value 1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
 join.LinkTo(dest);</code></pre>
 
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L70">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor">MergeJoin()</h4>
   <div class="markdown level1 summary"></div>
@@ -1043,13 +1051,6 @@ join.LinkTo(dest);</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MergeJoin()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_System_Func__0__1__2__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.%23ctor(System.Func%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L77">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_System_Func__0__1__2__" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor(System.Func{`0,`1,`2})">MergeJoin(Func&lt;TInput1, TInput2, TOutput&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1076,13 +1077,6 @@ join.LinkTo(dest);</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_System_Func__0__1__2__System_Func__0__1_System_Int32__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.%23ctor(System.Func%7B%600%2C%601%2C%602%7D%2CSystem.Func%7B%600%2C%601%2CSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L84">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3__ctor_System_Func__0__1__2__System_Func__0__1_System_Int32__" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.#ctor(System.Func{`0,`1,`2},System.Func{`0,`1,System.Int32})">MergeJoin(Func&lt;TInput1, TInput2, TOutput&gt;, Func&lt;TInput1, TInput2, Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1116,13 +1110,6 @@ join.LinkTo(dest);</code></pre>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_Buffer.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.Buffer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L109">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_Buffer_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.Buffer*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_Buffer" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.Buffer">Buffer</h4>
   <div class="markdown level1 summary"></div>
@@ -1146,13 +1133,6 @@ join.LinkTo(dest);</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_ComparisonFunc.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.ComparisonFunc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L64">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_ComparisonFunc_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.ComparisonFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_ComparisonFunc" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.ComparisonFunc">ComparisonFunc</h4>
   <div class="markdown level1 summary"><p>If the ComparisonFunc is defined, records are compared regarding their sort order and only joined if they match.
@@ -1183,13 +1163,6 @@ Return a value greater than 0 if the record for the right input is in the order 
   <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_3_ComparisonFunc_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Make sure that both inputs are sorted, and the comparison func take the sort order into account.</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_LeftInput.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.LeftInput%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L42">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_LeftInput_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.LeftInput*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_LeftInput" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.LeftInput">LeftInput</h4>
   <div class="markdown level1 summary"><p>The left target of the merge join. Use this to link your source component with.</p>
@@ -1214,13 +1187,6 @@ Return a value greater than 0 if the record for the right input is in the order 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_MergeJoinFunc.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.MergeJoinFunc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L55">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_MergeJoinFunc_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.MergeJoinFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_MergeJoinFunc" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.MergeJoinFunc">MergeJoinFunc</h4>
   <div class="markdown level1 summary"><p>The func that describes how both records from the left and right join target can be joined.</p>
@@ -1245,13 +1211,6 @@ Return a value greater than 0 if the record for the right input is in the order 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_RightInput.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.RightInput%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L47">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_RightInput_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.RightInput*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_RightInput" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.RightInput">RightInput</h4>
   <div class="markdown level1 summary"><p>The right target of the merge join. Use this to link your source component with.</p>
@@ -1276,13 +1235,6 @@ Return a value greater than 0 if the record for the right input is in the order 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_SourceBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.SourceBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L50">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
@@ -1309,13 +1261,6 @@ Return a value greater than 0 if the record for the right input is in the order 
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L37">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_TaskName_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_TaskName" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1345,13 +1290,6 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnFaulted_System_Exception_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.CleanUpOnFaulted(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L107">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1379,13 +1317,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnSuccess.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.CleanUpOnSuccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L101">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1396,13 +1327,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3_InternalInitBufferObjects.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603.InternalInitBufferObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L93">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_3_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.InternalInitBufferObjects*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_3_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`3.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
   <div class="markdown level1 summary"></div>
@@ -1416,9 +1340,6 @@ with a default name that can be overwritten.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
-  </div>
-  <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
   </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
@@ -1435,21 +1356,14 @@ with a default name that can be overwritten.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_3.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L32" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1466,7 +1380,7 @@ with a default name that can be overwritten.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

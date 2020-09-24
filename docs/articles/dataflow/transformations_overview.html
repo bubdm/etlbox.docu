@@ -99,37 +99,73 @@
                             <a href="../overview.html" title="What is ETLBox" class="">What is ETLBox</a>
                           </li>
                           <li class="">
-                            <a href="../getting_started.html" title="Core concepts" class="">Core concepts</a>
+                            <a href="../dataflow/core_concepts.html" title="Core concepts" class="">Core concepts</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/sources_destinations.html" title="Sources and destinations" class="">Sources and destinations</a>
+                          </li>
+                          <li class="active">
+                            <a href="../dataflow/transformations_overview.html" title="Transformations" class="active">Transformations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
                           </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
-                      <a class="">DataFlow Tutorial</a>
+                      <a class="">Going further</a>
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="../dataflow/dataflow_simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                            <a href="../transformations/row_manipulations.html" title="Row manipulations" class="">Row manipulations</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_db_sources_destinations.html" title="Integrate databases" class="">Integrate databases</a>
+                            <a href="../transformations/lookup_data.html" title="Lookup" class="">Lookup</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_file_sources_destinations.html" title="Integrate flat files and web services" class="">Integrate flat files and web services</a>
-                          </li>
-                          <li class="active">
-                            <a href="../dataflow/dataflow_transformations.html" title="Transformations" class="active">Transformations</a>
+                            <a href="../transformations/broadcast_merge_join.html" title="Broadcast - joins - split" class="">Broadcast - joins - split</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                            <a href="../transformations/aggregating_data.html" title="Aggregating data" class="">Aggregating data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
+                            <a href="../connectors/syncing_merge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Connectors</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../connectors/databases.html" title="Databases" class="">Databases</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_dbmerge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                            <a href="../connectors/csv.html" title="Csv data" class="">Csv data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_other_sources_destinations.html" title="Other sources and destinations" class="">Other sources and destinations</a>
+                            <a href="../connectors/json.html" title="Json data" class="">Json data</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/excel.html" title="Excel" class="">Excel</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/memory.html" title="In memory" class="">In memory</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/xml.html" title="Xml" class="">Xml</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/text.html" title="Text" class="">Text</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/custom.html" title="Custom code" class="">Custom code</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -172,120 +208,58 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="transformations">Transformations</h1>
 
+<h2 id="overview">Overview</h2>
+<p>This article will give you an overview of all transformations that currently exist in ETLBox. If you already know what kind of transformation you are looking for, you can visit directly the article that goes more into the details.</p>
+<ul>
+<li><a href="../transformations/row_manipulations.html">Read more about row transformations, duplication and manipulations</a></li>
+<li><a href="../transformations/lookup_data.html">Read more about data retrieval</a></li>
+<li><a href="../transformations/broadcast_merge_join.html">Read more about broadcasting, joining, splitting or merging data</a></li>
+<li><a href="../transformations/aggregating_data.html">Read more about aggregating data and block transformation</a></li>
+</ul>
+<h2 id="transformation-concepts">Transformation concepts</h2>
 <p>Transformations always have at least one input and one output. Inputs can be connected either to other transformations or sources, and the output can also connect to other transformations
 or to destinations.
 The purpose of a transformation component is to take the data from its input(s) and post the transformed data to its outputs. This is done on a row-by-row basis.
 As soon as there is any data in the input, the transformation will start and post the result to the output.</p>
-<h2 id="transformation-concepts">Transformation concepts</h2>
 <h3 id="buffering">Buffering</h3>
-<p>Every transformation will come with an input. If the components connected to the input post data faster than the transformation
-can process it, the buffer will hold this data until the transformation can continue with the next item. This allows a source to read as fast as possible,
-allowing the already read data to be buffered in the memory - so the transformation will always have some data ready to process.</p>
+<p>Every transformation will come with an input buffer. If the transformation receives more data in its input than it is able to process, the buffer will hold this data until the transformation can continue with the next row. This buffering mechanism improves general throughput. E.g. a data source can read all data as fast as possible, as there will always be an input buffer in the transformation that will accept and buffer the record in memory. Whenever the transformation is ready for the next record there is will always be one in the buffer waiting for processing.</p>
+<p>Some transformation will also have an output buffer. This depends on the specific transformations. Also, every destination component comes with an input buffer.</p>
+<h4 id="restricting-buffer-size">Restricting buffer size</h4>
+<p>By default, all input (and output) buffers don't have a limitation how much rows they buffer. Though rows are constantly are removed when processing continues, sometimes there can be a bottleneck where a buffer become bigger and bigger because the processing in the flow doesn't continue fast enough. Normally, there is enough free memory available to handle this. But if needed you can restrict the amount of rows stored in the buffer. Every data flow component has the property <code>MaxBufferSize</code>. If set to a value greater than 0, e.g. 500, it will only allow up to 500 rows in the buffer(s) of the component..</p>
 <h3 id="non-blocking-and-blocking-transformations">Non-Blocking and Blocking transformations</h3>
 <p>Transformation can be either blocking or non-blocking.</p>
 <p>Non-Blocking transformations will start to process data as soon as it finds something in its input buffer.
-In the moment where it discovers data in there, it will  start to transform it and send the data to registered output components.</p>
-<p>Blocking transformations will stop the data processing for the whole pipe - the input buffer will wait until all data has reached the input. This means it will wait until
-all sources in the pipe connected to the transformation have read all data from their source, and all transformations before have processed the incoming data.
-When all data was read from the connected sources and transformations further down the pipe, the blocking transformation will start the transformation. In a transformation
-of a blocking transformation, you will therefore have access to all data buffered within the memory. For instance, the sort component is a blocking transformation.
-It will wait until all data has reached the transformation block - then it will sort it and post the sorted data to its output.</p>
-<h2 id="non-blocking-tranformations">Non blocking tranformations</h2>
+In the moment where it discovers data in there, it will  start to transform it and send the data to registered output components. Using only non-blocking transformation is the fastest way to get data through the data flow pipeline.</p>
+<p>Blocking transformations will stop the data processing for the whole flow - the input buffer will wait until all data has reached the input. This means it will wait until all components connected to this transformation have read all data from their source.
+When all data was read from the connected sources and transformations further down the pipe, the blocking transformation will start its processing. Though this will reduce speed of your flow and consume more memory, the benefit of a blocking transformation is that you will have access to all data in the memory. Sometimes this is mandatory, e.g. if you want to sort data. The sort will always wait until all data has reached the transformation - only then it is able to sort it and post the sorted data to its output.</p>
+<p>Some transformation are partially blocking. This means that they are not blocking the whole flow like a blocking transformation - still some part of it will block. E.g. the Lookup transformation will read data from a lookup source into memory the first time data arrives - this does block the flow until the lookup source data is loaded. After this, the lookup is behaves basically like a non blocking transformation.</p>
+<h2 id="row-manipulations">Row manipulations</h2>
 <h3 id="rowtransformations">RowTransformations</h3>
 <p>The RowTransformation is the simplest but most powerful transformation in ETLBox. The generic transformation has two types</p>
 <ul>
-<li>the type of the input data and the type of the output data. When creating a RowTransformation, you pass a delegate
-describing how each record in the dataflow is transformed. Here you can add any C# code that you like.</li>
+<li>the type of the input data and the type of the output data. When creating a RowTransformation, you pass a transformation functions
+describing how each record in the data flow is transformed. Here you can add any C# code that you like.</li>
 </ul>
 <p>The RowTransformation is a non blocking transformation, so it won't use up much memory even for high amounts of data.</p>
-<p>Here is an example that convert a string array into a <code>MySimpleRow</code> object.</p>
-<pre><code class="lang-C#">public class MySimpleRow
-{
-    public int Col1 { get; set; }
-    public string Col2 { get; set; }
-}
-
-RowTransformation&amp;lt;string[], MySimpleRow&amp;gt; trans = new RowTransformation&amp;lt;string[], MySimpleRow&amp;gt;(
-    csvdata =&gt;
-    {
-        return new MySimpleRow()
-        {
-            Col1 = int.Parse(csvdata[0]),
-            Col2 = csvdata[1]
-        };
-});
-</code></pre>
-<h3 id="lookuptransformation">LookupTransformation</h3>
-<p>The lookup is a row transformation, but before it starts processing any rows it will load all data from the given LookupSource into memory
-and will make it accessible as a List object.
-Though the lookup is non-blocking, it will take as much memory as the lookup table needs to be loaded fully into memory.</p>
-<p>A lookup can be used with the Attributes <code>MatchColumn</code> and <code>RetrieveColumn</code>. The MatchColumn defines which property in the target object needs to match, so
-that the lookup should retrieve the value. The RetrieveColumn maps the retrieved value to a property in the target class.</p>
-<p>Let's look at an example:</p>
-<pre><code class="lang-C#">  public class LookupData
-{
-    [MatchColumn(&quot;LookupId&quot;)]
-    public int Id { get; set; }
-    [RetrieveColumn(&quot;LookupValue&quot;)]
-    public string Value { get; set; }
-}
-
-public class InputDataRow
-{
-    public int LookupId { get; set; }
-    public string LookupValue { get; set; }
-}
-
-MemorySource&lt;InputDataRow&gt; source = new MemorySource&lt;InputDataRow&gt;();
-source.Data.Add(new InputDataRow() { LookupId = 1 });
-MemorySource&lt;LookupData&gt; lookupSource = new MemorySource&lt;LookupData&gt;();
-lookupSource.Data.Add(new LookupData() { Id = 1, Value = &quot;Test1&quot; });
-
-var lookup = new LookupTransformation&lt;InputDataRow, LookupData&gt;();
-lookup.Source = lookupSource;
-MemoryDestination&lt;InputDataRow&gt; dest = new MemoryDestination&lt;InputDataRow&gt;();
-source.LinkTo(lookup);
-lookup.LinkTo(dest);
-</code></pre>
-<p>If you don't want to use attributes, you can define your own lookup functions.</p>
-<pre><code class="lang-C#">DbSource&lt;MyLookupRow&gt; lookupSource = new DbSource&lt;MyLookupRow&gt;(connection, &quot;Lookup&quot;);
-List&lt;MyLookupRow&gt; LookupTableData = new List&lt;MyLookupRow&gt;();
-LookupTransformation&lt;MyInputDataRow, MyLookupRow&gt; lookup = new Lookup&lt;MyInputDataRow, MyLookupRow&gt;(
-    lookupSource,
-    row =&gt;
-    {
-        Col1 = row.Col1,
-        Col2 = row.Col2,
-        Col3 = LookupTableData.Where(ld =&gt; ld.Key == row.Col1).Select(ld =&gt; ld.LookupValue1).FirstOrDefault(),
-        Col4 = LookupTableData.Where(ld =&gt; ld.Key == row.Col1).Select(ld =&gt; ld.LookupValue2).FirstOrDefault(),
-        return row;
-    }
-    , LookupTableData
-);
+<pre><code class="lang-C#">RowTransformation&lt;InputType,OutputType&gt; trans = new RowTransformation&lt;InputType,OutputType&gt;(
+    row =&gt; {
+        return new OutputType() { Value = row.Value + 1 };
+    });
 </code></pre>
 <h3 id="rowduplication">RowDuplication</h3>
 <p>Sometimes you want to duplicate the rows of your input data. This can be easily done with the RowDuplication transformation -
 it will give you one or more duplicates of your data. If you want only to duplicate particular rows, you can pass a
 Predicate expression that define which rows can be clones and which not.</p>
-<p>Here a simple example for duplication:</p>
-<pre><code class="lang-C#">DbSource source = new DbSource(&quot;SourcTable&quot;);
-RowDuplication duplication = new RowDuplication();
-MemoryDestination dest = new MemoryDestination();
-
-source.LinkTo(duplication);
-duplication.LinkTo(dest);
-</code></pre>
-<p>If you need more than 1 duplicate, let's say 10:</p>
-<pre><code class="lang-C#">RowDuplication&lt;MySimpleRow&gt; duplication = new RowDuplication&lt;MySimpleRow&gt;(10);
-</code></pre>
-<p>And here an example how to set up a predicate to define which rows should be duplicated:</p>
-<pre><code class="lang-C#">RowDuplication&lt;MySimpleRow&gt; duplication = new RowDuplication&lt;MySimpleRow&gt;(
-    row =&gt; row.Col1 == 1 || row.Col2 == &quot;Test&quot;
-);
+<p>The RowDuplication is a non blocking transformation.</p>
+<p>Here a simple example for creating three duplicates of each row:</p>
+<pre><code class="lang-C#">var source = new DbSource&lt;InputType&gt;(&quot;SourceTable&quot;);
+RowDuplication&lt;InputType&gt; duplication = new RowDuplication&lt;InputType&gt;(3);
+var dest = new CsvDestination&lt;InputType&gt;(&quot;output.csv&quot;);
+source.LinkTo(duplication).LinkTo(dest);
 </code></pre>
 <h3 id="rowmultiplication">RowMultiplication</h3>
-<p>The RowMultiplication component is a variant of the RowTransformation. Like the RowTransformation, it accepts an input and an output type, and a transformation function (called MultiplicationFunc). The difference to the RowTransformation is that the multiplication function returns an array or list as return type. So from input record you are able to create a transformation that return one or more output records of different or the same type.</p>
-<p>Let's see an example:</p>
+<p>The RowMultiplication component is a variant of the RowTransformation. Like the RowTransformation, it accepts an input and an output type, and a transformation function (called MultiplicationFunc). The difference to the RowTransformation is that the multiplication function returns an array or list as return type. So from one input record you are able to create a transformation that returns one or more output records.</p>
+<p>The RowMultiplication is a non blocking transformation.</p>
 <pre><code class="lang-C#">DbSource&lt;InputRow&gt; source = new DbSource&lt;InputRow&gt;(&quot;SourceTable&quot;);
 RowMultiplication&lt;InputRow, OutputRow&gt; multiplication = new RowMultiplication&lt;InputRow, OutputRow&gt;(
     row =&gt;
@@ -295,181 +269,152 @@ RowMultiplication&lt;InputRow, OutputRow&gt; multiplication = new RowMultiplicat
         result.Add(new OutputRow(row.Value2));
         return result;
     });
-DbDestination&lt;OutputRow&gt; dest = new DbDestination&lt;OutputRow&gt;();
+DbDestination&lt;OutputRow&gt; dest = new DbDestination&lt;OutputRow&gt;(&quot;DestinationTable&quot;);
 source.LinkTo(multiplication);
 multiplication.LinkTo(dest);
 </code></pre>
-<h3 id="xmlschemavalidation">XmlSchemaValidation</h3>
-<p>Validates a given string that contains xml with a defined Xml schema definition. Not valid xml is redirected to
-the error output.</p>
-<p>Here is an example code:</p>
-<pre><code class="lang-C#">string xsdMarkup = @&quot;&lt;xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'&gt;
-   &lt;xsd:element name='Root'&gt;
-      &lt;xsd:complexType&gt;
-         &lt;xsd:sequence&gt;
-            &lt;xsd:element name='Child1' minOccurs='1' maxOccurs='1'/&gt;
-            &lt;xsd:element name='Child2' minOccurs='1' maxOccurs='1'/&gt;
-         &lt;/xsd:sequence&gt;
-     &lt;/xsd:complexType&gt;
-   &lt;/xsd:element&gt;
-&lt;/xsd:schema&gt;&quot;;
-
-public class MyXmlRow
+<h3 id="columnrename">ColumnRename</h3>
+<p>ColumnRename allows you to rename the column or properties names of your ingoing data.
+You can provide a column mapping with the old and the new name for each column. The mapping can also be automatically retrieved from existing ColumnMap attributes.</p>
+<p>This transformation works with objects, ExpandoObjects and arrays as input data type. It will always output an ExpandoObject with the new mapped property names.</p>
+<p>If you have an array as input type, instead of providing the old name you need to enter the array index and the new name.</p>
+<pre><code>var source = new DbSource&lt;MyInputRow&gt;();
+var map = new ColumnRename&lt;MyInputRow&gt;();
+map.ColumnMapping = new List&lt;ColumnMapping&gt;()
 {
-  public string Xml { get; set; }
+    new ColumnMapping(&quot;OldCol1&quot;,&quot;Col1&quot;),
+    new ColumnMapping(&quot;OldCol2&quot;,&quot;Col2&quot;),
+};
+var dest = new DbDestination(SqlConnection, &quot;ColumnRenameDest&quot;);
+
+source.LinkTo&lt;ExpandoObject&gt;(map).LinkTo(dest);
+</code></pre>
+<h2 id="data-lookup">Data lookup</h2>
+<h3 id="lookuptransformation">LookupTransformation</h3>
+<p>The lookup transformation enriches the incoming data with data from the lookup source. To achieve this, all or some data from the lookup source is read into memory when the first record arrives. For each incoming row, the lookup tries to find a matching record in the in-memory table. If found, it uses this pre-loaded record to add additional data to the ingoing row.</p>
+<p>E.g. you have an order record that contains a customer name. This is your ingoing record into the lookup. Also, the lookup gets a table containing customer names and their ids as lookup source. Then the lookup can retrieve the customer id and update the property value in your order record during.</p>
+<p>The lookup is a partially blocking transformation.</p>
+<pre><code class="lang-C#">public class Order
+{    
+    public int OrderNumber { get; set; }    
+    public int CustomerId { get; set; }    
+    public string CustomerName { get; set; }    
 }
 
-string _validXml =&gt; $@&quot;&lt;?xml version=&quot;&quot;1.0&quot;&quot; encoding=&quot;&quot;utf-8&quot;&quot;?&gt;
-&lt;Root&gt;
-  &lt;Child1&gt;Content1&lt;/Child1&gt;
-  &lt;Child2&gt;Content2&lt;/Child2&gt;
-&lt;/Root&gt;&quot;;
+public class Customer
+{   
+    [RetrieveColumn(nameof(Order.CustomerId))]
+    public int Id { get; set; }
+    
+    [MatchColumn(nameof(Order.CustomerName))]
+    public string Name { get; set; }
+}
 
-string _invalidXml =&gt; $@&quot;&lt;?xml version=&quot;&quot;1.0&quot;&quot; encoding=&quot;&quot;utf-8&quot;&quot;?&gt;
-&lt;Root&gt;
-  &lt;Child1&gt;Content1&lt;/Child1&gt;
-  &lt;Child3&gt;Content3&lt;/Child3&gt;
-&lt;/Root&gt;&quot;;
-
-var source = new MemorySource&lt;MyXmlRow&gt;();
-source.DataAsList.Add(new MyXmlRow() { Xml = _validXml });
-source.DataAsList.Add(new MyXmlRow() { Xml = _invalidXml });
-MemoryDestination&lt;MyXmlRow&gt; dest = new MemoryDestination&lt;MyXmlRow&gt;();
-MemoryDestination&lt;ETLBoxError&gt; error = new MemoryDestination&lt;ETLBoxError&gt;();
-
-XmlSchemaValidation&lt;MyXmlRow&gt; schemaValidation = new XmlSchemaValidation&lt;MyXmlRow&gt;();
-schemaValidation.XmlSelector = r =&gt; r.Xml;
-schemaValidation.XmlSchema = xsdMarkup;
-source.LinkTo(schemaValidation);
-schemaValidation.LinkTo(dest);
-schemaValidation.LinkErrorTo(error);
-source.Execute();
-dest.Wait();
-error.Wait()
+DbSource&lt;Order&gt; orderSource = new DbSource&lt;Order&gt;(&quot;OrderData&quot;);
+CsvSource&lt;Customer&gt; lookupSource = new CsvSource&lt;Customer&gt;(&quot;CustomerData.csv&quot;);
+var lookup = new LookupTransformation&lt;Order, Customer&gt;();
+lookup.Source = lookupSource;
+DbDestination&lt;Order&gt; dest = new DbDestination&lt;Order&gt;(&quot;OrderWithCustomerTable&quot;);
+source.LinkTo(lookup).LinkTo(dest);
 </code></pre>
-<h3 id="splitting-data">Splitting data</h3>
-<p>In some of your data flow you may want to split the data and have it processed differently in the further flow.
+<h2 id="broadcasting-and-merging-data">Broadcasting and merging data</h2>
+<p>In some of your data flow you may want to clone the data into multiple outputs and have it processed differently in the further flow.
 E.g. your data comes from one source and you want parts of it written into one destination and parts of it
-written into another. Or you like to split up data based on some conditions. For this purpose you can use the Multicast</p>
-<h4 id="multicast">Multicast</h4>
-<p>The <code>Multicast</code> is a component which basically duplicates your data. It has one input and two or more outputs.
-(Technically, it could also be used with only one output, but then it wouldn't do much.)
-Multicast is a non-blocking operation.</p>
-<p>The following code demonstrate a simple example where data would be duplicated and copied into two destinations -
-a database table and a Json file.</p>
-<pre><code class="lang-C#">var source = new CsvSource(&quot;test.csv&quot;);
-
-var multicast = new Multicast();
-var destination1 = new JsonDestination(&quot;test.json&quot;);
-var destination2 = new DbDestination(&quot;TestTable&quot;);
-
-source.LinkTo(multicast);
-multicast.LinkTo(destination1);
-multicast.LinkTo(destination2);
+written into another. Or you like to split up data based on some conditions. For this purpose you can use the Multicast.</p>
+<h3 id="multicast">Multicast</h3>
+<p>The <code>Multicast</code> is a component that broadcasts your data into all linked components. It has one input and two or more outputs.
+The Multicast is a non-blocking operation.</p>
+<p>If you want to split data, you can use Predicates which allow you to let only certain rows pass to a linked destination.  See more about this in the <a href="linking_execution.html">article about Predicates and linking</a></p>
+<pre><code class="lang-C#">Multicast&lt;MyDataRow&gt; multicast = new Multicast&lt;MyDataRow&gt;();
+multicast.LinkTo(dest1);
+multicast.LinkTo(dest2);
+multicast.LinkTo(dest3);
 </code></pre>
-<p>If you want to split data, you can use Predicates.
-Predicates allow you to let only certain data pass.
-E.g. the following code would only copy data into Table1 where the first column is greater 0, the rest will be
-copied into Table2.</p>
-<pre><code class="lang-C#">var source = new CsvSource(&quot;test.csv&quot;);
-
-var multicast = new Multicast();
-var destination1 = new DbDestination(&quot;Table1&quot;);
-var destination2 = new DbDestination(&quot;Table2&quot;);
-
-source.LinkTo(multicast);
-multicast.LinkTo(destination1, row =&gt; row[0] &gt; 0);
-multicast.LinkTo(destination2, row =&gt; row[0] &lt; 0);
-</code></pre>
-<p>Please note: Make sure when using predicate that always all rows arrive at a destination. Use a <code>VoidDestination</code>
-for records that you don't want to keep. See more about this in the <a href="dataflow_linking_execution.html">article about Predicates</a>.</p>
-<h3 id="merging-data">Merging data</h3>
-<p>If you want to merge data in your dataflow, you can use the <code>MergeJoin</code>. This basically joins the outcome
+<h3 id="merging-data-with-mergejoin">Merging data with MergeJoin</h3>
+<p>If you want to merge data in your data flow, you can use the <code>MergeJoin</code>. This basically joins the outcome
 of two sources or transformations into one data record.</p>
-<h4 id="mergejoin">MergeJoin</h4>
 <p>The MergeJoin accepts two inputs and has one output. A function describes how the two inputs are combined into one output.
-E.g. you can link two sources with the MergeJoin, define
-a method how to combine these records and produce a new merged output. The data type of the
-output and the inputs can be different, as long as you handle it in the join function.
-MergeJoin is a non blocking transformation.</p>
-<pre><code class="lang-C#">DbSource&lt;MyInputRowType1&gt; source1 = new DbSource&lt;MyInputRowType1&gt;(Connection, &quot;MergeJoinSource1&quot;);
-DbSource&lt;MyInputRowType2&gt; source2 = new DbSource&lt;MyInputRowType2&gt;(Connection, &quot;MergeJoinSource2&quot;);
-DbDestination&lt;MyOutputRowType&gt; dest = new DbDestination&lt;MyOutputRowType&gt;(Connection, &quot;MergeJoinDestination&quot;);
-
-MergeJoin&lt;MyInputRowType1, MyInputRowType2, MyOutputRowType&gt; join = new MergeJoin&lt;MyInputRowType1, MyInputRowType2, MyOutputRowType&gt;(
-    (inputRow1, inputRow2) =&gt; {
-        return new MyOutputRowType() {
-            Value = inputRow1.Value + inputRow2.Value
-        };
-    });
-source1.LinkTo(join.Target1);
-source2.LinkTo(join.Target2);
+E.g. you can link two sources with the MergeJoin, define  a method how to combine these records and produce a new merged output. If needed, you can define a comparison function which describes if two records should be joined if a match condition is met. MergeJoin is a non blocking transformation.</p>
+<pre><code class="lang-C#">MergeJoin&lt;InputType1, InputType2, OutputType&gt; join = new MergeJoin&lt;InputType1, InputType2, OutputType&gt;();
+join.MergeJoinFunc =  (leftRow, rightRow) =&gt; {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.LeftInput);
+source2.LinkTo(join.RightInput);
 join.LinkTo(dest);
 </code></pre>
+<h3 id="crossjoin">CrossJoin</h3>
+<p>The CrossJoin allows you to combine every record from input with every records from the other input. E.g. if your left input has the input records 1 and 2, and your right input the records A, B and C, the CrossJoin will combine 1 with A, B and C and 2 with A, B and C.
+The CrossJoin is a partial blocking transformation.</p>
+<pre><code class="lang-C#">CrossJoin&lt;InputType1, InputType2, OutputType&gt; crossJoin = new CrossJoin&lt;InputType1, InputType2, OutputType&gt;();
+crossJoin.CrossJoinFunc = (inmemoryRow, passingRow) =&gt; {
+    return new OutputType() {
+        Result = leftRow.Value1 + rightRow.Value2
+    };
+});
+source1.LinkTo(join.InMemoryTarget);
+source2.LinkTo(join.PassingTarget);
+join.LinkTo(dest);
+</code></pre>
+<h2 id="aggregating-data">Aggregating data</h2>
 <h3 id="aggregation">Aggregation</h3>
-<p>The aggregation allow you to aggregate data in your flow in a non-blocking transformation. Aggregation functions
-are sum, min, max and count. This means that you can calculate a total sum, the min or max value or the count of a all items
-in your flow. Also, you can define your own aggregation function.
-The aggregation does not necessarily be calculated on your whole data. You can specify that your calculation is grouped by a particular property or function.</p>
-<p>There are two ways to use the Aggregation. The easier way is to make use of the attributes <code>AggregationColumn</code> and <code>GroupColumn</code>. The first parameter is the
-property name of target property.</p>
-<pre><code class="lang-C#">public class MyRow
+<p>The aggregation allows you to aggregate data in your flow. You can either define your own aggregation function or use one of the default functions. The default aggregation functions are sum, min, max and count. The aggregation does not necessarily to be calculated on your whole data. You can specify that your data is grouped (similar to a group BY).</p>
+<p>The Aggregation is basically a blocking transformation, but with a lower memory consumption. It will only store aggregated values in memory, not the detail rows itself. The calculation of the aggregated values is updated every time a record arrives at the Aggregation. This is why there is limitation of what kind of calculation can be performed.</p>
+<pre><code class="lang-C#">public class MyDetailValue
 {
-    public string ClassName { get; set; }         
-    public double DetailValue { get; set; }
+    public int DetailValue { get; set; }
 }
 
 public class MyAggRow
 {
-    [GroupColumn(nameof(MyRow.ClassName))]
-    public string GroupName { get; set; }
-    [AggregateColumn(nameof(MyRow.DetailValue), AggregationMethod.Sum)]
-    public double AggValue { get; set; }
+    [AggregateColumn(nameof(MyDetailValue.DetailValue), AggregationMethod.Sum)]
+    public int AggValue { get; set; }
 }
-
-MemorySource&lt;MyRow&gt; source = new MemorySource&lt;MyRow&gt;();
-Aggregation&lt;MyRow, MyAggRow&gt; agg = new Aggregation&lt;MyRow, MyAggRow&gt;();
-MemoryDestination&lt;MyAggRow&gt; dest = new MemoryDestination&lt;MyAggRow&gt;();
-source.LinkTo(agg);
-agg.LinkTo(dest);
+    
+var source = new DbSource&lt;MyDetailValue&gt;(&quot;DetailValues&quot;);
+var agg = new Aggregation&lt;MyDetailValue, MyAggRow&gt;();
+var dest = new MemoryDestination&lt;MyAggRow&gt;();
+source.LinkTo&lt;MyAggRow&gt;(agg).LinkTo(dest);
 </code></pre>
-<p>To achieve the same behaviour with your own functions, you could create the Aggregation like this:</p>
-<pre><code class="lang-C#">Aggregation&lt;MyRow, MyAggRow&gt; agg = new Aggregation&lt;MyRow, MyAggRow&gt;(
-    (row, aggValue) =&gt; aggValue.AggValue += row.DetailValue,
-    row =&gt; row.ClassName,
-    (key, agg) =&gt; agg.GroupName = (string)key
-);
-</code></pre>
-<h2 id="blocking-transformations">Blocking Transformations</h2>
 <h3 id="blocktransformation">BlockTransformation</h3>
-<p>A BlockTransformation waits until all data is received at the BlockTranformation - then it will be available in a List object and you can do modifications
-on your whole data set. Keep in mind that this transformation will need as much memory as the amount of data you loaded.</p>
-<pre><code class="lang-C#">BlockTransformation&lt;MySimpleRow&gt; block = new BlockTransformation&lt;MySimpleRow&gt;(
+<p>A BlockTransformation waits until all data is received at the BlockTranformation - then it will be available in a List object and you can do modifications or calculations on your whole data set. Keep in mind that this transformation will need as much memory as the amount of data you loaded.</p>
+<pre><code class="lang-C#">BlockTransformation&lt;InputType&gt; block = new BlockTransformation&lt;InputType&gt;(
     inputData =&gt; {
         inputData.RemoveRange(1, 2);
-        inputData.Add(new MySimpleRow() { Col1 = 4, Col2 = &quot;Test4&quot; });
+        inputData.Add(new InputType() { Value = 1 });
         return inputData;
     });
 </code></pre>
+<h2 id="other-transformations">Other transformations</h2>
 <h3 id="sort">Sort</h3>
-<p>A sort will wait for all data to arrive and then sort the data based on the given sort method.</p>
+<p>A sort will wait for all data to arrive and then sort the data based on the given sort method. This is a blocking transformation, because data can only be sorted when all records are available in memory.</p>
 <pre><code class="lang-C#">Comparison&lt;MySimpleRow&gt; comp = new Comparison&lt;MySimpleRow&gt;(
         (x, y) =&gt; y.Col1 - x.Col1
     );
 Sort&lt;MySimpleRow&gt; block = new Sort&lt;MySimpleRow&gt;(comp);
 </code></pre>
+<ul>
+<li><a href="../transformations/other.html">Read more about the sort and other transformations</a></li>
+</ul>
+<h3 id="xmlschemavalidation">XmlSchemaValidation</h3>
+<p>This transformation allows you to validate XML code in your incoming data against a XML schema definition. You need to define how the XML string can be read from your data row and the schema definition used for validation. If the schema is not valid, the complete row will be send to the error output of the transformation.</p>
+<pre><code class="lang-C#">XmlSchemaValidation&lt;MyXmlRow&gt; schemaValidation = new XmlSchemaValidation&lt;MyXmlRow&gt;();
+schemaValidation.XmlSelector = row =&gt; row.Xml;
+schemaValidation.XmlSchema = xsdMarkup;
+source.LinkTo(schemaValidation);
+schemaValidation.LinkTo(dest);
+schemaValidation.LinkErrorTo(error);
+</code></pre>
+<ul>
+<li><a href="../connectors/xml.html">Read more about the xml connector and xml validation</a></li>
+</ul>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.docu/blob/main/ETLBoxDocu/articles/dataflow/dataflow_transformations.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -486,7 +431,7 @@ Sort&lt;MySimpleRow&gt; block = new Sort&lt;MySimpleRow&gt;(comp);
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

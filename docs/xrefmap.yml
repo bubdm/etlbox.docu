@@ -7219,6 +7219,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureName
   nameWithType: CreateProcedureTask.ProcedureName
+- uid: ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureOptions
+  name: ProcedureOptions
+  href: api/ETLBox.ControlFlow.Tasks.CreateProcedureTask.html#ETLBox_ControlFlow_Tasks_CreateProcedureTask_ProcedureOptions
+  commentId: P:ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureOptions
+  fullName: ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureOptions
+  nameWithType: CreateProcedureTask.ProcedureOptions
+- uid: ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureOptions*
+  name: ProcedureOptions
+  href: api/ETLBox.ControlFlow.Tasks.CreateProcedureTask.html#ETLBox_ControlFlow_Tasks_CreateProcedureTask_ProcedureOptions_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureOptions
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureOptions
+  nameWithType: CreateProcedureTask.ProcedureOptions
 - uid: ETLBox.ControlFlow.Tasks.CreateProcedureTask.ProcedureParameters
   name: ProcedureParameters
   href: api/ETLBox.ControlFlow.Tasks.CreateProcedureTask.html#ETLBox_ControlFlow_Tasks_CreateProcedureTask_ProcedureParameters
@@ -7670,6 +7683,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateViewTask.TaskName
   nameWithType: CreateViewTask.TaskName
+- uid: ETLBox.ControlFlow.Tasks.CreateViewTask.ViewAttributes
+  name: ViewAttributes
+  href: api/ETLBox.ControlFlow.Tasks.CreateViewTask.html#ETLBox_ControlFlow_Tasks_CreateViewTask_ViewAttributes
+  commentId: P:ETLBox.ControlFlow.Tasks.CreateViewTask.ViewAttributes
+  fullName: ETLBox.ControlFlow.Tasks.CreateViewTask.ViewAttributes
+  nameWithType: CreateViewTask.ViewAttributes
+- uid: ETLBox.ControlFlow.Tasks.CreateViewTask.ViewAttributes*
+  name: ViewAttributes
+  href: api/ETLBox.ControlFlow.Tasks.CreateViewTask.html#ETLBox_ControlFlow_Tasks_CreateViewTask_ViewAttributes_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateViewTask.ViewAttributes
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.Tasks.CreateViewTask.ViewAttributes
+  nameWithType: CreateViewTask.ViewAttributes
 - uid: ETLBox.ControlFlow.Tasks.CreateViewTask.ViewName
   name: ViewName
   href: api/ETLBox.ControlFlow.Tasks.CreateViewTask.html#ETLBox_ControlFlow_Tasks_CreateViewTask_ViewName
@@ -9731,6 +9757,76 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.ColumnMap.ColumnName
   nameWithType: ColumnMap.ColumnName
+- uid: ETLBox.DataFlow.ColumnMapping
+  name: ColumnMapping
+  href: api/ETLBox.DataFlow.ColumnMapping.html
+  commentId: T:ETLBox.DataFlow.ColumnMapping
+  fullName: ETLBox.DataFlow.ColumnMapping
+  nameWithType: ColumnMapping
+- uid: ETLBox.DataFlow.ColumnMapping.#ctor
+  name: ColumnMapping()
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping__ctor
+  commentId: M:ETLBox.DataFlow.ColumnMapping.#ctor
+  fullName: ETLBox.DataFlow.ColumnMapping.ColumnMapping()
+  nameWithType: ColumnMapping.ColumnMapping()
+- uid: ETLBox.DataFlow.ColumnMapping.#ctor(System.Int32,System.String)
+  name: ColumnMapping(Int32, String)
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping__ctor_System_Int32_System_String_
+  commentId: M:ETLBox.DataFlow.ColumnMapping.#ctor(System.Int32,System.String)
+  fullName: ETLBox.DataFlow.ColumnMapping.ColumnMapping(System.Int32, System.String)
+  nameWithType: ColumnMapping.ColumnMapping(Int32, String)
+- uid: ETLBox.DataFlow.ColumnMapping.#ctor(System.String,System.String)
+  name: ColumnMapping(String, String)
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping__ctor_System_String_System_String_
+  commentId: M:ETLBox.DataFlow.ColumnMapping.#ctor(System.String,System.String)
+  fullName: ETLBox.DataFlow.ColumnMapping.ColumnMapping(System.String, System.String)
+  nameWithType: ColumnMapping.ColumnMapping(String, String)
+- uid: ETLBox.DataFlow.ColumnMapping.#ctor*
+  name: ColumnMapping
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping__ctor_
+  commentId: Overload:ETLBox.DataFlow.ColumnMapping.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.ColumnMapping.ColumnMapping
+  nameWithType: ColumnMapping.ColumnMapping
+- uid: ETLBox.DataFlow.ColumnMapping.ArrayIndex
+  name: ArrayIndex
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_ArrayIndex
+  commentId: P:ETLBox.DataFlow.ColumnMapping.ArrayIndex
+  fullName: ETLBox.DataFlow.ColumnMapping.ArrayIndex
+  nameWithType: ColumnMapping.ArrayIndex
+- uid: ETLBox.DataFlow.ColumnMapping.ArrayIndex*
+  name: ArrayIndex
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_ArrayIndex_
+  commentId: Overload:ETLBox.DataFlow.ColumnMapping.ArrayIndex
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.ColumnMapping.ArrayIndex
+  nameWithType: ColumnMapping.ArrayIndex
+- uid: ETLBox.DataFlow.ColumnMapping.CurrentName
+  name: CurrentName
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_CurrentName
+  commentId: P:ETLBox.DataFlow.ColumnMapping.CurrentName
+  fullName: ETLBox.DataFlow.ColumnMapping.CurrentName
+  nameWithType: ColumnMapping.CurrentName
+- uid: ETLBox.DataFlow.ColumnMapping.CurrentName*
+  name: CurrentName
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_CurrentName_
+  commentId: Overload:ETLBox.DataFlow.ColumnMapping.CurrentName
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.ColumnMapping.CurrentName
+  nameWithType: ColumnMapping.CurrentName
+- uid: ETLBox.DataFlow.ColumnMapping.NewName
+  name: NewName
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_NewName
+  commentId: P:ETLBox.DataFlow.ColumnMapping.NewName
+  fullName: ETLBox.DataFlow.ColumnMapping.NewName
+  nameWithType: ColumnMapping.NewName
+- uid: ETLBox.DataFlow.ColumnMapping.NewName*
+  name: NewName
+  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_NewName_
+  commentId: Overload:ETLBox.DataFlow.ColumnMapping.NewName
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.ColumnMapping.NewName
+  nameWithType: ColumnMapping.NewName
 - uid: ETLBox.DataFlow.CompareColumn
   name: CompareColumn
   href: api/ETLBox.DataFlow.CompareColumn.html
@@ -10724,6 +10820,14 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).ConnectionManager
   nameWithType: DbDestination<TInput>.ConnectionManager
   nameWithType.vb: DbDestination(Of TInput).ConnectionManager
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.DEFAULT_BATCH_SIZE_ODBC_OLEDB
+  name: DEFAULT_BATCH_SIZE_ODBC_OLEDB
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_DEFAULT_BATCH_SIZE_ODBC_OLEDB
+  commentId: F:ETLBox.DataFlow.Connectors.DbDestination`1.DEFAULT_BATCH_SIZE_ODBC_OLEDB
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.DEFAULT_BATCH_SIZE_ODBC_OLEDB
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).DEFAULT_BATCH_SIZE_ODBC_OLEDB
+  nameWithType: DbDestination<TInput>.DEFAULT_BATCH_SIZE_ODBC_OLEDB
+  nameWithType.vb: DbDestination(Of TInput).DEFAULT_BATCH_SIZE_ODBC_OLEDB
 - uid: ETLBox.DataFlow.Connectors.DbDestination`1.DestinationTableDefinition
   name: DestinationTableDefinition
   href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_DestinationTableDefinition
@@ -10758,6 +10862,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).FinishWrite
   nameWithType: DbDestination<TInput>.FinishWrite
   nameWithType.vb: DbDestination(Of TInput).FinishWrite
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.InternalInitBufferObjects
+  name: InternalInitBufferObjects()
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_InternalInitBufferObjects
+  commentId: M:ETLBox.DataFlow.Connectors.DbDestination`1.InternalInitBufferObjects
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.InternalInitBufferObjects()
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).InternalInitBufferObjects()
+  nameWithType: DbDestination<TInput>.InternalInitBufferObjects()
+  nameWithType.vb: DbDestination(Of TInput).InternalInitBufferObjects()
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.InternalInitBufferObjects*
+  name: InternalInitBufferObjects
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_InternalInitBufferObjects_
+  commentId: Overload:ETLBox.DataFlow.Connectors.DbDestination`1.InternalInitBufferObjects
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.InternalInitBufferObjects
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).InternalInitBufferObjects
+  nameWithType: DbDestination<TInput>.InternalInitBufferObjects
+  nameWithType.vb: DbDestination(Of TInput).InternalInitBufferObjects
 - uid: ETLBox.DataFlow.Connectors.DbDestination`1.PrepareWrite
   name: PrepareWrite()
   href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite
@@ -12520,6 +12641,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.TextSource(Of TOutput).TextSource
   nameWithType: TextSource<TOutput>.TextSource
   nameWithType.vb: TextSource(Of TOutput).TextSource
+- uid: ETLBox.DataFlow.Connectors.TextSource`1.ArraySize
+  name: ArraySize
+  href: api/ETLBox.DataFlow.Connectors.TextSource-1.html#ETLBox_DataFlow_Connectors_TextSource_1_ArraySize
+  commentId: P:ETLBox.DataFlow.Connectors.TextSource`1.ArraySize
+  fullName: ETLBox.DataFlow.Connectors.TextSource<TOutput>.ArraySize
+  fullName.vb: ETLBox.DataFlow.Connectors.TextSource(Of TOutput).ArraySize
+  nameWithType: TextSource<TOutput>.ArraySize
+  nameWithType.vb: TextSource(Of TOutput).ArraySize
+- uid: ETLBox.DataFlow.Connectors.TextSource`1.ArraySize*
+  name: ArraySize
+  href: api/ETLBox.DataFlow.Connectors.TextSource-1.html#ETLBox_DataFlow_Connectors_TextSource_1_ArraySize_
+  commentId: Overload:ETLBox.DataFlow.Connectors.TextSource`1.ArraySize
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.TextSource<TOutput>.ArraySize
+  fullName.vb: ETLBox.DataFlow.Connectors.TextSource(Of TOutput).ArraySize
+  nameWithType: TextSource<TOutput>.ArraySize
+  nameWithType.vb: TextSource(Of TOutput).ArraySize
 - uid: ETLBox.DataFlow.Connectors.TextSource`1.CloseReader
   name: CloseReader()
   href: api/ETLBox.DataFlow.Connectors.TextSource-1.html#ETLBox_DataFlow_Connectors_TextSource_1_CloseReader
@@ -16405,6 +16543,206 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.BlockTransformation(Of TInput, TOutput).TaskName
   nameWithType: BlockTransformation<TInput, TOutput>.TaskName
   nameWithType.vb: BlockTransformation(Of TInput, TOutput).TaskName
+- uid: ETLBox.DataFlow.Transformations.ColumnRename
+  name: ColumnRename
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename.html
+  commentId: T:ETLBox.DataFlow.Transformations.ColumnRename
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename
+  nameWithType: ColumnRename
+- uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor
+  name: ColumnRename()
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename.#ctor
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename()
+  nameWithType: ColumnRename.ColumnRename()
+- uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMapping})
+  name: ColumnRename(IEnumerable<ColumnMapping>)
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor_System_Collections_Generic_IEnumerable_ETLBox_DataFlow_ColumnMapping__
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMapping})
+  name.vb: ColumnRename(IEnumerable(Of ColumnMapping))
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.IEnumerable<ETLBox.DataFlow.ColumnMapping>)
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.IEnumerable(Of ETLBox.DataFlow.ColumnMapping))
+  nameWithType: ColumnRename.ColumnRename(IEnumerable<ColumnMapping>)
+  nameWithType.vb: ColumnRename.ColumnRename(IEnumerable(Of ColumnMapping))
+- uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor*
+  name: ColumnRename
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename
+  nameWithType: ColumnRename.ColumnRename
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1
+  name: ColumnRename<TInput>
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html
+  commentId: T:ETLBox.DataFlow.Transformations.ColumnRename`1
+  name.vb: ColumnRename(Of TInput)
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput)
+  nameWithType: ColumnRename<TInput>
+  nameWithType.vb: ColumnRename(Of TInput)
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor
+  name: ColumnRename()
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnRename()
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename()
+  nameWithType: ColumnRename<TInput>.ColumnRename()
+  nameWithType.vb: ColumnRename(Of TInput).ColumnRename()
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMapping})
+  name: ColumnRename(IEnumerable<ColumnMapping>)
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_System_Collections_Generic_IEnumerable_ETLBox_DataFlow_ColumnMapping__
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMapping})
+  name.vb: ColumnRename(IEnumerable(Of ColumnMapping))
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnRename(System.Collections.Generic.IEnumerable<ETLBox.DataFlow.ColumnMapping>)
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename(System.Collections.Generic.IEnumerable(Of ETLBox.DataFlow.ColumnMapping))
+  nameWithType: ColumnRename<TInput>.ColumnRename(IEnumerable<ColumnMapping>)
+  nameWithType.vb: ColumnRename(Of TInput).ColumnRename(IEnumerable(Of ColumnMapping))
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor*
+  name: ColumnRename
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnRename
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename
+  nameWithType: ColumnRename<TInput>.ColumnRename
+  nameWithType.vb: ColumnRename(Of TInput).ColumnRename
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.CleanUpOnFaulted(System.Exception)
+  name: CleanUpOnFaulted(Exception)
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_CleanUpOnFaulted_System_Exception_
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.CleanUpOnFaulted(System.Exception)
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.CleanUpOnFaulted(System.Exception)
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).CleanUpOnFaulted(System.Exception)
+  nameWithType: ColumnRename<TInput>.CleanUpOnFaulted(Exception)
+  nameWithType.vb: ColumnRename(Of TInput).CleanUpOnFaulted(Exception)
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.CleanUpOnFaulted*
+  name: CleanUpOnFaulted
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_CleanUpOnFaulted_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.CleanUpOnFaulted
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.CleanUpOnFaulted
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).CleanUpOnFaulted
+  nameWithType: ColumnRename<TInput>.CleanUpOnFaulted
+  nameWithType.vb: ColumnRename(Of TInput).CleanUpOnFaulted
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.CleanUpOnSuccess
+  name: CleanUpOnSuccess()
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_CleanUpOnSuccess
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.CleanUpOnSuccess
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.CleanUpOnSuccess()
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).CleanUpOnSuccess()
+  nameWithType: ColumnRename<TInput>.CleanUpOnSuccess()
+  nameWithType.vb: ColumnRename(Of TInput).CleanUpOnSuccess()
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.CleanUpOnSuccess*
+  name: CleanUpOnSuccess
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_CleanUpOnSuccess_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.CleanUpOnSuccess
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.CleanUpOnSuccess
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).CleanUpOnSuccess
+  nameWithType: ColumnRename<TInput>.CleanUpOnSuccess
+  nameWithType.vb: ColumnRename(Of TInput).CleanUpOnSuccess
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.ColumnMapping
+  name: ColumnMapping
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_ColumnMapping
+  commentId: P:ETLBox.DataFlow.Transformations.ColumnRename`1.ColumnMapping
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnMapping
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnMapping
+  nameWithType: ColumnRename<TInput>.ColumnMapping
+  nameWithType.vb: ColumnRename(Of TInput).ColumnMapping
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.ColumnMapping*
+  name: ColumnMapping
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_ColumnMapping_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.ColumnMapping
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnMapping
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnMapping
+  nameWithType: ColumnRename<TInput>.ColumnMapping
+  nameWithType.vb: ColumnRename(Of TInput).ColumnMapping
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.InternalInitBufferObjects
+  name: InternalInitBufferObjects()
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_InternalInitBufferObjects
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.InternalInitBufferObjects
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.InternalInitBufferObjects()
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).InternalInitBufferObjects()
+  nameWithType: ColumnRename<TInput>.InternalInitBufferObjects()
+  nameWithType.vb: ColumnRename(Of TInput).InternalInitBufferObjects()
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.InternalInitBufferObjects*
+  name: InternalInitBufferObjects
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_InternalInitBufferObjects_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.InternalInitBufferObjects
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.InternalInitBufferObjects
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).InternalInitBufferObjects
+  nameWithType: ColumnRename<TInput>.InternalInitBufferObjects
+  nameWithType.vb: ColumnRename(Of TInput).InternalInitBufferObjects
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})
+  name: LinkErrorTo(IDataFlowDestination<ETLBoxError>)
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})
+  name.vb: LinkErrorTo(IDataFlowDestination(Of ETLBoxError))
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination<ETLBox.DataFlow.ETLBoxError>)
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination(Of ETLBox.DataFlow.ETLBoxError))
+  nameWithType: ColumnRename<TInput>.LinkErrorTo(IDataFlowDestination<ETLBoxError>)
+  nameWithType.vb: ColumnRename(Of TInput).LinkErrorTo(IDataFlowDestination(Of ETLBoxError))
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.LinkErrorTo*
+  name: LinkErrorTo
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_LinkErrorTo_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.LinkErrorTo
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.LinkErrorTo
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).LinkErrorTo
+  nameWithType: ColumnRename<TInput>.LinkErrorTo
+  nameWithType.vb: ColumnRename(Of TInput).LinkErrorTo
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.SourceBlock
+  name: SourceBlock
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_SourceBlock
+  commentId: P:ETLBox.DataFlow.Transformations.ColumnRename`1.SourceBlock
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.SourceBlock
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).SourceBlock
+  nameWithType: ColumnRename<TInput>.SourceBlock
+  nameWithType.vb: ColumnRename(Of TInput).SourceBlock
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.SourceBlock*
+  name: SourceBlock
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_SourceBlock_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.SourceBlock
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.SourceBlock
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).SourceBlock
+  nameWithType: ColumnRename<TInput>.SourceBlock
+  nameWithType.vb: ColumnRename(Of TInput).SourceBlock
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.TargetBlock
+  name: TargetBlock
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_TargetBlock
+  commentId: P:ETLBox.DataFlow.Transformations.ColumnRename`1.TargetBlock
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.TargetBlock
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).TargetBlock
+  nameWithType: ColumnRename<TInput>.TargetBlock
+  nameWithType.vb: ColumnRename(Of TInput).TargetBlock
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.TargetBlock*
+  name: TargetBlock
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_TargetBlock_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.TargetBlock
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.TargetBlock
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).TargetBlock
+  nameWithType: ColumnRename<TInput>.TargetBlock
+  nameWithType.vb: ColumnRename(Of TInput).TargetBlock
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.TaskName
+  name: TaskName
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_TaskName
+  commentId: P:ETLBox.DataFlow.Transformations.ColumnRename`1.TaskName
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.TaskName
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).TaskName
+  nameWithType: ColumnRename<TInput>.TaskName
+  nameWithType.vb: ColumnRename(Of TInput).TaskName
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.TaskName*
+  name: TaskName
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_TaskName_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.TaskName
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.TaskName
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).TaskName
+  nameWithType: ColumnRename<TInput>.TaskName
+  nameWithType.vb: ColumnRename(Of TInput).TaskName
 - uid: ETLBox.DataFlow.Transformations.CrossJoin
   name: CrossJoin
   href: api/ETLBox.DataFlow.Transformations.CrossJoin.html
@@ -16848,15 +17186,15 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.LookupTransformation(Of TInput, TSourceOutput).LookupTransformation(ETLBox.DataFlow.IDataFlowExecutableSource(Of TSourceOutput), System.Func(Of TInput, TInput))
   nameWithType: LookupTransformation<TInput, TSourceOutput>.LookupTransformation(IDataFlowExecutableSource<TSourceOutput>, Func<TInput, TInput>)
   nameWithType.vb: LookupTransformation(Of TInput, TSourceOutput).LookupTransformation(IDataFlowExecutableSource(Of TSourceOutput), Func(Of TInput, TInput))
-- uid: ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{`1},System.Func{`0,`0},System.Collections.Generic.List{`1})
-  name: LookupTransformation(IDataFlowExecutableSource<TSourceOutput>, Func<TInput, TInput>, List<TSourceOutput>)
-  href: api/ETLBox.DataFlow.Transformations.LookupTransformation-2.html#ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__System_Func__0__0__System_Collections_Generic_List__1__
-  commentId: M:ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{`1},System.Func{`0,`0},System.Collections.Generic.List{`1})
-  name.vb: LookupTransformation(IDataFlowExecutableSource(Of TSourceOutput), Func(Of TInput, TInput), List(Of TSourceOutput))
-  fullName: ETLBox.DataFlow.Transformations.LookupTransformation<TInput, TSourceOutput>.LookupTransformation(ETLBox.DataFlow.IDataFlowExecutableSource<TSourceOutput>, System.Func<TInput, TInput>, System.Collections.Generic.List<TSourceOutput>)
-  fullName.vb: ETLBox.DataFlow.Transformations.LookupTransformation(Of TInput, TSourceOutput).LookupTransformation(ETLBox.DataFlow.IDataFlowExecutableSource(Of TSourceOutput), System.Func(Of TInput, TInput), System.Collections.Generic.List(Of TSourceOutput))
-  nameWithType: LookupTransformation<TInput, TSourceOutput>.LookupTransformation(IDataFlowExecutableSource<TSourceOutput>, Func<TInput, TInput>, List<TSourceOutput>)
-  nameWithType.vb: LookupTransformation(Of TInput, TSourceOutput).LookupTransformation(IDataFlowExecutableSource(Of TSourceOutput), Func(Of TInput, TInput), List(Of TSourceOutput))
+- uid: ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{`1},System.Func{`0,`0},System.Collections.Generic.IList{`1})
+  name: LookupTransformation(IDataFlowExecutableSource<TSourceOutput>, Func<TInput, TInput>, IList<TSourceOutput>)
+  href: api/ETLBox.DataFlow.Transformations.LookupTransformation-2.html#ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__System_Func__0__0__System_Collections_Generic_IList__1__
+  commentId: M:ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{`1},System.Func{`0,`0},System.Collections.Generic.IList{`1})
+  name.vb: LookupTransformation(IDataFlowExecutableSource(Of TSourceOutput), Func(Of TInput, TInput), IList(Of TSourceOutput))
+  fullName: ETLBox.DataFlow.Transformations.LookupTransformation<TInput, TSourceOutput>.LookupTransformation(ETLBox.DataFlow.IDataFlowExecutableSource<TSourceOutput>, System.Func<TInput, TInput>, System.Collections.Generic.IList<TSourceOutput>)
+  fullName.vb: ETLBox.DataFlow.Transformations.LookupTransformation(Of TInput, TSourceOutput).LookupTransformation(ETLBox.DataFlow.IDataFlowExecutableSource(Of TSourceOutput), System.Func(Of TInput, TInput), System.Collections.Generic.IList(Of TSourceOutput))
+  nameWithType: LookupTransformation<TInput, TSourceOutput>.LookupTransformation(IDataFlowExecutableSource<TSourceOutput>, Func<TInput, TInput>, IList<TSourceOutput>)
+  nameWithType.vb: LookupTransformation(Of TInput, TSourceOutput).LookupTransformation(IDataFlowExecutableSource(Of TSourceOutput), Func(Of TInput, TInput), IList(Of TSourceOutput))
 - uid: ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor*
   name: LookupTransformation
   href: api/ETLBox.DataFlow.Transformations.LookupTransformation-2.html#ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_
@@ -16900,6 +17238,24 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.LookupTransformation(Of TInput, TSourceOutput).CleanUpOnSuccess
   nameWithType: LookupTransformation<TInput, TSourceOutput>.CleanUpOnSuccess
   nameWithType.vb: LookupTransformation(Of TInput, TSourceOutput).CleanUpOnSuccess
+- uid: ETLBox.DataFlow.Transformations.LookupTransformation`2.FindFirst*
+  name: FindFirst
+  href: api/ETLBox.DataFlow.Transformations.LookupTransformation-2.html#ETLBox_DataFlow_Transformations_LookupTransformation_2_FindFirst_
+  commentId: Overload:ETLBox.DataFlow.Transformations.LookupTransformation`2.FindFirst
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.LookupTransformation<TInput, TSourceOutput>.FindFirst
+  fullName.vb: ETLBox.DataFlow.Transformations.LookupTransformation(Of TInput, TSourceOutput).FindFirst
+  nameWithType: LookupTransformation<TInput, TSourceOutput>.FindFirst
+  nameWithType.vb: LookupTransformation(Of TInput, TSourceOutput).FindFirst
+- uid: ETLBox.DataFlow.Transformations.LookupTransformation`2.FindFirst``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})
+  name: FindFirst<T>(IList<T>, Func<T, Boolean>)
+  href: api/ETLBox.DataFlow.Transformations.LookupTransformation-2.html#ETLBox_DataFlow_Transformations_LookupTransformation_2_FindFirst__1_System_Collections_Generic_IList___0__System_Func___0_System_Boolean__
+  commentId: M:ETLBox.DataFlow.Transformations.LookupTransformation`2.FindFirst``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})
+  name.vb: FindFirst(Of T)(IList(Of T), Func(Of T, Boolean))
+  fullName: ETLBox.DataFlow.Transformations.LookupTransformation<TInput, TSourceOutput>.FindFirst<T>(System.Collections.Generic.IList<T>, System.Func<T, System.Boolean>)
+  fullName.vb: ETLBox.DataFlow.Transformations.LookupTransformation(Of TInput, TSourceOutput).FindFirst(Of T)(System.Collections.Generic.IList(Of T), System.Func(Of T, System.Boolean))
+  nameWithType: LookupTransformation<TInput, TSourceOutput>.FindFirst<T>(IList<T>, Func<T, Boolean>)
+  nameWithType.vb: LookupTransformation(Of TInput, TSourceOutput).FindFirst(Of T)(IList(Of T), Func(Of T, Boolean))
 - uid: ETLBox.DataFlow.Transformations.LookupTransformation`2.InternalInitBufferObjects
   name: InternalInitBufferObjects()
   href: api/ETLBox.DataFlow.Transformations.LookupTransformation-2.html#ETLBox_DataFlow_Transformations_LookupTransformation_2_InternalInitBufferObjects
@@ -18284,23 +18640,6 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.Sort(Of TInput).InternalInitBufferObjects
   nameWithType: Sort<TInput>.InternalInitBufferObjects
   nameWithType.vb: Sort(Of TInput).InternalInitBufferObjects
-- uid: ETLBox.DataFlow.Transformations.Sort`1.MaxBufferSize
-  name: MaxBufferSize
-  href: api/ETLBox.DataFlow.Transformations.Sort-1.html#ETLBox_DataFlow_Transformations_Sort_1_MaxBufferSize
-  commentId: P:ETLBox.DataFlow.Transformations.Sort`1.MaxBufferSize
-  fullName: ETLBox.DataFlow.Transformations.Sort<TInput>.MaxBufferSize
-  fullName.vb: ETLBox.DataFlow.Transformations.Sort(Of TInput).MaxBufferSize
-  nameWithType: Sort<TInput>.MaxBufferSize
-  nameWithType.vb: Sort(Of TInput).MaxBufferSize
-- uid: ETLBox.DataFlow.Transformations.Sort`1.MaxBufferSize*
-  name: MaxBufferSize
-  href: api/ETLBox.DataFlow.Transformations.Sort-1.html#ETLBox_DataFlow_Transformations_Sort_1_MaxBufferSize_
-  commentId: Overload:ETLBox.DataFlow.Transformations.Sort`1.MaxBufferSize
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.Transformations.Sort<TInput>.MaxBufferSize
-  fullName.vb: ETLBox.DataFlow.Transformations.Sort(Of TInput).MaxBufferSize
-  nameWithType: Sort<TInput>.MaxBufferSize
-  nameWithType.vb: Sort(Of TInput).MaxBufferSize
 - uid: ETLBox.DataFlow.Transformations.Sort`1.SortFunction
   name: SortFunction
   href: api/ETLBox.DataFlow.Transformations.Sort-1.html#ETLBox_DataFlow_Transformations_Sort_1_SortFunction

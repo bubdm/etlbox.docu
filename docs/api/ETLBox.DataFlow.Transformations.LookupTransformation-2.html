@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -794,10 +803,10 @@
   
   <h1 id="ETLBox_DataFlow_Transformations_LookupTransformation_2" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2" class="text-break">Class LookupTransformation&lt;TInput, TSourceOutput&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A lookup task - incoming rows can be enriched with data retrieved from the lookup source.
-For each rows that comes in, a matching records is search for in the lookup source. If one is found,
-the missing properties are filled with values from the source.
-Data is read from the lookup source when the first rows arrives in the LookupTransformation.</p>
+  <div class="markdown level0 summary"><p>The lookup transformation enriches the incoming data with data from the lookup source.
+Data from the lookup source is read into memory when the first record arrives.
+For each incoming row, the lookup tries to find a matching record in the
+memory table and uses this record to add additional data to the ingoing row.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -813,13 +822,13 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -990,7 +999,7 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LookupTransformation&lt;TInput, TSourceOutput&gt; : DataFlowTransformation&lt;TInput, TInput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class LookupTransformation&lt;TInput, TSourceOutput&gt; : DataFlowTransformation&lt;TInput, TInput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1013,15 +1022,32 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_examples"><strong>Examples</strong></h5>
+  <pre><code>public class Order
+{    
+    public int OrderNumber { get; set; }
+    public int CustomerId { get; set; }
+    public string CustomerName { get; set; }
+}
+
+public class Customer
+{
+    [RetrieveColumn(nameof(Order.CustomerId))]
+    public int Id { get; set; }
+
+    [MatchColumn(nameof(Order.CustomerName))]
+    public string Name { get; set; }
+}
+
+DbSource&lt;Order> orderSource = new DbSource&lt;Order>(&quot;OrderData&quot;);
+CsvSource&lt;Customer> lookupSource = new CsvSource&lt;Customer>(&quot;CustomerData.csv&quot;);
+var lookup = new LookupTransformation&lt;Order, Customer>();
+lookup.Source = lookupSource;
+DbDestination&lt;Order> dest = new DbDestination&lt;Order>(&quot;OrderWithCustomerTable&quot;);
+source.LinkTo(lookup).LinkTo(dest);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L62">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor">LookupTransformation()</h4>
   <div class="markdown level1 summary"></div>
@@ -1030,13 +1056,6 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public LookupTransformation()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.%23ctor(ETLBox.DataFlow.IDataFlowExecutableSource%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L69">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{`1})">LookupTransformation(IDataFlowExecutableSource&lt;TSourceOutput&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1063,13 +1082,6 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__System_Func__0__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.%23ctor(ETLBox.DataFlow.IDataFlowExecutableSource%7B%601%7D%2CSystem.Func%7B%600%2C%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L76">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__System_Func__0__0__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{`1},System.Func{`0,`0})">LookupTransformation(IDataFlowExecutableSource&lt;TSourceOutput&gt;, Func&lt;TInput, TInput&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1102,20 +1114,13 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__System_Func__0__0__System_Collections_Generic_List__1__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.%23ctor(ETLBox.DataFlow.IDataFlowExecutableSource%7B%601%7D%2CSystem.Func%7B%600%2C%600%7D%2CSystem.Collections.Generic.List%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L85">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__System_Func__0__0__System_Collections_Generic_List__1__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{`1},System.Func{`0,`0},System.Collections.Generic.List{`1})">LookupTransformation(IDataFlowExecutableSource&lt;TSourceOutput&gt;, Func&lt;TInput, TInput&gt;, List&lt;TSourceOutput&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2__ctor_ETLBox_DataFlow_IDataFlowExecutableSource__1__System_Func__0__0__System_Collections_Generic_IList__1__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.#ctor(ETLBox.DataFlow.IDataFlowExecutableSource{`1},System.Func{`0,`0},System.Collections.Generic.IList{`1})">LookupTransformation(IDataFlowExecutableSource&lt;TSourceOutput&gt;, Func&lt;TInput, TInput&gt;, IList&lt;TSourceOutput&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LookupTransformation(IDataFlowExecutableSource&lt;TSourceOutput&gt; lookupSource, Func&lt;TInput, TInput&gt; transformationFunc, List&lt;TSourceOutput&gt; lookupList)</code></pre>
+    <pre><code class="lang-csharp hljs">public LookupTransformation(IDataFlowExecutableSource&lt;TSourceOutput&gt; lookupSource, Func&lt;TInput, TInput&gt; transformationFunc, IList&lt;TSourceOutput&gt; lookupList)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1140,7 +1145,7 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;TSourceOutput&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TSourceOutput&gt;</td>
         <td><span class="parametername">lookupList</span></td>
         <td><p>Sets the list for the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2.html#ETLBox_DataFlow_Transformations_LookupTransformation_2_LookupData">LookupData</a></p>
 </td>
@@ -1149,13 +1154,6 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_LookupData.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.LookupData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L30">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_LookupData_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.LookupData*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_LookupData" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.LookupData">LookupData</h4>
   <div class="markdown level1 summary"><p>Holds the data read from the lookup source. This data is used to find data that is missing in the incoming rows.</p>
@@ -1163,7 +1161,7 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;TSourceOutput&gt; LookupData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IList&lt;TSourceOutput&gt; LookupData { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1175,18 +1173,11 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;TSourceOutput&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TSourceOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_Source.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L50">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_Source_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.Source*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_Source" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.Source">Source</h4>
   <div class="markdown level1 summary"><p>The source component from which the lookup data is retrieved. E.g. a <a class="xref" href="ETLBox.DataFlow.Connectors.DbSource.html">DbSource</a> or a <a class="xref" href="ETLBox.DataFlow.Connectors.MemorySource.html">MemorySource</a>.</p>
@@ -1211,13 +1202,6 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_SourceBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.SourceBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L43">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
@@ -1244,13 +1228,6 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_TargetBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.TargetBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L46">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -1277,13 +1254,6 @@ Data is read from the lookup source when the first rows arrives in the LookupTra
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L25">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_TaskName_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_TaskName" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1311,13 +1281,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_TransformationFunc.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.TransformationFunc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L56">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_TransformationFunc_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.TransformationFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_TransformationFunc" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.TransformationFunc">TransformationFunc</h4>
   <div class="markdown level1 summary"><p>A transformation func that describes how the ingoing data can be enriched with the already pre-read data from
@@ -1345,13 +1308,6 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_CleanUpOnFaulted_System_Exception_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.CleanUpOnFaulted(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L109">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1379,13 +1335,6 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_CleanUpOnSuccess.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.CleanUpOnSuccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L104">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1396,13 +1345,66 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_InternalInitBufferObjects.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.InternalInitBufferObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L95">View Source</a>
-  </span>
+  <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_FindFirst_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.FindFirst*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_FindFirst__1_System_Collections_Generic_IList___0__System_Func___0_System_Boolean__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.FindFirst``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})">FindFirst&lt;T&gt;(IList&lt;T&gt;, Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T FindFirst&lt;T&gt;(IList&lt;T&gt; source, Func&lt;T, bool&gt; condition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;T&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.InternalInitBufferObjects*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
   <div class="markdown level1 summary"></div>
@@ -1413,13 +1415,6 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InternalInitBufferObjects">DataFlowComponent.InternalInitBufferObjects()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination%7BETLBox.DataFlow.ETLBoxError%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L115">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_LookupTransformation_2_LinkErrorTo_" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.LinkErrorTo*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_LookupTransformation_2_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__" data-uid="ETLBox.DataFlow.Transformations.LookupTransformation`2.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1465,9 +1460,6 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1485,21 +1477,14 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_LookupTransformation_2.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.LookupTransformation%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/LookupTransformation.cs/#L20" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1516,7 +1501,7 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

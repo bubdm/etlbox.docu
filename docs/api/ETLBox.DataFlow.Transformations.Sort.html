@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -794,7 +803,7 @@
   
   <h1 id="ETLBox_DataFlow_Transformations_Sort" data-uid="ETLBox.DataFlow.Transformations.Sort" class="text-break">Class Sort
   </h1>
-  <div class="markdown level0 summary"><p>Sort the incoming data with the given sort function.
+  <div class="markdown level0 summary"><p>Sorts the incoming data with by the given comparison function.
 This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -811,13 +820,13 @@ This is a blocking transformation - no output will be produced until all input d
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -832,9 +841,6 @@ This is a blocking transformation - no output will be produced until all input d
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.Transformations.Sort-1.html#ETLBox_DataFlow_Transformations_Sort_1_TargetBlock">Sort&lt;ExpandoObject&gt;.TargetBlock</a>
-    </div>
-    <div>
-      <a class="xref" href="ETLBox.DataFlow.Transformations.Sort-1.html#ETLBox_DataFlow_Transformations_Sort_1_MaxBufferSize">Sort&lt;ExpandoObject&gt;.MaxBufferSize</a>
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.Transformations.Sort-1.html#ETLBox_DataFlow_Transformations_Sort_1_InternalInitBufferObjects">Sort&lt;ExpandoObject&gt;.InternalInitBufferObjects()</a>
@@ -868,6 +874,9 @@ This is a blocking transformation - no output will be produced until all input d
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowSource&lt;ExpandoObject&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent__maxBufferSize">DataFlowComponent._maxBufferSize</a>
@@ -1012,17 +1021,10 @@ This is a blocking transformation - no output will be produced until all input d
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Transformations_Sort_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Sort : Sort&lt;ExpandoObject&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;, IDataFlowSource&lt;ExpandoObject&gt;, IDataFlowSource, IDataFlowDestination&lt;ExpandoObject&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class Sort : Sort&lt;ExpandoObject&gt;, ILoggableTask, IDataFlowLogging, IDataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;, IDataFlowSource&lt;ExpandoObject&gt;, IDataFlowSource, IDataFlowDestination&lt;ExpandoObject&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L97">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort__ctor_" data-uid="ETLBox.DataFlow.Transformations.Sort.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort__ctor" data-uid="ETLBox.DataFlow.Transformations.Sort.#ctor">Sort()</h4>
   <div class="markdown level1 summary"></div>
@@ -1031,13 +1033,6 @@ This is a blocking transformation - no output will be produced until all input d
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Sort()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort__ctor_System_Comparison_System_Dynamic_ExpandoObject__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort.%23ctor(System.Comparison%7BSystem.Dynamic.ExpandoObject%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L100">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort__ctor_" data-uid="ETLBox.DataFlow.Transformations.Sort.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort__ctor_System_Comparison_System_Dynamic_ExpandoObject__" data-uid="ETLBox.DataFlow.Transformations.Sort.#ctor(System.Comparison{System.Dynamic.ExpandoObject})">Sort(Comparison&lt;ExpandoObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1068,9 +1063,6 @@ This is a blocking transformation - no output will be produced until all input d
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1088,21 +1080,14 @@ This is a blocking transformation - no output will be produced until all input d
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L95" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1119,7 +1104,7 @@ This is a blocking transformation - no output will be produced until all input d
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

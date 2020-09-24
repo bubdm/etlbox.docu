@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -834,13 +843,6 @@
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_MergeProperties_ComparePropertyNames.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.MergeProperties.ComparePropertyNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/MergeProperties.cs/#L19">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_MergeProperties_ComparePropertyNames_" data-uid="ETLBox.DataFlow.MergeProperties.ComparePropertyNames*"></a>
   <h4 id="ETLBox_DataFlow_MergeProperties_ComparePropertyNames" data-uid="ETLBox.DataFlow.MergeProperties.ComparePropertyNames">ComparePropertyNames</h4>
   <div class="markdown level1 summary"><p>Property names that should be use to compare if the values of a column are equal, so that
@@ -866,13 +868,6 @@ the DbMerge can decide if the column needs to be udpated.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_MergeProperties_DeletionProperties.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.MergeProperties.DeletionProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/MergeProperties.cs/#L24">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_MergeProperties_DeletionProperties_" data-uid="ETLBox.DataFlow.MergeProperties.DeletionProperties*"></a>
   <h4 id="ETLBox_DataFlow_MergeProperties_DeletionProperties" data-uid="ETLBox.DataFlow.MergeProperties.DeletionProperties">DeletionProperties</h4>
   <div class="markdown level1 summary"><p>List of property names and a to-be value that tells the DbMerge if this row can be deleted.</p>
@@ -897,13 +892,6 @@ the DbMerge can decide if the column needs to be udpated.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_MergeProperties_IdPropertyNames.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.MergeProperties.IdPropertyNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/MergeProperties.cs/#L13">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_MergeProperties_IdPropertyNames_" data-uid="ETLBox.DataFlow.MergeProperties.IdPropertyNames*"></a>
   <h4 id="ETLBox_DataFlow_MergeProperties_IdPropertyNames" data-uid="ETLBox.DataFlow.MergeProperties.IdPropertyNames">IdPropertyNames</h4>
   <div class="markdown level1 summary"><p>Property names that are used to check if the columns match (id values are equal).</p>
@@ -933,16 +921,6 @@ the DbMerge can decide if the column needs to be udpated.</p>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_MergeProperties.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.MergeProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/MergeProperties.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -959,7 +937,7 @@ the DbMerge can decide if the column needs to be udpated.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -810,7 +819,6 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;TInput, TOutput&gt;</div>
@@ -818,6 +826,7 @@
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -991,7 +1000,7 @@
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RowMultiplication&lt;TInput, TOutput&gt; : DataFlowTransformation&lt;TInput, TOutput&gt;, IDataFlowComponent, IDataFlowLogging, ILoggableTask, IDataFlowTransformation&lt;TInput, TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class RowMultiplication&lt;TInput, TOutput&gt; : DataFlowTransformation&lt;TInput, TOutput&gt;, IDataFlowLogging, ILoggableTask, IDataFlowTransformation&lt;TInput, TOutput&gt;, IDataFlowSource&lt;TOutput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1016,13 +1025,6 @@
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L35">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.#ctor">RowMultiplication()</h4>
   <div class="markdown level1 summary"></div>
@@ -1031,13 +1033,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RowMultiplication()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor_System_Func__0_System_Collections_Generic_IEnumerable__1___.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.%23ctor(System.Func%7B%600%2CSystem.Collections.Generic.IEnumerable%7B%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L41">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2__ctor_System_Func__0_System_Collections_Generic_IEnumerable__1___" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.#ctor(System.Func{`0,System.Collections.Generic.IEnumerable{`1}})">RowMultiplication(Func&lt;TInput, IEnumerable&lt;TOutput&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1066,13 +1061,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2_MultiplicationFunc.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.MultiplicationFunc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L29">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_MultiplicationFunc_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.MultiplicationFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_MultiplicationFunc" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.MultiplicationFunc">MultiplicationFunc</h4>
   <div class="markdown level1 summary"><p>The transformation func that produces multiple rows for each ingoing row.</p>
@@ -1097,13 +1085,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2_SourceBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.SourceBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L22">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
@@ -1130,13 +1111,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2_TargetBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.TargetBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L24">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -1163,13 +1137,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TOutput&gt;.TargetBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L20">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_TaskName_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_TaskName" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1199,13 +1166,6 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnFaulted_System_Exception_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.CleanUpOnFaulted(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L63">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1233,13 +1193,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnSuccess.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.CleanUpOnSuccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L58">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1250,13 +1203,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2_InternalInitBufferObjects.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602.InternalInitBufferObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L50">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication_2_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.InternalInitBufferObjects*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication_2_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication`2.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
   <div class="markdown level1 summary"></div>
@@ -1268,9 +1214,6 @@ with a default name that can be overwritten.</p>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InternalInitBufferObjects">DataFlowComponent.InternalInitBufferObjects()</a></div>
   <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
@@ -1292,21 +1235,14 @@ with a default name that can be overwritten.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication_2.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L15" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1323,7 +1259,7 @@ with a default name that can be overwritten.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

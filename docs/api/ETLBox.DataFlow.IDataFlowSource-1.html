@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -805,12 +814,24 @@
     <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html#ETLBox_DataFlow_IDataFlowSource_Successors">IDataFlowSource.Successors</a>
     </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html#ETLBox_DataFlow_IDataFlowComponent_Completion">IDataFlowComponent.Completion</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html#ETLBox_DataFlow_IDataFlowComponent_OnCompletion">IDataFlowComponent.OnCompletion</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html#ETLBox_DataFlow_IDataFlowComponent_Exception">IDataFlowComponent.Exception</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html#ETLBox_DataFlow_IDataFlowComponent_MaxBufferSize">IDataFlowComponent.MaxBufferSize</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.DataFlow.html">ETLBox.DataFlow</a></h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_IDataFlowSource_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IDataFlowSource&lt;TOutput&gt; : IDataFlowSource</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IDataFlowSource&lt;TOutput&gt; : IDataFlowSource, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -830,13 +851,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1_SourceBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601.SourceBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L33">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowSource_1_SourceBlock_" data-uid="ETLBox.DataFlow.IDataFlowSource`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_1_SourceBlock" data-uid="ETLBox.DataFlow.IDataFlowSource`1.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
@@ -863,13 +877,6 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination%7BETLBox.DataFlow.ETLBoxError%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L94">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowSource_1_LinkErrorTo_" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkErrorTo*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
   <div class="markdown level1 summary"><p>If an error occurs in the component, by default the component will throw an exception and stop execution.
@@ -914,13 +921,6 @@ If you use the error linking, any erroneous records will catched and redirected.
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601.LinkTo(ETLBox.DataFlow.IDataFlowDestination%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L41">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo(ETLBox.DataFlow.IDataFlowDestination{`0})">LinkTo(IDataFlowDestination&lt;TOutput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination.
@@ -966,13 +966,6 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601.LinkTo(ETLBox.DataFlow.IDataFlowDestination%7B%600%7D%2CSystem.Predicate%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L51">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo(ETLBox.DataFlow.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate.
@@ -1025,13 +1018,6 @@ if you want to discared rows.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601.LinkTo(ETLBox.DataFlow.IDataFlowDestination%7B%600%7D%2CSystem.Predicate%7B%600%7D%2CSystem.Predicate%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L58">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo(ETLBox.DataFlow.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
@@ -1086,13 +1072,6 @@ and a second predicate for rows you want to discard.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601.LinkTo%60%601(ETLBox.DataFlow.IDataFlowDestination%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L68">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo``1(ETLBox.DataFlow.IDataFlowDestination{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TOutput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination.
@@ -1154,13 +1133,6 @@ If you want to link multiple targets, either use predicates or a <a class="xref"
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601.LinkTo%60%601(ETLBox.DataFlow.IDataFlowDestination%7B%600%7D%2CSystem.Predicate%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L79">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo``1(ETLBox.DataFlow.IDataFlowDestination{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate.
@@ -1229,13 +1201,6 @@ if you want to discared rows.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601.LinkTo%60%601(ETLBox.DataFlow.IDataFlowDestination%7B%600%7D%2CSystem.Predicate%7B%600%7D%2CSystem.Predicate%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L87">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo_" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__" data-uid="ETLBox.DataFlow.IDataFlowSource`1.LinkTo``1(ETLBox.DataFlow.IDataFlowDestination{`0},System.Predicate{`0},System.Predicate{`0})">LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TOutput&gt;, Predicate&lt;TOutput&gt;, Predicate&lt;TOutput&gt;)</h4>
   <div class="markdown level1 summary"><p>Links the current block to another transformation or destination with a predicate for rows that you want to keep
@@ -1311,16 +1276,6 @@ and a second predicate for rows you want to discard.</p>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowSource_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowSource%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowSource.cs/#L28" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1337,7 +1292,7 @@ and a second predicate for rows you want to discard.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

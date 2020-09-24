@@ -333,6 +333,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -588,6 +591,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -790,31 +799,29 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="api-documentation">API Documentation</h1>
 
-<h2 id="welcome">Welcome</h2>
-<p>Welcome to the API documentation of ETLBox. This will give you access to all class and interface definitions that come with ETLBox.
-Check the <a href="https://github.com/etlbox/etlbox">Github page</a> to see the full source code.
-Please note that connection managers are now closed source.</p>
-<h2 id="net-standard-app">.NET Standard App</h2>
+<h2 id="source-code">Source Code</h2>
+<p>This is the complete API documentation of ETLBox. It lists all classes and interface definitions that are available with all ETLBox packages. Most classes are part of the core packages, some classes (the connectors) are part of the connector packages.
+Check the <a href="https://github.com/etlbox/etlbox">Github page</a> to see the full source code for the core package. Please note that connection managers are now closed source. It is possible to get access to the source code of the connector packages if you purchase a paid license.</p>
+<h3 id="net-standard-app">.NET Standard App</h3>
 <p>ETLBox is .NET Standard app (.NET Standard 2.0 or higher) and therefore works with many current .NET version. <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">See the official .NET implementation support for more details.</a></p>
-<h2 id="namespaces">Namespaces</h2>
-<p>ETLBox is divided in several namepsace.</p>
+<h3 id="namespaces">Namespaces</h3>
+<p>ETLBox is divided in several namespace.</p>
 <p>The most important ones are: <code>ETLBox.ControlFlow.Tasks</code>,  <code>ETLBox.DataFlow.Connectors</code> and <code>ETLBox.DataFlow.Transformations</code>.
-They containt the components that you usually work with to create your data flow or control your database.</p>
-<p>To establish connection to a database, file or whereever you'll need a connection manager from the <code>ETLBox.Connection</code> namespace.</p>
-<p>You'll find tasks related to logging in the namespace <code>ETLBox.Logging</code>.</p>
+They contain the components that you usually work with to create your data flow or control your database.</p>
+<p>To establish a connection to a database you will need a connection manager from the <code>ETLBox.Connection</code> namespace.</p>
+<p>Tasks related to logging reside in the namespace <code>ETLBox.Logging</code>.</p>
 <p>Classes with some useful (mostly static) methods are in the namespace <code>ETLBox.Helper</code>.</p>
+<h3 id="3rd-party-dependencies">3rd party dependencies</h3>
+<p>ETLBox core and the connector packages may rely on different 3rd party libraries.</p>
+<ul>
+<li>The implementation for the Excel Source is based on <a href="https://github.com/ExcelDataReader/ExcelDataReader">https://github.com/ExcelDataReader/ExcelDataReader</a></li>
+<li>The CsvSource is based on <a href="https://joshclose.github.io/CsvHelper/">https://joshclose.github.io/CsvHelper/</a></li>
+</ul>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.docu/blob/main/ETLBoxDocu/api/index.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -831,7 +838,7 @@ They containt the components that you usually work with to create your data flow
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

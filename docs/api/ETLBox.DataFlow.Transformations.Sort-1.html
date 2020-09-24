@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -794,7 +803,7 @@
   
   <h1 id="ETLBox_DataFlow_Transformations_Sort_1" data-uid="ETLBox.DataFlow.Transformations.Sort`1" class="text-break">Class Sort&lt;TInput&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Sort the incoming data with the given sort function.
+  <div class="markdown level0 summary"><p>Sorts the incoming data with by the given comparison function.
 This is a blocking transformation - no output will be produced until all input data has arrived in the transformation.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -811,13 +820,13 @@ This is a blocking transformation - no output will be produced until all input d
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -844,6 +853,9 @@ This is a blocking transformation - no output will be produced until all input d
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html#ETLBox_DataFlow_DataFlowSource_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowSource&lt;TInput&gt;.LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent__maxBufferSize">DataFlowComponent._maxBufferSize</a>
@@ -988,7 +1000,7 @@ This is a blocking transformation - no output will be produced until all input d
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Transformations_Sort_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Sort&lt;TInput&gt; : DataFlowTransformation&lt;TInput, TInput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class Sort&lt;TInput&gt; : DataFlowTransformation&lt;TInput, TInput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1014,13 +1026,6 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
 
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L45">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1__ctor" data-uid="ETLBox.DataFlow.Transformations.Sort`1.#ctor">Sort()</h4>
   <div class="markdown level1 summary"></div>
@@ -1029,13 +1034,6 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Sort()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1__ctor_System_Comparison__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.%23ctor(System.Comparison%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L51">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1__ctor_System_Comparison__0__" data-uid="ETLBox.DataFlow.Transformations.Sort`1.#ctor(System.Comparison{`0})">Sort(Comparison&lt;TInput&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1064,43 +1062,6 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1_MaxBufferSize.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.MaxBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L39">View Source</a>
-  </span>
-  <a id="ETLBox_DataFlow_Transformations_Sort_1_MaxBufferSize_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.MaxBufferSize*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_Sort_1_MaxBufferSize" data-uid="ETLBox.DataFlow.Transformations.Sort`1.MaxBufferSize">MaxBufferSize</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxBufferSize { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1_SortFunction.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.SortFunction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L32">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_SortFunction_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.SortFunction*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_SortFunction" data-uid="ETLBox.DataFlow.Transformations.Sort`1.SortFunction">SortFunction</h4>
   <div class="markdown level1 summary"><p>A System.Comparison used to sort the data.</p>
@@ -1125,13 +1086,6 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1_SourceBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.SourceBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L35">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.Sort`1.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
@@ -1158,13 +1112,6 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1_TargetBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.TargetBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L37">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.Sort`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -1191,13 +1138,6 @@ Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L27">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_TaskName_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_TaskName" data-uid="ETLBox.DataFlow.Transformations.Sort`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1227,13 +1167,6 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnFaulted_System_Exception_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.CleanUpOnFaulted(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L73">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1261,13 +1194,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnSuccess.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.CleanUpOnSuccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L68">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.Sort`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1278,13 +1204,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1_InternalInitBufferObjects.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601.InternalInitBufferObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L61">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_Sort_1_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.Transformations.Sort`1.InternalInitBufferObjects*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Sort_1_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.Transformations.Sort`1.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
   <div class="markdown level1 summary"></div>
@@ -1298,9 +1217,6 @@ with a default name that can be overwritten.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
-  </div>
-  <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
   </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
@@ -1320,21 +1236,14 @@ with a default name that can be overwritten.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_Sort_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.Sort%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/Sort.cs/#L22" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1351,7 +1260,7 @@ with a default name that can be overwritten.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

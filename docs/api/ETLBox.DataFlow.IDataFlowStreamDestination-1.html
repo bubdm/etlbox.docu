@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -805,12 +814,24 @@
     <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html#ETLBox_DataFlow_IDataFlowDestination_Predecessors">IDataFlowDestination.Predecessors</a>
     </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html#ETLBox_DataFlow_IDataFlowComponent_Completion">IDataFlowComponent.Completion</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html#ETLBox_DataFlow_IDataFlowComponent_OnCompletion">IDataFlowComponent.OnCompletion</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html#ETLBox_DataFlow_IDataFlowComponent_Exception">IDataFlowComponent.Exception</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html#ETLBox_DataFlow_IDataFlowComponent_MaxBufferSize">IDataFlowComponent.MaxBufferSize</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.DataFlow.html">ETLBox.DataFlow</a></h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_IDataFlowStreamDestination_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IDataFlowStreamDestination&lt;TInput&gt; : IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IDataFlowStreamDestination&lt;TInput&gt; : IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -830,13 +851,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowStreamDestination_1_HttpClient.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowStreamDestination%601.HttpClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowDestination.cs/#L51">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowStreamDestination_1_HttpClient_" data-uid="ETLBox.DataFlow.IDataFlowStreamDestination`1.HttpClient*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowStreamDestination_1_HttpClient" data-uid="ETLBox.DataFlow.IDataFlowStreamDestination`1.HttpClient">HttpClient</h4>
   <div class="markdown level1 summary"><p>The System.Net.HttpClient used to connect with the destination (only needed when the <a class="xref" href="ETLBox.DataFlow.IDataFlowStreamDestination-1.html#ETLBox_DataFlow_IDataFlowStreamDestination_1_ResourceType">ResourceType</a> is Http.</p>
@@ -861,13 +875,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowStreamDestination_1_ResourceType.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowStreamDestination%601.ResourceType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowDestination.cs/#L46">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowStreamDestination_1_ResourceType_" data-uid="ETLBox.DataFlow.IDataFlowStreamDestination`1.ResourceType*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowStreamDestination_1_ResourceType" data-uid="ETLBox.DataFlow.IDataFlowStreamDestination`1.ResourceType">ResourceType</h4>
   <div class="markdown level1 summary"><p>Specifies the resourc type. ResourceType.
@@ -893,13 +900,6 @@ Specify ResourceType.File if you want to write into a file.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowStreamDestination_1_Uri.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowStreamDestination%601.Uri%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowDestination.cs/#L40">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowStreamDestination_1_Uri_" data-uid="ETLBox.DataFlow.IDataFlowStreamDestination`1.Uri*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowStreamDestination_1_Uri" data-uid="ETLBox.DataFlow.IDataFlowStreamDestination`1.Uri">Uri</h4>
   <div class="markdown level1 summary"><p>The Url of the webservice (e.g. <a href="https://test.com/foo">https://test.com/foo</a>) or the file name (relative or absolute)</p>
@@ -929,16 +929,6 @@ Specify ResourceType.File if you want to write into a file.</p>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowStreamDestination_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowStreamDestination%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowDestination.cs/#L35" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -955,7 +945,7 @@ Specify ResourceType.File if you want to write into a file.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

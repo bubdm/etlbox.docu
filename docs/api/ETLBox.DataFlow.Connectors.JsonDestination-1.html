@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -810,11 +819,11 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowStreamDestination-1.html">IDataFlowStreamDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1000,7 +1009,7 @@
   <h6><strong>Assembly</strong>: ETLBox.Json.dll</h6>
   <h5 id="ETLBox_DataFlow_Connectors_JsonDestination_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class JsonDestination&lt;TInput&gt; : DataFlowStreamDestination&lt;TInput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowStreamDestination&lt;TInput&gt;, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class JsonDestination&lt;TInput&gt; : DataFlowStreamDestination&lt;TInput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowStreamDestination&lt;TInput&gt;, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1024,13 +1033,6 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
 
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L34">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_JsonDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_JsonDestination_1__ctor" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.#ctor">JsonDestination()</h4>
   <div class="markdown level1 summary"></div>
@@ -1039,13 +1041,6 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public JsonDestination()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1__ctor_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L44">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_JsonDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_JsonDestination_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.#ctor(System.String)">JsonDestination(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1072,13 +1067,6 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1__ctor_System_String_ETLBox_DataFlow_ResourceType_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601.%23ctor(System.String%2CETLBox.DataFlow.ResourceType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L51">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_JsonDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_JsonDestination_1__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.#ctor(System.String,ETLBox.DataFlow.ResourceType)">JsonDestination(String, ResourceType)</h4>
   <div class="markdown level1 summary"></div>
@@ -1113,13 +1101,6 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1_JsonSerializer.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601.JsonSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L28">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_JsonDestination_1_JsonSerializer_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.JsonSerializer*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_JsonDestination_1_JsonSerializer" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.JsonSerializer">JsonSerializer</h4>
   <div class="markdown level1 summary"><p>The Newtonsoft.Json.JsonSerializer used to deserialize the json into the used data type.</p>
@@ -1144,13 +1125,6 @@ dest.Wait(); //Wait for all data to arrive</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L23">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_JsonDestination_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_JsonDestination_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1180,13 +1154,6 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1_CloseStream.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601.CloseStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L92">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_JsonDestination_1_CloseStream_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.CloseStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_JsonDestination_1_CloseStream" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.CloseStream">CloseStream()</h4>
   <div class="markdown level1 summary"></div>
@@ -1197,13 +1164,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.CloseStream()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1_InitStream.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601.InitStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L62">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_JsonDestination_1_InitStream_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.InitStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_JsonDestination_1_InitStream" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.InitStream">InitStream()</h4>
   <div class="markdown level1 summary"></div>
@@ -1214,13 +1174,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowStreamDestination&lt;TInput&gt;.InitStream()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1_WriteIntoStream__0_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601.WriteIntoStream(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L76">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_JsonDestination_1_WriteIntoStream_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.WriteIntoStream*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_JsonDestination_1_WriteIntoStream__0_" data-uid="ETLBox.DataFlow.Connectors.JsonDestination`1.WriteIntoStream(`0)">WriteIntoStream(TInput)</h4>
   <div class="markdown level1 summary"></div>
@@ -1253,9 +1206,6 @@ with a default name that can be overwritten.</p>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1267,21 +1217,14 @@ with a default name that can be overwritten.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_JsonDestination_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.JsonDestination%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Json/src/Toolbox/JsonDestination.cs/#L18" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1298,7 +1241,7 @@ with a default name that can be overwritten.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

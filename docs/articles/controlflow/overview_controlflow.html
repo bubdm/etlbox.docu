@@ -99,37 +99,73 @@
                             <a href="../overview.html" title="What is ETLBox" class="">What is ETLBox</a>
                           </li>
                           <li class="">
-                            <a href="../getting_started.html" title="Core concepts" class="">Core concepts</a>
+                            <a href="../dataflow/core_concepts.html" title="Core concepts" class="">Core concepts</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/sources_destinations.html" title="Sources and destinations" class="">Sources and destinations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/transformations_overview.html" title="Transformations" class="">Transformations</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                          </li>
+                          <li class="">
+                            <a href="../dataflow/generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
                           </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
-                      <a class="">DataFlow Tutorial</a>
+                      <a class="">Going further</a>
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="../dataflow/dataflow_simple_flow.html" title="A simple data flow" class="">A simple data flow</a>
+                            <a href="../transformations/row_manipulations.html" title="Row manipulations" class="">Row manipulations</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_db_sources_destinations.html" title="Integrate databases" class="">Integrate databases</a>
+                            <a href="../transformations/lookup_data.html" title="Lookup" class="">Lookup</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_file_sources_destinations.html" title="Integrate flat files and web services" class="">Integrate flat files and web services</a>
+                            <a href="../transformations/broadcast_merge_join.html" title="Broadcast - joins - split" class="">Broadcast - joins - split</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_transformations.html" title="Transformations" class="">Transformations</a>
+                            <a href="../transformations/aggregating_data.html" title="Aggregating data" class="">Aggregating data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                            <a href="../connectors/syncing_merge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Connectors</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../connectors/databases.html" title="Databases" class="">Databases</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
+                            <a href="../connectors/csv.html" title="Csv data" class="">Csv data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_dbmerge.html" title="Syncing tables with Merge" class="">Syncing tables with Merge</a>
+                            <a href="../connectors/json.html" title="Json data" class="">Json data</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/dataflow_other_sources_destinations.html" title="Other sources and destinations" class="">Other sources and destinations</a>
+                            <a href="../connectors/excel.html" title="Excel" class="">Excel</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/memory.html" title="In memory" class="">In memory</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/xml.html" title="Xml" class="">Xml</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/text.html" title="Text" class="">Text</a>
+                          </li>
+                          <li class="">
+                            <a href="../connectors/custom.html" title="Custom code" class="">Custom code</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -236,7 +272,7 @@ E.g. for Sql Server you would create it with</p>
 <h3 id="tables">Tables</h3>
 <h4 id="createtables-task">CreateTables Task</h4>
 <p>CreateTableTask will help you to create a table on the database. You can pass either a <code>TableDefinition</code> object
-or a table name and a list of table colums.</p>
+or a table name and a list of table columns.</p>
 <p>Here is an example with passing the table name and a list of table columns</p>
 <pre><code class="lang-C#">List&lt;TableColumn&gt; columns = new List&lt;TableColumn&gt;() {
     new TableColumn(&quot;Id&quot;, &quot;INT&quot;,allowNulls:false,isPrimaryKey:true, isIdentity: true),
@@ -250,7 +286,7 @@ CreateTableTask.Create(connectionManager, &quot;tablename&quot;, columns);
 <p>A table column describe the column in the database with the most used attributes: Name, Data type (use the data type
 which you are most familiar with, there will be an attempt to convert the database type into the right database specific format),
 if the column is nullable, if the column is a primary key and if the column is used as identity column. (Serial for Postgres or
-auto increment for MySql). Additionaly, you could specify if the column is a computed column or if it has a default value.</p>
+auto increment for MySql). Additionally, you could specify if the column is a computed column or if it has a default value.</p>
 <p>Here is an example for creating a <code>TableDefinition</code> and pass it to the CreateTableTask:</p>
 <pre><code class="lang-C#">TableDefinition CustomerTableDef = new TableDefinition(&quot;customer&quot;,
     new List&lt;TableColumn&gt;() {
@@ -260,7 +296,7 @@ auto increment for MySql). Additionaly, you could specify if the column is a com
 CreateTableTask.Create(connectionManager, CustomerTableDef);
 </code></pre>
 <p><em>Implicit data type conversions</em>:</p>
-<p>CreateTableTask will automatically try to convert the given data type into a type that your database actually understands. E.g., if you pass &quot;DATETIME&quot; as datatype for a column, and you want to create your table on a Postgres connection manager, CreateTableTask will automatically convert &quot;DATETIME&quot; into &quot;TIMESTAMP&quot;.</p>
+<p>CreateTableTask will automatically try to convert the given data type into a type that your database actually understands. E.g., if you pass &quot;DATETIME&quot; as data type for a column, and you want to create your table on a Postgres connection manager, CreateTableTask will automatically convert &quot;DATETIME&quot; into &quot;TIMESTAMP&quot;.</p>
 <p><em>Adding your own data type conversion</em></p>
 <p>If you need to change the default data type conversion, you can overwrite it with your  implementation. To achieve this, you
 need to pass an object that implements IDataTypeConverter. The interface has one method: <code>TryConvertDbDataType</code> and 2 parameter. <code>dbSpecificTypeName</code> is the name that you define in your TableColumn, and connection type defines the connection manager type (e.g. SqlServer or Oracle).
@@ -379,7 +415,7 @@ in MySql).</p>
 which allows you to do almost everything on the database, without the &quot;overhead&quot; and boilerplate code that ADO.NET brings with it.</p>
 <p>SqlTask always expects a descriptive name when you use it - this name is used for logging purposes.</p>
 <pre><code class="lang-C#">SqlTask.ExecuteNonQuery(connectionManager, &quot;Insert data&quot;,
-   $@&quot;insert into demo.table1 (value) select * from (values ('Ein Text'), ('Noch mehr Text')) as data(v)&quot;);
+   $@&quot;insert into demo.table1 (value) select * from (values ('Text'), ('More text')) as data(v)&quot;);
 </code></pre>
 <p>ExecuteNonQuery will just execute the sql code without reading any results from the database.</p>
 <h3 id="using-parameters">Using parameters</h3>
@@ -400,7 +436,7 @@ object result = SqlTask.ExecuteScalar(connectionManager, &quot;Execute scalar&qu
     $@&quot;SELECT 'Hallo Welt' AS ScalarResult&quot;);
 
 //with type conversion
-double? result = SqlTask.ExecuteScalar&lt;double&gt;(connectionManager,&quot;Execute scalar with datatype&quot;,
+double? result = SqlTask.ExecuteScalar&lt;double&gt;(connectionManager,&quot;Execute scalar with data type&quot;,
     $@&quot;SELECT CAST(1.343 AS NUMERIC(4,3)) AS ScalarResult&quot;));
 </code></pre>
 <h4 id="result-sets">Result sets</h4>
@@ -455,23 +491,16 @@ int count = task.Count().Rows;
 </code></pre>
 <p><strong>Note</strong>: The QuickQueryMode will create sql code that only works on SqlServer. For other databases, this won't work.</p>
 <h2 id="why-not-entitiy-framework">Why not Entitiy Framework</h2>
-<p>ETLBox was designed to be used as an ETL object library. Therefore, the user normally deals with big data, some kind of datawarehouse structures and is used to
+<p>ETLBox was designed to be used as an ETL object library. Therefore, the user normally deals with big data, some kind of data warehouse structures and is used to
 have full control over the database. With the underlying power of ADO.NET - which is used by ETLBox - you have full access to the database and basically can do anything
 you are used to do with sql on the server. As EF (Entity Framework) is a high sophisticated ORM tool, it comes with the downside that you can only do things on a database that
-EF allows you to do. But as EF does not incorporate all the possibilities that you can do with SQL and ADO.NET on a Sql Server, Entitity Framework normally isn't a
+EF allows you to do. But as EF does not incorporate all the possibilities that you can do with SQL and ADO.NET on a Sql Server, Entity Framework normally isn't a
 good choice for creating ETL jobs. This is also true for other ORM tools.</p>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.docu/blob/main/ETLBoxDocu/articles/controlflow/overview_controlflow.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -488,7 +517,7 @@ good choice for creating ETL jobs. This is also true for other ORM tools.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -810,11 +819,11 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowStreamDestination-1.html">IDataFlowStreamDestination</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1024,17 +1033,10 @@
   <h6><strong>Assembly</strong>: ETLBox.Xml.dll</h6>
   <h5 id="ETLBox_DataFlow_Connectors_XmlDestination_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class XmlDestination : XmlDestination&lt;ExpandoObject&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowStreamDestination&lt;ExpandoObject&gt;, IDataFlowDestination&lt;ExpandoObject&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class XmlDestination : XmlDestination&lt;ExpandoObject&gt;, ILoggableTask, IDataFlowLogging, IDataFlowStreamDestination&lt;ExpandoObject&gt;, IDataFlowDestination&lt;ExpandoObject&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlDestination__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlDestination.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlDestination.cs/#L131">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination__ctor" data-uid="ETLBox.DataFlow.Connectors.XmlDestination.#ctor">XmlDestination()</h4>
   <div class="markdown level1 summary"></div>
@@ -1043,13 +1045,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public XmlDestination()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlDestination__ctor_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlDestination.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlDestination.cs/#L132">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination.#ctor(System.String)">XmlDestination(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1075,13 +1070,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlDestination__ctor_System_String_ETLBox_DataFlow_ResourceType_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlDestination.%23ctor(System.String%2CETLBox.DataFlow.ResourceType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlDestination.cs/#L133">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_XmlDestination__ctor_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_XmlDestination__ctor_System_String_ETLBox_DataFlow_ResourceType_" data-uid="ETLBox.DataFlow.Connectors.XmlDestination.#ctor(System.String,ETLBox.DataFlow.ResourceType)">XmlDestination(String, ResourceType)</h4>
   <div class="markdown level1 summary"></div>
@@ -1117,9 +1105,6 @@
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1131,21 +1116,14 @@
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.connectors/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_XmlDestination.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.XmlDestination%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox.connectors/blob/dev/ETLBox.Xml/src/Toolbox/XmlDestination.cs/#L129" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1162,7 +1140,7 @@
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

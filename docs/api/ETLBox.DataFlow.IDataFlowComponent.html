@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -804,13 +813,6 @@
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowComponent_Completion.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowComponent.Completion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowComponent.cs/#L12">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowComponent_Completion_" data-uid="ETLBox.DataFlow.IDataFlowComponent.Completion*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowComponent_Completion" data-uid="ETLBox.DataFlow.IDataFlowComponent.Completion">Completion</h4>
   <div class="markdown level1 summary"><p>The completion task of the component. A component is completed when all predecessors (if any) are
@@ -836,13 +838,6 @@ completed and the current component has completed its buffer.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowComponent_Exception.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowComponent.Exception%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowComponent.cs/#L23">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowComponent_Exception_" data-uid="ETLBox.DataFlow.IDataFlowComponent.Exception*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowComponent_Exception" data-uid="ETLBox.DataFlow.IDataFlowComponent.Exception">Exception</h4>
   <div class="markdown level1 summary"><p>If a component encountered an exception or entered a fault state because another component
@@ -868,13 +863,6 @@ in the data flow faulted, the thrown exception will be stored in this property.<
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowComponent_MaxBufferSize.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowComponent.MaxBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowComponent.cs/#L29">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowComponent_MaxBufferSize_" data-uid="ETLBox.DataFlow.IDataFlowComponent.MaxBufferSize*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowComponent_MaxBufferSize" data-uid="ETLBox.DataFlow.IDataFlowComponent.MaxBufferSize">MaxBufferSize</h4>
   <div class="markdown level1 summary"><p>Each component can have one or more buffers to improve throughput and allow faster processing of data.
@@ -901,13 +889,6 @@ The default value is -1 (unlimited)</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowComponent_OnCompletion.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowComponent.OnCompletion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowComponent.cs/#L17">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_IDataFlowComponent_OnCompletion_" data-uid="ETLBox.DataFlow.IDataFlowComponent.OnCompletion*"></a>
   <h4 id="ETLBox_DataFlow_IDataFlowComponent_OnCompletion" data-uid="ETLBox.DataFlow.IDataFlowComponent.OnCompletion">OnCompletion</h4>
   <div class="markdown level1 summary"><p>When a component has completed and processed all rows, the OnCompletion action is executed.</p>
@@ -937,16 +918,6 @@ The default value is -1 (unlimited)</p>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_IDataFlowComponent.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.IDataFlowComponent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/IDataFlowComponent.cs/#L6" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -963,7 +934,7 @@ The default value is -1 (unlimited)</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

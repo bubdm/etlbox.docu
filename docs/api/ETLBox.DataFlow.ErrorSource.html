@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -810,11 +819,11 @@ can use this source to redirect errors into the error data flow.</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowExecutableSource-1.html">IDataFlowExecutableSource</a>&lt;<a class="xref" href="ETLBox.DataFlow.ETLBoxError.html">ETLBoxError</a>&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;<a class="xref" href="ETLBox.DataFlow.ETLBoxError.html">ETLBoxError</a>&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1012,17 +1021,10 @@ can use this source to redirect errors into the error data flow.</p>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_ErrorSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ErrorSource : DataFlowExecutableSource&lt;ETLBoxError&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowExecutableSource&lt;ETLBoxError&gt;, IDataFlowSource&lt;ETLBoxError&gt;, IDataFlowSource</code></pre>
+    <pre><code class="lang-csharp hljs">public class ErrorSource : DataFlowExecutableSource&lt;ETLBoxError&gt;, ILoggableTask, IDataFlowLogging, IDataFlowExecutableSource&lt;ETLBoxError&gt;, IDataFlowSource&lt;ETLBoxError&gt;, IDataFlowSource, IDataFlowComponent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_ErrorSource__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.ErrorSource.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/ErrorSource.cs/#L19">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_ErrorSource__ctor_" data-uid="ETLBox.DataFlow.ErrorSource.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource__ctor" data-uid="ETLBox.DataFlow.ErrorSource.#ctor">ErrorSource()</h4>
   <div class="markdown level1 summary"></div>
@@ -1033,13 +1035,6 @@ can use this source to redirect errors into the error data flow.</p>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_ErrorSource_Redirection.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.ErrorSource.Redirection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/ErrorSource.cs/#L17">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_ErrorSource_Redirection_" data-uid="ETLBox.DataFlow.ErrorSource.Redirection*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_Redirection" data-uid="ETLBox.DataFlow.ErrorSource.Redirection">Redirection</h4>
   <div class="markdown level1 summary"><p>If set to another error source, all message send to this source will redirected.</p>
@@ -1066,13 +1061,6 @@ can use this source to redirect errors into the error data flow.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_ErrorSource_ConvertErrorData__1___0_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.ErrorSource.ConvertErrorData%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/ErrorSource.cs/#L65">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_ErrorSource_ConvertErrorData_" data-uid="ETLBox.DataFlow.ErrorSource.ConvertErrorData*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_ConvertErrorData__1___0_" data-uid="ETLBox.DataFlow.ErrorSource.ConvertErrorData``1(``0)">ConvertErrorData&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"><p>Serialized a row using the default json serialization</p>
@@ -1132,13 +1120,6 @@ can use this source to redirect errors into the error data flow.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_ErrorSource_InternalInitBufferObjects.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.ErrorSource.InternalInitBufferObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/ErrorSource.cs/#L23">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_ErrorSource_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.ErrorSource.InternalInitBufferObjects*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.ErrorSource.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
   <div class="markdown level1 summary"></div>
@@ -1149,13 +1130,6 @@ can use this source to redirect errors into the error data flow.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowExecutableSource&lt;ETLBox.DataFlow.ETLBoxError&gt;.InternalInitBufferObjects()</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_ErrorSource_Send_System_Exception_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.ErrorSource.Send(System.Exception%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/ErrorSource.cs/#L43">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_ErrorSource_Send_" data-uid="ETLBox.DataFlow.ErrorSource.Send*"></a>
   <h4 id="ETLBox_DataFlow_ErrorSource_Send_System_Exception_System_String_" data-uid="ETLBox.DataFlow.ErrorSource.Send(System.Exception,System.String)">Send(Exception, String)</h4>
   <div class="markdown level1 summary"><p>Sends the error message into the error data flow</p>
@@ -1194,9 +1168,6 @@ can use this source to redirect errors into the error data flow.</p>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1208,21 +1179,14 @@ can use this source to redirect errors into the error data flow.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_ErrorSource.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.ErrorSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/DataFlow/ErrorSource.cs/#L12" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1239,7 +1203,7 @@ can use this source to redirect errors into the error data flow.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

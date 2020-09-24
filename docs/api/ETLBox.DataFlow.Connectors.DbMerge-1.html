@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -812,7 +821,6 @@ A delta table is generated that stores information if a records was inserted, up
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TInput&gt;</div>
@@ -820,6 +828,7 @@ A delta table is generated that stores information if a records was inserted, up
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowBatchDestination-1.html">IDataFlowBatchDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -990,7 +999,7 @@ A delta table is generated that stores information if a records was inserted, up
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Connectors_DbMerge_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DbMerge&lt;TInput&gt; : DataFlowTransformation&lt;TInput, TInput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowBatchDestination&lt;TInput&gt;, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class DbMerge&lt;TInput&gt; : DataFlowTransformation&lt;TInput, TInput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowBatchDestination&lt;TInput&gt;, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1010,13 +1019,6 @@ A delta table is generated that stores information if a records was inserted, up
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1__ctor_ETLBox_Connection_IConnectionManager_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.%23ctor(ETLBox.Connection.IConnectionManager%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L130">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(ETLBox.Connection.IConnectionManager,System.String)">DbMerge(IConnectionManager, String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1047,13 +1049,6 @@ A delta table is generated that stores information if a records was inserted, up
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1__ctor_ETLBox_Connection_IConnectionManager_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.%23ctor(ETLBox.Connection.IConnectionManager%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L140">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_ETLBox_Connection_IConnectionManager_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(ETLBox.Connection.IConnectionManager,System.String,System.Int32)">DbMerge(IConnectionManager, String, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -1089,13 +1084,6 @@ A delta table is generated that stores information if a records was inserted, up
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1__ctor_System_String_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L121">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_System_String_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(System.String)">DbMerge(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1121,13 +1109,6 @@ A delta table is generated that stores information if a records was inserted, up
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1__ctor_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.%23ctor(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L135">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1__ctor_System_String_System_Int32_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.#ctor(System.String,System.Int32)">DbMerge(String, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -1160,13 +1141,6 @@ A delta table is generated that stores information if a records was inserted, up
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_BatchSize.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.BatchSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L89">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_BatchSize_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.BatchSize*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_BatchSize" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.BatchSize">BatchSize</h4>
   <div class="markdown level1 summary"><p>The batch size used when inserted data into the database table.</p>
@@ -1191,13 +1165,6 @@ A delta table is generated that stores information if a records was inserted, up
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_ConnectionManager.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.ConnectionManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L98">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_ConnectionManager_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.ConnectionManager*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_ConnectionManager" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.ConnectionManager">ConnectionManager</h4>
   <div class="markdown level1 summary"><p>The connection manager used to connect to the database - use the right connection manager for your database type.</p>
@@ -1222,13 +1189,6 @@ A delta table is generated that stores information if a records was inserted, up
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_DeltaTable.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.DeltaTable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L57">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_DeltaTable_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.DeltaTable*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_DeltaTable" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.DeltaTable">DeltaTable</h4>
   <div class="markdown level1 summary"><p>A list that is filled with delta information when the merge is executed.
@@ -1254,13 +1214,6 @@ It will contain inserted, updated, deleted and untouched (existing) rows.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_DestinationTableDefinition.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.DestinationTableDefinition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L46">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_DestinationTableDefinition_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.DestinationTableDefinition*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_DestinationTableDefinition" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.DestinationTableDefinition">DestinationTableDefinition</h4>
   <div class="markdown level1 summary"><p>The table definition of the destination table. By default, the table definition is read from the database.
@@ -1287,13 +1240,6 @@ only to use the columns in the provided definition.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_MergeMode.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.MergeMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L39">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_MergeMode_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.MergeMode*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_MergeMode" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.MergeMode">MergeMode</h4>
   <div class="markdown level1 summary"><p>Defines the type of target data which affects how deletions or insertions are handled.
@@ -1321,13 +1267,6 @@ OnlyUpdates means that only updates are applied to the destination.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_MergeProperties.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.MergeProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L62">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_MergeProperties_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.MergeProperties*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_MergeProperties" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.MergeProperties">MergeProperties</h4>
   <div class="markdown level1 summary"><p>A list of property names that are used in the Merge.</p>
@@ -1352,13 +1291,6 @@ OnlyUpdates means that only updates are applied to the destination.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_SourceBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.SourceBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L29">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_SourceBlock_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.SourceBlock*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_SourceBlock" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.SourceBlock">SourceBlock</h4>
   <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
@@ -1385,13 +1317,6 @@ OnlyUpdates means that only updates are applied to the destination.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_TableName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.TableName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L51">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_TableName_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TableName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_TableName" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TableName">TableName</h4>
   <div class="markdown level1 summary"><p>The name of the target database table for the merge.</p>
@@ -1416,13 +1341,6 @@ OnlyUpdates means that only updates are applied to the destination.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_TargetBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.TargetBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L31">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_TargetBlock_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_TargetBlock" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
@@ -1449,13 +1367,6 @@ OnlyUpdates means that only updates are applied to the destination.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_TaskName.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L27">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_TaskName_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TaskName*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_TaskName" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.TaskName">TaskName</h4>
   <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
@@ -1483,13 +1394,6 @@ with a default name that can be overwritten.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_UseTruncateMethod.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.UseTruncateMethod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L69">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_UseTruncateMethod_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.UseTruncateMethod*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_UseTruncateMethod" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.UseTruncateMethod">UseTruncateMethod</h4>
   <div class="markdown level1 summary"><p>By default, only records are deleted that either need to be deleted or inserted by using a DELETE FROM statement.
@@ -1518,13 +1422,6 @@ This can be faster if many records would need to be deleted from the destination
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnFaulted_System_Exception_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.CleanUpOnFaulted(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L177">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1552,13 +1449,6 @@ This can be faster if many records would need to be deleted from the destination
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnSuccess.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.CleanUpOnSuccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L172">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1569,13 +1459,6 @@ This can be faster if many records would need to be deleted from the destination
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_InternalInitBufferObjects.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.InternalInitBufferObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L163">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.InternalInitBufferObjects*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
   <div class="markdown level1 summary"></div>
@@ -1586,13 +1469,6 @@ This can be faster if many records would need to be deleted from the destination
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InternalInitBufferObjects">DataFlowComponent.InternalInitBufferObjects()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination%7BETLBox.DataFlow.ETLBoxError%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L179">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_LinkErrorTo_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.LinkErrorTo*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1633,13 +1509,6 @@ This can be faster if many records would need to be deleted from the destination
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1_Wait.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601.Wait%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L117">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Connectors_DbMerge_1_Wait_" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.Wait*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbMerge_1_Wait" data-uid="ETLBox.DataFlow.Connectors.DbMerge`1.Wait">Wait()</h4>
   <div class="markdown level1 summary"></div>
@@ -1651,9 +1520,6 @@ This can be faster if many records would need to be deleted from the destination
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
-  </div>
-  <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
   </div>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
@@ -1676,21 +1542,14 @@ This can be faster if many records would need to be deleted from the destination
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Connectors_DbMerge_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Connectors.DbMerge%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/DbMerge.cs/#L22" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1707,7 +1566,7 @@ This can be faster if many records would need to be deleted from the destination
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

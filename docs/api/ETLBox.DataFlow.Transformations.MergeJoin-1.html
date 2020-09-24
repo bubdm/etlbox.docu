@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -799,7 +808,7 @@ Each row from the left join target will be merged with a row from the right join
 If the amount of ingoing data is unevenly distributed, the last rows will be joined with null values.</p>
 <p>You can define a match condition that let you only merge matching records. This will change the
 match behavior a little bit.
-By assuming that the intput is sorted, not matching records will be joined with null then. This
+By assuming that the input is sorted, not matching records will be joined with null then. This
 can be compared with a left or right join.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -815,12 +824,12 @@ can be compared with a left or right join.</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-1.html">IDataFlowTransformation</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1036,7 +1045,7 @@ can be compared with a left or right join.</p>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Transformations_MergeJoin_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MergeJoin&lt;TInput&gt; : MergeJoin&lt;TInput, TInput, TInput&gt;, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowTransformation&lt;TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class MergeJoin&lt;TInput&gt; : MergeJoin&lt;TInput, TInput, TInput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowTransformation&lt;TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1055,13 +1064,6 @@ can be compared with a left or right join.</p>
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_1__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L232">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_1__ctor" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`1.#ctor">MergeJoin()</h4>
   <div class="markdown level1 summary"></div>
@@ -1070,13 +1072,6 @@ can be compared with a left or right join.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MergeJoin()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_1__ctor_System_Func__0__0__0__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%601.%23ctor(System.Func%7B%600%2C%600%2C%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L235">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_MergeJoin_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`1.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_MergeJoin_1__ctor_System_Func__0__0__0__" data-uid="ETLBox.DataFlow.Transformations.MergeJoin`1.#ctor(System.Func{`0,`0,`0})">MergeJoin(Func&lt;TInput, TInput, TInput&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1107,9 +1102,6 @@ can be compared with a left or right join.</p>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1124,21 +1116,14 @@ can be compared with a left or right join.</p>
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_MergeJoin_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.MergeJoin%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/MergeJoin.cs/#L230" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1155,7 +1140,7 @@ can be compared with a left or right join.</p>
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

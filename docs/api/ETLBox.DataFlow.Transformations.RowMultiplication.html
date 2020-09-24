@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -809,7 +818,6 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
@@ -817,6 +825,7 @@
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1023,17 +1032,10 @@
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_Transformations_RowMultiplication_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RowMultiplication : RowMultiplication&lt;ExpandoObject, ExpandoObject&gt;, IDataFlowComponent, IDataFlowLogging, ILoggableTask, IDataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;, IDataFlowSource&lt;ExpandoObject&gt;, IDataFlowSource, IDataFlowDestination&lt;ExpandoObject&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public class RowMultiplication : RowMultiplication&lt;ExpandoObject, ExpandoObject&gt;, IDataFlowLogging, ILoggableTask, IDataFlowTransformation&lt;ExpandoObject, ExpandoObject&gt;, IDataFlowSource&lt;ExpandoObject&gt;, IDataFlowSource, IDataFlowDestination&lt;ExpandoObject&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication__ctor.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L92">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication__ctor" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication.#ctor">RowMultiplication()</h4>
   <div class="markdown level1 summary"></div>
@@ -1042,13 +1044,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RowMultiplication()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication__ctor_System_Func_System_Dynamic_ExpandoObject_System_Collections_Generic_IEnumerable_System_Dynamic_ExpandoObject___.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication.%23ctor(System.Func%7BSystem.Dynamic.ExpandoObject%2CSystem.Collections.Generic.IEnumerable%7BSystem.Dynamic.ExpandoObject%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L95">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_Transformations_RowMultiplication__ctor_" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_RowMultiplication__ctor_System_Func_System_Dynamic_ExpandoObject_System_Collections_Generic_IEnumerable_System_Dynamic_ExpandoObject___" data-uid="ETLBox.DataFlow.Transformations.RowMultiplication.#ctor(System.Func{System.Dynamic.ExpandoObject,System.Collections.Generic.IEnumerable{System.Dynamic.ExpandoObject}})">RowMultiplication(Func&lt;ExpandoObject, IEnumerable&lt;ExpandoObject&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1076,9 +1071,6 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1099,21 +1091,14 @@
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_Transformations_RowMultiplication.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.Transformations.RowMultiplication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Toolbox/DataFlow/RowMultiplication.cs/#L90" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1130,7 +1115,7 @@
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>

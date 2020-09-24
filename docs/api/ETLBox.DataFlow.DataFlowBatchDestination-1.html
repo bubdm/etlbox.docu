@@ -335,6 +335,9 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -590,6 +593,12 @@
                             <a href="ETLBox.DataFlow.Transformations.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename.html" title="ColumnRename" class="">ColumnRename</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Transformations.ColumnRename-1.html" title="ColumnRename&lt;TInput&gt;" class="">ColumnRename&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin.html" title="CrossJoin" class="">CrossJoin</a>
                           </li>
                           <li class="">
@@ -807,11 +816,11 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
-    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowBatchDestination-1.html">IDataFlowBatchDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
     <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -964,7 +973,7 @@
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_DataFlow_DataFlowBatchDestination_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class DataFlowBatchDestination&lt;TInput&gt; : DataFlowComponent, ILoggableTask, IDataFlowComponent, IDataFlowLogging, IDataFlowBatchDestination&lt;TInput&gt;, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class DataFlowBatchDestination&lt;TInput&gt; : DataFlowComponent, ILoggableTask, IDataFlowLogging, IDataFlowBatchDestination&lt;TInput&gt;, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -983,13 +992,6 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_DEFAULT_BATCH_SIZE.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.DEFAULT_BATCH_SIZE%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L31">View Source</a>
-  </span>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_DEFAULT_BATCH_SIZE" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.DEFAULT_BATCH_SIZE">DEFAULT_BATCH_SIZE</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -1014,13 +1016,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_AfterBatchWrite.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.AfterBatchWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L20">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_AfterBatchWrite_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.AfterBatchWrite*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_AfterBatchWrite" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.AfterBatchWrite">AfterBatchWrite</h4>
   <div class="markdown level1 summary"><p>This action is called after a batch was successfully inserted into the destination.
@@ -1046,13 +1041,6 @@ You will get a copy of the data that was used for the insertion.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.BatchSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L29">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.BatchSize*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_BatchSize" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.BatchSize">BatchSize</h4>
   <div class="markdown level1 summary"><p>The batch size defines how many records needs to be in the Input buffer before data is written into the destination.
@@ -1078,13 +1066,6 @@ The default batch size is 1000.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_BeforeBatchWrite.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.BeforeBatchWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L15">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_BeforeBatchWrite_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.BeforeBatchWrite*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_BeforeBatchWrite" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.BeforeBatchWrite">BeforeBatchWrite</h4>
   <div class="markdown level1 summary"><p>This function is called every time before a batch is inserted into the destination.
@@ -1110,13 +1091,6 @@ It receives an array that represents the batch - you can modify the data itself 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_Buffer.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.Buffer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L87">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_Buffer_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.Buffer*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_Buffer" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.Buffer">Buffer</h4>
   <div class="markdown level1 summary"></div>
@@ -1140,13 +1114,6 @@ It receives an array that represents the batch - you can modify the data itself 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_TargetAction.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.TargetAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L39">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_TargetAction_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.TargetAction*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_TargetAction" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.TargetAction">TargetAction</h4>
   <div class="markdown level1 summary"></div>
@@ -1170,13 +1137,6 @@ It receives an array that represents the batch - you can modify the data itself 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_TargetBlock.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.TargetBlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L24">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_TargetBlock_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.TargetBlock*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_TargetBlock" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.TargetBlock">TargetBlock</h4>
   <div class="markdown level1 summary"><p>The buffer component used as target for linking.</p>
@@ -1201,13 +1161,6 @@ It receives an array that represents the batch - you can modify the data itself 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_WasWritingPrepared.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.WasWritingPrepared%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L85">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_WasWritingPrepared_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.WasWritingPrepared*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_WasWritingPrepared" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.WasWritingPrepared">WasWritingPrepared</h4>
   <div class="markdown level1 summary"></div>
@@ -1233,13 +1186,6 @@ It receives an array that represents the batch - you can modify the data itself 
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnFaulted_System_Exception_.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.CleanUpOnFaulted(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L76">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.CleanUpOnFaulted*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
   <div class="markdown level1 summary"></div>
@@ -1267,13 +1213,6 @@ It receives an array that represents the batch - you can modify the data itself 
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnSuccess.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.CleanUpOnSuccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L71">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.CleanUpOnSuccess*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
   <div class="markdown level1 summary"></div>
@@ -1284,13 +1223,6 @@ It receives an array that represents the batch - you can modify the data itself 
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_FinishWrite.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.FinishWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L106">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_FinishWrite_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.FinishWrite*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_FinishWrite" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.FinishWrite">FinishWrite()</h4>
   <div class="markdown level1 summary"></div>
@@ -1299,13 +1231,6 @@ It receives an array that represents the batch - you can modify the data itself 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void FinishWrite()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_InternalInitBufferObjects.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.InternalInitBufferObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L54">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.InternalInitBufferObjects*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
   <div class="markdown level1 summary"></div>
@@ -1316,13 +1241,6 @@ It receives an array that represents the batch - you can modify the data itself 
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InternalInitBufferObjects">DataFlowComponent.InternalInitBufferObjects()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination%7BETLBox.DataFlow.ETLBoxError%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L51">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_LinkErrorTo_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.LinkErrorTo*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1363,13 +1281,6 @@ It receives an array that represents the batch - you can modify the data itself 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_PrepareWrite.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.PrepareWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L104">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_PrepareWrite_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.PrepareWrite*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_PrepareWrite" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.PrepareWrite">PrepareWrite()</h4>
   <div class="markdown level1 summary"></div>
@@ -1378,13 +1289,6 @@ It receives an array that represents the batch - you can modify the data itself 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void PrepareWrite()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_TryBulkInsertData__0___.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.TryBulkInsertData(%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L105">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_TryBulkInsertData_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.TryBulkInsertData*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_TryBulkInsertData__0___" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.TryBulkInsertData(`0[])">TryBulkInsertData(TInput[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1410,13 +1314,6 @@ It receives an array that represents the batch - you can modify the data itself 
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_Wait.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.Wait%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L37">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_Wait_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.Wait*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_Wait" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.Wait">Wait()</h4>
   <div class="markdown level1 summary"></div>
@@ -1425,13 +1322,6 @@ It receives an array that represents the batch - you can modify the data itself 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Wait()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1_WriteBatch__0___.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601.WriteBatch(%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L89">View Source</a>
-  </span>
   <a id="ETLBox_DataFlow_DataFlowBatchDestination_1_WriteBatch_" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.WriteBatch*"></a>
   <h4 id="ETLBox_DataFlow_DataFlowBatchDestination_1_WriteBatch__0___" data-uid="ETLBox.DataFlow.DataFlowBatchDestination`1.WriteBatch(`0[])">WriteBatch(TInput[])</h4>
   <div class="markdown level1 summary"></div>
@@ -1462,9 +1352,6 @@ It receives an array that represents the batch - you can modify the data itself 
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
   </div>
   <div>
-      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
-  </div>
-  <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
   </div>
   <div>
@@ -1476,21 +1363,14 @@ It receives an array that represents the batch - you can modify the data itself 
   <div>
       <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
   </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/new/dev/apiSpec/new?filename=ETLBox_DataFlow_DataFlowBatchDestination_1.md&amp;value=---%0Auid%3A%20ETLBox.DataFlow.DataFlowBatchDestination%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/etlbox/etlbox/blob/dev/ETLBox/src/Definitions/TaskBase/DataFlowBatchDestination.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
@@ -1507,7 +1387,7 @@ It receives an array that represents the batch - you can modify the data itself 
               <a href="#top">Back to top</a>
             </span>
             <span>Crafted with &lt;3 in Berlin<br>
-<a href="https://etlbox.net/articles/imprint.html">Contact & legal information</a></span>
+<a href="https://etlbox.net/articles/legals.html">Contact & legal notice</a></span>
             
           </div>
         </div>
