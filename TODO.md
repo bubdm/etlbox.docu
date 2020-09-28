@@ -9,12 +9,6 @@
 
 - From PoC: Aggregation supports currently MIN/MAX/COUNT/SUM. What about strings? Something like "FirstValue" or "LastValue" or FirstNonEmpty or LastNonEmpty?
 
-- From issue #75: 
-Solution 1: Create a RenameProperty Transformation, so that properties can be renamed in a dataflow. Input could be an object or Expando, output would also be an expando. 
-Solution 2: it would be good if the columnMapping for a db destination could be passed into the destination, so that this column mapping could be used instead a row transformation that changes the naming. This could also be true for other destinations and source (a generic column mapping?) This would mean that the current mappings (ColumnName etc.) would be overwritten?
-Actually solution 1 and 2 shouldn't be hard to implement. For solution 2, there are already ColumnMap attributes in place, which are doing basically the same as desired. Perhaps this can be extended that they are passed as a value to the DbDestination, and that it works with Objects and ExpandoObjects as well?
-
-
 ## Refactoring
 
 - Remove SqlTask: Add task name & Comments before sql code Make sql task name optional
@@ -22,9 +16,9 @@ Actually solution 1 and 2 shouldn't be hard to implement. For solution 2, there 
 ## Bugs
 
 - PrimaryKeyConstrainName now is part of TableDefinition, but not read from "GetTableDefinitionFrom"
-- GCPressure was detected on CSVSource - verify if CSVSource really is the root cause. (See performance tests, improve tests that uses memory as source) 
 - Check if license file is correctly read from same folder if using a "classic" .NET project (or nunit test project) 
 - Double check if the waiting for the buffercompletion/preprocessor completion makes sense, or can be simplified (looks like that always the buffercompletion and predecesssor completion is included, sometimes twice?)
+- When an exception is thrown in the AfterBatchWrite of the DbDestination (see DbDestinationExceptionTests), then the thrown exception should bubble up. (E.g. an argumentexception). But instead of this exception the sources are also faulted, and the exception in the sources will bubble up first and rethrown by ETLBox. This should be checked if this can be solved better. 
 
 # Improved Odbc support:
 
@@ -37,8 +31,6 @@ It would be good if the connection manager would return the code how to find if 
 
 - CopyTableDefinitionTask - uses TableDefinition to retrieve the current table definiton and the creates a new table. 
 Very good for testing purposes.
-- 
-
 
 # Oracle
 
@@ -50,8 +42,7 @@ In theory, this will also work for the MergeModes NoDeletions && OnlyUpdates. Bu
 throw an exception - itstead, it should use the InputDataDict to reinsert the records that were truncated (but shouldn't be deleted.)
 
 # Enhance Lookup Transformation
-- A "partial lookup" could be implemented. In the DbMerge, this could be useful for the DbMerge (in full load with deletions enabled this probably will not,
-but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
+- A "partial lookup" could be implemented. In the DbMerge, this could be useful for the DbMerge (in full load with deletions enabled this probably will not,but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
 
 
 # Ideas
@@ -61,9 +52,12 @@ but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
 - CachedRowTransformation - could be userd by lookup as partial lookup
 - FRistValue / LastValue for Aggregation
 - FirstNonEmpty / LastNonEmpty for Aggregation
-- Csv: ReleaseGCPressure needs to go away
 - Excel IngoreBlankRows without Range - infinite loop?
 - RowTransformation: Add Parallelization
 - Currently no ErrorHandling in Aggregation - add missing try/catch
 - Blocking transformation can't have an LinkErrorTo() - throw an exception if this is called
 - New transformation: Distinct (as partial blocking) which only let the first row through, but keeps a hash value to identify similar rows
+- Add new properties to ColumnRename: AddColumns and DeleteColumns as list with column names to add or remove
+- AggregateColumn/GroupColumn should be also assignable as list via properties (attributes can be also create with new )
+- Match/RetrieveColumn should also be assigable via list properties (attributes can be created with new)
+- ColumnMap attributes should also be assignable via a list property
