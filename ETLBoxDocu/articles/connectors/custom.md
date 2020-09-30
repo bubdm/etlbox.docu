@@ -214,9 +214,9 @@ dest.WriteAction = (row, progressCount) => rows.Add(row);
 
 ### Input buffer
 
-The CustomDestination has an input buffer - this means that every data row can be cached before it is actually processed from your destination. This is the case if your processing takes longer than new data arrive. . You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows. 
+The CustomDestination has an input buffer - this means that every data row can be cached before it is actually processed from your destination. This is the case if your processing takes longer than new data arrive. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows. 
 
-### CustomSource Api documentation
+### CustomDestination Api documentation
 
 The full class documentation can be found in the Api documentation.
 

@@ -62,4 +62,4 @@ throw an exception - itstead, it should use the InputDataDict to reinsert the re
 - (AggregateColumn/GroupColumn should be also assignable as list via properties (attributes can be also create with new )) - Issue: the attributes don't have a property name, and adding a prop name would be confusing? Perhaps it would be ok-ish, but then there would be different implmentations (e.g. for expandoobject and arrays)
   - Match/RetrieveColumn should also be assigable via list properties (attributes can be created with new)
   - ColumnMap attributes should also be assignable via a list property
-- New Destination: CustomBatchDestination
+- New Destination: CustomBatchDestinationgi
