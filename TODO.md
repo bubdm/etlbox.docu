@@ -19,6 +19,7 @@
 - Check if license file is correctly read from same folder if using a "classic" .NET project (or nunit test project) 
 - Double check if the waiting for the buffercompletion/preprocessor completion makes sense, or can be simplified (looks like that always the buffercompletion and predecesssor completion is included, sometimes twice?)
 - When an exception is thrown in the AfterBatchWrite of the DbDestination (see DbDestinationExceptionTests), then the thrown exception should bubble up. (E.g. an argumentexception). But instead of this exception the sources are also faulted, and the exception in the sources will bubble up first and rethrown by ETLBox. This should be checked if this can be solved better. 
+- If an exception is thrown, this should be written into log output!
 
 # Improved Odbc support:
 
@@ -31,6 +32,7 @@ It would be good if the connection manager would return the code how to find if 
 
 - CopyTableDefinitionTask - uses TableDefinition to retrieve the current table definiton and the creates a new table. 
 Very good for testing purposes.
+- MigrateTables - will compare two tables via their defintion, and then alter the table if empty or copy the existing data into the new table
 
 # Oracle
 
@@ -43,13 +45,12 @@ throw an exception - itstead, it should use the InputDataDict to reinsert the re
 
 # Enhance Lookup Transformation
 - A "partial lookup" could be implemented. In the DbMerge, this could be useful for the DbMerge (in full load with deletions enabled this probably will not,but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
-
+- This goes togheter with a cachedrowtransformation, which basically should be able to have a cache and the cache must be filled by a "fillcachefunction"
 
 # Ideas
 
 - Release notes page?
 - Roadmap page? 
-- CachedRowTransformation - could be userd by lookup as partial lookup
 - FRistValue / LastValue for Aggregation
 - FirstNonEmpty / LastNonEmpty for Aggregation
 - Excel IngoreBlankRows without Range - infinite loop?
@@ -58,6 +59,7 @@ throw an exception - itstead, it should use the InputDataDict to reinsert the re
 - Blocking transformation can't have an LinkErrorTo() - throw an exception if this is called
 - New transformation: Distinct (as partial blocking) which only let the first row through, but keeps a hash value to identify similar rows
 - Add new properties to ColumnRename: AddColumns and DeleteColumns as list with column names to add or remove
-- AggregateColumn/GroupColumn should be also assignable as list via properties (attributes can be also create with new )
-- Match/RetrieveColumn should also be assigable via list properties (attributes can be created with new)
-- ColumnMap attributes should also be assignable via a list property
+- (AggregateColumn/GroupColumn should be also assignable as list via properties (attributes can be also create with new )) - Issue: the attributes don't have a property name, and adding a prop name would be confusing? Perhaps it would be ok-ish, but then there would be different implmentations (e.g. for expandoobject and arrays)
+  - Match/RetrieveColumn should also be assigable via list properties (attributes can be created with new)
+  - ColumnMap attributes should also be assignable via a list property
+- New Destination: CustomBatchDestination
