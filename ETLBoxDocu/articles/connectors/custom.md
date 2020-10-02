@@ -5,7 +5,7 @@ ETLBox allows you to create your own implementation of a source or destinations.
 ## CustomSource
 
 A custom source can generate any type of  output you need. 
-It will need two functions to work properly: A read function that generates one data row as output, and a read completed function that returns true if you reached the end of your data. Bot functions get the current progress count as input parameters. It is optional to use the progress count - it is just an information how many rows have been processed so far from the custom source. 
+It will need two functions to work properly: A read function that generates one data row as output, and a reading completed predicate that returns true if you reached the end of your data. Bot functions get the current progress count as input parameters. It is optional to use the progress count - it is just an information how many rows have been processed so far from the custom source. 
 
 ### Simple example
 
@@ -33,7 +33,7 @@ public static void Main()
             Value = Data[progressCount]
         };                                
     };
-    source.ReadCompletedFunc = progressCount => progressCount >= Data.Count;
+    source.ReadingCompleted = progressCount => progressCount >= Data.Count;
 
     var dest = new MemoryDestination<MyRow>();
 
@@ -74,7 +74,7 @@ public static void Main()
         result.Value = Data[progressCount];                
         return result;
     };
-    source.ReadCompletedFunc = progressCount => progressCount >= Data.Count;
+    source.ReadingCompleted = progressCount => progressCount >= Data.Count;
 
     var dest = new MemoryDestination();
 
@@ -110,7 +110,7 @@ public static void Main()
     };           
     var source = new CustomSource<string[]>();
     source.ReadFunc = progressCount => Data[progressCount];
-    source.ReadCompletedFunc = progressCount => progressCount >= Data.Count;
+    source.ReadingCompleted = progressCount => progressCount >= Data.Count;
 
     var dest = new MemoryDestination<string[]>();
 
