@@ -6,12 +6,20 @@
 - Check if SMOConnectionManager can be reinstalled again
 - All sources (DbSource, CsvSource, etc. )  always read all the data from the source. For development purposes it would be benefical if only the first X rows are read from the source. A property `public int Limit` could be introduced, so that only the first X rows are read for a DBSource/CSVSource/JsonSource/. This is quite easy to implement as SqlTask already has the Limit property. For Csv/Json, there should be a counter on the lines within the stream reader...
 - CreateTableTask.CreateOrAlter() and Migrate(): add functionality to alter a table if empty, or Migrate a table if not empty
-
 - From PoC: Aggregation supports currently MIN/MAX/COUNT/SUM. What about strings? Something like "FirstValue" or "LastValue" or FirstNonEmpty or LastNonEmpty?
+- CopyTableDefinitionTask - uses TableDefinition to retrieve the current table definiton and the creates a new table. 
+Very good for testing purposes.
+- MigrateTables - will compare two tables via their defintion, and then alter the table if empty or copy the existing data into the new table
 
-## Refactoring
+### Enhance Merge for UseTruncateMethod
+- The current merge does suppor the "UseTruncateMethod" flag. If set to true, the table is truncated before inserted the modified data.
+In theory, this will also work for the MergeModes NoDeletions && OnlyUpdates. But then the method `ReinsertTruncatedRecords` should not 
+throw an exception - itstead, it should use the InputDataDict to reinsert the records that were truncated (but shouldn't be deleted.)
 
-- Remove SqlTask: Add task name & Comments before sql code Make sql task name optional
+### Enhance Lookup Transformation
+- A "partial lookup" could be implemented. In the DbMerge, this could be useful for the DbMerge (in full load with deletions enabled this probably will not,but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
+- This goes togheter with a cachedrowtransformation, which basically should be able to have a cache and the cache must be filled by a "fillcachefunction"
+
 
 ## Bugs
 
@@ -21,45 +29,20 @@
 - When an exception is thrown in the AfterBatchWrite of the DbDestination (see DbDestinationExceptionTests), then the thrown exception should bubble up. (E.g. an argumentexception). But instead of this exception the sources are also faulted, and the exception in the sources will bubble up first and rethrown by ETLBox. This should be checked if this can be solved better. 
 - If an exception is thrown, this should be written into log output!
 
-# Improved Odbc support:
+### Improved Odbc support:
 
 This is only relevant for Unknown Odbc (or OleDb) source. For better Odbc supportl also  look at DbSchemaReader(martinjw) in github.
 Currently, if not table definition is given, the current implementation of TableDefintion.FromTable name throws an exception that the table does not exists (though it does). 
 For known Odbc connection (like Sql Server), the sql is known, but for the "default" odbc connection there can't be a sql to get the table definition. But this could be done using the Ado.NET schema objects. 
 It would be good if the connection manager would return the code how to find if a table exists. Then the normal conneciton managers would run some sql code, and the Odbc could use ADO.NET to retrieve if the table exists and to get the table definition (independent from the database).
 
-# New feature
-
-- CopyTableDefinitionTask - uses TableDefinition to retrieve the current table definiton and the creates a new table. 
-Very good for testing purposes.
-- MigrateTables - will compare two tables via their defintion, and then alter the table if empty or copy the existing data into the new table
-
-# Oracle
-
-Add missing tests for specific data type conversions. E.g. number(22,2) should also create the correct .net datatype. Currently the DataTypeConverter will parse it into System.String.
-
-# Enhance Merge for UseTruncateMethod
-- The current merge does suppor the "UseTruncateMethod" flag. If set to true, the table is truncated before inserted the modified data.
-In theory, this will also work for the MergeModes NoDeletions && OnlyUpdates. But then the method `ReinsertTruncatedRecords` should not 
-throw an exception - itstead, it should use the InputDataDict to reinsert the records that were truncated (but shouldn't be deleted.)
-
-# Enhance Lookup Transformation
-- A "partial lookup" could be implemented. In the DbMerge, this could be useful for the DbMerge (in full load with deletions enabled this probably will not,but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
-- This goes togheter with a cachedrowtransformation, which basically should be able to have a cache and the cache must be filled by a "fillcachefunction"
-
 # Ideas
 
 - Release notes page?
 - Roadmap page? 
-- FRistValue / LastValue for Aggregation
-- FirstNonEmpty / LastNonEmpty for Aggregation
 - Excel IngoreBlankRows without Range - infinite loop?
 - RowTransformation: Add Parallelization
-- Currently no ErrorHandling in Aggregation - add missing try/catch
 - Blocking transformation can't have an LinkErrorTo() - throw an exception if this is called
 - New transformation: Distinct (as partial blocking) which only let the first row through, but keeps a hash value to identify similar rows
-- Add new properties to ColumnRename: AddColumns and DeleteColumns as list with column names to add or remove
-- (AggregateColumn/GroupColumn should be also assignable as list via properties (attributes can be also create with new )) - Issue: the attributes don't have a property name, and adding a prop name would be confusing? Perhaps it would be ok-ish, but then there would be different implmentations (e.g. for expandoobject and arrays)
-  - Match/RetrieveColumn should also be assigable via list properties (attributes can be created with new)
-  - ColumnMap attributes should also be assignable via a list property
-- New Destination: CustomBatchDestinationgi
+- Match/RetrieveColumn should also be assigable via list properties (attributes can be created with new) - probably together with CachedRowTransformation as well as a solution for patial lookups
+- New Destination: CustomBatchDestinationg

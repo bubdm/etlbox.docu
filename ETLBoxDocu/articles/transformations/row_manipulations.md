@@ -371,10 +371,10 @@ If you have an array as input type, instead of providing the old name you need t
 ```
 var source = new DbSource<MyInputRow>();
 var map = new ColumnRename<MyInputRow>();
-map.ColumnMapping = new List<ColumnMapping>()
+map.ColumnMapping = new List<ColumnMap>()
 {
-    new ColumnMapping("OldCol1","Col1"),
-    new ColumnMapping("OldCol2","Col2"),
+    new ColumnMap() { CurrentName = "OldCol1", NewName = "Col1" },
+    new ColumnMap() { CurrentName = "OldCol2", NewName = "Col2" }
 };
 var dest = new DbDestination(SqlConnection, "ColumnRenameDest");
 

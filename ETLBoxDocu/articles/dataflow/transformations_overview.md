@@ -213,7 +213,7 @@ join.LinkTo(dest);
 
 ### Aggregation
 
-The aggregation allows you to aggregate data in your flow. You can either define your own aggregation function or use one of the default functions. The default aggregation functions are sum, min, max and count. The aggregation does not necessarily to be calculated on your whole data. You can specify that your data is grouped (similar to a group BY). 
+The aggregation allows you to aggregate data in your flow. You can either define your own aggregation function or use one of the default functions. The default aggregation functions are Sum, Min, Max, Count, FirstValue and LastValue. The aggregation does not necessarily to be calculated on your whole data. You can specify that your data is grouped (similar to a group BY). 
 
 The Aggregation is basically a blocking transformation, but with a lower memory consumption. It will only store aggregated values in memory, not the detail rows itself. The calculation of the aggregated values is updated every time a record arrives at the Aggregation. This is why there is limitation of what kind of calculation can be performed. 
 

@@ -53,6 +53,58 @@ public static void Main()
 }
 ```
 
+#### Define AggregationColumns without attributes
+
+If you are working with dynamic columns, you don't have the options to add attributes to these kind of options. In this case, you can pass a list of `AggregateColumn` into the Aggregation, which basically defines the property names of the detail value, the aggregation value as well as the aggregation method.
+Of course you can do this also with normal objects. This is alternative to the attribute usage. 
+
+```C#
+public static void Main()
+{
+    var source = new MemorySource();
+    dynamic val1 = new ExpandoObject(); val1.DetailValue = 5; source.DataAsList.Add(val1);
+    dynamic val2 = new ExpandoObject(); val2.DetailValue = 3; source.DataAsList.Add(val2);
+    dynamic val3 = new ExpandoObject(); val3.DetailValue = 2; source.DataAsList.Add(val3);
+
+    var agg = new Aggregation();
+    agg.AggregateColumns = new List<AggregateColumn>()
+    {
+        new AggregateColumn() {
+            InputProperty = "DetailValue",
+            AggregationProperty = "AggValue",
+            AggregationMethod = AggregationMethod.Sum
+            }
+    };
+
+    var dest = new MemoryDestination();
+
+    source.LinkTo(agg).LinkTo(dest);
+    source.Execute();
+    dest.Wait();
+
+    foreach (dynamic row in dest.Data)
+        Console.WriteLine($"Sum:{row.AggValue}");
+
+    //Output
+    //Sum:10
+}
+```
+
+#### Aggregation methods
+
+The aggregation column currently offers the following aggregation methods:
+
+- Count
+- Sum
+- Min
+- Max
+- FirstValue (including nulls)
+- LastValue (including nulls)
+- FirstNotNullValue
+- LastNotNullValue
+
+Together with the option to group (or classify) data, these basic aggregation methods can already be useful in most situations. If these methods are not sufficient for your need, you can write your own aggregation action. 
+
 #### Using aggregation action
 
 You can achieve the same behavior as above with your own aggregation function. To do so you define an action how the aggregated value is updated when a new values arrives in the property AggregationAction. 
@@ -100,12 +152,12 @@ public static void Main()
 
 #### Using GroupingColumn
 
-Having the aggregation on all your data records is probably most of the time not what you need. Often you would have to classify your data based on particular properties, and then have aggregation build for each class. This is called grouping and works similar like the GROUP BY clause in sql - you define which properties are used for grouping, and the calculations is done sepearately for each group. 
+Having the aggregation on all your data records is probably most of the time not what you need. Often you would have to classify your data based on particular properties, and then have aggregation build for each class. This is called grouping and works similar like the GROUP BY clause in sql - you define which properties are used for grouping, and the calculations is done separately for each group. 
 
-Let's define a basic exmaple: 
+Let's define a basic example: 
 Our input data is "A":3, "A":7, "B":4 and "B":6. We are interest in the sum of the numbers. If we would do a normal aggregation without the number, the overall result would 20. Now we want to group our data by the letter. Then the result for group "A" would be 10 and for group "B" also 10. 
 
-Codewise this would look like this, when we use the GroupColumn attribute
+Code wise this would look like this, when we use the GroupColumn attribute
 
 ```C#
 public class DetailWithGroup
@@ -148,6 +200,61 @@ public static void Main()
 ```
 
 Please note that the GroupColumn is also used as attribute on the aggregated value - it needs to name of the property in the details object on which the grouping is based on. 
+
+#### Using dynamic objects
+
+Like the AggregateColumn, if you are using the dynamic ExpandoObject of the default implementation you can also pass a list of GroupColumns to the Aggregation. You need to give a GroupColumn the property name in your input object and the property name in your output object. 
+
+```C#
+public static void Main()
+{
+    var source = new MemorySource();
+    dynamic val1 = new ExpandoObject();
+    val1.Group = "A"; val1.DetailValue = 3;
+    source.DataAsList.Add(val1);
+    dynamic val2 = new ExpandoObject();
+    val2.Group = "A"; val2.DetailValue = 7;
+    source.DataAsList.Add(val2);
+    dynamic val3 = new ExpandoObject();
+    val3.Group = "B"; val3.DetailValue = 4;
+    source.DataAsList.Add(val3);
+    dynamic val4 = new ExpandoObject();
+    val4.Group = "B"; val4.DetailValue = 6;
+    source.DataAsList.Add(val4);            
+
+    var agg = new Aggregation();
+    agg.AggregateColumns = new List<AggregateColumn>()
+    {
+        new AggregateColumn()
+        {
+            InputProperty = "DetailValue",
+            AggregationProperty = "AggValue",
+            AggregationMethod = AggregationMethod.Sum
+        }
+    };
+    agg.GroupColumns = new List<GroupColumn>()
+    {
+        new GroupColumn()
+        {
+            InputGroupingProperty = "Group",
+            OutputGroupingProperty = "Group"
+        }
+    };
+
+    var dest = new MemoryDestination();
+
+    source.LinkTo(agg).LinkTo(dest);
+    source.Execute();
+    dest.Wait();
+
+    foreach (dynamic row in dest.Data)
+        Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
+
+    //Output
+    //Sum for A:10
+    //Sum for B:10
+}
+```
 
 #### Using grouping function
 
@@ -199,7 +306,6 @@ public static void Main()
 }
 ```
 
-
 #### Multiple attributes
 
 The AggregateColumn and GroupColumn can be applied to as many properties as needed. You can use different aggregation function for each AggregateColumn. If there are multiple grouping columns, the combination of all columns is used to create the grouping key (which means that if all columns match they are in the same group).
@@ -224,6 +330,14 @@ public class MyAggRow
     public decimal AveragePrices => AggPrice / CountOrders;
 }
 ```
+
+Instead of using attributes, you can also pass multiple aggregation or group columns to the `AggregateColumns` and `GroupColumns` properties.
+
+### Arrays and ExpandoObject
+
+The Aggregation offers full support for ExpandoObject, which is also used when you use the default implementation. It will work either when you pass a list of AggregateColumns or GroupColumns, or if you define your AggregationActoin / GroupingFunc yourself.
+
+The Aggregation won't work with arrays. You could use the `ColumnRename` transformation to convert your array into an ExpandoObject, or the RowTransformation to convert an array into an object. 
 
 ### Blocking transformation
 
