@@ -11,10 +11,14 @@
 Very good for testing purposes.
 - MigrateTables - will compare two tables via their defintion, and then alter the table if empty or copy the existing data into the new table
 
-### Enhance Merge for UseTruncateMethod
-- The current merge does suppor the "UseTruncateMethod" flag. If set to true, the table is truncated before inserted the modified data.
+### Enhance Merge 
+- Old: The current merge does suppor the "UseTruncateMethod" flag. If set to true, the table is truncated before inserted the modified data.
 In theory, this will also work for the MergeModes NoDeletions && OnlyUpdates. But then the method `ReinsertTruncatedRecords` should not 
 throw an exception - itstead, it should use the InputDataDict to reinsert the records that were truncated (but shouldn't be deleted.)
+- New: Remove truncate completely. For large data set, the delete statement will become big. Run the delete statement in bathces
+- Add the partial lookup to the merge
+- Allow merge to overwrite identity columns (see issue)
+- adapt merge to match / compare column attributes (instead of string arrays)
 
 ### Enhance Lookup Transformation
 - A "partial lookup" could be implemented. In the DbMerge, this could be useful for the DbMerge (in full load with deletions enabled this probably will not,but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
@@ -45,4 +49,5 @@ It would be good if the connection manager would return the code how to find if 
 - Blocking transformation can't have an LinkErrorTo() - throw an exception if this is called
 - New transformation: Distinct (as partial blocking) which only let the first row through, but keeps a hash value to identify similar rows
 - Match/RetrieveColumn should also be assigable via list properties (attributes can be created with new) - probably together with CachedRowTransformation as well as a solution for patial lookups
-- New Destination: CustomBatchDestinationg
+- New Destination: CustomBatchDestination
+- ColumnRename: Add a "rename column action" which could respace spaces in a columns names or something similar

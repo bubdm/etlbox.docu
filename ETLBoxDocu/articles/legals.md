@@ -2,7 +2,9 @@
 
 (C) 2020 ETLBox Office Andreas Lennartz
 
-## Contact information
+Crafted with <3 in Berlin.
+
+## Company information
 
 ETLBox Office <br />
 Andreas Lennartz  <br />
@@ -10,11 +12,15 @@ Landsberger Str. 216B  <br />
 12623 Berlin  <br />
 Germany  <br />
 
+VAT Number: DE 333985271
+
+The company is registered in Berlin, Germany. 
+
+## Contact us
+
 Phone: +49 151 228 42181  <br />
 E-Mail: mail@etlbox.net  <br />
 Internet address: www.etlbox.net  <br />
-
-Crafted with <: in Berlin.
 
 ## Disclaimer
 
