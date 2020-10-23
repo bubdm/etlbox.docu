@@ -296,7 +296,7 @@ The following table shows which types of sources and destination are supported o
 <td>Full support</td>
 </tr>
 <tr>
-<td>Any web api</td>
+<td>Any web service</td>
 <td>Json, Xml, Csv, Text</td>
 <td>Full support</td>
 </tr>
@@ -327,7 +327,7 @@ The following table shows which types of sources and destination are supported o
 </tr>
 </tbody>
 </table>
-<p>You can choose between different sources and destination components. <code>DbSource</code> and <code>DbDestination</code> will connect to the most used databases (e.g. Sql Server, Postgres, MySql, SQLite). <code>CsvSource</code>, <code>CsvDestination</code> give you support for flat files. <code>ExcelSource</code> allows you to read data from an excel sheet. <code>JsonSource</code>, <code>JsonDestination</code>, <code>XmlSource</code> and <code>XmlDestination</code> let you read and write json or xml from files or web service request. <code>TextSource</code> and <code>TextDestination</code> allow access to regular text files with line breaks.  <code>MemorySource</code>, <code>MemoryDestinatiation</code> as well as <code>CustomSource</code> and <code>CustomDestination</code> will give you a lot flexibility to read or write  data directly from memory or to create your own custom made source or destination component.</p>
+<p>You can choose between different sources and destination components. <code>DbSource</code> and <code>DbDestination</code> will connect to the most used databases (e.g. Sql Server, Postgres, MySql, SQLite). <code>CsvSource</code>, <code>CsvDestination</code> give you support for flat files. <code>ExcelSource</code> allows you to read data from an excel sheet. <code>JsonSource</code>, <code>JsonDestination</code>, <code>XmlSource</code> and <code>XmlDestination</code> let you read and write json or xml from files or web service requests. <code>TextSource</code> and <code>TextDestination</code> allow access to regular text files with line breaks.  <code>MemorySource</code>, <code>MemoryDestinatiation</code> as well as <code>CustomSource</code> and <code>CustomDestination</code> will give you a lot flexibility to read or write  data directly from memory or to create your own custom made source or destination component.</p>
 <h3 id="transformations">Transformations</h3>
 <p>ETLBox has 3 type of transformations: Non-blocking, partially blocking and blocking transformations. Non-blocking transformations will
 only store the row that is currently processed in memory (plus some more in the buffer to optimize throughput and performance). Partially blocking transformations will load some data in the memory before they process data row-by-row. Blocking transformations will wait until all data has arrived at the component before it starts processing all records subsequently.</p>
@@ -372,6 +372,11 @@ only store the row that is currently processed in memory (plus some more in the 
 <td></td>
 </tr>
 <tr>
+<td>ColumnRename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>XmlSchemaValidation</td>
 <td></td>
 <td></td>
@@ -382,6 +387,7 @@ only store the row that is currently processed in memory (plus some more in the 
 <p><em>Aggregation</em>: Aggregate your data on-the-fly  based on Grouping and Aggregation functions.</p>
 <p><em>RowDuplication</em>: Simple duplicate your input row x times - additionally, you can add your own condition when to duplicate.</p>
 <p><em>RowMultiplication</em>: Allow you to create multiple rows based on your incoming rows - based on your own custom C# code.</p>
+<p><em>ColumnRename</em>: Allows you to rename your columns or propertie names.</p>
 <p><em>Multicast</em>: Broadcast your incoming data into 2 or more targets.</p>
 <p><em>MergeJoin</em>: Join your incoming data into one. Works best with sorted input.</p>
 <p><em>LookupTransformation</em>: Allows you to store lookup data in memory and use it for enriching your data in your DataFlow.</p>
@@ -391,7 +397,7 @@ only store the row that is currently processed in memory (plus some more in the 
 <p><em>DbMerge</em>: Allows you to insert, update or delete data in your target table depending on your incoming data.
 No more need to write your own &quot;upsert&quot; statement - the <code>DbMerge</code> is supported by all ETLBox databases. The output of the DbMerge
 is the changes to your target table (insertions, updates and deletions.)</p>
-<p><em>XmlSchemaValidation</em>: Validates a given string that contains xml with a defined Xml schema definition. Not valid xml is redirected to
+<p><em>XmlSchemaValidation</em>: Validates a given string that contains xml with a defined Xml schema definition - invalid xml is redirected to
 the error output.</p>
 <h4 id="designed-for-big-data">Designed for big data</h4>
 <p>ETLBox was designed for performance and is able to deal with big amounts of data. All destinations do support Bulk or Batch operations. By default, every component comes with an input and/or output buffer. You can design your data flow that only batches or your data is stored in memory, which are kept in different buffers for every component to increase throughput. All operations can be execute asynchrounously, so that your processing will run only within separate threads.</p>

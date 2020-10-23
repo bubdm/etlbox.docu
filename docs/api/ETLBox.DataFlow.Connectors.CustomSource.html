@@ -335,9 +335,6 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -834,7 +831,7 @@
       <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc">CustomSource&lt;ExpandoObject&gt;.ReadFunc</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadCompletedFunc">CustomSource&lt;ExpandoObject&gt;.ReadCompletedFunc</a>
+      <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadingCompleted">CustomSource&lt;ExpandoObject&gt;.ReadingCompleted</a>
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_OnExecutionDoSynchronousWork">CustomSource&lt;ExpandoObject&gt;.OnExecutionDoSynchronousWork()</a>
@@ -1043,12 +1040,12 @@
     <pre><code class="lang-csharp hljs">public CustomSource()</code></pre>
   </div>
   <a id="ETLBox_DataFlow_Connectors_CustomSource__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomSource.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_CustomSource__ctor_System_Func_System_Dynamic_ExpandoObject__System_Func_System_Boolean__" data-uid="ETLBox.DataFlow.Connectors.CustomSource.#ctor(System.Func{System.Dynamic.ExpandoObject},System.Func{System.Boolean})">CustomSource(Func&lt;ExpandoObject&gt;, Func&lt;Boolean&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_Connectors_CustomSource__ctor_System_Func_System_Int32_System_Dynamic_ExpandoObject__System_Predicate_System_Int32__" data-uid="ETLBox.DataFlow.Connectors.CustomSource.#ctor(System.Func{System.Int32,System.Dynamic.ExpandoObject},System.Predicate{System.Int32})">CustomSource(Func&lt;Int32, ExpandoObject&gt;, Predicate&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CustomSource(Func&lt;ExpandoObject&gt; readFunc, Func&lt;bool&gt; readCompletedFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public CustomSource(Func&lt;int, ExpandoObject&gt; readFunc, Predicate&lt;int&gt; readingCompleted)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1061,13 +1058,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Dynamic.ExpandoObject</span>&gt;</td>
         <td><span class="parametername">readFunc</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td><span class="parametername">readCompletedFunc</span></td>
+        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">readingCompleted</span></td>
         <td></td>
       </tr>
     </tbody>

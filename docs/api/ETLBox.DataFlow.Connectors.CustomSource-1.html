@@ -335,9 +335,6 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -1027,6 +1024,23 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Connectors_CustomSource_1_examples"><strong>Examples</strong></h5>
+  <pre><code> List&lt;string> Data = new List&lt;string>()
+ {
+     &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
+ };
+ var source = new CustomSource&lt;MyRow>();
+ source.ReadFunc = progressCount =>
+ {
+     return new MyRow()
+     {
+         Id = progressCount + 1,
+         Value = Data[progressCount]
+     };    
+    return result;
+ };
+source.ReadCompletedFunc =  progressCount => progressCount >= Data.Count;</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <a id="ETLBox_DataFlow_Connectors_CustomSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.#ctor*"></a>
@@ -1038,12 +1052,12 @@
     <pre><code class="lang-csharp hljs">public CustomSource()</code></pre>
   </div>
   <a id="ETLBox_DataFlow_Connectors_CustomSource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_CustomSource_1__ctor_System_Func__0__System_Func_System_Boolean__" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.#ctor(System.Func{`0},System.Func{System.Boolean})">CustomSource(Func&lt;TOutput&gt;, Func&lt;Boolean&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_Connectors_CustomSource_1__ctor_System_Func_System_Int32__0__System_Predicate_System_Int32__" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.#ctor(System.Func{System.Int32,`0},System.Predicate{System.Int32})">CustomSource(Func&lt;Int32, TOutput&gt;, Predicate&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CustomSource(Func&lt;TOutput&gt; readFunc, Func&lt;bool&gt; readCompletedFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public CustomSource(Func&lt;int, TOutput&gt; readFunc, Predicate&lt;int&gt; readingCompleted)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1056,29 +1070,30 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>, TOutput&gt;</td>
         <td><span class="parametername">readFunc</span></td>
         <td><p>Sets the <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc">ReadFunc</a></p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td><span class="parametername">readCompletedFunc</span></td>
-        <td><p>Sets the <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadCompletedFunc">ReadCompletedFunc</a></p>
+        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">readingCompleted</span></td>
+        <td><p>Sets the <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadingCompleted">ReadingCompleted</a></p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="ETLBox_DataFlow_Connectors_CustomSource_1_ReadCompletedFunc_" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.ReadCompletedFunc*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_CustomSource_1_ReadCompletedFunc" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.ReadCompletedFunc">ReadCompletedFunc</h4>
-  <div class="markdown level1 summary"><p>This Func returns true when all rows for the flow are successfully returned from the <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc">ReadFunc</a>.</p>
+  <a id="ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc_" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.ReadFunc*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.ReadFunc">ReadFunc</h4>
+  <div class="markdown level1 summary"><p>The function that returns a data row as output. An integer value with the
+current progress count is the input of the function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;bool&gt; ReadCompletedFunc { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;int, TOutput&gt; ReadFunc { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1090,19 +1105,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>, TOutput&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc_" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.ReadFunc*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.ReadFunc">ReadFunc</h4>
-  <div class="markdown level1 summary"><p>The Func that returns a data row as output.</p>
+  <a id="ETLBox_DataFlow_Connectors_CustomSource_1_ReadingCompleted_" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.ReadingCompleted*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_CustomSource_1_ReadingCompleted" data-uid="ETLBox.DataFlow.Connectors.CustomSource`1.ReadingCompleted">ReadingCompleted</h4>
+  <div class="markdown level1 summary"><p>This predicate returns true when all rows for the flow are successfully returned from the <a class="xref" href="ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc">ReadFunc</a>. An integer value with the
+current progress count is the input of the predicate.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;TOutput&gt; ReadFunc { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Predicate&lt;int&gt; ReadingCompleted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1114,7 +1130,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

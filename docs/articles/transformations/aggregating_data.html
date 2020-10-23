@@ -251,6 +251,52 @@ public static void Main()
     //Sum:10
 }
 </code></pre>
+<h4 id="define-aggregationcolumns-without-attributes">Define AggregationColumns without attributes</h4>
+<p>If you are working with dynamic columns, you don't have the options to add attributes to these kind of options. In this case, you can pass a list of <code>AggregateColumn</code> into the Aggregation, which basically defines the property names of the detail value, the aggregation value as well as the aggregation method.
+Of course you can do this also with normal objects. This is alternative to the attribute usage.</p>
+<pre><code class="lang-C#">public static void Main()
+{
+    var source = new MemorySource();
+    dynamic val1 = new ExpandoObject(); val1.DetailValue = 5; source.DataAsList.Add(val1);
+    dynamic val2 = new ExpandoObject(); val2.DetailValue = 3; source.DataAsList.Add(val2);
+    dynamic val3 = new ExpandoObject(); val3.DetailValue = 2; source.DataAsList.Add(val3);
+
+    var agg = new Aggregation();
+    agg.AggregateColumns = new List&lt;AggregateColumn&gt;()
+    {
+        new AggregateColumn() {
+            InputProperty = &quot;DetailValue&quot;,
+            AggregationProperty = &quot;AggValue&quot;,
+            AggregationMethod = AggregationMethod.Sum
+            }
+    };
+
+    var dest = new MemoryDestination();
+
+    source.LinkTo(agg).LinkTo(dest);
+    source.Execute();
+    dest.Wait();
+
+    foreach (dynamic row in dest.Data)
+        Console.WriteLine($&quot;Sum:{row.AggValue}&quot;);
+
+    //Output
+    //Sum:10
+}
+</code></pre>
+<h4 id="aggregation-methods">Aggregation methods</h4>
+<p>The aggregation column currently offers the following aggregation methods:</p>
+<ul>
+<li>Count</li>
+<li>Sum</li>
+<li>Min</li>
+<li>Max</li>
+<li>FirstValue (including nulls)</li>
+<li>LastValue (including nulls)</li>
+<li>FirstNotNullValue</li>
+<li>LastNotNullValue</li>
+</ul>
+<p>Together with the option to group (or classify) data, these basic aggregation methods can already be useful in most situations. If these methods are not sufficient for your need, you can write your own aggregation action.</p>
 <h4 id="using-aggregation-action">Using aggregation action</h4>
 <p>You can achieve the same behavior as above with your own aggregation function. To do so you define an action how the aggregated value is updated when a new values arrives in the property AggregationAction.</p>
 <p>As a sum is easy to implement, your code would look like this:</p>
@@ -291,10 +337,10 @@ public static void Main()
 </code></pre>
 <h3 id="example-aggregation-with-grouping">Example aggregation with grouping</h3>
 <h4 id="using-groupingcolumn">Using GroupingColumn</h4>
-<p>Having the aggregation on all your data records is probably most of the time not what you need. Often you would have to classify your data based on particular properties, and then have aggregation build for each class. This is called grouping and works similar like the GROUP BY clause in sql - you define which properties are used for grouping, and the calculations is done sepearately for each group.</p>
-<p>Let's define a basic exmaple:
+<p>Having the aggregation on all your data records is probably most of the time not what you need. Often you would have to classify your data based on particular properties, and then have aggregation build for each class. This is called grouping and works similar like the GROUP BY clause in sql - you define which properties are used for grouping, and the calculations is done separately for each group.</p>
+<p>Let's define a basic example:
 Our input data is &quot;A&quot;:3, &quot;A&quot;:7, &quot;B&quot;:4 and &quot;B&quot;:6. We are interest in the sum of the numbers. If we would do a normal aggregation without the number, the overall result would 20. Now we want to group our data by the letter. Then the result for group &quot;A&quot; would be 10 and for group &quot;B&quot; also 10.</p>
-<p>Codewise this would look like this, when we use the GroupColumn attribute</p>
+<p>Code wise this would look like this, when we use the GroupColumn attribute</p>
 <pre><code class="lang-C#">public class DetailWithGroup
 {
     public int DetailValue { get; set; }
@@ -334,6 +380,57 @@ public static void Main()
 }
 </code></pre>
 <p>Please note that the GroupColumn is also used as attribute on the aggregated value - it needs to name of the property in the details object on which the grouping is based on.</p>
+<h4 id="using-dynamic-objects">Using dynamic objects</h4>
+<p>Like the AggregateColumn, if you are using the dynamic ExpandoObject of the default implementation you can also pass a list of GroupColumns to the Aggregation. You need to give a GroupColumn the property name in your input object and the property name in your output object.</p>
+<pre><code class="lang-C#">public static void Main()
+{
+    var source = new MemorySource();
+    dynamic val1 = new ExpandoObject();
+    val1.Group = &quot;A&quot;; val1.DetailValue = 3;
+    source.DataAsList.Add(val1);
+    dynamic val2 = new ExpandoObject();
+    val2.Group = &quot;A&quot;; val2.DetailValue = 7;
+    source.DataAsList.Add(val2);
+    dynamic val3 = new ExpandoObject();
+    val3.Group = &quot;B&quot;; val3.DetailValue = 4;
+    source.DataAsList.Add(val3);
+    dynamic val4 = new ExpandoObject();
+    val4.Group = &quot;B&quot;; val4.DetailValue = 6;
+    source.DataAsList.Add(val4);            
+
+    var agg = new Aggregation();
+    agg.AggregateColumns = new List&lt;AggregateColumn&gt;()
+    {
+        new AggregateColumn()
+        {
+            InputProperty = &quot;DetailValue&quot;,
+            AggregationProperty = &quot;AggValue&quot;,
+            AggregationMethod = AggregationMethod.Sum
+        }
+    };
+    agg.GroupColumns = new List&lt;GroupColumn&gt;()
+    {
+        new GroupColumn()
+        {
+            InputGroupingProperty = &quot;Group&quot;,
+            OutputGroupingProperty = &quot;Group&quot;
+        }
+    };
+
+    var dest = new MemoryDestination();
+
+    source.LinkTo(agg).LinkTo(dest);
+    source.Execute();
+    dest.Wait();
+
+    foreach (dynamic row in dest.Data)
+        Console.WriteLine($&quot;Sum for {row.Group}:{row.AggValue}&quot;);
+
+    //Output
+    //Sum for A:10
+    //Sum for B:10
+}
+</code></pre>
 <h4 id="using-grouping-function">Using grouping function</h4>
 <p>Of course you can also create your own grouping function. If you want to do this, you actually need two functions:</p>
 <ul>
@@ -401,6 +498,10 @@ public static void Main()
     public decimal AveragePrices =&gt; AggPrice / CountOrders;
 }
 </code></pre>
+<p>Instead of using attributes, you can also pass multiple aggregation or group columns to the <code>AggregateColumns</code> and <code>GroupColumns</code> properties.</p>
+<h3 id="arrays-and-expandoobject">Arrays and ExpandoObject</h3>
+<p>The Aggregation offers full support for ExpandoObject, which is also used when you use the default implementation. It will work either when you pass a list of AggregateColumns or GroupColumns, or if you define your AggregationActoin / GroupingFunc yourself.</p>
+<p>The Aggregation won't work with arrays. You could use the <code>ColumnRename</code> transformation to convert your array into an ExpandoObject, or the RowTransformation to convert an array into an object.</p>
 <h3 id="blocking-transformation">Blocking transformation</h3>
 <p>The aggregation is a blocking transformation. It will block processing until all records arrived at the aggregation. Then the aggregated values are written into the output. Because of the special calculation operation, the memory consumption will be moderate.
 The aggregation has an input and output buffer. You can't restrict the number of rows stored in the input buffer. You can restrict the amount of records in the output buffer - set the <code>MaxBufferSize</code> property to a value greater than 0. Restricting the output buffer is not recommended.</p>

@@ -213,31 +213,91 @@
 within your data flow if you already have a collection containing your data available in memory.
 When you execute the flow, the memory destination will iterate through the list and
 asynchronously post record by record into the flow.</p>
-<p>Example code:</p>
-<pre><code class="lang-C#">MemorySource&lt;MySimpleRow&gt; source = new MemorySource&lt;MySimpleRow&gt;();
-source.Data = new List&lt;MySimpleRow&gt;()
+<h3 id="example-with-own-list">Example with own list</h3>
+<p>Here is an example code that uses your own list object to assign source data to the memory source.</p>
+<pre><code class="lang-C#">MemorySource&lt;MyRow&gt; source = new MemorySource&lt;MyRow&gt;();
+source.Data = new List&lt;MyRow&gt;()
 {
-    new MySimpleRow() { Col1 = 1, Col2 = &quot;Test1&quot; },
-    new MySimpleRow() { Col1 = 2, Col2 = &quot;Test2&quot; },
-    new MySimpleRow() { Col1 = 3, Col2 = &quot;Test3&quot; }
+    new MyRow() { Id = 1, Value = &quot;Test1&quot; },
+    new MyRow() { Id = 2, Value = &quot;Test2&quot; },
+    new MyRow() { Id = 3, Value = &quot;Test3&quot; }
 };
 </code></pre>
+<p>The <code>Data</code> property of the MemorySource will accept any <code>IEnumerable&lt;T&gt;</code>.</p>
+<h4 id="using-the-internal-list">Using the internal list</h4>
+<p>By default, the <code>Data</code> property is always initialized with an empty List<t>, where T is the type of your MemorySource. This list can also be used to add data to it. Because the IEnumerable type of <code>Data</code> has some limitations regarding records, you can use the property <code>Data</code>DataAsList<code>. This will try to cast the current list stored in </code>Data<code>into an</code>IList<t>`. If you don't get null, this was successfully, and you can use the methods implement on this interface. This allows you to direct write code like this:<p>
+<pre><code class="lang-C#">MemorySource&lt;MyRow&gt; source = new MemorySource&lt;MyRow&gt;();
+source.DataAsList.Add(new MyRow() { Id = 1, Value = &quot;Test1&quot; });
+source.DataAsList.Add(new MyRow() { Id = 2, Value = &quot;Test2&quot; });
+source.DataAsList.Add(new MyRow() { Id = 3, Value = &quot;Test3&quot; });
+</code></pre>
+<h4 id="using-dynamic-object">Using dynamic object</h4>
+<p>The default implementation of the MemorySource works internally with an ExpandoObject.</p>
+<pre><code class="lang-C#">dynamic row = new ExpandoObject();
+row.Id = 1;
+row.Value = &quot;Test1&quot;;
+
+MemorySource source = new MemorySource();
+source.DataAsList.Add(row);            
+</code></pre>
+<h4 id="using-arrays">Using arrays</h4>
+<p>You can also use the MemorySource with arrays.</p>
+<pre><code class="lang-C#"> MemorySource&lt;string[]&gt; source = new MemorySource&lt;string[]&gt;();
+ source.DataAsList = new List&lt;string[]&gt;()
+ {
+    new string[] { &quot;1&quot;, &quot;Test1&quot; },
+    new string[] { &quot;2&quot;, &quot;Test2&quot; },
+    new string[] { &quot;3&quot;, &quot;Test3&quot; },
+};
+</code></pre>
+<h3 id="output-buffer">Output buffer</h3>
+<p>The MemorySource has an output buffer - this means that every data row can be cached before it is send to the next component in the flow. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows.</p>
+<h3 id="memorysource-api-documentation">MemorySource Api documentation</h3>
+<p>The full class documentation can be found in the Api documentation.</p>
+<ul>
+<li>If the output type is an array or object, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.MemorySource-1.html">use the MemorySource that accepts one data type</a>.</li>
+<li>If the output type is an ExpandoObject, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.MemorySource.html">use the default implementation</a>.</li>
+</ul>
 <h2 id="memorydestination">MemoryDestination</h2>
-<p>A memory destinatio stores the incoming data within a List.
+<p>A memory destination stores the incoming data within a List.
 You can access the received data within the <code>Data</code> property.
-Data should be read from this collection when all data has arrived at the destination. If you want to access the data asynchronously while the list is still receiving data from the flow, consider using the <code>ConcurrentMemoryDestination</code>.</p>
-<pre><code class="lang-C#">MemoryDestination&lt;MySimpleRow&gt; dest = new MemoryDestination&lt;MySimpleRow&gt;();
+Data should be read from this collection when all data has arrived at the destination. If you want to access the data asynchronously while the list is still receiving data from the flow, consider using the <code>ConcurrentMemoryDestination</code>.
+As the <code>Data</code> property will internally use an <code>List&lt;T&gt;</code>, accessing data in this list while your data flow is still running is not thread safe. See below the details for the ConcurrentMemoryDestination.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-C#">MemoryDestination&lt;MyRow&gt; dest = new MemoryDestination&lt;MyRow&gt;();
 // data is accessible in dest.Data 
 </code></pre>
-<h2 id="concurrentmemorydestination">ConcurrentMemoryDestination</h2>
+<h4 id="using-dynamic-objects">Using dynamic objects</h4>
+<p>The default implementation of <code>MemoryDestination</code> will use internal the ExpandoObject</p>
+<pre><code class="lang-C#">var dest = new MemoryDestination();
+</code></pre>
+<h4 id="using-array">Using array</h4>
+<p>You can use the MemoryDestination also with arrays.</p>
+<pre><code class="lang-C#">var dest = new MemoryDestination&lt;string[]&gt;();
+</code></pre>
+<h3 id="concurrentmemorydestination">ConcurrentMemoryDestination</h3>
 <p>A memory destination is a component that store the incoming data within a <a href="https://docs.microsoft.com/de-de/dotnet/api/system.collections.concurrent.blockingcollection-1?view=netframework-4.8">BlockingCollection</a>.
-You can access the received data within the <code>Data</code> property.
-Data can be read from this collection as soon as it arrives.</p>
+You can access the received data within the <code>Data</code> property. The BlockingCollection is designed to be thread-safe.
+Data can be read from this collection as soon as it arrives, and you don't have to wait for you data flow to finish.</p>
 <p>Example:</p>
 <pre><code class="lang-C#">ConcurrentMemoryDestination&lt;MySimpleRow&gt; dest = new ConcurrentMemoryDestination&lt;MySimpleRow&gt;();
 // data is accessible in dest.Data 
 </code></pre>
-</article>
+<h3 id="input-buffer">Input buffer</h3>
+<p>The MemoryDestination as well as the ConcurrentMemoryDestination has an input buffer - this means that every data row can be cached before it is actually processed from your destination. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows.</p>
+<h3 id="memorydestination--concurrentmemorydestination-api-documentation">MemoryDestination &amp; ConcurrentMemoryDestination Api documentation</h3>
+<p>The full class documentation can be found in the Api documentation.</p>
+<h4 id="memorydestination-1">MemoryDestination:</h4>
+<ul>
+<li>If the input type is an array or object, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.MemoryDestination-1.html">use the MemoryDestination that accepts one data type</a>.</li>
+<li>If the input type is an ExpandoObject, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.MemoryDestination.html">use the default implementation</a>.</li>
+</ul>
+<h4 id="concurrentmemorydestination-1">ConcurrentMemoryDestination</h4>
+<ul>
+<li>If the input type is an array or object, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination-1.html">use the ConcurrentMemoryDestination that accepts one data type</a>.</li>
+<li>If the input type is an ExpandoObject, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination.html">use the default implementation</a>.</li>
+</ul>
+</t></t></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

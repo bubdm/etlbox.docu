@@ -335,9 +335,6 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -1028,6 +1025,15 @@ By default, an empty List&lt;T&gt; is created which can be filled with data.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="ETLBox_DataFlow_Connectors_MemorySource_1_examples"><strong>Examples</strong></h5>
+  <pre><code>MemorySource&lt;MyRow> source = new MemorySource&lt;MyRow>();
+source.Data = new List&lt;MyRow>()
+{
+    new MyRow() { Id = 1, Value = &quot;Test1&quot; },
+    new MyRow() { Id = 2, Value = &quot;Test2&quot; },
+    new MyRow() { Id = 3, Value = &quot;Test3&quot; }
+};</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <a id="ETLBox_DataFlow_Connectors_MemorySource_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.MemorySource`1.#ctor*"></a>

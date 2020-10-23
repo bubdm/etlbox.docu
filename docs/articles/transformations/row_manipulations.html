@@ -522,10 +522,10 @@ The ColumnMapping contains information about the renaming - this should be the o
 <h4 id="example">Example</h4>
 <pre><code>var source = new DbSource&lt;MyInputRow&gt;();
 var map = new ColumnRename&lt;MyInputRow&gt;();
-map.ColumnMapping = new List&lt;ColumnMapping&gt;()
+map.ColumnMapping = new List&lt;ColumnMap&gt;()
 {
-    new ColumnMapping(&quot;OldCol1&quot;,&quot;Col1&quot;),
-    new ColumnMapping(&quot;OldCol2&quot;,&quot;Col2&quot;),
+    new ColumnMap() { CurrentName = &quot;OldCol1&quot;, NewName = &quot;Col1&quot; },
+    new ColumnMap() { CurrentName = &quot;OldCol2&quot;, NewName = &quot;Col2&quot; }
 };
 var dest = new DbDestination(SqlConnection, &quot;ColumnRenameDest&quot;);
 

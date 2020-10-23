@@ -9,9 +9,9 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Custom sources &amp; destinations | ETLBox - a lightweight ETL library for C#. </title>
+    <title>Custom code connector | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Custom sources &amp; destinations | ETLBox - a lightweight ETL library for C#. ">
+    <meta name="title" content="Custom code connector | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -206,48 +206,196 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="custom-sources--destinations">Custom sources &amp; destinations</h1>
+<h1 id="custom-code-connector">Custom code connector</h1>
 
-<p>ETLBox allows you to write your own implementation of sources and destinations. This gives you a
-great flexibility if you need to integrate systems that are currently now included in the list of default
-connectors.</p>
+<p>ETLBox allows you to create your own implementation of a source or destinations. This gives you high flexibility if you need to integrate systems that are currently now included in the list of default connectors.</p>
 <h2 id="customsource">CustomSource</h2>
 <p>A custom source can generate any type of  output you need.
-It will accept tow function: One function that generates the your output, and another one that return true if you reached the end of your data.</p>
+It will need two functions to work properly: A read function that generates one data row as output, and a reading completed predicate that returns true if you reached the end of your data. Bot functions get the current progress count as input parameters. It is optional to use the progress count - it is just an information how many rows have been processed so far from the custom source.</p>
 <h3 id="simple-example">Simple example</h3>
-<p>Let's look at a simple example. Assuming we have a list of strings, and we want to return these string wrapped into an object data for our source.</p>
-<p>First we define an object</p>
-<pre><code class="lang-C#">public class MyRow {
+<p>Let's look at a simple example. Assuming we have a list of strings, and we want to return these string wrapped into an object data for our source. So for each string in our input array we create an object that we send into our flow. When all elements are processed, we set up an expression that returns true.</p>
+<pre><code class="lang-C#">public class MyRow
+{
     public int Id { get; set; }
     public string Value { get; set; }
 }
 
-List&lt;string&gt; Data = new List&lt;string&gt;() { &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot; };
-int _readIndex = 0;
-
-CustomSource&lt;MySimpleRow&gt; source = new CustomSource&lt;MySimpleRow&gt;(
-    () =&gt; {
+public static void Main()
+{
+    List&lt;string&gt; Data = new List&lt;string&gt;()
+    {
+        &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
+    };
+    var source = new CustomSource&lt;MyRow&gt;();
+    source.ReadFunc = progressCount =&gt;
+    {
         return new MyRow()
         {
-            Id = _readIndex++,
-            Value = Data[_readIndex]
-        };
-    }, 
-    () =&gt; _readIndex &gt;= Data.Count);
+            Id = progressCount + 1,
+            Value = Data[progressCount]
+        };                                
+    };
+    source.ReadingCompleted = progressCount =&gt; progressCount &gt;= Data.Count;
+
+    var dest = new MemoryDestination&lt;MyRow&gt;();
+
+    source.LinkTo(dest);
+
+    source.Execute();
+    dest.Wait();
+
+    foreach (var row in dest.Data)
+        Console.WriteLine($&quot;Id: {row.Id} Value: {row.Value}&quot;);
+
+    //Output
+    /*
+        Id: 1 Value: Test1
+        Id: 2 Value: Test2
+        Id: 3 Value: Test3
+    */
+}
 </code></pre>
-<p>CustomSource also works with dynamic ExpandoObject and arrays.</p>
+<h4 id="using-dynamic-objects">Using dynamic objects</h4>
+<p>Like all other components in ETLBox, CustomSource also has a default implementation which uses ExpandoObjects. The above example could be modified like this to create code without any object types:</p>
+<pre><code class="lang-C#">public static void Main()
+{
+    List&lt;string&gt; Data = new List&lt;string&gt;()
+    {
+        &quot;Test1&quot;, &quot;Test2&quot;, &quot;Test3&quot;
+    };           
+
+    var source = new CustomSource();
+    source.ReadFunc = progressCount =&gt;
+    {
+        dynamic result = new ExpandoObject();
+        result.Id = progressCount + 1;
+        result.Value = Data[progressCount];                
+        return result;
+    };
+    source.ReadingCompleted = progressCount =&gt; progressCount &gt;= Data.Count;
+
+    var dest = new MemoryDestination();
+
+    source.LinkTo(dest);
+
+    source.Execute();
+    dest.Wait();
+
+    foreach (dynamic row in dest.Data)
+        Console.WriteLine($&quot;Id: {row.Id} Value: {row.Value}&quot;);
+
+    //Output
+    /*
+        Id: 1 Value: Test1
+        Id: 2 Value: Test2
+        Id: 3 Value: Test3
+    */
+}
+</code></pre>
+<h4 id="using-string-array">Using string array</h4>
+<p>Instead of parsing your input data into an object, of course you can also simply pass your array into the flow. If we modify our example again to work with arrays, we will get the following code:</p>
+<pre><code class="lang-C#">public static void Main()
+{
+    List&lt;string[]&gt; Data = new List&lt;string[]&gt;()
+    {
+        new string[] {  &quot;1&quot;, &quot;Test1&quot; },
+        new string[] {  &quot;2&quot;, &quot;Test2&quot; },
+        new string[] {  &quot;3&quot;, &quot;Test3&quot; },
+    };           
+    var source = new CustomSource&lt;string[]&gt;();
+    source.ReadFunc = progressCount =&gt; Data[progressCount];
+    source.ReadingCompleted = progressCount =&gt; progressCount &gt;= Data.Count;
+
+    var dest = new MemoryDestination&lt;string[]&gt;();
+
+    source.LinkTo(dest);
+
+    source.Execute();
+    dest.Wait();
+
+    foreach (var row in dest.Data)
+        Console.WriteLine($&quot;Id: {row[0]} Value: {row[1]}&quot;);
+
+    //Output
+    /*
+        Id: 1 Value: Test1
+        Id: 2 Value: Test2
+        Id: 3 Value: Test3
+    */
+}
+</code></pre>
+<h3 id="output-buffer">Output buffer</h3>
+<p>The CustomSource has an output buffer - this means that every data row can be cached before it is send to the next component in the flow. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows.</p>
+<h3 id="customsource-api-documentation">CustomSource Api documentation</h3>
+<p>The full class documentation can be found in the Api documentation.</p>
+<ul>
+<li>If the output type is an array or object, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.CustomSource-1.html">use the CustomSource that accepts one data type</a>.</li>
+<li>If the output type is an ExpandoObject, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.CustomSource.html">use the default implementation</a>.</li>
+</ul>
 <h2 id="custom-destination">Custom Destination</h2>
 <p>The use of a custom destination is even simpler - a custom destination
-just calls an action for every received record.</p>
-<p>Here is an example:</p>
-<pre><code class="lang-C#">CustomDestination&lt;MySimpleRow&gt; dest = new CustomDestination&lt;MySimpleRow&gt;(
-    row =&gt; {
-        SqlTask.ExecuteNonQuery(Connection, &quot;Insert row&quot;,
-            $&quot;INSERT INTO dbo.CustomDestination VALUES({row.Id},'{row.Value}')&quot;);
-    }
-);
+just calls an action for every received record. In this action you will the receive each incoming row as well as an progress count of already received data.
+It is in your responsibility to do the further processing of the record. E.g. you could execute some code which writes the line into the database, or you could add it to an internal list and the convert this list into a json. Though both things could be accomplished with either the DbDestination or the JsonDestination, here is an example for the latter one.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-C#"> public class MyRow
+{
+    public int Id { get; set; }
+    public string Value { get; set; }
+}
+
+public static void Main()
+{
+    var source = new MemorySource&lt;MyRow&gt;();
+    source.DataAsList.Add(new MyRow() { Id = 1, Value = &quot;Test1&quot; });
+    source.DataAsList.Add(new MyRow() { Id = 2, Value = &quot;Test2&quot; });
+
+    List&lt;MyRow&gt; rows = new List&lt;MyRow&gt;();
+    var dest = new CustomDestination&lt;MyRow&gt;();
+    dest.WriteAction = (row, progressCount) =&gt; rows.Add(row);
+
+    source.LinkTo(dest);
+    source.Execute();
+    dest.Wait();
+            
+    string json = JsonConvert.SerializeObject(rows, Formatting.Indented);
+
+    Console.WriteLine(json);
+
+    //Output
+    /*
+        [
+        {
+            &quot;Id&quot;: 1,
+            &quot;Value&quot;: &quot;Test1&quot;
+        },
+        {
+            &quot;Id&quot;: 2,
+            &quot;Value&quot;: &quot;Test2&quot;
+        }
+    ]
+    */
+}
 </code></pre>
-<p>CustomDestination also works with dynamic ExpandoObject and arrays.</p>
+<h4 id="using-dynamic-object">Using dynamic object</h4>
+<p>CustomDestination also works with dynamic ExpandoObject. Simple use the default implementation when you want to work with an ExpandoObject.  You can access each dynamic object in your WriteAction, together with the current progress count.</p>
+<pre><code class="lang-C#"> List&lt;ExpandoObject&gt; rows = new List&lt;ExpandoObject&gt;();
+var dest = new CustomDestination();
+dest.WriteAction = (row, progressCount) =&gt; rows.Add(row);
+</code></pre>
+<h4 id="using-arrays">Using arrays</h4>
+<p>Also you can use the Custom destination with arrays. Within the WriteAction you will have access to each incoming array row (along with the current progress count),</p>
+<pre><code class="lang-C#">List&lt;string[]&gt; rows = new List&lt;string[]&gt;();
+var dest = new CustomDestination&lt;string[]&gt;();
+dest.WriteAction = (row, progressCount) =&gt; rows.Add(row);
+</code></pre>
+<h3 id="input-buffer">Input buffer</h3>
+<p>The CustomDestination has an input buffer - this means that every data row can be cached before it is actually processed from your destination. This is the case if your processing takes longer than new data arrive. You can restrict the maximal buffer size by setting MaxBufferSize to a value greater than 0. The default value is 100000 rows.</p>
+<h3 id="customdestination-api-documentation">CustomDestination Api documentation</h3>
+<p>The full class documentation can be found in the Api documentation.</p>
+<ul>
+<li>If the input type is an array or object, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.CustomDestination-1.html">use the CustomDestination that accepts one data type</a>.</li>
+<li>If the input type is an ExpandoObject, <a href="https://etlbox.net/api/ETLBox.DataFlow.Connectors.CustomDestination.html">use the default implementation</a>.</li>
+</ul>
 </article>
           </div>
           

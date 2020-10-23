@@ -335,9 +335,6 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -1219,6 +1216,29 @@ manager.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping">ColumnMapping</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ColumnMap&gt; ColumnMapping { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnMap.html">ColumnMap</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_ConnectionManager_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ConnectionManager*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_ConnectionManager" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ConnectionManager">ConnectionManager</h4>
   <div class="markdown level1 summary"><p>The connection manager used to connect to the database - use the right connection manager for your database type.</p>
@@ -1322,6 +1342,33 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
+  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertData_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertData*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertData__0___" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertData(`0[])">BulkInsertData(TInput[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void BulkInsertData(TInput[] data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TInput[]</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.BulkInsertData(TInput[])</span></div>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_FinishWrite_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.FinishWrite*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_FinishWrite" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.FinishWrite">FinishWrite()</h4>
   <div class="markdown level1 summary"></div>
@@ -1352,33 +1399,6 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.PrepareWrite()</span></div>
-  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_TryBulkInsertData_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TryBulkInsertData*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_TryBulkInsertData__0___" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.TryBulkInsertData(`0[])">TryBulkInsertData(TInput[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void TryBulkInsertData(TInput[] data)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>TInput[]</td>
-        <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.TryBulkInsertData(TInput[])</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>

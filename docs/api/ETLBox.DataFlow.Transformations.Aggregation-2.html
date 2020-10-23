@@ -335,9 +335,6 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -1149,9 +1146,36 @@ source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   </table>
   <h3 id="properties">Properties
   </h3>
+  <a id="ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.AggregateColumns*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.AggregateColumns">AggregateColumns</h4>
+  <div class="markdown level1 summary"><p>This list will be used to set the AggregationAction.
+This also works with ExpandoObjects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;AggregateColumn&gt; AggregateColumns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ETLBox.DataFlow.AggregateColumn.html">AggregateColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_AggregationAction_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.AggregationAction*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_AggregationAction" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.AggregationAction">AggregationAction</h4>
-  <div class="markdown level1 summary"><p>This action describes how the input data is aggregated</p>
+  <div class="markdown level1 summary"><p>This action describes how the input data is aggregated.
+Not needed if you use the <a class="xref" href="ETLBox.DataFlow.AggregateColumn.html">AggregateColumn</a> in your object
+or pass a list to the <a class="xref" href="ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns">AggregateColumns</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1173,9 +1197,36 @@ source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.GroupColumns*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.GroupColumns">GroupColumns</h4>
+  <div class="markdown level1 summary"><p>This list will be used to set the <a class="xref" href="ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_GroupingFunc">GroupingFunc</a> and the <a class="xref" href="ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_StoreKeyAction">StoreKeyAction</a>.
+This also works with ExpandoObjects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GroupColumn&gt; GroupColumns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ETLBox.DataFlow.GroupColumn.html">GroupColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_GroupingFunc_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.GroupingFunc*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_GroupingFunc" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.GroupingFunc">GroupingFunc</h4>
-  <div class="markdown level1 summary"><p>This Func defines how the object for grouping data is retrieved</p>
+  <div class="markdown level1 summary"><p>This Func defines how the object for grouping data is retrieved.
+Not needed if you use the <a class="xref" href="ETLBox.DataFlow.GroupColumn.html">GroupColumn</a> in your object
+or pass a list to the <a class="xref" href="ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns">GroupColumns</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1225,7 +1276,9 @@ source.LinkTo&lt;MyAggRow>(agg).LinkTo(dest);</code></pre>
   <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TOutput&gt;.SourceBlock</span></div>
   <a id="ETLBox_DataFlow_Transformations_Aggregation_2_StoreKeyAction_" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.StoreKeyAction*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_Aggregation_2_StoreKeyAction" data-uid="ETLBox.DataFlow.Transformations.Aggregation`2.StoreKeyAction">StoreKeyAction</h4>
-  <div class="markdown level1 summary"><p>This action defines how the grouping object is written back into the aggregated object</p>
+  <div class="markdown level1 summary"><p>This action defines how the grouping object is written back into the aggregated object.
+Not needed if you use the <a class="xref" href="ETLBox.DataFlow.GroupColumn.html">GroupColumn</a> in your object
+or pass a list to the <a class="xref" href="ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns">GroupColumns</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

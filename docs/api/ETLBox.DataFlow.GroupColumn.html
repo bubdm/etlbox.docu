@@ -335,9 +335,6 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -952,13 +949,21 @@ public class GroupColumn : Attribute</code></pre>
   <h3 id="constructors">Constructors
   </h3>
   <a id="ETLBox_DataFlow_GroupColumn__ctor_" data-uid="ETLBox.DataFlow.GroupColumn.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_GroupColumn__ctor" data-uid="ETLBox.DataFlow.GroupColumn.#ctor">GroupColumn()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupColumn()</code></pre>
+  </div>
+  <a id="ETLBox_DataFlow_GroupColumn__ctor_" data-uid="ETLBox.DataFlow.GroupColumn.#ctor*"></a>
   <h4 id="ETLBox_DataFlow_GroupColumn__ctor_System_String_" data-uid="ETLBox.DataFlow.GroupColumn.#ctor(System.String)">GroupColumn(String)</h4>
-  <div class="markdown level1 summary"><p>Sets the property name used for grouping in the aggregation output object</p>
+  <div class="markdown level1 summary"><p>Sets the property name used for grouping in the input object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GroupColumn(string aggregationGroupingProperty)</code></pre>
+    <pre><code class="lang-csharp hljs">public GroupColumn(string inputGroupingProperty)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -972,22 +977,46 @@ public class GroupColumn : Attribute</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">aggregationGroupingProperty</span></td>
-        <td><p>Property name used for grouping in the output object</p>
+        <td><span class="parametername">inputGroupingProperty</span></td>
+        <td><p>Property name in the input object used for grouping the aggregation data</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="ETLBox_DataFlow_GroupColumn_AggregationGroupingProperty_" data-uid="ETLBox.DataFlow.GroupColumn.AggregationGroupingProperty*"></a>
-  <h4 id="ETLBox_DataFlow_GroupColumn_AggregationGroupingProperty" data-uid="ETLBox.DataFlow.GroupColumn.AggregationGroupingProperty">AggregationGroupingProperty</h4>
-  <div class="markdown level1 summary"><p>Property name used for groupin in the aggregation output object.</p>
+  <a id="ETLBox_DataFlow_GroupColumn_InputGroupingProperty_" data-uid="ETLBox.DataFlow.GroupColumn.InputGroupingProperty*"></a>
+  <h4 id="ETLBox_DataFlow_GroupColumn_InputGroupingProperty" data-uid="ETLBox.DataFlow.GroupColumn.InputGroupingProperty">InputGroupingProperty</h4>
+  <div class="markdown level1 summary"><p>Property name used in the input object for grouping the aggregation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AggregationGroupingProperty { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string InputGroupingProperty { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_GroupColumn_OutputGroupingProperty_" data-uid="ETLBox.DataFlow.GroupColumn.OutputGroupingProperty*"></a>
+  <h4 id="ETLBox_DataFlow_GroupColumn_OutputGroupingProperty" data-uid="ETLBox.DataFlow.GroupColumn.OutputGroupingProperty">OutputGroupingProperty</h4>
+  <div class="markdown level1 summary"><p>Property name that holds the grouping value in the output object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OutputGroupingProperty { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -335,9 +335,6 @@
                             <a href="ETLBox.DataFlow.ColumnMap.html" title="ColumnMap" class="">ColumnMap</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.DataFlow.ColumnMapping.html" title="ColumnMapping" class="">ColumnMapping</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.DataFlow.CompareColumn.html" title="CompareColumn" class="">CompareColumn</a>
                           </li>
                           <li class="">
@@ -803,8 +800,7 @@
   
   <h1 id="ETLBox_DataFlow_Connectors_CustomDestination_1" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1" class="text-break">Class CustomDestination&lt;TInput&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Define your own destination block. This block accepts all data from the flow and sends it to your custom written Action.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -996,8 +992,7 @@
     <tbody>
       <tr>
         <td><span class="parametername">TInput</span></td>
-        <td><p>Type of ingoing data.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1012,12 +1007,12 @@
     <pre><code class="lang-csharp hljs">public CustomDestination()</code></pre>
   </div>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_System_Action__0__" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor(System.Action{`0})">CustomDestination(Action&lt;TInput&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_System_Action__0_System_Int32__" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor(System.Action{`0,System.Int32})">CustomDestination(Action&lt;TInput, Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CustomDestination(Action&lt;TInput&gt; writeAction)</code></pre>
+    <pre><code class="lang-csharp hljs">public CustomDestination(Action&lt;TInput, int&gt; writeAction)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1030,7 +1025,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;TInput&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;TInput, <span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">writeAction</span></td>
         <td><p>Sets the <a class="xref" href="ETLBox.DataFlow.Connectors.CustomDestination-1.html#ETLBox_DataFlow_Connectors_CustomDestination_1_WriteAction">WriteAction</a></p>
 </td>
@@ -1068,12 +1063,12 @@ with a default name that can be overwritten.</p>
   <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
   <a id="ETLBox_DataFlow_Connectors_CustomDestination_1_WriteAction_" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.WriteAction*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_CustomDestination_1_WriteAction" data-uid="ETLBox.DataFlow.Connectors.CustomDestination`1.WriteAction">WriteAction</h4>
-  <div class="markdown level1 summary"><p>Each row that the CustomDestination receives is send into this Action.</p>
+  <div class="markdown level1 summary"><p>Each row that the CustomDestination receives is send into this Action as first input value. The second input value is the current progress count.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;TInput&gt; WriteAction { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Action&lt;TInput, int&gt; WriteAction { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1085,7 +1080,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;TInput&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;TInput, <span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

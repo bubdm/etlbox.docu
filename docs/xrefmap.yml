@@ -9656,6 +9656,12 @@ references:
   commentId: T:ETLBox.DataFlow.AggregateColumn
   fullName: ETLBox.DataFlow.AggregateColumn
   nameWithType: AggregateColumn
+- uid: ETLBox.DataFlow.AggregateColumn.#ctor
+  name: AggregateColumn()
+  href: api/ETLBox.DataFlow.AggregateColumn.html#ETLBox_DataFlow_AggregateColumn__ctor
+  commentId: M:ETLBox.DataFlow.AggregateColumn.#ctor
+  fullName: ETLBox.DataFlow.AggregateColumn.AggregateColumn()
+  nameWithType: AggregateColumn.AggregateColumn()
 - uid: ETLBox.DataFlow.AggregateColumn.#ctor(System.String,ETLBox.DataFlow.Transformations.AggregationMethod)
   name: AggregateColumn(String, AggregationMethod)
   href: api/ETLBox.DataFlow.AggregateColumn.html#ETLBox_DataFlow_AggregateColumn__ctor_System_String_ETLBox_DataFlow_Transformations_AggregationMethod_
@@ -9695,6 +9701,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.AggregateColumn.AggregationProperty
   nameWithType: AggregateColumn.AggregationProperty
+- uid: ETLBox.DataFlow.AggregateColumn.InputProperty
+  name: InputProperty
+  href: api/ETLBox.DataFlow.AggregateColumn.html#ETLBox_DataFlow_AggregateColumn_InputProperty
+  commentId: P:ETLBox.DataFlow.AggregateColumn.InputProperty
+  fullName: ETLBox.DataFlow.AggregateColumn.InputProperty
+  nameWithType: AggregateColumn.InputProperty
+- uid: ETLBox.DataFlow.AggregateColumn.InputProperty*
+  name: InputProperty
+  href: api/ETLBox.DataFlow.AggregateColumn.html#ETLBox_DataFlow_AggregateColumn_InputProperty_
+  commentId: Overload:ETLBox.DataFlow.AggregateColumn.InputProperty
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.AggregateColumn.InputProperty
+  nameWithType: AggregateColumn.InputProperty
 - uid: ETLBox.DataFlow.ChangeAction
   name: ChangeAction
   href: api/ETLBox.DataFlow.ChangeAction.html
@@ -9731,6 +9750,12 @@ references:
   commentId: T:ETLBox.DataFlow.ColumnMap
   fullName: ETLBox.DataFlow.ColumnMap
   nameWithType: ColumnMap
+- uid: ETLBox.DataFlow.ColumnMap.#ctor
+  name: ColumnMap()
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap__ctor
+  commentId: M:ETLBox.DataFlow.ColumnMap.#ctor
+  fullName: ETLBox.DataFlow.ColumnMap.ColumnMap()
+  nameWithType: ColumnMap.ColumnMap()
 - uid: ETLBox.DataFlow.ColumnMap.#ctor(System.String)
   name: ColumnMap(String)
   href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap__ctor_System_String_
@@ -9744,89 +9769,58 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.ColumnMap.ColumnMap
   nameWithType: ColumnMap.ColumnMap
-- uid: ETLBox.DataFlow.ColumnMap.ColumnName
-  name: ColumnName
-  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_ColumnName
-  commentId: P:ETLBox.DataFlow.ColumnMap.ColumnName
-  fullName: ETLBox.DataFlow.ColumnMap.ColumnName
-  nameWithType: ColumnMap.ColumnName
-- uid: ETLBox.DataFlow.ColumnMap.ColumnName*
-  name: ColumnName
-  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_ColumnName_
-  commentId: Overload:ETLBox.DataFlow.ColumnMap.ColumnName
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.ColumnMap.ColumnName
-  nameWithType: ColumnMap.ColumnName
-- uid: ETLBox.DataFlow.ColumnMapping
-  name: ColumnMapping
-  href: api/ETLBox.DataFlow.ColumnMapping.html
-  commentId: T:ETLBox.DataFlow.ColumnMapping
-  fullName: ETLBox.DataFlow.ColumnMapping
-  nameWithType: ColumnMapping
-- uid: ETLBox.DataFlow.ColumnMapping.#ctor
-  name: ColumnMapping()
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping__ctor
-  commentId: M:ETLBox.DataFlow.ColumnMapping.#ctor
-  fullName: ETLBox.DataFlow.ColumnMapping.ColumnMapping()
-  nameWithType: ColumnMapping.ColumnMapping()
-- uid: ETLBox.DataFlow.ColumnMapping.#ctor(System.Int32,System.String)
-  name: ColumnMapping(Int32, String)
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping__ctor_System_Int32_System_String_
-  commentId: M:ETLBox.DataFlow.ColumnMapping.#ctor(System.Int32,System.String)
-  fullName: ETLBox.DataFlow.ColumnMapping.ColumnMapping(System.Int32, System.String)
-  nameWithType: ColumnMapping.ColumnMapping(Int32, String)
-- uid: ETLBox.DataFlow.ColumnMapping.#ctor(System.String,System.String)
-  name: ColumnMapping(String, String)
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping__ctor_System_String_System_String_
-  commentId: M:ETLBox.DataFlow.ColumnMapping.#ctor(System.String,System.String)
-  fullName: ETLBox.DataFlow.ColumnMapping.ColumnMapping(System.String, System.String)
-  nameWithType: ColumnMapping.ColumnMapping(String, String)
-- uid: ETLBox.DataFlow.ColumnMapping.#ctor*
-  name: ColumnMapping
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping__ctor_
-  commentId: Overload:ETLBox.DataFlow.ColumnMapping.#ctor
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.ColumnMapping.ColumnMapping
-  nameWithType: ColumnMapping.ColumnMapping
-- uid: ETLBox.DataFlow.ColumnMapping.ArrayIndex
+- uid: ETLBox.DataFlow.ColumnMap.ArrayIndex
   name: ArrayIndex
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_ArrayIndex
-  commentId: P:ETLBox.DataFlow.ColumnMapping.ArrayIndex
-  fullName: ETLBox.DataFlow.ColumnMapping.ArrayIndex
-  nameWithType: ColumnMapping.ArrayIndex
-- uid: ETLBox.DataFlow.ColumnMapping.ArrayIndex*
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_ArrayIndex
+  commentId: P:ETLBox.DataFlow.ColumnMap.ArrayIndex
+  fullName: ETLBox.DataFlow.ColumnMap.ArrayIndex
+  nameWithType: ColumnMap.ArrayIndex
+- uid: ETLBox.DataFlow.ColumnMap.ArrayIndex*
   name: ArrayIndex
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_ArrayIndex_
-  commentId: Overload:ETLBox.DataFlow.ColumnMapping.ArrayIndex
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_ArrayIndex_
+  commentId: Overload:ETLBox.DataFlow.ColumnMap.ArrayIndex
   isSpec: "True"
-  fullName: ETLBox.DataFlow.ColumnMapping.ArrayIndex
-  nameWithType: ColumnMapping.ArrayIndex
-- uid: ETLBox.DataFlow.ColumnMapping.CurrentName
+  fullName: ETLBox.DataFlow.ColumnMap.ArrayIndex
+  nameWithType: ColumnMap.ArrayIndex
+- uid: ETLBox.DataFlow.ColumnMap.CurrentName
   name: CurrentName
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_CurrentName
-  commentId: P:ETLBox.DataFlow.ColumnMapping.CurrentName
-  fullName: ETLBox.DataFlow.ColumnMapping.CurrentName
-  nameWithType: ColumnMapping.CurrentName
-- uid: ETLBox.DataFlow.ColumnMapping.CurrentName*
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_CurrentName
+  commentId: P:ETLBox.DataFlow.ColumnMap.CurrentName
+  fullName: ETLBox.DataFlow.ColumnMap.CurrentName
+  nameWithType: ColumnMap.CurrentName
+- uid: ETLBox.DataFlow.ColumnMap.CurrentName*
   name: CurrentName
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_CurrentName_
-  commentId: Overload:ETLBox.DataFlow.ColumnMapping.CurrentName
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_CurrentName_
+  commentId: Overload:ETLBox.DataFlow.ColumnMap.CurrentName
   isSpec: "True"
-  fullName: ETLBox.DataFlow.ColumnMapping.CurrentName
-  nameWithType: ColumnMapping.CurrentName
-- uid: ETLBox.DataFlow.ColumnMapping.NewName
+  fullName: ETLBox.DataFlow.ColumnMap.CurrentName
+  nameWithType: ColumnMap.CurrentName
+- uid: ETLBox.DataFlow.ColumnMap.NewName
   name: NewName
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_NewName
-  commentId: P:ETLBox.DataFlow.ColumnMapping.NewName
-  fullName: ETLBox.DataFlow.ColumnMapping.NewName
-  nameWithType: ColumnMapping.NewName
-- uid: ETLBox.DataFlow.ColumnMapping.NewName*
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_NewName
+  commentId: P:ETLBox.DataFlow.ColumnMap.NewName
+  fullName: ETLBox.DataFlow.ColumnMap.NewName
+  nameWithType: ColumnMap.NewName
+- uid: ETLBox.DataFlow.ColumnMap.NewName*
   name: NewName
-  href: api/ETLBox.DataFlow.ColumnMapping.html#ETLBox_DataFlow_ColumnMapping_NewName_
-  commentId: Overload:ETLBox.DataFlow.ColumnMapping.NewName
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_NewName_
+  commentId: Overload:ETLBox.DataFlow.ColumnMap.NewName
   isSpec: "True"
-  fullName: ETLBox.DataFlow.ColumnMapping.NewName
-  nameWithType: ColumnMapping.NewName
+  fullName: ETLBox.DataFlow.ColumnMap.NewName
+  nameWithType: ColumnMap.NewName
+- uid: ETLBox.DataFlow.ColumnMap.RemoveColumn
+  name: RemoveColumn
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_RemoveColumn
+  commentId: P:ETLBox.DataFlow.ColumnMap.RemoveColumn
+  fullName: ETLBox.DataFlow.ColumnMap.RemoveColumn
+  nameWithType: ColumnMap.RemoveColumn
+- uid: ETLBox.DataFlow.ColumnMap.RemoveColumn*
+  name: RemoveColumn
+  href: api/ETLBox.DataFlow.ColumnMap.html#ETLBox_DataFlow_ColumnMap_RemoveColumn_
+  commentId: Overload:ETLBox.DataFlow.ColumnMap.RemoveColumn
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.ColumnMap.RemoveColumn
+  nameWithType: ColumnMap.RemoveColumn
 - uid: ETLBox.DataFlow.CompareColumn
   name: CompareColumn
   href: api/ETLBox.DataFlow.CompareColumn.html
@@ -10304,23 +10298,6 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.CsvSource(Of TOutput).ReadAllRecords
   nameWithType: CsvSource<TOutput>.ReadAllRecords
   nameWithType.vb: CsvSource(Of TOutput).ReadAllRecords
-- uid: ETLBox.DataFlow.Connectors.CsvSource`1.ReleaseGCPressureRowCount
-  name: ReleaseGCPressureRowCount
-  href: api/ETLBox.DataFlow.Connectors.CsvSource-1.html#ETLBox_DataFlow_Connectors_CsvSource_1_ReleaseGCPressureRowCount
-  commentId: P:ETLBox.DataFlow.Connectors.CsvSource`1.ReleaseGCPressureRowCount
-  fullName: ETLBox.DataFlow.Connectors.CsvSource<TOutput>.ReleaseGCPressureRowCount
-  fullName.vb: ETLBox.DataFlow.Connectors.CsvSource(Of TOutput).ReleaseGCPressureRowCount
-  nameWithType: CsvSource<TOutput>.ReleaseGCPressureRowCount
-  nameWithType.vb: CsvSource(Of TOutput).ReleaseGCPressureRowCount
-- uid: ETLBox.DataFlow.Connectors.CsvSource`1.ReleaseGCPressureRowCount*
-  name: ReleaseGCPressureRowCount
-  href: api/ETLBox.DataFlow.Connectors.CsvSource-1.html#ETLBox_DataFlow_Connectors_CsvSource_1_ReleaseGCPressureRowCount_
-  commentId: Overload:ETLBox.DataFlow.Connectors.CsvSource`1.ReleaseGCPressureRowCount
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.Connectors.CsvSource<TOutput>.ReleaseGCPressureRowCount
-  fullName.vb: ETLBox.DataFlow.Connectors.CsvSource(Of TOutput).ReleaseGCPressureRowCount
-  nameWithType: CsvSource<TOutput>.ReleaseGCPressureRowCount
-  nameWithType.vb: CsvSource(Of TOutput).ReleaseGCPressureRowCount
 - uid: ETLBox.DataFlow.Connectors.CsvSource`1.SkipRows
   name: SkipRows
   href: api/ETLBox.DataFlow.Connectors.CsvSource-1.html#ETLBox_DataFlow_Connectors_CsvSource_1_SkipRows
@@ -10367,15 +10344,15 @@ references:
   commentId: M:ETLBox.DataFlow.Connectors.CustomDestination.#ctor
   fullName: ETLBox.DataFlow.Connectors.CustomDestination.CustomDestination()
   nameWithType: CustomDestination.CustomDestination()
-- uid: ETLBox.DataFlow.Connectors.CustomDestination.#ctor(System.Action{System.Dynamic.ExpandoObject})
-  name: CustomDestination(Action<ExpandoObject>)
-  href: api/ETLBox.DataFlow.Connectors.CustomDestination.html#ETLBox_DataFlow_Connectors_CustomDestination__ctor_System_Action_System_Dynamic_ExpandoObject__
-  commentId: M:ETLBox.DataFlow.Connectors.CustomDestination.#ctor(System.Action{System.Dynamic.ExpandoObject})
-  name.vb: CustomDestination(Action(Of ExpandoObject))
-  fullName: ETLBox.DataFlow.Connectors.CustomDestination.CustomDestination(System.Action<System.Dynamic.ExpandoObject>)
-  fullName.vb: ETLBox.DataFlow.Connectors.CustomDestination.CustomDestination(System.Action(Of System.Dynamic.ExpandoObject))
-  nameWithType: CustomDestination.CustomDestination(Action<ExpandoObject>)
-  nameWithType.vb: CustomDestination.CustomDestination(Action(Of ExpandoObject))
+- uid: ETLBox.DataFlow.Connectors.CustomDestination.#ctor(System.Action{System.Dynamic.ExpandoObject,System.Int32})
+  name: CustomDestination(Action<ExpandoObject, Int32>)
+  href: api/ETLBox.DataFlow.Connectors.CustomDestination.html#ETLBox_DataFlow_Connectors_CustomDestination__ctor_System_Action_System_Dynamic_ExpandoObject_System_Int32__
+  commentId: M:ETLBox.DataFlow.Connectors.CustomDestination.#ctor(System.Action{System.Dynamic.ExpandoObject,System.Int32})
+  name.vb: CustomDestination(Action(Of ExpandoObject, Int32))
+  fullName: ETLBox.DataFlow.Connectors.CustomDestination.CustomDestination(System.Action<System.Dynamic.ExpandoObject, System.Int32>)
+  fullName.vb: ETLBox.DataFlow.Connectors.CustomDestination.CustomDestination(System.Action(Of System.Dynamic.ExpandoObject, System.Int32))
+  nameWithType: CustomDestination.CustomDestination(Action<ExpandoObject, Int32>)
+  nameWithType.vb: CustomDestination.CustomDestination(Action(Of ExpandoObject, Int32))
 - uid: ETLBox.DataFlow.Connectors.CustomDestination.#ctor*
   name: CustomDestination
   href: api/ETLBox.DataFlow.Connectors.CustomDestination.html#ETLBox_DataFlow_Connectors_CustomDestination__ctor_
@@ -10400,15 +10377,15 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.CustomDestination(Of TInput).CustomDestination()
   nameWithType: CustomDestination<TInput>.CustomDestination()
   nameWithType.vb: CustomDestination(Of TInput).CustomDestination()
-- uid: ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor(System.Action{`0})
-  name: CustomDestination(Action<TInput>)
-  href: api/ETLBox.DataFlow.Connectors.CustomDestination-1.html#ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_System_Action__0__
-  commentId: M:ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor(System.Action{`0})
-  name.vb: CustomDestination(Action(Of TInput))
-  fullName: ETLBox.DataFlow.Connectors.CustomDestination<TInput>.CustomDestination(System.Action<TInput>)
-  fullName.vb: ETLBox.DataFlow.Connectors.CustomDestination(Of TInput).CustomDestination(System.Action(Of TInput))
-  nameWithType: CustomDestination<TInput>.CustomDestination(Action<TInput>)
-  nameWithType.vb: CustomDestination(Of TInput).CustomDestination(Action(Of TInput))
+- uid: ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor(System.Action{`0,System.Int32})
+  name: CustomDestination(Action<TInput, Int32>)
+  href: api/ETLBox.DataFlow.Connectors.CustomDestination-1.html#ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_System_Action__0_System_Int32__
+  commentId: M:ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor(System.Action{`0,System.Int32})
+  name.vb: CustomDestination(Action(Of TInput, Int32))
+  fullName: ETLBox.DataFlow.Connectors.CustomDestination<TInput>.CustomDestination(System.Action<TInput, System.Int32>)
+  fullName.vb: ETLBox.DataFlow.Connectors.CustomDestination(Of TInput).CustomDestination(System.Action(Of TInput, System.Int32))
+  nameWithType: CustomDestination<TInput>.CustomDestination(Action<TInput, Int32>)
+  nameWithType.vb: CustomDestination(Of TInput).CustomDestination(Action(Of TInput, Int32))
 - uid: ETLBox.DataFlow.Connectors.CustomDestination`1.#ctor*
   name: CustomDestination
   href: api/ETLBox.DataFlow.Connectors.CustomDestination-1.html#ETLBox_DataFlow_Connectors_CustomDestination_1__ctor_
@@ -10515,15 +10492,15 @@ references:
   commentId: M:ETLBox.DataFlow.Connectors.CustomSource.#ctor
   fullName: ETLBox.DataFlow.Connectors.CustomSource.CustomSource()
   nameWithType: CustomSource.CustomSource()
-- uid: ETLBox.DataFlow.Connectors.CustomSource.#ctor(System.Func{System.Dynamic.ExpandoObject},System.Func{System.Boolean})
-  name: CustomSource(Func<ExpandoObject>, Func<Boolean>)
-  href: api/ETLBox.DataFlow.Connectors.CustomSource.html#ETLBox_DataFlow_Connectors_CustomSource__ctor_System_Func_System_Dynamic_ExpandoObject__System_Func_System_Boolean__
-  commentId: M:ETLBox.DataFlow.Connectors.CustomSource.#ctor(System.Func{System.Dynamic.ExpandoObject},System.Func{System.Boolean})
-  name.vb: CustomSource(Func(Of ExpandoObject), Func(Of Boolean))
-  fullName: ETLBox.DataFlow.Connectors.CustomSource.CustomSource(System.Func<System.Dynamic.ExpandoObject>, System.Func<System.Boolean>)
-  fullName.vb: ETLBox.DataFlow.Connectors.CustomSource.CustomSource(System.Func(Of System.Dynamic.ExpandoObject), System.Func(Of System.Boolean))
-  nameWithType: CustomSource.CustomSource(Func<ExpandoObject>, Func<Boolean>)
-  nameWithType.vb: CustomSource.CustomSource(Func(Of ExpandoObject), Func(Of Boolean))
+- uid: ETLBox.DataFlow.Connectors.CustomSource.#ctor(System.Func{System.Int32,System.Dynamic.ExpandoObject},System.Predicate{System.Int32})
+  name: CustomSource(Func<Int32, ExpandoObject>, Predicate<Int32>)
+  href: api/ETLBox.DataFlow.Connectors.CustomSource.html#ETLBox_DataFlow_Connectors_CustomSource__ctor_System_Func_System_Int32_System_Dynamic_ExpandoObject__System_Predicate_System_Int32__
+  commentId: M:ETLBox.DataFlow.Connectors.CustomSource.#ctor(System.Func{System.Int32,System.Dynamic.ExpandoObject},System.Predicate{System.Int32})
+  name.vb: CustomSource(Func(Of Int32, ExpandoObject), Predicate(Of Int32))
+  fullName: ETLBox.DataFlow.Connectors.CustomSource.CustomSource(System.Func<System.Int32, System.Dynamic.ExpandoObject>, System.Predicate<System.Int32>)
+  fullName.vb: ETLBox.DataFlow.Connectors.CustomSource.CustomSource(System.Func(Of System.Int32, System.Dynamic.ExpandoObject), System.Predicate(Of System.Int32))
+  nameWithType: CustomSource.CustomSource(Func<Int32, ExpandoObject>, Predicate<Int32>)
+  nameWithType.vb: CustomSource.CustomSource(Func(Of Int32, ExpandoObject), Predicate(Of Int32))
 - uid: ETLBox.DataFlow.Connectors.CustomSource.#ctor*
   name: CustomSource
   href: api/ETLBox.DataFlow.Connectors.CustomSource.html#ETLBox_DataFlow_Connectors_CustomSource__ctor_
@@ -10548,15 +10525,15 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).CustomSource()
   nameWithType: CustomSource<TOutput>.CustomSource()
   nameWithType.vb: CustomSource(Of TOutput).CustomSource()
-- uid: ETLBox.DataFlow.Connectors.CustomSource`1.#ctor(System.Func{`0},System.Func{System.Boolean})
-  name: CustomSource(Func<TOutput>, Func<Boolean>)
-  href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1__ctor_System_Func__0__System_Func_System_Boolean__
-  commentId: M:ETLBox.DataFlow.Connectors.CustomSource`1.#ctor(System.Func{`0},System.Func{System.Boolean})
-  name.vb: CustomSource(Func(Of TOutput), Func(Of Boolean))
-  fullName: ETLBox.DataFlow.Connectors.CustomSource<TOutput>.CustomSource(System.Func<TOutput>, System.Func<System.Boolean>)
-  fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).CustomSource(System.Func(Of TOutput), System.Func(Of System.Boolean))
-  nameWithType: CustomSource<TOutput>.CustomSource(Func<TOutput>, Func<Boolean>)
-  nameWithType.vb: CustomSource(Of TOutput).CustomSource(Func(Of TOutput), Func(Of Boolean))
+- uid: ETLBox.DataFlow.Connectors.CustomSource`1.#ctor(System.Func{System.Int32,`0},System.Predicate{System.Int32})
+  name: CustomSource(Func<Int32, TOutput>, Predicate<Int32>)
+  href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1__ctor_System_Func_System_Int32__0__System_Predicate_System_Int32__
+  commentId: M:ETLBox.DataFlow.Connectors.CustomSource`1.#ctor(System.Func{System.Int32,`0},System.Predicate{System.Int32})
+  name.vb: CustomSource(Func(Of Int32, TOutput), Predicate(Of Int32))
+  fullName: ETLBox.DataFlow.Connectors.CustomSource<TOutput>.CustomSource(System.Func<System.Int32, TOutput>, System.Predicate<System.Int32>)
+  fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).CustomSource(System.Func(Of System.Int32, TOutput), System.Predicate(Of System.Int32))
+  nameWithType: CustomSource<TOutput>.CustomSource(Func<Int32, TOutput>, Predicate<Int32>)
+  nameWithType.vb: CustomSource(Of TOutput).CustomSource(Func(Of Int32, TOutput), Predicate(Of Int32))
 - uid: ETLBox.DataFlow.Connectors.CustomSource`1.#ctor*
   name: CustomSource
   href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1__ctor_
@@ -10634,23 +10611,6 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).OnExecutionDoSynchronousWork
   nameWithType: CustomSource<TOutput>.OnExecutionDoSynchronousWork
   nameWithType.vb: CustomSource(Of TOutput).OnExecutionDoSynchronousWork
-- uid: ETLBox.DataFlow.Connectors.CustomSource`1.ReadCompletedFunc
-  name: ReadCompletedFunc
-  href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadCompletedFunc
-  commentId: P:ETLBox.DataFlow.Connectors.CustomSource`1.ReadCompletedFunc
-  fullName: ETLBox.DataFlow.Connectors.CustomSource<TOutput>.ReadCompletedFunc
-  fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).ReadCompletedFunc
-  nameWithType: CustomSource<TOutput>.ReadCompletedFunc
-  nameWithType.vb: CustomSource(Of TOutput).ReadCompletedFunc
-- uid: ETLBox.DataFlow.Connectors.CustomSource`1.ReadCompletedFunc*
-  name: ReadCompletedFunc
-  href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadCompletedFunc_
-  commentId: Overload:ETLBox.DataFlow.Connectors.CustomSource`1.ReadCompletedFunc
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.Connectors.CustomSource<TOutput>.ReadCompletedFunc
-  fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).ReadCompletedFunc
-  nameWithType: CustomSource<TOutput>.ReadCompletedFunc
-  nameWithType.vb: CustomSource(Of TOutput).ReadCompletedFunc
 - uid: ETLBox.DataFlow.Connectors.CustomSource`1.ReadFunc
   name: ReadFunc
   href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadFunc
@@ -10668,6 +10628,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).ReadFunc
   nameWithType: CustomSource<TOutput>.ReadFunc
   nameWithType.vb: CustomSource(Of TOutput).ReadFunc
+- uid: ETLBox.DataFlow.Connectors.CustomSource`1.ReadingCompleted
+  name: ReadingCompleted
+  href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadingCompleted
+  commentId: P:ETLBox.DataFlow.Connectors.CustomSource`1.ReadingCompleted
+  fullName: ETLBox.DataFlow.Connectors.CustomSource<TOutput>.ReadingCompleted
+  fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).ReadingCompleted
+  nameWithType: CustomSource<TOutput>.ReadingCompleted
+  nameWithType.vb: CustomSource(Of TOutput).ReadingCompleted
+- uid: ETLBox.DataFlow.Connectors.CustomSource`1.ReadingCompleted*
+  name: ReadingCompleted
+  href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_ReadingCompleted_
+  commentId: Overload:ETLBox.DataFlow.Connectors.CustomSource`1.ReadingCompleted
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.CustomSource<TOutput>.ReadingCompleted
+  fullName.vb: ETLBox.DataFlow.Connectors.CustomSource(Of TOutput).ReadingCompleted
+  nameWithType: CustomSource<TOutput>.ReadingCompleted
+  nameWithType.vb: CustomSource(Of TOutput).ReadingCompleted
 - uid: ETLBox.DataFlow.Connectors.CustomSource`1.TaskName
   name: TaskName
   href: api/ETLBox.DataFlow.Connectors.CustomSource-1.html#ETLBox_DataFlow_Connectors_CustomSource_1_TaskName
@@ -10803,6 +10780,41 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).BulkInsertConnectionManager
   nameWithType: DbDestination<TInput>.BulkInsertConnectionManager
   nameWithType.vb: DbDestination(Of TInput).BulkInsertConnectionManager
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertData(`0[])
+  name: BulkInsertData(TInput[])
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertData__0___
+  commentId: M:ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertData(`0[])
+  name.vb: BulkInsertData(TInput())
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.BulkInsertData(TInput[])
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).BulkInsertData(TInput())
+  nameWithType: DbDestination<TInput>.BulkInsertData(TInput[])
+  nameWithType.vb: DbDestination(Of TInput).BulkInsertData(TInput())
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertData*
+  name: BulkInsertData
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_BulkInsertData_
+  commentId: Overload:ETLBox.DataFlow.Connectors.DbDestination`1.BulkInsertData
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.BulkInsertData
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).BulkInsertData
+  nameWithType: DbDestination<TInput>.BulkInsertData
+  nameWithType.vb: DbDestination(Of TInput).BulkInsertData
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping
+  name: ColumnMapping
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping
+  commentId: P:ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.ColumnMapping
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).ColumnMapping
+  nameWithType: DbDestination<TInput>.ColumnMapping
+  nameWithType.vb: DbDestination(Of TInput).ColumnMapping
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping*
+  name: ColumnMapping
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping_
+  commentId: Overload:ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.ColumnMapping
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).ColumnMapping
+  nameWithType: DbDestination<TInput>.ColumnMapping
+  nameWithType.vb: DbDestination(Of TInput).ColumnMapping
 - uid: ETLBox.DataFlow.Connectors.DbDestination`1.ConnectionManager
   name: ConnectionManager
   href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_ConnectionManager
@@ -10930,24 +10942,6 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).TaskName
   nameWithType: DbDestination<TInput>.TaskName
   nameWithType.vb: DbDestination(Of TInput).TaskName
-- uid: ETLBox.DataFlow.Connectors.DbDestination`1.TryBulkInsertData(`0[])
-  name: TryBulkInsertData(TInput[])
-  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_TryBulkInsertData__0___
-  commentId: M:ETLBox.DataFlow.Connectors.DbDestination`1.TryBulkInsertData(`0[])
-  name.vb: TryBulkInsertData(TInput())
-  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.TryBulkInsertData(TInput[])
-  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).TryBulkInsertData(TInput())
-  nameWithType: DbDestination<TInput>.TryBulkInsertData(TInput[])
-  nameWithType.vb: DbDestination(Of TInput).TryBulkInsertData(TInput())
-- uid: ETLBox.DataFlow.Connectors.DbDestination`1.TryBulkInsertData*
-  name: TryBulkInsertData
-  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_TryBulkInsertData_
-  commentId: Overload:ETLBox.DataFlow.Connectors.DbDestination`1.TryBulkInsertData
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.TryBulkInsertData
-  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).TryBulkInsertData
-  nameWithType: DbDestination<TInput>.TryBulkInsertData
-  nameWithType.vb: DbDestination(Of TInput).TryBulkInsertData
 - uid: ETLBox.DataFlow.Connectors.DbMerge
   name: DbMerge
   href: api/ETLBox.DataFlow.Connectors.DbMerge.html
@@ -13276,6 +13270,18 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.DataFlow.ClearSettings
   nameWithType: DataFlow.ClearSettings
+- uid: ETLBox.DataFlow.DataFlow.DEFAULT_LOGGING_THRESHOLD_ROW
+  name: DEFAULT_LOGGING_THRESHOLD_ROW
+  href: api/ETLBox.DataFlow.DataFlow.html#ETLBox_DataFlow_DataFlow_DEFAULT_LOGGING_THRESHOLD_ROW
+  commentId: F:ETLBox.DataFlow.DataFlow.DEFAULT_LOGGING_THRESHOLD_ROW
+  fullName: ETLBox.DataFlow.DataFlow.DEFAULT_LOGGING_THRESHOLD_ROW
+  nameWithType: DataFlow.DEFAULT_LOGGING_THRESHOLD_ROW
+- uid: ETLBox.DataFlow.DataFlow.DEFAULT_MAX_BUFFER_SIZE
+  name: DEFAULT_MAX_BUFFER_SIZE
+  href: api/ETLBox.DataFlow.DataFlow.html#ETLBox_DataFlow_DataFlow_DEFAULT_MAX_BUFFER_SIZE
+  commentId: F:ETLBox.DataFlow.DataFlow.DEFAULT_MAX_BUFFER_SIZE
+  fullName: ETLBox.DataFlow.DataFlow.DEFAULT_MAX_BUFFER_SIZE
+  nameWithType: DataFlow.DEFAULT_MAX_BUFFER_SIZE
 - uid: ETLBox.DataFlow.DataFlow.LoggingThresholdRows
   name: LoggingThresholdRows
   href: api/ETLBox.DataFlow.DataFlow.html#ETLBox_DataFlow_DataFlow_LoggingThresholdRows
@@ -13379,6 +13385,24 @@ references:
   fullName.vb: ETLBox.DataFlow.DataFlowBatchDestination(Of TInput).Buffer
   nameWithType: DataFlowBatchDestination<TInput>.Buffer
   nameWithType.vb: DataFlowBatchDestination(Of TInput).Buffer
+- uid: ETLBox.DataFlow.DataFlowBatchDestination`1.BulkInsertData(`0[])
+  name: BulkInsertData(TInput[])
+  href: api/ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_BulkInsertData__0___
+  commentId: M:ETLBox.DataFlow.DataFlowBatchDestination`1.BulkInsertData(`0[])
+  name.vb: BulkInsertData(TInput())
+  fullName: ETLBox.DataFlow.DataFlowBatchDestination<TInput>.BulkInsertData(TInput[])
+  fullName.vb: ETLBox.DataFlow.DataFlowBatchDestination(Of TInput).BulkInsertData(TInput())
+  nameWithType: DataFlowBatchDestination<TInput>.BulkInsertData(TInput[])
+  nameWithType.vb: DataFlowBatchDestination(Of TInput).BulkInsertData(TInput())
+- uid: ETLBox.DataFlow.DataFlowBatchDestination`1.BulkInsertData*
+  name: BulkInsertData
+  href: api/ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_BulkInsertData_
+  commentId: Overload:ETLBox.DataFlow.DataFlowBatchDestination`1.BulkInsertData
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DataFlowBatchDestination<TInput>.BulkInsertData
+  fullName.vb: ETLBox.DataFlow.DataFlowBatchDestination(Of TInput).BulkInsertData
+  nameWithType: DataFlowBatchDestination<TInput>.BulkInsertData
+  nameWithType.vb: DataFlowBatchDestination(Of TInput).BulkInsertData
 - uid: ETLBox.DataFlow.DataFlowBatchDestination`1.CleanUpOnFaulted(System.Exception)
   name: CleanUpOnFaulted(Exception)
   href: api/ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_CleanUpOnFaulted_System_Exception_
@@ -13524,24 +13548,6 @@ references:
   fullName.vb: ETLBox.DataFlow.DataFlowBatchDestination(Of TInput).TargetBlock
   nameWithType: DataFlowBatchDestination<TInput>.TargetBlock
   nameWithType.vb: DataFlowBatchDestination(Of TInput).TargetBlock
-- uid: ETLBox.DataFlow.DataFlowBatchDestination`1.TryBulkInsertData(`0[])
-  name: TryBulkInsertData(TInput[])
-  href: api/ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_TryBulkInsertData__0___
-  commentId: M:ETLBox.DataFlow.DataFlowBatchDestination`1.TryBulkInsertData(`0[])
-  name.vb: TryBulkInsertData(TInput())
-  fullName: ETLBox.DataFlow.DataFlowBatchDestination<TInput>.TryBulkInsertData(TInput[])
-  fullName.vb: ETLBox.DataFlow.DataFlowBatchDestination(Of TInput).TryBulkInsertData(TInput())
-  nameWithType: DataFlowBatchDestination<TInput>.TryBulkInsertData(TInput[])
-  nameWithType.vb: DataFlowBatchDestination(Of TInput).TryBulkInsertData(TInput())
-- uid: ETLBox.DataFlow.DataFlowBatchDestination`1.TryBulkInsertData*
-  name: TryBulkInsertData
-  href: api/ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_TryBulkInsertData_
-  commentId: Overload:ETLBox.DataFlow.DataFlowBatchDestination`1.TryBulkInsertData
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.DataFlowBatchDestination<TInput>.TryBulkInsertData
-  fullName.vb: ETLBox.DataFlow.DataFlowBatchDestination(Of TInput).TryBulkInsertData
-  nameWithType: DataFlowBatchDestination<TInput>.TryBulkInsertData
-  nameWithType.vb: DataFlowBatchDestination(Of TInput).TryBulkInsertData
 - uid: ETLBox.DataFlow.DataFlowBatchDestination`1.Wait
   name: Wait()
   href: api/ETLBox.DataFlow.DataFlowBatchDestination-1.html#ETLBox_DataFlow_DataFlowBatchDestination_1_Wait
@@ -15208,6 +15214,12 @@ references:
   commentId: T:ETLBox.DataFlow.GroupColumn
   fullName: ETLBox.DataFlow.GroupColumn
   nameWithType: GroupColumn
+- uid: ETLBox.DataFlow.GroupColumn.#ctor
+  name: GroupColumn()
+  href: api/ETLBox.DataFlow.GroupColumn.html#ETLBox_DataFlow_GroupColumn__ctor
+  commentId: M:ETLBox.DataFlow.GroupColumn.#ctor
+  fullName: ETLBox.DataFlow.GroupColumn.GroupColumn()
+  nameWithType: GroupColumn.GroupColumn()
 - uid: ETLBox.DataFlow.GroupColumn.#ctor(System.String)
   name: GroupColumn(String)
   href: api/ETLBox.DataFlow.GroupColumn.html#ETLBox_DataFlow_GroupColumn__ctor_System_String_
@@ -15221,19 +15233,32 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.GroupColumn.GroupColumn
   nameWithType: GroupColumn.GroupColumn
-- uid: ETLBox.DataFlow.GroupColumn.AggregationGroupingProperty
-  name: AggregationGroupingProperty
-  href: api/ETLBox.DataFlow.GroupColumn.html#ETLBox_DataFlow_GroupColumn_AggregationGroupingProperty
-  commentId: P:ETLBox.DataFlow.GroupColumn.AggregationGroupingProperty
-  fullName: ETLBox.DataFlow.GroupColumn.AggregationGroupingProperty
-  nameWithType: GroupColumn.AggregationGroupingProperty
-- uid: ETLBox.DataFlow.GroupColumn.AggregationGroupingProperty*
-  name: AggregationGroupingProperty
-  href: api/ETLBox.DataFlow.GroupColumn.html#ETLBox_DataFlow_GroupColumn_AggregationGroupingProperty_
-  commentId: Overload:ETLBox.DataFlow.GroupColumn.AggregationGroupingProperty
+- uid: ETLBox.DataFlow.GroupColumn.InputGroupingProperty
+  name: InputGroupingProperty
+  href: api/ETLBox.DataFlow.GroupColumn.html#ETLBox_DataFlow_GroupColumn_InputGroupingProperty
+  commentId: P:ETLBox.DataFlow.GroupColumn.InputGroupingProperty
+  fullName: ETLBox.DataFlow.GroupColumn.InputGroupingProperty
+  nameWithType: GroupColumn.InputGroupingProperty
+- uid: ETLBox.DataFlow.GroupColumn.InputGroupingProperty*
+  name: InputGroupingProperty
+  href: api/ETLBox.DataFlow.GroupColumn.html#ETLBox_DataFlow_GroupColumn_InputGroupingProperty_
+  commentId: Overload:ETLBox.DataFlow.GroupColumn.InputGroupingProperty
   isSpec: "True"
-  fullName: ETLBox.DataFlow.GroupColumn.AggregationGroupingProperty
-  nameWithType: GroupColumn.AggregationGroupingProperty
+  fullName: ETLBox.DataFlow.GroupColumn.InputGroupingProperty
+  nameWithType: GroupColumn.InputGroupingProperty
+- uid: ETLBox.DataFlow.GroupColumn.OutputGroupingProperty
+  name: OutputGroupingProperty
+  href: api/ETLBox.DataFlow.GroupColumn.html#ETLBox_DataFlow_GroupColumn_OutputGroupingProperty
+  commentId: P:ETLBox.DataFlow.GroupColumn.OutputGroupingProperty
+  fullName: ETLBox.DataFlow.GroupColumn.OutputGroupingProperty
+  nameWithType: GroupColumn.OutputGroupingProperty
+- uid: ETLBox.DataFlow.GroupColumn.OutputGroupingProperty*
+  name: OutputGroupingProperty
+  href: api/ETLBox.DataFlow.GroupColumn.html#ETLBox_DataFlow_GroupColumn_OutputGroupingProperty_
+  commentId: Overload:ETLBox.DataFlow.GroupColumn.OutputGroupingProperty
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GroupColumn.OutputGroupingProperty
+  nameWithType: GroupColumn.OutputGroupingProperty
 - uid: ETLBox.DataFlow.IDataFlowBatchDestination`1
   name: IDataFlowBatchDestination<TInput>
   href: api/ETLBox.DataFlow.IDataFlowBatchDestination-1.html
@@ -16056,6 +16081,12 @@ references:
   commentId: T:ETLBox.DataFlow.Transformations.Aggregation
   fullName: ETLBox.DataFlow.Transformations.Aggregation
   nameWithType: Aggregation
+- uid: ETLBox.DataFlow.Transformations.Aggregation.#ctor
+  name: Aggregation()
+  href: api/ETLBox.DataFlow.Transformations.Aggregation.html#ETLBox_DataFlow_Transformations_Aggregation__ctor
+  commentId: M:ETLBox.DataFlow.Transformations.Aggregation.#ctor
+  fullName: ETLBox.DataFlow.Transformations.Aggregation.Aggregation()
+  nameWithType: Aggregation.Aggregation()
 - uid: ETLBox.DataFlow.Transformations.Aggregation.#ctor(System.Action{System.Dynamic.ExpandoObject,System.Dynamic.ExpandoObject})
   name: Aggregation(Action<ExpandoObject, ExpandoObject>)
   href: api/ETLBox.DataFlow.Transformations.Aggregation.html#ETLBox_DataFlow_Transformations_Aggregation__ctor_System_Action_System_Dynamic_ExpandoObject_System_Dynamic_ExpandoObject__
@@ -16143,6 +16174,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.Aggregation(Of TInput, TOutput).Aggregation
   nameWithType: Aggregation<TInput, TOutput>.Aggregation
   nameWithType.vb: Aggregation(Of TInput, TOutput).Aggregation
+- uid: ETLBox.DataFlow.Transformations.Aggregation`2.AggregateColumns
+  name: AggregateColumns
+  href: api/ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns
+  commentId: P:ETLBox.DataFlow.Transformations.Aggregation`2.AggregateColumns
+  fullName: ETLBox.DataFlow.Transformations.Aggregation<TInput, TOutput>.AggregateColumns
+  fullName.vb: ETLBox.DataFlow.Transformations.Aggregation(Of TInput, TOutput).AggregateColumns
+  nameWithType: Aggregation<TInput, TOutput>.AggregateColumns
+  nameWithType.vb: Aggregation(Of TInput, TOutput).AggregateColumns
+- uid: ETLBox.DataFlow.Transformations.Aggregation`2.AggregateColumns*
+  name: AggregateColumns
+  href: api/ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_AggregateColumns_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Aggregation`2.AggregateColumns
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Aggregation<TInput, TOutput>.AggregateColumns
+  fullName.vb: ETLBox.DataFlow.Transformations.Aggregation(Of TInput, TOutput).AggregateColumns
+  nameWithType: Aggregation<TInput, TOutput>.AggregateColumns
+  nameWithType.vb: Aggregation(Of TInput, TOutput).AggregateColumns
 - uid: ETLBox.DataFlow.Transformations.Aggregation`2.AggregationAction
   name: AggregationAction
   href: api/ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_AggregationAction
@@ -16194,6 +16242,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.Aggregation(Of TInput, TOutput).CleanUpOnSuccess
   nameWithType: Aggregation<TInput, TOutput>.CleanUpOnSuccess
   nameWithType.vb: Aggregation(Of TInput, TOutput).CleanUpOnSuccess
+- uid: ETLBox.DataFlow.Transformations.Aggregation`2.GroupColumns
+  name: GroupColumns
+  href: api/ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns
+  commentId: P:ETLBox.DataFlow.Transformations.Aggregation`2.GroupColumns
+  fullName: ETLBox.DataFlow.Transformations.Aggregation<TInput, TOutput>.GroupColumns
+  fullName.vb: ETLBox.DataFlow.Transformations.Aggregation(Of TInput, TOutput).GroupColumns
+  nameWithType: Aggregation<TInput, TOutput>.GroupColumns
+  nameWithType.vb: Aggregation(Of TInput, TOutput).GroupColumns
+- uid: ETLBox.DataFlow.Transformations.Aggregation`2.GroupColumns*
+  name: GroupColumns
+  href: api/ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_GroupColumns_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Aggregation`2.GroupColumns
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Aggregation<TInput, TOutput>.GroupColumns
+  fullName.vb: ETLBox.DataFlow.Transformations.Aggregation(Of TInput, TOutput).GroupColumns
+  nameWithType: Aggregation<TInput, TOutput>.GroupColumns
+  nameWithType.vb: Aggregation(Of TInput, TOutput).GroupColumns
 - uid: ETLBox.DataFlow.Transformations.Aggregation`2.GroupingFunc
   name: GroupingFunc
   href: api/ETLBox.DataFlow.Transformations.Aggregation-2.html#ETLBox_DataFlow_Transformations_Aggregation_2_GroupingFunc
@@ -16308,6 +16373,30 @@ references:
   commentId: F:ETLBox.DataFlow.Transformations.AggregationMethod.Count
   fullName: ETLBox.DataFlow.Transformations.AggregationMethod.Count
   nameWithType: AggregationMethod.Count
+- uid: ETLBox.DataFlow.Transformations.AggregationMethod.FirstNotNullValue
+  name: FirstNotNullValue
+  href: api/ETLBox.DataFlow.Transformations.AggregationMethod.html#ETLBox_DataFlow_Transformations_AggregationMethod_FirstNotNullValue
+  commentId: F:ETLBox.DataFlow.Transformations.AggregationMethod.FirstNotNullValue
+  fullName: ETLBox.DataFlow.Transformations.AggregationMethod.FirstNotNullValue
+  nameWithType: AggregationMethod.FirstNotNullValue
+- uid: ETLBox.DataFlow.Transformations.AggregationMethod.FirstValue
+  name: FirstValue
+  href: api/ETLBox.DataFlow.Transformations.AggregationMethod.html#ETLBox_DataFlow_Transformations_AggregationMethod_FirstValue
+  commentId: F:ETLBox.DataFlow.Transformations.AggregationMethod.FirstValue
+  fullName: ETLBox.DataFlow.Transformations.AggregationMethod.FirstValue
+  nameWithType: AggregationMethod.FirstValue
+- uid: ETLBox.DataFlow.Transformations.AggregationMethod.LastNotNullValue
+  name: LastNotNullValue
+  href: api/ETLBox.DataFlow.Transformations.AggregationMethod.html#ETLBox_DataFlow_Transformations_AggregationMethod_LastNotNullValue
+  commentId: F:ETLBox.DataFlow.Transformations.AggregationMethod.LastNotNullValue
+  fullName: ETLBox.DataFlow.Transformations.AggregationMethod.LastNotNullValue
+  nameWithType: AggregationMethod.LastNotNullValue
+- uid: ETLBox.DataFlow.Transformations.AggregationMethod.LastValue
+  name: LastValue
+  href: api/ETLBox.DataFlow.Transformations.AggregationMethod.html#ETLBox_DataFlow_Transformations_AggregationMethod_LastValue
+  commentId: F:ETLBox.DataFlow.Transformations.AggregationMethod.LastValue
+  fullName: ETLBox.DataFlow.Transformations.AggregationMethod.LastValue
+  nameWithType: AggregationMethod.LastValue
 - uid: ETLBox.DataFlow.Transformations.AggregationMethod.Max
   name: Max
   href: api/ETLBox.DataFlow.Transformations.AggregationMethod.html#ETLBox_DataFlow_Transformations_AggregationMethod_Max
@@ -16555,15 +16644,15 @@ references:
   commentId: M:ETLBox.DataFlow.Transformations.ColumnRename.#ctor
   fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename()
   nameWithType: ColumnRename.ColumnRename()
-- uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMapping})
-  name: ColumnRename(IEnumerable<ColumnMapping>)
-  href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor_System_Collections_Generic_IEnumerable_ETLBox_DataFlow_ColumnMapping__
-  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMapping})
-  name.vb: ColumnRename(IEnumerable(Of ColumnMapping))
-  fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.IEnumerable<ETLBox.DataFlow.ColumnMapping>)
-  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.IEnumerable(Of ETLBox.DataFlow.ColumnMapping))
-  nameWithType: ColumnRename.ColumnRename(IEnumerable<ColumnMapping>)
-  nameWithType.vb: ColumnRename.ColumnRename(IEnumerable(Of ColumnMapping))
+- uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMap})
+  name: ColumnRename(IEnumerable<ColumnMap>)
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor_System_Collections_Generic_IEnumerable_ETLBox_DataFlow_ColumnMap__
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMap})
+  name.vb: ColumnRename(IEnumerable(Of ColumnMap))
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.IEnumerable<ETLBox.DataFlow.ColumnMap>)
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.IEnumerable(Of ETLBox.DataFlow.ColumnMap))
+  nameWithType: ColumnRename.ColumnRename(IEnumerable<ColumnMap>)
+  nameWithType.vb: ColumnRename.ColumnRename(IEnumerable(Of ColumnMap))
 - uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor*
   name: ColumnRename
   href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor_
@@ -16588,15 +16677,15 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename()
   nameWithType: ColumnRename<TInput>.ColumnRename()
   nameWithType.vb: ColumnRename(Of TInput).ColumnRename()
-- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMapping})
-  name: ColumnRename(IEnumerable<ColumnMapping>)
-  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_System_Collections_Generic_IEnumerable_ETLBox_DataFlow_ColumnMapping__
-  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMapping})
-  name.vb: ColumnRename(IEnumerable(Of ColumnMapping))
-  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnRename(System.Collections.Generic.IEnumerable<ETLBox.DataFlow.ColumnMapping>)
-  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename(System.Collections.Generic.IEnumerable(Of ETLBox.DataFlow.ColumnMapping))
-  nameWithType: ColumnRename<TInput>.ColumnRename(IEnumerable<ColumnMapping>)
-  nameWithType.vb: ColumnRename(Of TInput).ColumnRename(IEnumerable(Of ColumnMapping))
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMap})
+  name: ColumnRename(IEnumerable<ColumnMap>)
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_System_Collections_Generic_IEnumerable_ETLBox_DataFlow_ColumnMap__
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMap})
+  name.vb: ColumnRename(IEnumerable(Of ColumnMap))
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnRename(System.Collections.Generic.IEnumerable<ETLBox.DataFlow.ColumnMap>)
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename(System.Collections.Generic.IEnumerable(Of ETLBox.DataFlow.ColumnMap))
+  nameWithType: ColumnRename<TInput>.ColumnRename(IEnumerable<ColumnMap>)
+  nameWithType.vb: ColumnRename(Of TInput).ColumnRename(IEnumerable(Of ColumnMap))
 - uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor*
   name: ColumnRename
   href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_
@@ -16692,6 +16781,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).LinkErrorTo
   nameWithType: ColumnRename<TInput>.LinkErrorTo
   nameWithType.vb: ColumnRename(Of TInput).LinkErrorTo
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.RemoveColumns
+  name: RemoveColumns
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_RemoveColumns
+  commentId: P:ETLBox.DataFlow.Transformations.ColumnRename`1.RemoveColumns
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.RemoveColumns
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).RemoveColumns
+  nameWithType: ColumnRename<TInput>.RemoveColumns
+  nameWithType.vb: ColumnRename(Of TInput).RemoveColumns
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.RemoveColumns*
+  name: RemoveColumns
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_RemoveColumns_
+  commentId: Overload:ETLBox.DataFlow.Transformations.ColumnRename`1.RemoveColumns
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.RemoveColumns
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).RemoveColumns
+  nameWithType: ColumnRename<TInput>.RemoveColumns
+  nameWithType.vb: ColumnRename(Of TInput).RemoveColumns
 - uid: ETLBox.DataFlow.Transformations.ColumnRename`1.SourceBlock
   name: SourceBlock
   href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1_SourceBlock
@@ -18996,6 +19102,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.TypeInfo.Properties
   nameWithType: TypeInfo.Properties
+- uid: ETLBox.DataFlow.TypeInfo.PropertiesByName
+  name: PropertiesByName
+  href: api/ETLBox.DataFlow.TypeInfo.html#ETLBox_DataFlow_TypeInfo_PropertiesByName
+  commentId: P:ETLBox.DataFlow.TypeInfo.PropertiesByName
+  fullName: ETLBox.DataFlow.TypeInfo.PropertiesByName
+  nameWithType: TypeInfo.PropertiesByName
+- uid: ETLBox.DataFlow.TypeInfo.PropertiesByName*
+  name: PropertiesByName
+  href: api/ETLBox.DataFlow.TypeInfo.html#ETLBox_DataFlow_TypeInfo_PropertiesByName_
+  commentId: Overload:ETLBox.DataFlow.TypeInfo.PropertiesByName
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.TypeInfo.PropertiesByName
+  nameWithType: TypeInfo.PropertiesByName
 - uid: ETLBox.DataFlow.TypeInfo.PropertyIndex
   name: PropertyIndex
   href: api/ETLBox.DataFlow.TypeInfo.html#ETLBox_DataFlow_TypeInfo_PropertyIndex
