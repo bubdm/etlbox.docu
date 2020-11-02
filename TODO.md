@@ -11,14 +11,18 @@
 Very good for testing purposes.
 - MigrateTables - will compare two tables via their defintion, and then alter the table if empty or copy the existing data into the new table
 
-### Enhance Merge 
+### Enhance DbMerge 
 - Old: The current merge does suppor the "UseTruncateMethod" flag. If set to true, the table is truncated before inserted the modified data.
 In theory, this will also work for the MergeModes NoDeletions && OnlyUpdates. But then the method `ReinsertTruncatedRecords` should not 
 throw an exception - itstead, it should use the InputDataDict to reinsert the records that were truncated (but shouldn't be deleted.)
 - New: Remove truncate completely. For large data set, the delete statement will become big. Run the delete statement in bathces
 - Add the partial lookup to the merge
-- Allow merge to overwrite identity columns (see issue)
+- Allow merge to overwrite identity columns (see issue) or use real updates instead (should work)
 - adapt merge to match / compare column attributes (instead of string arrays)
+- What is the difference between NoDeletions and Delta? Probably no deletions can be removed
+- fix performance issue with merge / (DELETE statement)
+- add real update operations (similar to INSERT/DELETE
+
 
 ### Enhance Lookup Transformation
 - A "partial lookup" could be implemented. In the DbMerge, this could be useful for the DbMerge (in full load with deletions enabled this probably will not,but it should work with other Merge modes NoDeltions, Delta & OnlyUpdates )
