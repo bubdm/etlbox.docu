@@ -9,10 +9,10 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StreamMetaData
+    <title>Class DistinctColumn
    | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StreamMetaData
+    <meta name="title" content="Class DistinctColumn
    | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
@@ -367,8 +367,8 @@
                           <li class="">
                             <a href="ETLBox.DataFlow.DeleteColumn.html" title="DeleteColumn" class="">DeleteColumn</a>
                           </li>
-                          <li class="">
-                            <a href="ETLBox.DataFlow.DistinctColumn.html" title="DistinctColumn" class="">DistinctColumn</a>
+                          <li class="active">
+                            <a href="ETLBox.DataFlow.DistinctColumn.html" title="DistinctColumn" class="active">DistinctColumn</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.ErrorSource.html" title="ErrorSource" class="">ErrorSource</a>
@@ -466,8 +466,8 @@
                           <li class="">
                             <a href="ETLBox.DataFlow.RetrieveColumn.html" title="RetrieveColumn" class="">RetrieveColumn</a>
                           </li>
-                          <li class="active">
-                            <a href="ETLBox.DataFlow.StreamMetaData.html" title="StreamMetaData" class="active">StreamMetaData</a>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.StreamMetaData.html" title="StreamMetaData" class="">StreamMetaData</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.TypeInfo.html" title="TypeInfo" class="">TypeInfo</a>
@@ -840,29 +840,135 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.StreamMetaData">
+            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.DistinctColumn">
   
   
-  <h1 id="ETLBox_DataFlow_StreamMetaData" data-uid="ETLBox.DataFlow.StreamMetaData" class="text-break">Class StreamMetaData
+  <h1 id="ETLBox_DataFlow_DistinctColumn" data-uid="ETLBox.DataFlow.DistinctColumn" class="text-break">Class DistinctColumn
   </h1>
-  <div class="markdown level0 summary"><p>This class holds meta data about the current progress of the source.</p>
+  <div class="markdown level0 summary"><p>This attribute is used to identify distinct properties in an object.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StreamMetaData</span></div>
+    <div class="level1"><span class="xref">System.Attribute</span></div>
+    <div class="level2"><span class="xref">DistinctColumn</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">System.Attribute.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.Module, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.Module, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefaultAttribute()</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Assembly, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.MemberInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.Module, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.IsDefined(System.Reflection.ParameterInfo, System.Type, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.Match(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Attribute.TypeId</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -879,44 +985,31 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.DataFlow.html">ETLBox.DataFlow</a></h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
-  <h5 id="ETLBox_DataFlow_StreamMetaData_syntax">Syntax</h5>
+  <h5 id="ETLBox_DataFlow_DistinctColumn_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StreamMetaData</code></pre>
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
+public class DistinctColumn : Attribute</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="ETLBox_DataFlow_DistinctColumn__ctor_" data-uid="ETLBox.DataFlow.DistinctColumn.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_DistinctColumn__ctor" data-uid="ETLBox.DataFlow.DistinctColumn.#ctor">DistinctColumn()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DistinctColumn()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="ETLBox_DataFlow_StreamMetaData_ProgressCount_" data-uid="ETLBox.DataFlow.StreamMetaData.ProgressCount*"></a>
-  <h4 id="ETLBox_DataFlow_StreamMetaData_ProgressCount" data-uid="ETLBox.DataFlow.StreamMetaData.ProgressCount">ProgressCount</h4>
-  <div class="markdown level1 summary"><p>Number of currently processed items</p>
+  <a id="ETLBox_DataFlow_DistinctColumn_DistinctPropertyName_" data-uid="ETLBox.DataFlow.DistinctColumn.DistinctPropertyName*"></a>
+  <h4 id="ETLBox_DataFlow_DistinctColumn_DistinctPropertyName" data-uid="ETLBox.DataFlow.DistinctColumn.DistinctPropertyName">DistinctPropertyName</h4>
+  <div class="markdown level1 summary"><p>Property name used in the object to identify distinct values</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ProgressCount { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_DataFlow_StreamMetaData_UnparsedData_" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData*"></a>
-  <h4 id="ETLBox_DataFlow_StreamMetaData_UnparsedData" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData">UnparsedData</h4>
-  <div class="markdown level1 summary"><p>Unparsed meta data from the response. E.g. this could be unparsed json that holds the links to the next page of the response.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UnparsedData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string DistinctPropertyName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

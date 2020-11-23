@@ -9,10 +9,10 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StreamMetaData
+    <title>Class Distinct&lt;TInput&gt;
    | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StreamMetaData
+    <meta name="title" content="Class Distinct&lt;TInput&gt;
    | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
@@ -466,8 +466,8 @@
                           <li class="">
                             <a href="ETLBox.DataFlow.RetrieveColumn.html" title="RetrieveColumn" class="">RetrieveColumn</a>
                           </li>
-                          <li class="active">
-                            <a href="ETLBox.DataFlow.StreamMetaData.html" title="StreamMetaData" class="active">StreamMetaData</a>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.StreamMetaData.html" title="StreamMetaData" class="">StreamMetaData</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.TypeInfo.html" title="TypeInfo" class="">TypeInfo</a>
@@ -643,8 +643,8 @@
                           <li class="">
                             <a href="ETLBox.DataFlow.Transformations.CrossJoin-3.InMemoryDestination-1.html" title="CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;" class="">CrossJoin&lt;TInput1, TInput2, TOutput&gt;.InMemoryDestination&lt;TInput&gt;</a>
                           </li>
-                          <li class="">
-                            <a href="ETLBox.DataFlow.Transformations.Distinct-1.html" title="Distinct&lt;TInput&gt;" class="">Distinct&lt;TInput&gt;</a>
+                          <li class="active">
+                            <a href="ETLBox.DataFlow.Transformations.Distinct-1.html" title="Distinct&lt;TInput&gt;" class="active">Distinct&lt;TInput&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.Transformations.LookupTransformation.html" title="LookupTransformation" class="">LookupTransformation</a>
@@ -840,21 +840,173 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.StreamMetaData">
+            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Transformations.Distinct`1">
   
   
-  <h1 id="ETLBox_DataFlow_StreamMetaData" data-uid="ETLBox.DataFlow.StreamMetaData" class="text-break">Class StreamMetaData
+  <h1 id="ETLBox_DataFlow_Transformations_Distinct_1" data-uid="ETLBox.DataFlow.Transformations.Distinct`1" class="text-break">Class Distinct&lt;TInput&gt;
   </h1>
-  <div class="markdown level0 summary"><p>This class holds meta data about the current progress of the source.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StreamMetaData</span></div>
+    <div class="level1"><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html">LoggableTask</a></div>
+    <div class="level2"><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html">DataFlowComponent</a></div>
+    <div class="level3"><a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html">DataFlowSource</a>&lt;TInput&gt;</div>
+    <div class="level4"><a class="xref" href="ETLBox.DataFlow.DataFlowTransformation-2.html">DataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
+    <div class="level5"><span class="xref">Distinct&lt;TInput&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation</a>&lt;TInput, TInput&gt;</div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;TInput&gt;</div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;TInput&gt;</div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a></div>
+    <div><a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowTransformation-2.html#ETLBox_DataFlow_DataFlowTransformation_2_TargetBlock">DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;TInput&gt;.LinkTo(IDataFlowDestination&lt;TInput&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html#ETLBox_DataFlow_DataFlowSource_1_LinkTo_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__">DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowSource-1.html#ETLBox_DataFlow_DataFlowSource_1_LinkTo__1_ETLBox_DataFlow_IDataFlowDestination__0__System_Predicate__0__System_Predicate__0__">DataFlowSource&lt;TInput&gt;.LinkTo&lt;TConvert&gt;(IDataFlowDestination&lt;TInput&gt;, Predicate&lt;TInput&gt;, Predicate&lt;TInput&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_MaxBufferSize">DataFlowComponent.MaxBufferSize</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent__maxBufferSize">DataFlowComponent._maxBufferSize</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_Predecessors">DataFlowComponent.Predecessors</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_Successors">DataFlowComponent.Successors</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_Completion">DataFlowComponent.Completion</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ComponentCompletion">DataFlowComponent.ComponentCompletion</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_Parent">DataFlowComponent.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_WereBufferInitialized">DataFlowComponent.WereBufferInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ReadyForProcessing">DataFlowComponent.ReadyForProcessing</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_WasLinked">DataFlowComponent.WasLinked</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InternalLinkTo__1_ETLBox_DataFlow_IDataFlowDestination_System_Object_System_Object_">DataFlowComponent.InternalLinkTo&lt;T&gt;(IDataFlowDestination, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_LinkBuffersRecursively">DataFlowComponent.LinkBuffersRecursively()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InitBufferRecursively">DataFlowComponent.InitBufferRecursively()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_RunErrorSourceInitializationRecursively">DataFlowComponent.RunErrorSourceInitializationRecursively()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_OnCompletion">DataFlowComponent.OnCompletion</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_SetCompletionTaskRecursively">DataFlowComponent.SetCompletionTaskRecursively()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultOnPredecessorCompletion_System_Threading_Tasks_Task_">DataFlowComponent.CompleteOrFaultOnPredecessorCompletion(Task)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultOnComponentAndBufferCompletion_System_Threading_Tasks_Task_">DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion(Task)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_FaultPredecessorsRecursively_System_Exception_">DataFlowComponent.FaultPredecessorsRecursively(Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_Exception">DataFlowComponent.Exception</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ErrorSource">DataFlowComponent.ErrorSource</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InternalLinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__">DataFlowComponent.InternalLinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ThrowOrRedirectError_System_Exception_System_String_">DataFlowComponent.ThrowOrRedirectError(Exception, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent__loggingThresholdRows">DataFlowComponent._loggingThresholdRows</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_LoggingThresholdRows">DataFlowComponent.LoggingThresholdRows</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_HasLoggingThresholdRows">DataFlowComponent.HasLoggingThresholdRows</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ThresholdCount">DataFlowComponent.ThresholdCount</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_WasLoggingStarted">DataFlowComponent.WasLoggingStarted</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_WasLoggingFinished">DataFlowComponent.WasLoggingFinished</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_NLogStartOnce">DataFlowComponent.NLogStartOnce()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_NLogFinishOnce">DataFlowComponent.NLogFinishOnce()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_LogProgressBatch_System_Int32_">DataFlowComponent.LogProgressBatch(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_LogProgress">DataFlowComponent.LogProgress()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskType">LoggableTask.TaskType</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask__disableLogging">LoggableTask._disableLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_DisableLogging">LoggableTask.DisableLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskHash">LoggableTask.TaskHash</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_CopyLogTaskProperties_ETLBox_ControlFlow_ILoggableTask_">LoggableTask.CopyLogTaskProperties(ILoggableTask)</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -877,22 +1029,71 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.DataFlow.html">ETLBox.DataFlow</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.DataFlow.Transformations.html">ETLBox.DataFlow.Transformations</a></h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
-  <h5 id="ETLBox_DataFlow_StreamMetaData_syntax">Syntax</h5>
+  <h5 id="ETLBox_DataFlow_Transformations_Distinct_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StreamMetaData</code></pre>
+    <pre><code class="lang-csharp hljs">public class Distinct&lt;TInput&gt; : DataFlowTransformation&lt;TInput, TInput&gt;, ILoggableTask, IDataFlowLogging, IDataFlowTransformation&lt;TInput, TInput&gt;, IDataFlowSource&lt;TInput&gt;, IDataFlowSource, IDataFlowDestination&lt;TInput&gt;, IDataFlowDestination, IDataFlowComponent where TInput : class</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInput</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1__ctor" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.#ctor">Distinct()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Distinct()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="ETLBox_DataFlow_StreamMetaData_ProgressCount_" data-uid="ETLBox.DataFlow.StreamMetaData.ProgressCount*"></a>
-  <h4 id="ETLBox_DataFlow_StreamMetaData_ProgressCount" data-uid="ETLBox.DataFlow.StreamMetaData.ProgressCount">ProgressCount</h4>
-  <div class="markdown level1 summary"><p>Number of currently processed items</p>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_DistinctColumns_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.DistinctColumns*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_DistinctColumns" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.DistinctColumns">DistinctColumns</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;DistinctColumn&gt; DistinctColumns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.DistinctColumn.html">DistinctColumn</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_ProgressCount_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.ProgressCount*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_ProgressCount" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.ProgressCount">ProgressCount</h4>
+  <div class="markdown level1 summary"><p>Contains the property names that are used to determine if
+two objects are equal</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ProgressCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int ProgressCount { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -909,14 +1110,67 @@
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_StreamMetaData_UnparsedData_" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData*"></a>
-  <h4 id="ETLBox_DataFlow_StreamMetaData_UnparsedData" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData">UnparsedData</h4>
-  <div class="markdown level1 summary"><p>Unparsed meta data from the response. E.g. this could be unparsed json that holds the links to the next page of the response.</p>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_SourceBlock_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.SourceBlock*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_SourceBlock" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.SourceBlock">SourceBlock</h4>
+  <div class="markdown level1 summary"><p>SourceBlock from the underlying TPL.Dataflow which is used as output buffer for the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UnparsedData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override ISourceBlock&lt;TInput&gt; SourceBlock { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Dataflow.ISourceBlock</span>&lt;TInput&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowSource&lt;TInput&gt;.SourceBlock</span></div>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_TargetBlock_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.TargetBlock*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_TargetBlock" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.TargetBlock">TargetBlock</h4>
+  <div class="markdown level1 summary"><p>TargetBlock from the underlying TPL.Dataflow which is used as input buffer for the component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ITargetBlock&lt;TInput&gt; TargetBlock { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Dataflow.ITargetBlock</span>&lt;TInput&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ETLBox.DataFlow.DataFlowTransformation&lt;TInput, TInput&gt;.TargetBlock</span></div>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_TaskName_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.TaskName*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_TaskName" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.TaskName">TaskName</h4>
+  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
+with a default name that can be overwritten.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string TaskName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -933,6 +1187,122 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnFaulted_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnFaulted*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnFaulted_System_Exception_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnFaulted(System.Exception)">CleanUpOnFaulted(Exception)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void CleanUpOnFaulted(Exception e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnFaulted_System_Exception_">DataFlowComponent.CleanUpOnFaulted(Exception)</a></div>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnSuccess_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnSuccess*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnSuccess" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnSuccess">CleanUpOnSuccess()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void CleanUpOnSuccess()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CleanUpOnSuccess">DataFlowComponent.CleanUpOnSuccess()</a></div>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_InternalInitBufferObjects_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.InternalInitBufferObjects*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_InternalInitBufferObjects" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.InternalInitBufferObjects">InternalInitBufferObjects()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InternalInitBufferObjects()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InternalInitBufferObjects">DataFlowComponent.InternalInitBufferObjects()</a></div>
+  <a id="ETLBox_DataFlow_Transformations_Distinct_1_LinkErrorTo_" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.LinkErrorTo*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_Distinct_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__" data-uid="ETLBox.DataFlow.Transformations.Distinct`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})">LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDataFlowSource&lt;ETLBoxError&gt; LinkErrorTo(IDataFlowDestination&lt;ETLBoxError&gt; target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination</a>&lt;<a class="xref" href="ETLBox.DataFlow.ETLBoxError.html">ETLBoxError</a>&gt;</td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource</a>&lt;<a class="xref" href="ETLBox.DataFlow.ETLBoxError.html">ETLBoxError</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowLogging.html">IDataFlowLogging</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowTransformation-2.html">IDataFlowTransformation&lt;TInput, TOutput&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowSource-1.html">IDataFlowSource&lt;TOutput&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowSource.html">IDataFlowSource</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination-1.html">IDataFlowDestination&lt;TInput&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowDestination.html">IDataFlowDestination</a>
+  </div>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.IDataFlowComponent.html">IDataFlowComponent</a>
+  </div>
 </article>
           </div>
           

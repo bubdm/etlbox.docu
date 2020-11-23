@@ -9,10 +9,10 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StreamMetaData
+    <title>Class HashCache&lt;TInput&gt;
    | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StreamMetaData
+    <meta name="title" content="Class HashCache&lt;TInput&gt;
    | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
@@ -388,8 +388,8 @@
                           <li class="">
                             <a href="ETLBox.DataFlow.GroupColumn.html" title="GroupColumn" class="">GroupColumn</a>
                           </li>
-                          <li class="">
-                            <a href="ETLBox.DataFlow.HashCache-1.html" title="HashCache&lt;TInput&gt;" class="">HashCache&lt;TInput&gt;</a>
+                          <li class="active">
+                            <a href="ETLBox.DataFlow.HashCache-1.html" title="HashCache&lt;TInput&gt;" class="active">HashCache&lt;TInput&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.HashValue.html" title="HashValue" class="">HashValue</a>
@@ -466,8 +466,8 @@
                           <li class="">
                             <a href="ETLBox.DataFlow.RetrieveColumn.html" title="RetrieveColumn" class="">RetrieveColumn</a>
                           </li>
-                          <li class="active">
-                            <a href="ETLBox.DataFlow.StreamMetaData.html" title="StreamMetaData" class="active">StreamMetaData</a>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.StreamMetaData.html" title="StreamMetaData" class="">StreamMetaData</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.TypeInfo.html" title="TypeInfo" class="">TypeInfo</a>
@@ -840,18 +840,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.StreamMetaData">
+            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.HashCache`1">
   
   
-  <h1 id="ETLBox_DataFlow_StreamMetaData" data-uid="ETLBox.DataFlow.StreamMetaData" class="text-break">Class StreamMetaData
+  <h1 id="ETLBox_DataFlow_HashCache_1" data-uid="ETLBox.DataFlow.HashCache`1" class="text-break">Class HashCache&lt;TInput&gt;
   </h1>
-  <div class="markdown level0 summary"><p>This class holds meta data about the current progress of the source.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StreamMetaData</span></div>
+    <div class="level1"><span class="xref">HashCache&lt;TInput&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ETLBox.DataFlow.ICacheManager-2.html">ICacheManager</a>&lt;TInput, <a class="xref" href="ETLBox.DataFlow.HashValue.html">HashValue</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -879,20 +882,44 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.DataFlow.html">ETLBox.DataFlow</a></h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
-  <h5 id="ETLBox_DataFlow_StreamMetaData_syntax">Syntax</h5>
+  <h5 id="ETLBox_DataFlow_HashCache_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StreamMetaData</code></pre>
+    <pre><code class="lang-csharp hljs">public class HashCache&lt;TInput&gt; : ICacheManager&lt;TInput, HashValue&gt; where TInput : class</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInput</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="ETLBox_DataFlow_HashCache_1__ctor_" data-uid="ETLBox.DataFlow.HashCache`1.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_HashCache_1__ctor" data-uid="ETLBox.DataFlow.HashCache`1.#ctor">HashCache()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HashCache()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="ETLBox_DataFlow_StreamMetaData_ProgressCount_" data-uid="ETLBox.DataFlow.StreamMetaData.ProgressCount*"></a>
-  <h4 id="ETLBox_DataFlow_StreamMetaData_ProgressCount" data-uid="ETLBox.DataFlow.StreamMetaData.ProgressCount">ProgressCount</h4>
-  <div class="markdown level1 summary"><p>Number of currently processed items</p>
-</div>
+  <a id="ETLBox_DataFlow_HashCache_1_HashSumFunc_" data-uid="ETLBox.DataFlow.HashCache`1.HashSumFunc*"></a>
+  <h4 id="ETLBox_DataFlow_HashCache_1_HashSumFunc" data-uid="ETLBox.DataFlow.HashCache`1.HashSumFunc">HashSumFunc</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ProgressCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;TInput, int&gt; HashSumFunc { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -904,19 +931,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Func</span>&lt;TInput, <span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_StreamMetaData_UnparsedData_" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData*"></a>
-  <h4 id="ETLBox_DataFlow_StreamMetaData_UnparsedData" data-uid="ETLBox.DataFlow.StreamMetaData.UnparsedData">UnparsedData</h4>
-  <div class="markdown level1 summary"><p>Unparsed meta data from the response. E.g. this could be unparsed json that holds the links to the next page of the response.</p>
-</div>
+  <a id="ETLBox_DataFlow_HashCache_1_Records_" data-uid="ETLBox.DataFlow.HashCache`1.Records*"></a>
+  <h4 id="ETLBox_DataFlow_HashCache_1_Records" data-uid="ETLBox.DataFlow.HashCache`1.Records">Records</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UnparsedData { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ICollection&lt;HashValue&gt; Records { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -928,11 +954,90 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.HashValue.html">HashValue</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="ETLBox_DataFlow_HashCache_1_Add_" data-uid="ETLBox.DataFlow.HashCache`1.Add*"></a>
+  <h4 id="ETLBox_DataFlow_HashCache_1_Add__0_" data-uid="ETLBox.DataFlow.HashCache`1.Add(`0)">Add(TInput)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(TInput row)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInput</span></td>
+        <td><span class="parametername">row</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_HashCache_1_Contains_" data-uid="ETLBox.DataFlow.HashCache`1.Contains*"></a>
+  <h4 id="ETLBox_DataFlow_HashCache_1_Contains__0_" data-uid="ETLBox.DataFlow.HashCache`1.Contains(`0)">Contains(TInput)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(TInput row)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInput</span></td>
+        <td><span class="parametername">row</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_HashCache_1_Init_" data-uid="ETLBox.DataFlow.HashCache`1.Init*"></a>
+  <h4 id="ETLBox_DataFlow_HashCache_1_Init" data-uid="ETLBox.DataFlow.HashCache`1.Init">Init()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Init()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ETLBox.DataFlow.ICacheManager-2.html">ICacheManager&lt;TInput, TCache&gt;</a>
+  </div>
 </article>
           </div>
           

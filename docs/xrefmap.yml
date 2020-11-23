@@ -11312,23 +11312,6 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.CsvSource(Of TOutput).ReadAllRecords
   nameWithType: CsvSource<TOutput>.ReadAllRecords
   nameWithType.vb: CsvSource(Of TOutput).ReadAllRecords
-- uid: ETLBox.DataFlow.Connectors.CsvSource`1.SkipRows
-  name: SkipRows
-  href: api/ETLBox.DataFlow.Connectors.CsvSource-1.html#ETLBox_DataFlow_Connectors_CsvSource_1_SkipRows
-  commentId: P:ETLBox.DataFlow.Connectors.CsvSource`1.SkipRows
-  fullName: ETLBox.DataFlow.Connectors.CsvSource<TOutput>.SkipRows
-  fullName.vb: ETLBox.DataFlow.Connectors.CsvSource(Of TOutput).SkipRows
-  nameWithType: CsvSource<TOutput>.SkipRows
-  nameWithType.vb: CsvSource(Of TOutput).SkipRows
-- uid: ETLBox.DataFlow.Connectors.CsvSource`1.SkipRows*
-  name: SkipRows
-  href: api/ETLBox.DataFlow.Connectors.CsvSource-1.html#ETLBox_DataFlow_Connectors_CsvSource_1_SkipRows_
-  commentId: Overload:ETLBox.DataFlow.Connectors.CsvSource`1.SkipRows
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.Connectors.CsvSource<TOutput>.SkipRows
-  fullName.vb: ETLBox.DataFlow.Connectors.CsvSource(Of TOutput).SkipRows
-  nameWithType: CsvSource<TOutput>.SkipRows
-  nameWithType.vb: CsvSource(Of TOutput).SkipRows
 - uid: ETLBox.DataFlow.Connectors.CsvSource`1.TaskName
   name: TaskName
   href: api/ETLBox.DataFlow.Connectors.CsvSource-1.html#ETLBox_DataFlow_Connectors_CsvSource_1_TaskName
@@ -14005,6 +13988,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.XmlDestination(Of TInput).InitStream
   nameWithType: XmlDestination<TInput>.InitStream
   nameWithType.vb: XmlDestination(Of TInput).InitStream
+- uid: ETLBox.DataFlow.Connectors.XmlDestination`1.NS
+  name: NS
+  href: api/ETLBox.DataFlow.Connectors.XmlDestination-1.html#ETLBox_DataFlow_Connectors_XmlDestination_1_NS
+  commentId: P:ETLBox.DataFlow.Connectors.XmlDestination`1.NS
+  fullName: ETLBox.DataFlow.Connectors.XmlDestination<TInput>.NS
+  fullName.vb: ETLBox.DataFlow.Connectors.XmlDestination(Of TInput).NS
+  nameWithType: XmlDestination<TInput>.NS
+  nameWithType.vb: XmlDestination(Of TInput).NS
+- uid: ETLBox.DataFlow.Connectors.XmlDestination`1.NS*
+  name: NS
+  href: api/ETLBox.DataFlow.Connectors.XmlDestination-1.html#ETLBox_DataFlow_Connectors_XmlDestination_1_NS_
+  commentId: Overload:ETLBox.DataFlow.Connectors.XmlDestination`1.NS
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.XmlDestination<TInput>.NS
+  fullName.vb: ETLBox.DataFlow.Connectors.XmlDestination(Of TInput).NS
+  nameWithType: XmlDestination<TInput>.NS
+  nameWithType.vb: XmlDestination(Of TInput).NS
 - uid: ETLBox.DataFlow.Connectors.XmlDestination`1.RootElementName
   name: RootElementName
   href: api/ETLBox.DataFlow.Connectors.XmlDestination-1.html#ETLBox_DataFlow_Connectors_XmlDestination_1_RootElementName
@@ -14073,23 +14073,6 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.XmlDestination(Of TInput).WriteIntoStream
   nameWithType: XmlDestination<TInput>.WriteIntoStream
   nameWithType.vb: XmlDestination(Of TInput).WriteIntoStream
-- uid: ETLBox.DataFlow.Connectors.XmlDestination`1.XmlWriter
-  name: XmlWriter
-  href: api/ETLBox.DataFlow.Connectors.XmlDestination-1.html#ETLBox_DataFlow_Connectors_XmlDestination_1_XmlWriter
-  commentId: P:ETLBox.DataFlow.Connectors.XmlDestination`1.XmlWriter
-  fullName: ETLBox.DataFlow.Connectors.XmlDestination<TInput>.XmlWriter
-  fullName.vb: ETLBox.DataFlow.Connectors.XmlDestination(Of TInput).XmlWriter
-  nameWithType: XmlDestination<TInput>.XmlWriter
-  nameWithType.vb: XmlDestination(Of TInput).XmlWriter
-- uid: ETLBox.DataFlow.Connectors.XmlDestination`1.XmlWriter*
-  name: XmlWriter
-  href: api/ETLBox.DataFlow.Connectors.XmlDestination-1.html#ETLBox_DataFlow_Connectors_XmlDestination_1_XmlWriter_
-  commentId: Overload:ETLBox.DataFlow.Connectors.XmlDestination`1.XmlWriter
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.Connectors.XmlDestination<TInput>.XmlWriter
-  fullName.vb: ETLBox.DataFlow.Connectors.XmlDestination(Of TInput).XmlWriter
-  nameWithType: XmlDestination<TInput>.XmlWriter
-  nameWithType.vb: XmlDestination(Of TInput).XmlWriter
 - uid: ETLBox.DataFlow.Connectors.XmlSource
   name: XmlSource
   href: api/ETLBox.DataFlow.Connectors.XmlSource.html
@@ -14248,6 +14231,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.XmlSource(Of TOutput).TaskName
   nameWithType: XmlSource<TOutput>.TaskName
   nameWithType.vb: XmlSource(Of TOutput).TaskName
+- uid: ETLBox.DataFlow.Connectors.XmlSource`1.XmlReaderSettings
+  name: XmlReaderSettings
+  href: api/ETLBox.DataFlow.Connectors.XmlSource-1.html#ETLBox_DataFlow_Connectors_XmlSource_1_XmlReaderSettings
+  commentId: P:ETLBox.DataFlow.Connectors.XmlSource`1.XmlReaderSettings
+  fullName: ETLBox.DataFlow.Connectors.XmlSource<TOutput>.XmlReaderSettings
+  fullName.vb: ETLBox.DataFlow.Connectors.XmlSource(Of TOutput).XmlReaderSettings
+  nameWithType: XmlSource<TOutput>.XmlReaderSettings
+  nameWithType.vb: XmlSource(Of TOutput).XmlReaderSettings
+- uid: ETLBox.DataFlow.Connectors.XmlSource`1.XmlReaderSettings*
+  name: XmlReaderSettings
+  href: api/ETLBox.DataFlow.Connectors.XmlSource-1.html#ETLBox_DataFlow_Connectors_XmlSource_1_XmlReaderSettings_
+  commentId: Overload:ETLBox.DataFlow.Connectors.XmlSource`1.XmlReaderSettings
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.XmlSource<TOutput>.XmlReaderSettings
+  fullName.vb: ETLBox.DataFlow.Connectors.XmlSource(Of TOutput).XmlReaderSettings
+  nameWithType: XmlSource<TOutput>.XmlReaderSettings
+  nameWithType.vb: XmlSource(Of TOutput).XmlReaderSettings
 - uid: ETLBox.DataFlow.Connectors.XmlSource`1.XmlSerializer
   name: XmlSerializer
   href: api/ETLBox.DataFlow.Connectors.XmlSource-1.html#ETLBox_DataFlow_Connectors_XmlSource_1_XmlSerializer
@@ -14658,19 +14658,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.DataFlowComponent.CleanUpOnSuccess
   nameWithType: DataFlowComponent.CleanUpOnSuccess
-- uid: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultCompletion(System.Threading.Tasks.Task)
-  name: CompleteOrFaultCompletion(Task)
-  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultCompletion_System_Threading_Tasks_Task_
-  commentId: M:ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultCompletion(System.Threading.Tasks.Task)
-  fullName: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultCompletion(System.Threading.Tasks.Task)
-  nameWithType: DataFlowComponent.CompleteOrFaultCompletion(Task)
-- uid: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultCompletion*
-  name: CompleteOrFaultCompletion
-  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultCompletion_
-  commentId: Overload:ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultCompletion
+- uid: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion(System.Threading.Tasks.Task)
+  name: CompleteOrFaultOnComponentAndBufferCompletion(Task)
+  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultOnComponentAndBufferCompletion_System_Threading_Tasks_Task_
+  commentId: M:ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion(System.Threading.Tasks.Task)
+  fullName: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion(System.Threading.Tasks.Task)
+  nameWithType: DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion(Task)
+- uid: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion*
+  name: CompleteOrFaultOnComponentAndBufferCompletion
+  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultOnComponentAndBufferCompletion_
+  commentId: Overload:ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion
   isSpec: "True"
-  fullName: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultCompletion
-  nameWithType: DataFlowComponent.CompleteOrFaultCompletion
+  fullName: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion
+  nameWithType: DataFlowComponent.CompleteOrFaultOnComponentAndBufferCompletion
 - uid: ETLBox.DataFlow.DataFlowComponent.CompleteOrFaultOnPredecessorCompletion(System.Threading.Tasks.Task)
   name: CompleteOrFaultOnPredecessorCompletion(Task)
   href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_CompleteOrFaultOnPredecessorCompletion_System_Threading_Tasks_Task_
@@ -14697,6 +14697,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.DataFlowComponent.Completion
   nameWithType: DataFlowComponent.Completion
+- uid: ETLBox.DataFlow.DataFlowComponent.ComponentCompletion
+  name: ComponentCompletion
+  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ComponentCompletion
+  commentId: P:ETLBox.DataFlow.DataFlowComponent.ComponentCompletion
+  fullName: ETLBox.DataFlow.DataFlowComponent.ComponentCompletion
+  nameWithType: DataFlowComponent.ComponentCompletion
+- uid: ETLBox.DataFlow.DataFlowComponent.ComponentCompletion*
+  name: ComponentCompletion
+  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ComponentCompletion_
+  commentId: Overload:ETLBox.DataFlow.DataFlowComponent.ComponentCompletion
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DataFlowComponent.ComponentCompletion
+  nameWithType: DataFlowComponent.ComponentCompletion
 - uid: ETLBox.DataFlow.DataFlowComponent.ErrorSource
   name: ErrorSource
   href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ErrorSource
@@ -14937,19 +14950,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.DataFlowComponent.Parent
   nameWithType: DataFlowComponent.Parent
-- uid: ETLBox.DataFlow.DataFlowComponent.PredecessorCompletion
-  name: PredecessorCompletion
-  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_PredecessorCompletion
-  commentId: P:ETLBox.DataFlow.DataFlowComponent.PredecessorCompletion
-  fullName: ETLBox.DataFlow.DataFlowComponent.PredecessorCompletion
-  nameWithType: DataFlowComponent.PredecessorCompletion
-- uid: ETLBox.DataFlow.DataFlowComponent.PredecessorCompletion*
-  name: PredecessorCompletion
-  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_PredecessorCompletion_
-  commentId: Overload:ETLBox.DataFlow.DataFlowComponent.PredecessorCompletion
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.DataFlowComponent.PredecessorCompletion
-  nameWithType: DataFlowComponent.PredecessorCompletion
 - uid: ETLBox.DataFlow.DataFlowComponent.Predecessors
   name: Predecessors
   href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_Predecessors
@@ -15487,6 +15487,23 @@ references:
   fullName.vb: ETLBox.DataFlow.DataFlowStreamDestination(Of TInput).CloseStream
   nameWithType: DataFlowStreamDestination<TInput>.CloseStream
   nameWithType.vb: DataFlowStreamDestination(Of TInput).CloseStream
+- uid: ETLBox.DataFlow.DataFlowStreamDestination`1.Encoding
+  name: Encoding
+  href: api/ETLBox.DataFlow.DataFlowStreamDestination-1.html#ETLBox_DataFlow_DataFlowStreamDestination_1_Encoding
+  commentId: P:ETLBox.DataFlow.DataFlowStreamDestination`1.Encoding
+  fullName: ETLBox.DataFlow.DataFlowStreamDestination<TInput>.Encoding
+  fullName.vb: ETLBox.DataFlow.DataFlowStreamDestination(Of TInput).Encoding
+  nameWithType: DataFlowStreamDestination<TInput>.Encoding
+  nameWithType.vb: DataFlowStreamDestination(Of TInput).Encoding
+- uid: ETLBox.DataFlow.DataFlowStreamDestination`1.Encoding*
+  name: Encoding
+  href: api/ETLBox.DataFlow.DataFlowStreamDestination-1.html#ETLBox_DataFlow_DataFlowStreamDestination_1_Encoding_
+  commentId: Overload:ETLBox.DataFlow.DataFlowStreamDestination`1.Encoding
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DataFlowStreamDestination<TInput>.Encoding
+  fullName.vb: ETLBox.DataFlow.DataFlowStreamDestination(Of TInput).Encoding
+  nameWithType: DataFlowStreamDestination<TInput>.Encoding
+  nameWithType.vb: DataFlowStreamDestination(Of TInput).Encoding
 - uid: ETLBox.DataFlow.DataFlowStreamDestination`1.HttpClient
   name: HttpClient
   href: api/ETLBox.DataFlow.DataFlowStreamDestination-1.html#ETLBox_DataFlow_DataFlowStreamDestination_1_HttpClient
@@ -15700,6 +15717,23 @@ references:
   fullName.vb: ETLBox.DataFlow.DataFlowStreamSource(Of TOutput).CurrentRequestUri
   nameWithType: DataFlowStreamSource<TOutput>.CurrentRequestUri
   nameWithType.vb: DataFlowStreamSource(Of TOutput).CurrentRequestUri
+- uid: ETLBox.DataFlow.DataFlowStreamSource`1.Encoding
+  name: Encoding
+  href: api/ETLBox.DataFlow.DataFlowStreamSource-1.html#ETLBox_DataFlow_DataFlowStreamSource_1_Encoding
+  commentId: P:ETLBox.DataFlow.DataFlowStreamSource`1.Encoding
+  fullName: ETLBox.DataFlow.DataFlowStreamSource<TOutput>.Encoding
+  fullName.vb: ETLBox.DataFlow.DataFlowStreamSource(Of TOutput).Encoding
+  nameWithType: DataFlowStreamSource<TOutput>.Encoding
+  nameWithType.vb: DataFlowStreamSource(Of TOutput).Encoding
+- uid: ETLBox.DataFlow.DataFlowStreamSource`1.Encoding*
+  name: Encoding
+  href: api/ETLBox.DataFlow.DataFlowStreamSource-1.html#ETLBox_DataFlow_DataFlowStreamSource_1_Encoding_
+  commentId: Overload:ETLBox.DataFlow.DataFlowStreamSource`1.Encoding
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DataFlowStreamSource<TOutput>.Encoding
+  fullName.vb: ETLBox.DataFlow.DataFlowStreamSource(Of TOutput).Encoding
+  nameWithType: DataFlowStreamSource<TOutput>.Encoding
+  nameWithType.vb: DataFlowStreamSource(Of TOutput).Encoding
 - uid: ETLBox.DataFlow.DataFlowStreamSource`1.GetNextUri
   name: GetNextUri
   href: api/ETLBox.DataFlow.DataFlowStreamSource-1.html#ETLBox_DataFlow_DataFlowStreamSource_1_GetNextUri
@@ -15853,6 +15887,23 @@ references:
   fullName.vb: ETLBox.DataFlow.DataFlowStreamSource(Of TOutput).ResourceType
   nameWithType: DataFlowStreamSource<TOutput>.ResourceType
   nameWithType.vb: DataFlowStreamSource(Of TOutput).ResourceType
+- uid: ETLBox.DataFlow.DataFlowStreamSource`1.SkipRows
+  name: SkipRows
+  href: api/ETLBox.DataFlow.DataFlowStreamSource-1.html#ETLBox_DataFlow_DataFlowStreamSource_1_SkipRows
+  commentId: P:ETLBox.DataFlow.DataFlowStreamSource`1.SkipRows
+  fullName: ETLBox.DataFlow.DataFlowStreamSource<TOutput>.SkipRows
+  fullName.vb: ETLBox.DataFlow.DataFlowStreamSource(Of TOutput).SkipRows
+  nameWithType: DataFlowStreamSource<TOutput>.SkipRows
+  nameWithType.vb: DataFlowStreamSource(Of TOutput).SkipRows
+- uid: ETLBox.DataFlow.DataFlowStreamSource`1.SkipRows*
+  name: SkipRows
+  href: api/ETLBox.DataFlow.DataFlowStreamSource-1.html#ETLBox_DataFlow_DataFlowStreamSource_1_SkipRows_
+  commentId: Overload:ETLBox.DataFlow.DataFlowStreamSource`1.SkipRows
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DataFlowStreamSource<TOutput>.SkipRows
+  fullName.vb: ETLBox.DataFlow.DataFlowStreamSource(Of TOutput).SkipRows
+  nameWithType: DataFlowStreamSource<TOutput>.SkipRows
+  nameWithType.vb: DataFlowStreamSource(Of TOutput).SkipRows
 - uid: ETLBox.DataFlow.DataFlowStreamSource`1.StreamReader
   name: StreamReader
   href: api/ETLBox.DataFlow.DataFlowStreamSource-1.html#ETLBox_DataFlow_DataFlowStreamSource_1_StreamReader
@@ -15981,6 +16032,38 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.DeleteColumn.DeletePropertyName
   nameWithType: DeleteColumn.DeletePropertyName
+- uid: ETLBox.DataFlow.DistinctColumn
+  name: DistinctColumn
+  href: api/ETLBox.DataFlow.DistinctColumn.html
+  commentId: T:ETLBox.DataFlow.DistinctColumn
+  fullName: ETLBox.DataFlow.DistinctColumn
+  nameWithType: DistinctColumn
+- uid: ETLBox.DataFlow.DistinctColumn.#ctor
+  name: DistinctColumn()
+  href: api/ETLBox.DataFlow.DistinctColumn.html#ETLBox_DataFlow_DistinctColumn__ctor
+  commentId: M:ETLBox.DataFlow.DistinctColumn.#ctor
+  fullName: ETLBox.DataFlow.DistinctColumn.DistinctColumn()
+  nameWithType: DistinctColumn.DistinctColumn()
+- uid: ETLBox.DataFlow.DistinctColumn.#ctor*
+  name: DistinctColumn
+  href: api/ETLBox.DataFlow.DistinctColumn.html#ETLBox_DataFlow_DistinctColumn__ctor_
+  commentId: Overload:ETLBox.DataFlow.DistinctColumn.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DistinctColumn.DistinctColumn
+  nameWithType: DistinctColumn.DistinctColumn
+- uid: ETLBox.DataFlow.DistinctColumn.DistinctPropertyName
+  name: DistinctPropertyName
+  href: api/ETLBox.DataFlow.DistinctColumn.html#ETLBox_DataFlow_DistinctColumn_DistinctPropertyName
+  commentId: P:ETLBox.DataFlow.DistinctColumn.DistinctPropertyName
+  fullName: ETLBox.DataFlow.DistinctColumn.DistinctPropertyName
+  nameWithType: DistinctColumn.DistinctPropertyName
+- uid: ETLBox.DataFlow.DistinctColumn.DistinctPropertyName*
+  name: DistinctPropertyName
+  href: api/ETLBox.DataFlow.DistinctColumn.html#ETLBox_DataFlow_DistinctColumn_DistinctPropertyName_
+  commentId: Overload:ETLBox.DataFlow.DistinctColumn.DistinctPropertyName
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DistinctColumn.DistinctPropertyName
+  nameWithType: DistinctColumn.DistinctPropertyName
 - uid: ETLBox.DataFlow.ErrorSource
   name: ErrorSource
   href: api/ETLBox.DataFlow.ErrorSource.html
@@ -16403,6 +16486,168 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.GroupColumn.OutputGroupingProperty
   nameWithType: GroupColumn.OutputGroupingProperty
+- uid: ETLBox.DataFlow.HashCache`1
+  name: HashCache<TInput>
+  href: api/ETLBox.DataFlow.HashCache-1.html
+  commentId: T:ETLBox.DataFlow.HashCache`1
+  name.vb: HashCache(Of TInput)
+  fullName: ETLBox.DataFlow.HashCache<TInput>
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput)
+  nameWithType: HashCache<TInput>
+  nameWithType.vb: HashCache(Of TInput)
+- uid: ETLBox.DataFlow.HashCache`1.#ctor
+  name: HashCache()
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1__ctor
+  commentId: M:ETLBox.DataFlow.HashCache`1.#ctor
+  fullName: ETLBox.DataFlow.HashCache<TInput>.HashCache()
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).HashCache()
+  nameWithType: HashCache<TInput>.HashCache()
+  nameWithType.vb: HashCache(Of TInput).HashCache()
+- uid: ETLBox.DataFlow.HashCache`1.#ctor*
+  name: HashCache
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1__ctor_
+  commentId: Overload:ETLBox.DataFlow.HashCache`1.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashCache<TInput>.HashCache
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).HashCache
+  nameWithType: HashCache<TInput>.HashCache
+  nameWithType.vb: HashCache(Of TInput).HashCache
+- uid: ETLBox.DataFlow.HashCache`1.Add(`0)
+  name: Add(TInput)
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_Add__0_
+  commentId: M:ETLBox.DataFlow.HashCache`1.Add(`0)
+  fullName: ETLBox.DataFlow.HashCache<TInput>.Add(TInput)
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).Add(TInput)
+  nameWithType: HashCache<TInput>.Add(TInput)
+  nameWithType.vb: HashCache(Of TInput).Add(TInput)
+- uid: ETLBox.DataFlow.HashCache`1.Add*
+  name: Add
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_Add_
+  commentId: Overload:ETLBox.DataFlow.HashCache`1.Add
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashCache<TInput>.Add
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).Add
+  nameWithType: HashCache<TInput>.Add
+  nameWithType.vb: HashCache(Of TInput).Add
+- uid: ETLBox.DataFlow.HashCache`1.Contains(`0)
+  name: Contains(TInput)
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_Contains__0_
+  commentId: M:ETLBox.DataFlow.HashCache`1.Contains(`0)
+  fullName: ETLBox.DataFlow.HashCache<TInput>.Contains(TInput)
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).Contains(TInput)
+  nameWithType: HashCache<TInput>.Contains(TInput)
+  nameWithType.vb: HashCache(Of TInput).Contains(TInput)
+- uid: ETLBox.DataFlow.HashCache`1.Contains*
+  name: Contains
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_Contains_
+  commentId: Overload:ETLBox.DataFlow.HashCache`1.Contains
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashCache<TInput>.Contains
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).Contains
+  nameWithType: HashCache<TInput>.Contains
+  nameWithType.vb: HashCache(Of TInput).Contains
+- uid: ETLBox.DataFlow.HashCache`1.HashSumFunc
+  name: HashSumFunc
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_HashSumFunc
+  commentId: P:ETLBox.DataFlow.HashCache`1.HashSumFunc
+  fullName: ETLBox.DataFlow.HashCache<TInput>.HashSumFunc
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).HashSumFunc
+  nameWithType: HashCache<TInput>.HashSumFunc
+  nameWithType.vb: HashCache(Of TInput).HashSumFunc
+- uid: ETLBox.DataFlow.HashCache`1.HashSumFunc*
+  name: HashSumFunc
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_HashSumFunc_
+  commentId: Overload:ETLBox.DataFlow.HashCache`1.HashSumFunc
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashCache<TInput>.HashSumFunc
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).HashSumFunc
+  nameWithType: HashCache<TInput>.HashSumFunc
+  nameWithType.vb: HashCache(Of TInput).HashSumFunc
+- uid: ETLBox.DataFlow.HashCache`1.Init
+  name: Init()
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_Init
+  commentId: M:ETLBox.DataFlow.HashCache`1.Init
+  fullName: ETLBox.DataFlow.HashCache<TInput>.Init()
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).Init()
+  nameWithType: HashCache<TInput>.Init()
+  nameWithType.vb: HashCache(Of TInput).Init()
+- uid: ETLBox.DataFlow.HashCache`1.Init*
+  name: Init
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_Init_
+  commentId: Overload:ETLBox.DataFlow.HashCache`1.Init
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashCache<TInput>.Init
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).Init
+  nameWithType: HashCache<TInput>.Init
+  nameWithType.vb: HashCache(Of TInput).Init
+- uid: ETLBox.DataFlow.HashCache`1.Records
+  name: Records
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_Records
+  commentId: P:ETLBox.DataFlow.HashCache`1.Records
+  fullName: ETLBox.DataFlow.HashCache<TInput>.Records
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).Records
+  nameWithType: HashCache<TInput>.Records
+  nameWithType.vb: HashCache(Of TInput).Records
+- uid: ETLBox.DataFlow.HashCache`1.Records*
+  name: Records
+  href: api/ETLBox.DataFlow.HashCache-1.html#ETLBox_DataFlow_HashCache_1_Records_
+  commentId: Overload:ETLBox.DataFlow.HashCache`1.Records
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashCache<TInput>.Records
+  fullName.vb: ETLBox.DataFlow.HashCache(Of TInput).Records
+  nameWithType: HashCache<TInput>.Records
+  nameWithType.vb: HashCache(Of TInput).Records
+- uid: ETLBox.DataFlow.HashValue
+  name: HashValue
+  href: api/ETLBox.DataFlow.HashValue.html
+  commentId: T:ETLBox.DataFlow.HashValue
+  fullName: ETLBox.DataFlow.HashValue
+  nameWithType: HashValue
+- uid: ETLBox.DataFlow.HashValue.#ctor(System.Int32)
+  name: HashValue(Int32)
+  href: api/ETLBox.DataFlow.HashValue.html#ETLBox_DataFlow_HashValue__ctor_System_Int32_
+  commentId: M:ETLBox.DataFlow.HashValue.#ctor(System.Int32)
+  fullName: ETLBox.DataFlow.HashValue.HashValue(System.Int32)
+  nameWithType: HashValue.HashValue(Int32)
+- uid: ETLBox.DataFlow.HashValue.#ctor*
+  name: HashValue
+  href: api/ETLBox.DataFlow.HashValue.html#ETLBox_DataFlow_HashValue__ctor_
+  commentId: Overload:ETLBox.DataFlow.HashValue.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashValue.HashValue
+  nameWithType: HashValue.HashValue
+- uid: ETLBox.DataFlow.HashValue.Equals(System.Object)
+  name: Equals(Object)
+  href: api/ETLBox.DataFlow.HashValue.html#ETLBox_DataFlow_HashValue_Equals_System_Object_
+  commentId: M:ETLBox.DataFlow.HashValue.Equals(System.Object)
+  fullName: ETLBox.DataFlow.HashValue.Equals(System.Object)
+  nameWithType: HashValue.Equals(Object)
+- uid: ETLBox.DataFlow.HashValue.Equals*
+  name: Equals
+  href: api/ETLBox.DataFlow.HashValue.html#ETLBox_DataFlow_HashValue_Equals_
+  commentId: Overload:ETLBox.DataFlow.HashValue.Equals
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashValue.Equals
+  nameWithType: HashValue.Equals
+- uid: ETLBox.DataFlow.HashValue.GetHashCode
+  name: GetHashCode()
+  href: api/ETLBox.DataFlow.HashValue.html#ETLBox_DataFlow_HashValue_GetHashCode
+  commentId: M:ETLBox.DataFlow.HashValue.GetHashCode
+  fullName: ETLBox.DataFlow.HashValue.GetHashCode()
+  nameWithType: HashValue.GetHashCode()
+- uid: ETLBox.DataFlow.HashValue.GetHashCode*
+  name: GetHashCode
+  href: api/ETLBox.DataFlow.HashValue.html#ETLBox_DataFlow_HashValue_GetHashCode_
+  commentId: Overload:ETLBox.DataFlow.HashValue.GetHashCode
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.HashValue.GetHashCode
+  nameWithType: HashValue.GetHashCode
+- uid: ETLBox.DataFlow.HashValue.Hash
+  name: Hash
+  href: api/ETLBox.DataFlow.HashValue.html#ETLBox_DataFlow_HashValue_Hash
+  commentId: F:ETLBox.DataFlow.HashValue.Hash
+  fullName: ETLBox.DataFlow.HashValue.Hash
+  nameWithType: HashValue.Hash
 - uid: ETLBox.DataFlow.ICacheManager`2
   name: ICacheManager<TInput, TCache>
   href: api/ETLBox.DataFlow.ICacheManager-2.html
@@ -17196,6 +17441,23 @@ references:
   fullName.vb: ETLBox.DataFlow.MemoryCache(Of TInput, TCache).Add
   nameWithType: MemoryCache<TInput, TCache>.Add
   nameWithType.vb: MemoryCache(Of TInput, TCache).Add
+- uid: ETLBox.DataFlow.MemoryCache`2.CompareFunc
+  name: CompareFunc
+  href: api/ETLBox.DataFlow.MemoryCache-2.html#ETLBox_DataFlow_MemoryCache_2_CompareFunc
+  commentId: P:ETLBox.DataFlow.MemoryCache`2.CompareFunc
+  fullName: ETLBox.DataFlow.MemoryCache<TInput, TCache>.CompareFunc
+  fullName.vb: ETLBox.DataFlow.MemoryCache(Of TInput, TCache).CompareFunc
+  nameWithType: MemoryCache<TInput, TCache>.CompareFunc
+  nameWithType.vb: MemoryCache(Of TInput, TCache).CompareFunc
+- uid: ETLBox.DataFlow.MemoryCache`2.CompareFunc*
+  name: CompareFunc
+  href: api/ETLBox.DataFlow.MemoryCache-2.html#ETLBox_DataFlow_MemoryCache_2_CompareFunc_
+  commentId: Overload:ETLBox.DataFlow.MemoryCache`2.CompareFunc
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.MemoryCache<TInput, TCache>.CompareFunc
+  fullName.vb: ETLBox.DataFlow.MemoryCache(Of TInput, TCache).CompareFunc
+  nameWithType: MemoryCache<TInput, TCache>.CompareFunc
+  nameWithType.vb: MemoryCache(Of TInput, TCache).CompareFunc
 - uid: ETLBox.DataFlow.MemoryCache`2.Contains(`0)
   name: Contains(TInput)
   href: api/ETLBox.DataFlow.MemoryCache-2.html#ETLBox_DataFlow_MemoryCache_2_Contains__0_
@@ -18275,6 +18537,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.CachedRowTransformation(Of TInput, TOutput, TCache).CacheManager
   nameWithType: CachedRowTransformation<TInput, TOutput, TCache>.CacheManager
   nameWithType.vb: CachedRowTransformation(Of TInput, TOutput, TCache).CacheManager
+- uid: ETLBox.DataFlow.Transformations.CachedRowTransformation`3.FillCacheAfterTranformation
+  name: FillCacheAfterTranformation
+  href: api/ETLBox.DataFlow.Transformations.CachedRowTransformation-3.html#ETLBox_DataFlow_Transformations_CachedRowTransformation_3_FillCacheAfterTranformation
+  commentId: P:ETLBox.DataFlow.Transformations.CachedRowTransformation`3.FillCacheAfterTranformation
+  fullName: ETLBox.DataFlow.Transformations.CachedRowTransformation<TInput, TOutput, TCache>.FillCacheAfterTranformation
+  fullName.vb: ETLBox.DataFlow.Transformations.CachedRowTransformation(Of TInput, TOutput, TCache).FillCacheAfterTranformation
+  nameWithType: CachedRowTransformation<TInput, TOutput, TCache>.FillCacheAfterTranformation
+  nameWithType.vb: CachedRowTransformation(Of TInput, TOutput, TCache).FillCacheAfterTranformation
+- uid: ETLBox.DataFlow.Transformations.CachedRowTransformation`3.FillCacheAfterTranformation*
+  name: FillCacheAfterTranformation
+  href: api/ETLBox.DataFlow.Transformations.CachedRowTransformation-3.html#ETLBox_DataFlow_Transformations_CachedRowTransformation_3_FillCacheAfterTranformation_
+  commentId: Overload:ETLBox.DataFlow.Transformations.CachedRowTransformation`3.FillCacheAfterTranformation
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.CachedRowTransformation<TInput, TOutput, TCache>.FillCacheAfterTranformation
+  fullName.vb: ETLBox.DataFlow.Transformations.CachedRowTransformation(Of TInput, TOutput, TCache).FillCacheAfterTranformation
+  nameWithType: CachedRowTransformation<TInput, TOutput, TCache>.FillCacheAfterTranformation
+  nameWithType.vb: CachedRowTransformation(Of TInput, TOutput, TCache).FillCacheAfterTranformation
 - uid: ETLBox.DataFlow.Transformations.CachedRowTransformation`3.InitAction
   name: InitAction
   href: api/ETLBox.DataFlow.Transformations.CachedRowTransformation-3.html#ETLBox_DataFlow_Transformations_CachedRowTransformation_3_InitAction
@@ -18957,6 +19236,186 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.CrossJoin(Of TInput1, TInput2, TOutput).TaskName
   nameWithType: CrossJoin<TInput1, TInput2, TOutput>.TaskName
   nameWithType.vb: CrossJoin(Of TInput1, TInput2, TOutput).TaskName
+- uid: ETLBox.DataFlow.Transformations.Distinct`1
+  name: Distinct<TInput>
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html
+  commentId: T:ETLBox.DataFlow.Transformations.Distinct`1
+  name.vb: Distinct(Of TInput)
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput)
+  nameWithType: Distinct<TInput>
+  nameWithType.vb: Distinct(Of TInput)
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.#ctor
+  name: Distinct()
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1__ctor
+  commentId: M:ETLBox.DataFlow.Transformations.Distinct`1.#ctor
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.Distinct()
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).Distinct()
+  nameWithType: Distinct<TInput>.Distinct()
+  nameWithType.vb: Distinct(Of TInput).Distinct()
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.#ctor*
+  name: Distinct
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1__ctor_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.Distinct
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).Distinct
+  nameWithType: Distinct<TInput>.Distinct
+  nameWithType.vb: Distinct(Of TInput).Distinct
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnFaulted(System.Exception)
+  name: CleanUpOnFaulted(Exception)
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnFaulted_System_Exception_
+  commentId: M:ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnFaulted(System.Exception)
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.CleanUpOnFaulted(System.Exception)
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).CleanUpOnFaulted(System.Exception)
+  nameWithType: Distinct<TInput>.CleanUpOnFaulted(Exception)
+  nameWithType.vb: Distinct(Of TInput).CleanUpOnFaulted(Exception)
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnFaulted*
+  name: CleanUpOnFaulted
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnFaulted_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnFaulted
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.CleanUpOnFaulted
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).CleanUpOnFaulted
+  nameWithType: Distinct<TInput>.CleanUpOnFaulted
+  nameWithType.vb: Distinct(Of TInput).CleanUpOnFaulted
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnSuccess
+  name: CleanUpOnSuccess()
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnSuccess
+  commentId: M:ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnSuccess
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.CleanUpOnSuccess()
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).CleanUpOnSuccess()
+  nameWithType: Distinct<TInput>.CleanUpOnSuccess()
+  nameWithType.vb: Distinct(Of TInput).CleanUpOnSuccess()
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnSuccess*
+  name: CleanUpOnSuccess
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_CleanUpOnSuccess_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.CleanUpOnSuccess
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.CleanUpOnSuccess
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).CleanUpOnSuccess
+  nameWithType: Distinct<TInput>.CleanUpOnSuccess
+  nameWithType.vb: Distinct(Of TInput).CleanUpOnSuccess
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.DistinctColumns
+  name: DistinctColumns
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_DistinctColumns
+  commentId: P:ETLBox.DataFlow.Transformations.Distinct`1.DistinctColumns
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.DistinctColumns
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).DistinctColumns
+  nameWithType: Distinct<TInput>.DistinctColumns
+  nameWithType.vb: Distinct(Of TInput).DistinctColumns
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.DistinctColumns*
+  name: DistinctColumns
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_DistinctColumns_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.DistinctColumns
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.DistinctColumns
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).DistinctColumns
+  nameWithType: Distinct<TInput>.DistinctColumns
+  nameWithType.vb: Distinct(Of TInput).DistinctColumns
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.InternalInitBufferObjects
+  name: InternalInitBufferObjects()
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_InternalInitBufferObjects
+  commentId: M:ETLBox.DataFlow.Transformations.Distinct`1.InternalInitBufferObjects
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.InternalInitBufferObjects()
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).InternalInitBufferObjects()
+  nameWithType: Distinct<TInput>.InternalInitBufferObjects()
+  nameWithType.vb: Distinct(Of TInput).InternalInitBufferObjects()
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.InternalInitBufferObjects*
+  name: InternalInitBufferObjects
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_InternalInitBufferObjects_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.InternalInitBufferObjects
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.InternalInitBufferObjects
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).InternalInitBufferObjects
+  nameWithType: Distinct<TInput>.InternalInitBufferObjects
+  nameWithType.vb: Distinct(Of TInput).InternalInitBufferObjects
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})
+  name: LinkErrorTo(IDataFlowDestination<ETLBoxError>)
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_LinkErrorTo_ETLBox_DataFlow_IDataFlowDestination_ETLBox_DataFlow_ETLBoxError__
+  commentId: M:ETLBox.DataFlow.Transformations.Distinct`1.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination{ETLBox.DataFlow.ETLBoxError})
+  name.vb: LinkErrorTo(IDataFlowDestination(Of ETLBoxError))
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination<ETLBox.DataFlow.ETLBoxError>)
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).LinkErrorTo(ETLBox.DataFlow.IDataFlowDestination(Of ETLBox.DataFlow.ETLBoxError))
+  nameWithType: Distinct<TInput>.LinkErrorTo(IDataFlowDestination<ETLBoxError>)
+  nameWithType.vb: Distinct(Of TInput).LinkErrorTo(IDataFlowDestination(Of ETLBoxError))
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.LinkErrorTo*
+  name: LinkErrorTo
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_LinkErrorTo_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.LinkErrorTo
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.LinkErrorTo
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).LinkErrorTo
+  nameWithType: Distinct<TInput>.LinkErrorTo
+  nameWithType.vb: Distinct(Of TInput).LinkErrorTo
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.ProgressCount
+  name: ProgressCount
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_ProgressCount
+  commentId: P:ETLBox.DataFlow.Transformations.Distinct`1.ProgressCount
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.ProgressCount
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).ProgressCount
+  nameWithType: Distinct<TInput>.ProgressCount
+  nameWithType.vb: Distinct(Of TInput).ProgressCount
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.ProgressCount*
+  name: ProgressCount
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_ProgressCount_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.ProgressCount
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.ProgressCount
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).ProgressCount
+  nameWithType: Distinct<TInput>.ProgressCount
+  nameWithType.vb: Distinct(Of TInput).ProgressCount
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.SourceBlock
+  name: SourceBlock
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_SourceBlock
+  commentId: P:ETLBox.DataFlow.Transformations.Distinct`1.SourceBlock
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.SourceBlock
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).SourceBlock
+  nameWithType: Distinct<TInput>.SourceBlock
+  nameWithType.vb: Distinct(Of TInput).SourceBlock
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.SourceBlock*
+  name: SourceBlock
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_SourceBlock_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.SourceBlock
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.SourceBlock
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).SourceBlock
+  nameWithType: Distinct<TInput>.SourceBlock
+  nameWithType.vb: Distinct(Of TInput).SourceBlock
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.TargetBlock
+  name: TargetBlock
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_TargetBlock
+  commentId: P:ETLBox.DataFlow.Transformations.Distinct`1.TargetBlock
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.TargetBlock
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).TargetBlock
+  nameWithType: Distinct<TInput>.TargetBlock
+  nameWithType.vb: Distinct(Of TInput).TargetBlock
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.TargetBlock*
+  name: TargetBlock
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_TargetBlock_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.TargetBlock
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.TargetBlock
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).TargetBlock
+  nameWithType: Distinct<TInput>.TargetBlock
+  nameWithType.vb: Distinct(Of TInput).TargetBlock
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.TaskName
+  name: TaskName
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_TaskName
+  commentId: P:ETLBox.DataFlow.Transformations.Distinct`1.TaskName
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.TaskName
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).TaskName
+  nameWithType: Distinct<TInput>.TaskName
+  nameWithType.vb: Distinct(Of TInput).TaskName
+- uid: ETLBox.DataFlow.Transformations.Distinct`1.TaskName*
+  name: TaskName
+  href: api/ETLBox.DataFlow.Transformations.Distinct-1.html#ETLBox_DataFlow_Transformations_Distinct_1_TaskName_
+  commentId: Overload:ETLBox.DataFlow.Transformations.Distinct`1.TaskName
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Transformations.Distinct<TInput>.TaskName
+  fullName.vb: ETLBox.DataFlow.Transformations.Distinct(Of TInput).TaskName
+  nameWithType: Distinct<TInput>.TaskName
+  nameWithType.vb: Distinct(Of TInput).TaskName
 - uid: ETLBox.DataFlow.Transformations.LookupTransformation
   name: LookupTransformation
   href: api/ETLBox.DataFlow.Transformations.LookupTransformation.html
@@ -21661,6 +22120,22 @@ references:
   isSpec: "True"
   fullName: ETLBox.Helper.HashHelper.CreateChar40Hash
   nameWithType: HashHelper.CreateChar40Hash
+- uid: ETLBox.Helper.HashHelper.HashSum(System.Collections.Generic.IEnumerable{System.Object})
+  name: HashSum(IEnumerable<Object>)
+  href: api/ETLBox.Helper.HashHelper.html#ETLBox_Helper_HashHelper_HashSum_System_Collections_Generic_IEnumerable_System_Object__
+  commentId: M:ETLBox.Helper.HashHelper.HashSum(System.Collections.Generic.IEnumerable{System.Object})
+  name.vb: HashSum(IEnumerable(Of Object))
+  fullName: ETLBox.Helper.HashHelper.HashSum(System.Collections.Generic.IEnumerable<System.Object>)
+  fullName.vb: ETLBox.Helper.HashHelper.HashSum(System.Collections.Generic.IEnumerable(Of System.Object))
+  nameWithType: HashHelper.HashSum(IEnumerable<Object>)
+  nameWithType.vb: HashHelper.HashSum(IEnumerable(Of Object))
+- uid: ETLBox.Helper.HashHelper.HashSum*
+  name: HashSum
+  href: api/ETLBox.Helper.HashHelper.html#ETLBox_Helper_HashHelper_HashSum_
+  commentId: Overload:ETLBox.Helper.HashHelper.HashSum
+  isSpec: "True"
+  fullName: ETLBox.Helper.HashHelper.HashSum
+  nameWithType: HashHelper.HashSum
 - uid: ETLBox.Helper.IDataTypeConverter
   name: IDataTypeConverter
   href: api/ETLBox.Helper.IDataTypeConverter.html
