@@ -3415,6 +3415,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "resources/legals_copy.html",
+      "output": {
+        "resource": {
+          "relative_path": "resources/legals_copy.html"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "resources/obfuscated.js",
       "output": {
         "resource": {
