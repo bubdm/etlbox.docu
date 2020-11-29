@@ -410,7 +410,7 @@ public static void Main()
 
                 result.Add(weekDayAverage);
             }
-            return result;
+            return result.ToArray();
         };
 
     var dest = new MemoryDestination<AveragePerDay>();

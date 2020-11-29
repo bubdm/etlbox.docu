@@ -63,3 +63,12 @@ It would be good if the connection manager would return the code how to find if 
 - Redo logging - this is currently messy
 - Add parquet source/destination
 - Add neo4j sourcd/destination
+
+# Inbox
+- Columns with spaces in database - check if ColumnMap attribute worked!
+- Check if using Access with a table does create duplicate rows in sys.columns
+- Add a general "CheckComponent" method which is run after the initialization. Here exception can be thrown that check the component if everything
+was successfully initialized
+- Adding test for DbMerge: If property names that are passed in IdProperties/CompareProperty/UpdateProperty, which do not exists in Poco (or Expando!), then a meaningful exception should be thrown
+- The general Merge concecpt (load data from source via lookup, and then either insert, update or delete data in destination) could be applied to other file types as well (e.g. CSVMerge or JsonMerge or XmlMerge)...
+- Make almost all classes (except POCO etc.) sealed
