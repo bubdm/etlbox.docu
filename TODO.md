@@ -19,10 +19,8 @@ throw an exception - itstead, it should use the InputDataDict to reinsert the re
 
 
 ### Enhance Lookup Transformation & BlockTransformation
-- Blocking transformation can't have an LinkErrorTo() - throw an exception if this is called
+- Blocking/batch transformation can have a link error to, but this can produce a lot of output. Write some performacne tests for it- perhaps write out the error message in batches as well? At least this makes sense for the BlockTransformation, because data can get quite big here
 - Now the CachedRowTransformation is used. This is nice, but not ideal because data needs to be loaded in batches. So data also needs to arrive in batches in the lookup. 
-- Rename BlockTransformation to BatchTransformation (or add BatchTransformation)
-- BatchTransformation should load data in batches, and for every batch some action is performend
 - Now the BatchTransformation can be extendend with a CachedBatchTransformation
 - The CachedBatchTransformation can be used in the lookup
 - The lookup with the batches can be used in the DbMerge to partially prefetch batches from the source
@@ -50,6 +48,10 @@ It would be good if the connection manager would return the code how to find if 
 - The Network class can execute all sources and wait for all destination (see existing branch where I did the first tests)
 - if dataflow component is connected to two successor, but without using predicates, data is only send to the first successor. This is confusing: If there are links to more than one successor, and no predicate nor Multicast is in between, an exception or log output should be produced (probably part of a "Network" class)
 
+# MySql Connector
+- See last answer here: [Most efficient way to insert Rows into MySQL Database - Stack Overflow:](https://stackoverflow.com/questions/25323560/most-efficient-way-to-insert-rows-into-mysql-database)
+- [mysql-net/MySqlConnector: Async MySQL Connector for .NET and .NET Core](https://github.com/mysql-net/MySqlConnector)
+
 # Ideas
 
 - Release notes page?
@@ -71,4 +73,4 @@ It would be good if the connection manager would return the code how to find if 
 was successfully initialized
 - Adding test for DbMerge: If property names that are passed in IdProperties/CompareProperty/UpdateProperty, which do not exists in Poco (or Expando!), then a meaningful exception should be thrown
 - The general Merge concecpt (load data from source via lookup, and then either insert, update or delete data in destination) could be applied to other file types as well (e.g. CSVMerge or JsonMerge or XmlMerge)...
-- Make almost all classes (except POCO etc.) sealed
+- Make almost all classes (except POCO etc.) sealed - this would need a better docu creation. Currently, every data flow transformation e.g. RowTransformation<TInput, TOutput> has a derived class RowTransformatiomo<ExpandoObject, ExpandoObject>. To seal these properly, the current RowTransformation<TInput, TOutput> would need to be internal and derived classes publicß
