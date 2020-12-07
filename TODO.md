@@ -60,7 +60,7 @@ It would be good if the connection manager would return the code how to find if 
 - RowTransformation: Add Parallelization
 - New transformation: Distinct (as partial blocking) which only let the first row through, but keeps a hash value to identify similar rows
 - New Destination: CustomBatchDestination
-- ColumnRename: Add a "rename column action" which could rename spaces in a columns names or something similar
+- ColumnRename: Add a "rename column action" which could rename spaces in a columns names or something similar (also add the LinkErrorTo + Tests, as well as a try / catch for action)
 - make list properties to ICollection or IEnumerable (e.g. MemorySource/Dest or TableDefinition)
 - Redo logging - this is currently messy
 - Add parquet source/destination
@@ -68,9 +68,9 @@ It would be good if the connection manager would return the code how to find if 
 
 # Inbox
 - Columns with spaces in database - check if ColumnMap attribute worked!
-- Check if using Access with a table does create duplicate rows in sys.columns
 - Add a general "CheckComponent" method which is run after the initialization. Here exception can be thrown that check the component if everything
 was successfully initialized
 - Adding test for DbMerge: If property names that are passed in IdProperties/CompareProperty/UpdateProperty, which do not exists in Poco (or Expando!), then a meaningful exception should be thrown
 - The general Merge concecpt (load data from source via lookup, and then either insert, update or delete data in destination) could be applied to other file types as well (e.g. CSVMerge or JsonMerge or XmlMerge)...
 - Make almost all classes (except POCO etc.) sealed - this would need a better docu creation. Currently, every data flow transformation e.g. RowTransformation<TInput, TOutput> has a derived class RowTransformatiomo<ExpandoObject, ExpandoObject>. To seal these properly, the current RowTransformation<TInput, TOutput> would need to be internal and derived classes publicß
+- CheckParameters is in most cases empty: add additional checks here (always throw an ArgumentNullExcpetion or ArgumentException or ArgumentOutOfRangeException)
