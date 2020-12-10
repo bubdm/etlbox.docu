@@ -28,14 +28,7 @@ throw an exception - itstead, it should use the InputDataDict to reinsert the re
 
 ## Bugs
 
-- Double check if the waiting for the buffercompletion/preprocessor completion makes sense, or can be simplified (looks like that always the buffercompletion and predecesssor completion is included, sometimes twice?)
-- A multicast that has two successors and where one of the destinations is faulted, then the Multicast will throw an exception, but at least the source or the other destination is still waiting and the process never finished. This needs to be fixed. (Create a test:
-  src -> MC --> Dest1
-            --> Dest2 
-let Dest2 fault, and check if process finishes. 
-)
 - When an exception is thrown in the AfterBatchWrite of the DbDestination (see DbDestinationExceptionTests), then the thrown exception should bubble up. (E.g. an argumentexception). But instead of this exception the sources are also faulted, and the exception in the sources will bubble up first and rethrown by ETLBox. This should be checked if this can be solved better. 
-- If an exception is thrown, this should be written into log output!
 
 ### Improved Odbc support:
 
@@ -47,10 +40,18 @@ It would be good if the connection manager would return the code how to find if 
 # Network class
 - The Network class can execute all sources and wait for all destination (see existing branch where I did the first tests)
 - if dataflow component is connected to two successor, but without using predicates, data is only send to the first successor. This is confusing: If there are links to more than one successor, and no predicate nor Multicast is in between, an exception or log output should be produced (probably part of a "Network" class)
+- network class should check for circles
+- network class should check if all transformations have output
+- network class can check (if all objects are passed) if everything is connected
+- netwrok should check if two or more transformation are linked without predicates
 
 # MySql Connector
 - See last answer here: [Most efficient way to insert Rows into MySQL Database - Stack Overflow:](https://stackoverflow.com/questions/25323560/most-efficient-way-to-insert-rows-into-mysql-database)
 - [mysql-net/MySqlConnector: Async MySQL Connector for .NET and .NET Core](https://github.com/mysql-net/MySqlConnector)
+
+# ColumnRename: 
+- Add an action that allows to have a particular renaming action invoked for every row - this can be additionally to the existing renaming via ColumnMapping
+- the current logic does lock faulted. What about columsn which aren't renamed? Do they stay (which should be the desired behavior) or are they removed? What about the RemoveColumn property? 
 
 # Ideas
 
@@ -59,17 +60,13 @@ It would be good if the connection manager would return the code how to find if 
 - Excel IngoreBlankRows without Range - infinite loop?
 - RowTransformation: Add Parallelization
 - New transformation: Distinct (as partial blocking) which only let the first row through, but keeps a hash value to identify similar rows
-- New Destination: CustomBatchDestination
-- ColumnRename: Add a "rename column action" which could rename spaces in a columns names or something similar (also add the LinkErrorTo + Tests, as well as a try / catch for action)
+
 - make list properties to ICollection or IEnumerable (e.g. MemorySource/Dest or TableDefinition)
 - Redo logging - this is currently messy
 - Add parquet source/destination
 - Add neo4j sourcd/destination
 
 # Inbox
-- Columns with spaces in database - check if ColumnMap attribute worked!
-- Add a general "CheckComponent" method which is run after the initialization. Here exception can be thrown that check the component if everything
-was successfully initialized
 - Adding test for DbMerge: If property names that are passed in IdProperties/CompareProperty/UpdateProperty, which do not exists in Poco (or Expando!), then a meaningful exception should be thrown
 - The general Merge concecpt (load data from source via lookup, and then either insert, update or delete data in destination) could be applied to other file types as well (e.g. CSVMerge or JsonMerge or XmlMerge)...
 - Make almost all classes (except POCO etc.) sealed - this would need a better docu creation. Currently, every data flow transformation e.g. RowTransformation<TInput, TOutput> has a derived class RowTransformatiomo<ExpandoObject, ExpandoObject>. To seal these properly, the current RowTransformation<TInput, TOutput> would need to be internal and derived classes publicß
