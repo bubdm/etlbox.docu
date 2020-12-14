@@ -67,7 +67,8 @@ It would be good if the connection manager would return the code how to find if 
 - Add neo4j sourcd/destination
 
 # Inbox
-- Adding test for DbMerge: If property names that are passed in IdProperties/CompareProperty/UpdateProperty, which do not exists in Poco (or Expando!), then a meaningful exception should be thrown
+- Adding test for DbMerge: If property names that are passed in IdProperties/CompareProperty/UpdateProperty, which do not exists in Poco (or Expando!), then a meaningful exception should be thrown (actual, this is party true if these are used as attributes, better to write a test for the real behavior!)
 - The general Merge concecpt (load data from source via lookup, and then either insert, update or delete data in destination) could be applied to other file types as well (e.g. CSVMerge or JsonMerge or XmlMerge)...
-- Make almost all classes (except POCO etc.) sealed - this would need a better docu creation. Currently, every data flow transformation e.g. RowTransformation<TInput, TOutput> has a derived class RowTransformatiomo<ExpandoObject, ExpandoObject>. To seal these properly, the current RowTransformation<TInput, TOutput> would need to be internal and derived classes publicß
-- CheckParameters is in most cases empty: add additional checks here (always throw an ArgumentNullExcpetion or ArgumentException or ArgumentOutOfRangeException)
+- Make almost all classes (except POCO etc.) sealed - this would need a better docu creation. Currently, every data flow transformation e.g. RowTransformation<TInput, TOutput> has a derived class RowTransformatiomo<ExpandoObject, ExpandoObject>. To seal these properly, the current kRowTransformation<TInput, TOutput> would need to be internal and derived classes publicß
+- Add a better approach for logging/display the progress... e.g. having it more customized in the nlog output?
+- CustomSource (and actually all sources or all components?) could need an InitAction . Check if this is feasible to implement.

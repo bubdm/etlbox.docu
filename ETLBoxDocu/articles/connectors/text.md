@@ -9,9 +9,12 @@ file is converted into an object yourself, this source is not as convenient as o
 ### Example
 
 If your text file look like this:
+
+```
 1  A
 2  B
 3  C
+```
 
 You could read this file into a dataflow with:
 
