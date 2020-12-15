@@ -72,3 +72,5 @@ It would be good if the connection manager would return the code how to find if 
 - Make almost all classes (except POCO etc.) sealed - this would need a better docu creation. Currently, every data flow transformation e.g. RowTransformation<TInput, TOutput> has a derived class RowTransformatiomo<ExpandoObject, ExpandoObject>. To seal these properly, the current kRowTransformation<TInput, TOutput> would need to be internal and derived classes publicß
 - Add a better approach for logging/display the progress... e.g. having it more customized in the nlog output?
 - CustomSource (and actually all sources or all components?) could need an InitAction . Check if this is feasible to implement.
+-Oracle: table definition sql takes too long. also, computed columns are not properly read from table definition.(test needs to be extended)
+- new idea: ForEachTableInDatabaseTask, that gets a lamda expression an interates through each database table... this is basically a foreach through the output of sys.tables in SqlServer... 
