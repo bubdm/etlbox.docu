@@ -11,19 +11,19 @@ All prices are net without VAT. Prices only apply for business customers.
     <div class="col-lg-3 col-md-3 col-sm-6">
         <div class="plan">
             <div class="plan-title">
-                <h2>Personal</h2>
+                <h2>PERSONAL</h2>
             </div>
             <div class="plan-body">
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">                        
-                        <li>For testing and personal use</li>                        
+                        <li>Testing & personal use only</li>                        
                         <li><a href="eula.md">Standard EULA</a></li>
-                        <li>Limited to 10.000 rows for each connectors & transformations</li>                        
+                        <li>Limited to 10.000 rows per flow</li>                        
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Community</h4>
                     <ul class="plan-items">
-                        <li>Open source for Control Flow components</li>
+                        <li>Open source for ControlFlow</li>
                         <li>GitHub Issues</li>
                     </ul>
                 </div>
@@ -38,13 +38,13 @@ All prices are net without VAT. Prices only apply for business customers.
     <div class="col-lg-3 col-md-3 col-sm-6">
         <div class="plan">
             <div class="plan-title" style="background-color: #337ab7;">
-                <h2>Startup</h2>
+                <h2>STARTUP</h2>
             </div>
             <div class="plan-body">
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li>One developer license</li>
+                        <li><b>One</b> developer license</li>
                         <li>Annual license</li>
                         <li><a href="eula.md">Standard EULA</a></li>
                     </ul>
@@ -72,13 +72,13 @@ All prices are net without VAT. Prices only apply for business customers.
     <div class="col-lg-3 col-md-3 col-sm-6">
         <div class="plan">
             <div class="plan-title" style="background-color: #5cb85c;">
-                <h2>Business</h2>
+                <h2>BUSINESS</h2>
             </div>
             <div class="plan-body">
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">                        
-                        <li>Up to 5 developers</li>
+                        <li>Up to <b>4</b> developers</li>
                         <li>Annual license</li>
                         <li><a href="eula.md">Standard EULA</a></li>
                         <li>Chargeable option: Source code access</li>
@@ -98,7 +98,7 @@ All prices are net without VAT. Prices only apply for business customers.
                 </div>
                 <div class="plan-price">
                     <h3>999<span class="symbol">€</span></h3>
-                    <h4>&lt; 5 developer / year</h4>
+                    <h4>&lt; 4 developer / year</h4>
                 </div>
                 <a class="btn btn-default" href="contact.md" target="_top">Try</a>
                 <a class="btn btn-primary" href="contact.md" target="_top">Buy Now</a>
@@ -107,6 +107,43 @@ All prices are net without VAT. Prices only apply for business customers.
     </div>   
     <div class="col-lg-3 col-md-3 col-sm-6">
         <div class="plan">
+            <div class="plan-title" style="background-color: #37573c;">
+                <h2>COMPANY</h2>
+            </div>
+            <div class="plan-body">
+                <div class="plan-features">
+                    <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
+                    <ul class="plan-items">                        
+                        <li>Up to <b>10</b> developers</li>
+                        <li>Annual license</li>
+                        <li><a href="eula.md">Standard EULA</a></li>
+                        <li>Chargeable option: Source code access</li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
+                    <ul class="plan-items">
+                        <li>Email</li>
+                        <li>Technical support</li>
+                        <li>Remote training session</li>
+                        <li>Code review</li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Purchasing</h4>
+                    <ul class="plan-items">
+                        <li>Credit Card</li>
+                        <li>PayPal</li>
+                        <li>Invoice / Purchase order</li>
+                    </ul>
+                </div>
+                <div class="plan-price">
+                    <h3>1599<span class="symbol">€</span></h3>
+                    <h4>&lt; 10 developer / year</h4>
+                </div>
+                <a class="btn btn-default" href="contact.md" target="_top">Try</a>
+                <a class="btn btn-primary" href="contact.md" target="_top">Buy Now</a>
+            </div>
+        </div>
+    </div>   
+    <div class="col-lg-6 col-md-6 col-sm-7">
+        <div class="plan">
             <div class="plan-title" style="background-color: #f0ad4e">
                 <h2>Enterprise</h2>
             </div>
@@ -114,11 +151,11 @@ All prices are net without VAT. Prices only apply for business customers.
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li>Unlimited developers</li>
+                        <li><b>Unlimited</b> developers</li>
                         <li>Annual license</li>
-                        <li><a href="eula.md">Standard EULA</a></li>                        
+                        <li><a href="eula.md">Standard EULA</a></li>                     
                         <li>Full source code access</li>
-                        <li>Access to private NuGet feed</li>
+                        <li>Private NuGet feed</li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
@@ -143,27 +180,28 @@ All prices are net without VAT. Prices only apply for business customers.
             </div>
         </div>
     </div>     
-    <div class="col-lg-3 col-md-3 col-sm-6">
+    <div class="col-lg-6 col-md-6 col-sm-9">
         <div class="plan">
-            <div class="plan-title" style="background-color: #f0ad4e">
+            <div class="plan-title" style="background-color: #3d3c22">
                 <h2>Redistributable</h2>
             </div>
             <div class="plan-body">
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li>License checks removed</li>
-                        <li>Up to 20 customers</li>
-                        <li>Annual license</li>
-                        <li><a href="royalty_free_eula.md">Royality-free EULA</a></li>        
-                        <li>Full source code access</li>                        
+                        <li>Annual vendor license</li>
+                        <li><a href="royalty_free_eula.md">Royality-free EULA</a></li>  
+                        <li>Removed license checks</li>
+                        <li>Full source code access</li>        
+                        <li>Use of ETLBox is not visible for your customers</li>
+                        <li>No back-link/mention to ETLBox needed</li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
                         <li>Email</li>
                         <li>Technical support</li>
                         <li>Remote training session</li>
-                        <li>No need to reference or mention ETLBox in your product</li>
+                        <li>Remote support</li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Purchasing</h4>
                     <ul class="plan-items">
@@ -173,8 +211,8 @@ All prices are net without VAT. Prices only apply for business customers.
                     </ul>
                 </div>
                 <div class="plan-price">
-                    <h3>4999<span class="symbol">€</span> / year</h3>
-                    <h4>up to 20 customers</h4>
+                    <h3>Request a quote</h3>
+                    <h4>per customer / year</h4>
                 </div>
                 <a class="btn btn-default" href="contact.md" target="_top">Try</a>
                 <a class="btn btn-primary" href="contact.md" target="_top">Contact us</a>
