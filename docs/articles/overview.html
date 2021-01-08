@@ -347,33 +347,33 @@ only store the row that is currently processed in memory (plus some more in the 
 <td>BlockTransformation</td>
 </tr>
 <tr>
-<td>Aggregation</td>
+<td>ColumnRename</td>
 <td>CrossJoin</td>
 <td>Sort</td>
 </tr>
 <tr>
-<td>MergeJoin</td>
-<td></td>
-<td>DbMerge*</td>
+<td>MergeJoin(always join)</td>
+<td>MergeJoin (join on match)</td>
+<td>DbMerge</td>
 </tr>
 <tr>
 <td>Multicast</td>
-<td></td>
+<td>Distinct</td>
 <td></td>
 </tr>
 <tr>
 <td>RowDuplication</td>
-<td></td>
+<td>Aggregation</td>
 <td></td>
 </tr>
 <tr>
 <td>RowMultiplication</td>
-<td></td>
+<td>BatchTransformation</td>
 <td></td>
 </tr>
 <tr>
-<td>ColumnRename</td>
-<td></td>
+<td>CachedRowTransformation</td>
+<td>CachedBatchTransformation</td>
 <td></td>
 </tr>
 <tr>
@@ -384,14 +384,19 @@ only store the row that is currently processed in memory (plus some more in the 
 </tbody>
 </table>
 <p><em>RowTransformation</em>: This transformation let you modfiy each data record with your custom written C# code</p>
-<p><em>Aggregation</em>: Aggregate your data on-the-fly  based on Grouping and Aggregation functions.</p>
+<p><em>ColumnRename</em>: Allows you to rename your columns or propertie names.</p>
+<p><em>MergeJoin</em>: Join your incoming data into one. Works best with sorted input. You can either always join two rows from the inpts,
+or define a match function which determines when the incoming rows are equal and should be joined.</p>
 <p><em>RowDuplication</em>: Simple duplicate your input row x times - additionally, you can add your own condition when to duplicate.</p>
 <p><em>RowMultiplication</em>: Allow you to create multiple rows based on your incoming rows - based on your own custom C# code.</p>
-<p><em>ColumnRename</em>: Allows you to rename your columns or propertie names.</p>
 <p><em>Multicast</em>: Broadcast your incoming data into 2 or more targets.</p>
-<p><em>MergeJoin</em>: Join your incoming data into one. Works best with sorted input.</p>
+<p><em>CachedRowTransformation</em>: Work the same way as the row transformations, but stores previously processed row in a cache.</p>
 <p><em>LookupTransformation</em>: Allows you to store lookup data in memory and use it for enriching your data in your DataFlow.</p>
 <p><em>CrossJoin</em>: Takes two inputs and return one output with each record of both inputs joined with each other.</p>
+<p><em>Distinct</em>: Eliminates duplicates by returning only the first unique of incoming data and discarding duplicates.</p>
+<p><em>Aggregation</em>: Aggregate your data on-the-fly based on Grouping and Aggregation functions.</p>
+<p><em>BatchTransformation</em>: Execute your custom written C# code on a batch of incoming data.</p>
+<p><em>CachedBatchTransformation</em>: Works exactly like the BatchTransformation, but stores previously processed batches in a cache.</p>
 <p><em>BlockTransformation</em>: Allows you to execute your own custom written C# on your whole set of incoming data.</p>
 <p><em>Sort</em>: Sorts your input data by your own sort function.</p>
 <p><em>DbMerge</em>: Allows you to insert, update or delete data in your target table depending on your incoming data.
