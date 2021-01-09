@@ -5,7 +5,7 @@
 This article will give you an overview of all transformations that currently exist in ETLBox. If you already know what kind of transformation you are looking for, you can visit directly the article that goes more into the details.
 
 - [Read more about row transformations, duplication and manipulations](../transformations/row_manipulations.md)
-- [Read more about data retrieval](../transformations/lookup_data.md)
+- [Read more about data retrieval and data lookup](../transformations/lookup_data.md)
 - [Read more about broadcasting, joining, splitting or merging data](../transformations/broadcast_merge_join.md)
 - [Read more about aggregating data and block transformation](../transformations/aggregating_data.md)
 

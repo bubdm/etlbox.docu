@@ -169,8 +169,12 @@ until all data was read from sources and written into all destinations. Using th
 debugging a lot easier, as you don't have to deal with async programming and the specialties of exception
 handling with tasks.
 
-Please note: In the background, the data flow is always executed asynchronous! The underlying data flow engine
-is based on `Microsoft.TPL.Dataflow`. ETLBox will wrap this behavior into synchronous methods. 
+*Note*: In the background, the data flow is always executed asynchronous! The underlying data flow engine
+is based on `Microsoft.TPL.Dataflow`. ETLBox will wrap this behavior into synchronous method calls. 
+
+*Note*: Starting with version 2.3.0, the Execute() on any source is a replace for the Network.Execute(comp) call. 
+It will trigger all sources in the network to post their data and will also wait for all destinations. If you want to have a source
+to post all data into the network and then return use the Post() method instead.
 
 ### Example sync execution
 
@@ -181,17 +185,14 @@ RowTransformation rowTrans = new RowTransformation( row => row );
 DbDestination dest = new DbDestination("DestTable");
 source.LinkTo(row);
 
-//Execute the source 
+//Execute the whole data flow
 source.Execute();
-
-//Wait for the destination
-dest.Wait(); 
 ```
 
 The Execute() method on the source will block execution until data is read from the source and posted into the data flow.
+Also, it will block exeuction until all data has arrived at the destination. Under the hood,
+this method is a shortcut for the `Network.Execute(params DataFlowComponent[])`
 
-The Wait() method on the destination will block execution until all data arrived at the destination. Under the hood,
-this method will call the Wait() method of the Task from the underlying data flow.
 
 ## Asynchronous execution
 
@@ -208,18 +209,14 @@ DbDestination dest = new DbDestination("DestTable");
 
 source.LinkTo(row).LinkTo(dest);
 
-Task sourceTask = source.ExecuteAsync();
+source.ExecuteAsync();
 Task destTask = dest.Completion;
-try
-{
-    sourceTask.Wait();
-    destTask.Wait();
-} catch (Exception e)
-{
-    throw e.InnerException;
-}
+
+destTask.Wait();
+//if the destination completes, the source is 
 ```
 
 The `ExecuteAsync()` method will return a Task which completes when all data is read from the source and posted in the data flow.
-The `Completion` property will return a Task which completes when all data has arrived at the destination.
+You don't have to wait for this task (but of course you can). But if a destination is completed, all its predecessors are also completed. 
+The `Completion` property will return a Task which completes when all data has arrived in the component. Every component has the Completion property. 
 

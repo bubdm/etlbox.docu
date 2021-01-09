@@ -14,14 +14,14 @@ every data that comes from any source or transformation in your data flow can be
 
 First, let's differentiate 2 scenarios.
 
-Scenario 1: The source table does not have any information about its changes. 
+Scenario "Delta": The source table has information about its changes. 
+This can be e.g. a timestamp indicating when the record was inserted or updated. The source contains information
+about it's changes, which is called "delta". Getting delta information from the source (e.g. via Change Data Capture) can make data loads significantly faster. 
+
+Scenario "Full": The source table does not have any information about its changes. 
 So no delta information is provided by the source. The source is delivering data always in "full".
 
-Scenario 2: The source table has information about its changes. 
-This can be e.g. a timestamp indicating when the record was inserted or updated. The source contains information
-about it's changes, which is called "delta".
-
-Scenario 2 is a little bit more tricky when it comes to deletions. In scenario 1 we always know which objects are currently
+Scenario "Delata" is a little bit more tricky when it comes to deletions. In scenario "Full" we always know which objects are currently
 existing and what data they have. In the Delta scenario the handling of deletions are more problematic. There is
 no straight-forward solution how to manage deleted records here. One way could be an extra flag indicating that 
 the record was deleted (including the deletion time as "update" timestamp). 
@@ -29,16 +29,15 @@ Or it could be that deletions are not transferred at all, either because they do
 
 ### DBMerge
 
-Both scenarios are supported with ETLBox. The `DBMerge` component can be used to tackle this problem
-
+Both scenarios are supported with ETLBox. The `DBMerge` component can be used to tackle this problem.
 The `DBMerge` is a destination component and is created on a destination table in your data flow.
 It will wait for all data from the flow to arrive, and then either insert, 
 update or delete the data in the destination table. 
 Deletion is optional (by default turned on) , and can be disabled with the property 
 `DisableDeletion` set to true. 
 
-The DBMerge was designed for scenario 1 and scenario 2. For scenario 2, the property DeltaMode has
-to be set to DeltaMode.Delta: `DeltaMode = DeltaMode.Delta`.
+The DBMerge was designed for scenario "Delta" and scenario "Full". If you want to support full load, 
+you have to set the mode to DeltaMode.Full: `merge.DeltaMode = DeltaMode.Full`.
 
 ## Example 
 
@@ -46,21 +45,28 @@ to be set to DeltaMode.Delta: `DeltaMode = DeltaMode.Delta`.
 
 To implement an example sync between two tables, we will  need a `DbSource` pointing to our source table. 
  In our case we just pass a table name for the source table, but you could also define a sql query 
- (e.g. which gives you only the delta records).
+ (e.g. which gives you only the delta records). Also, any other data flow component can be used as source - either other sources
+  or the transformations. 
 
 The source is then connected to the DBMerge, and data from the source will then be inserted, 
 updated or deleted in the destination. 
 
-The DBMerge  is a generic object and expect as type an object that implements the interface `IMergeableRow`. 
+The DbMerge itself is a non generic class - but it does inherit from DBMerge<TInput>. If you don't use the generic class with a type, 
+the default is DbMerge<ExpandoObject> - the ExpandoObject is a dynamic object which can have properties added during runtime.
+If you decide to use your own Plain old component object (POCO) with the DbMerge, it will expect it that it implements the interface `IMergeableRow`. 
 This interface needs to have a ChangeDate and ChangeAction defines on your object, as well a UniqueId property
 to describe how objects are compared.
 
-The easiest (and recommended) way to implement is the interface is to inherit from the class `MergeableRow`.
-You will automatically have all the necessary implementation details to pass the object to a `DBMerge`.
-Only two things are left to do here: 
+The easiest (and recommended) way to implement the interface on a POCO is to inherit from the class `MergeableRow`.
+You will automatically have all the necessary implementation details to pass the object to a `DbMerge`.
+Only three things are left to do here: 
 1. You need to flag the properties that identify the unique Id columns with the attribute `IdColumn`
 2. You need to flag the properties used when comparing the values of a record to decide if it really needs to be updated
 with the attribute `CompareColumn`
+3. Optional: You can flag the properties that you want to have updated in the target with the `UpdateColumn` attribute. If this is omitted,
+all non-Id columns are updated. 
+
+If you use an ExpanoObject, you can't use attributes. Instead you can set the `MergeProperties.IdColumns`, `MergeProperties.CompareColumns` and optionally the `MergeProperties.UpdateColumns` directly. 
 
 Let's start with a simple object, that has a property that should contain the key column (the id) and one property
 for holding a value:
@@ -100,13 +106,17 @@ No we can already set up a data flow. It would look like this:
 ```C#
 DbSource<MyMergeRow> source = new DbSource<MyMergeRow>(connection, "SourceTable");
 DbMerge<MyMergeRow> merge = new DbMerge<MyMergeRow>(connection, "DestinationTable");
+merge.DeltaMode = DeltaMode.Full;
 source.LinkTo(merge);
 source.Execute();
-merge.Wait();
 ```
 
+In this example, we will start the scenario "Full". That means that we will load all data from the source, and expect
+the merge to delete records that aren't delivered. 
+
 Now what happens if we let this flow run? First of all, all records will be loaded from the destination
-into a memory object and compared with the source data. Within the memory object, the DBMerge 
+into a memory object and compared with the source data. 
+Within the memory object, the DBMerge 
 will identify:
 
 - which records need to inserted (ChangeAction: Insert)
@@ -119,7 +129,7 @@ and it is recommended to only use unique columns for that.
 
 As you can see, there is a difference between an update and an existing records that doesn't need to be updated. 
 All records where the IdColumns match will be examined based on their value. All properties
-marked with the `CompareColumn` attribute are compared (using the underlying Equals() implementation). 
+marked with the `CompareColumn` attribute are compared.
 If one property/columns differs, the record will be marked to be updated. If they are all equal, the record
 won't be touched on the database and marked as 'E' (Existing).
 
@@ -136,13 +146,56 @@ In our example after doing the `DBMerge`, our destination table now looks like t
 2    |Test - Update 
 3    |Test - Exists 
 
-Please note that if you connect the DBMerge to a source that provide you with delta information only, 
-you need to disable the deletions - in that case, deletions need to be handled manually. If we would have
-deletions disable, there would be an additional row in our destination table:
+Please note that the record with Id 4 is now deleted. If the MergeMode would have been MergeMode.Delta (which is the default),
+this entry would still be in the target table. 
+
+#### Delete Column
+
+Let's assume for our example above the we used the MergeMode Delta. Now we would still end up with the record #4:
 
 -----|---------------
 4    |Test - Deleted
 
+How can we do deletions in a delta scenario? 
+If you want to also have deletions executed when loading delta from the source, you can use the deletion attribute in your object. 
+
+E.g. consider we would add the following property to `MyMergeRow`
+
+```C#
+    [DeleteColumn("YES")]
+    public string DoDelete { get; set; }
+```
+
+When executing the deletions, the DbMerge will check the value of the property `DoDelete`. If there is a matching entry in the target table (which is identified by the IdColumn attribute), then it will first check the value of the property and compare it to the expected value (which is "YES" in our example). If `DoDelete` does hold the value "YES", then it will delete the record in the target. If `DoDelete` is null or holds any other string value, then no deletion would be executed.
+
+Of course this will also work with boolean values or any other object types.
+Here is another example: 
+
+```C#
+public class MyMergeRow : MergeableRow
+{
+    [IdColumn]
+    public long Key { get; set; }
+    [CompareColumn]
+    public string Value { get; set; }
+    [DeleteColumn(true)]
+    public bool DeleteThisRow { get; set; }
+}
+```
+
+In this example object, if the property DeleteThisRow is set to true, the record in the destination will be deleted
+if it matches with the Key property that is flagged with the attribute IdColumn.
+
+
+### Cache Mode 
+
+By default, the DbMerge will always load all data from the destination into memory first. If you want to avoid this, 
+e.g. because your target table is quite bit, consider to set the CacheMode to `CacheMode.Partial`. 
+
+```C#
+DbMerge<MyMergeRow> merge = new DbMerge<MyMergeRow>(connection, "DestinationTable");
+merge.CacheMode = CacheMode.Partial;
+```
 
 ### Delta table
 
@@ -150,8 +203,10 @@ The DBMerge has a property `DeltaTable` which is a List containing additionally 
 where updated, existing,  inserted or deleted. The operation and change-date is stored in the corresponding 
 `ChangeDate`/ `ChangeAction` properties.
 
-In our example, the property `dest.DeltaTable` now contains information about the what delta operations where made on the destination
-table. In this example, it would contain the information, that 1 row was inserted (Key: 1)
+This delta table can be accessed if the DbMerge is not treated as as source, but like a transformation. If the DbMerge is linkned to other components, 
+it will write the delta records into it's output. 
+
+In our example, it would contain the information, that 1 row was inserted (Key: 1)
 , 1 was updated (Key: 2), one column wasn't changed (Key:3) and one column was deleted (Key: 4).
 
 This information can be used as a source for further processing in the data flow, 
@@ -181,44 +236,18 @@ The DeltaTable now will look like this:
 
 ### Truncate instead delete
 
-Because the DBMerge does delete records that need to be deleted or updated using a `DELETE` sql statement, 
+Because the DBMerge does delete records that need to be deleted or updated using a bulk delete sql statement, 
 this method can sometimes be a performance bottleneck if you expect a lot of deletions  to happen. The 
-`DBMerge` does support a Truncate-approach by setting the property `UseTruncateMethod` to true. 
+`DbMerge` does support a Truncate-approach by setting the property `UseTruncateMethod` to true. 
 It will then read all existing data from the destination into the memory, identify the changes, 
 truncate the destination table and then write all changes back into the database. This approach can be much faster
-if you expect a lot of deletions, but you will always read all data from the destination table and write it back.
-Unfortunately, there is no general recommendation when to use this approach. 
-
-Also, if you don't specify any Id columns with the `IdColumn` attribute, the DbMerge will use the truncate method automatically. 
-
-### Delta mode
-
-If the source transfer delta information, then you can set the DbMerge delta mode:
+if you expect a lot of deletions, but you will always need to read all data from the destination table and write it back.
+The CacheMode Partial won't work if you use the truncate method. 
 
 ```C#
-DbMerge<MyMergeRow> dest = new DbMerge<MyMergeRow>(connection, "DBMergeDeltaDestination")
-{
-    DeltaMode = DeltaMode.Delta
-};
+DbMerge<MyMergeRow> merge = new DbMerge<MyMergeRow>(connection, "DestinationTable");
+merge.UseTruncateMethod = true;
 ```
- 
-In delta mode, by default objects in the destination won't be deleted. It can be that there is a property in your source 
-that is an indicator that a record is deleted. In this case, you can flag this property with the attribute `DeleteColumn`.
-
-```C#
-public class MyMergeRow : MergeableRow
-{
-    [IdColumn]
-    public long Key { get; set; }
-    [CompareColumn]
-    public string Value { get; set; }
-    [DeleteColumn(true)]
-    public bool DeleteThisRow { get; set; }
-}
-```
-
-In this example object, if the property DeleteThisRow is set to true, the record in the destination will be deleted
-if it matches with the Key property that is flagged with the attribute IdColumn.
 
 ### ColumnMap attribute
 
@@ -237,6 +266,8 @@ public class MyMergeRow : MergeableRow
     public string Value { get; set; }
 }
 ```
+
+For dynamic objects, you can define your column mappings via the `ColumnMaps` property. 
 
 ### Composite Keys
 
@@ -277,14 +308,12 @@ public class MySimpleRow : IMergeableRow
     public DateTime ChangeDate { get; set; }
     public ChangeAction? ChangeAction { get; set; }
     public string UniqueId => Key.ToString();
-    public new bool Equals(object other)
-    {
-        var o = other as MySimpleRow;
-        if (o == null) return false;
-        return Value == o.Value;
-    }
 }
 ```
 
 Overwriting the Equals method and using the IdColumn attribute is optional. If no IdColumn
-is passed, the truncate method is used to merge the data. 
+is passed, then you would need to use the `UseTruncateMethod`.
+
+If you use the ExpanoObject, the properties ChangeDate and ChangeAction are appended automatically.
+You will need to pass at least one IdColumn to the `MergeProperties.IdColumns` when using the dynamic approach.
+
