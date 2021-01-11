@@ -125,8 +125,7 @@ DbSource<NameListElement> sourceTable = new DbSource<NameListElement>(conMan, "N
 CsvDestination<NameListElement> destCSV = new CsvDestination<NameListElement>("Export.csv");
 destCSV.Configuration.Delimiter = ";";
 sourceTable.LinkTo(destCSV);
-sourceTable.Execute();
-destCSV.Wait();
+Network.Execute(sourceTable);
 ```
 
 You will find a file called `Export.csv` in your output directory. As you have 

@@ -248,9 +248,7 @@ the first link that either has no predicate or which predicate returns true is u
 <pre><code class="lang-C#">source.LinkTo(multicast);
 multicast.LinkTo(dest1, row =&gt; row.Value2 &lt;= 2);
 multicast.LinkTo(dest2,  row =&gt; row.Value2 &gt; 2);
-source.Execute();
-dest1.Wait();
-dest2.Wait();
+Network.Execute(source);
 </code></pre>
 <h3 id="voiddestination">VoidDestination</h3>
 <p>Whenever you use predicates, sometime you end up with data which you don't want to write into a destination.
@@ -281,7 +279,7 @@ DbDestination&lt;MySimpleRow&gt; dest = new DbDestination&lt;MySimpleRow&gt;(con
 MemoryDestination&lt;ETLBoxError&gt; errorDest = new MemoryDestination&lt;ETLBoxError&gt;();
 source.LinkTo(dest);
 source.LinkErrorTo(errorDest);
-source.Execute();
+Network.Execute(source);
 </code></pre>
 <p><code>LinkErrorTo</code> only accepts transformations or destinations that have the input type <code>ETLBoxError</code>. It will contain
 the exception itself and an exception message, the time the error occurred, and the faulted record as json (if it was

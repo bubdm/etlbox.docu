@@ -190,7 +190,7 @@ RowTransformation<ExpandoObject> trans = new RowTransformation<ExpandoObject>(
 DbDestination<ExpandoObject> dest = new DbDestination<ExpandoObject>(Connection, "DynamicJson");
 
 source.LinkTo(trans).LinkTo(dest);
-source.Execute();
+Network.Execute(source);
 ```
 
 ### 3rd party libraries

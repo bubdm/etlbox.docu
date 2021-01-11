@@ -324,7 +324,7 @@ for holding a value:</p>
 DbMerge&lt;MyMergeRow&gt; merge = new DbMerge&lt;MyMergeRow&gt;(connection, &quot;DestinationTable&quot;);
 merge.DeltaMode = DeltaMode.Full;
 source.LinkTo(merge);
-source.Execute();
+Network.Execute(source);
 </code></pre>
 <p>In this example, we will start the scenario &quot;Full&quot;. That means that we will load all data from the source, and expect
 the merge to delete records that aren't delivered.</p>
@@ -420,9 +420,7 @@ DBMerge&lt;MyMergeRow&gt; merge = new DBMerge&lt;MyMergeRow&gt;(connection, &quo
 DbDestination&lt;MyMergeRow&gt; delta = new DbDestination&lt;MyMergeRow&gt;(connection, &quot;DeltaTable&quot;);
 source.LinkTo(merge);
 merge.LinkTo(delta);
-source.Execute();
-merge.Wait();
-delta.Wait();
+Network.Execute(source);
 </code></pre>
 <p>The DeltaTable now will look like this:</p>
 <table>

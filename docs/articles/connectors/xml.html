@@ -323,7 +323,7 @@ schemaValidation.XmlSchema = xsdMarkup;
 source.LinkTo(schemaValidation);
 schemaValidation.LinkTo(dest);
 schemaValidation.LinkErrorTo(error);
-source.Execute();
+Network.Execute(source);
 </code></pre>
 <h3 id="3rd-party-libraries">3rd party libraries</h3>
 <p>The xml connector package is based on <code>System.Xml</code>.</p>

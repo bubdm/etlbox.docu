@@ -335,7 +335,7 @@ lookup.RetrievalByKeyFunc = (inputrow, dict) =>
 var dest = new MemoryDestination<Order>();
 
 orderSource.LinkTo(lookup).LinkTo(dest);
-orderSource.Execute();
+Network.Execute(orderSource);
 
 
 foreach (var row in dest.Data)

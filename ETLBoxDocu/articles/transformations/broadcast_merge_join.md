@@ -31,9 +31,7 @@ public static void Main()
     multicast.LinkTo(dest1);
     multicast.LinkTo(dest2);
 
-    source.Execute();
-    dest1.Wait();
-    dest2.Wait();
+    Network.Execute(source);
 
     Console.WriteLine($"Destination 1");
     foreach (var row in dest1.Data)
@@ -80,9 +78,7 @@ public static void Main()
     source.LinkTo(dest1, row => row.Id <= 1);
     source.LinkTo(dest2, row => row.Id >= 2);
             
-    source.Execute();
-    dest1.Wait();
-    dest2.Wait();
+    Network.Execute(source);
 
     Console.WriteLine($"Destination 1");
     foreach (var row in dest1.Data)

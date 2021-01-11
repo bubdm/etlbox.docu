@@ -60,9 +60,7 @@ If you need data send into two ore more connected components, you can use the Mu
 source.LinkTo(multicast);
 multicast.LinkTo(dest1, row => row.Value2 <= 2);
 multicast.LinkTo(dest2,  row => row.Value2 > 2);
-source.Execute();
-dest1.Wait();
-dest2.Wait();
+Network.Execute(source);
 ```
 
 ### VoidDestination
@@ -108,7 +106,7 @@ DbDestination<MySimpleRow> dest = new DbDestination<MySimpleRow>(connection, "De
 MemoryDestination<ETLBoxError> errorDest = new MemoryDestination<ETLBoxError>();
 source.LinkTo(dest);
 source.LinkErrorTo(errorDest);
-source.Execute();
+Network.Execute(source);
 ```
 
 `LinkErrorTo` only accepts transformations or destinations that have the input type `ETLBoxError`. It will contain

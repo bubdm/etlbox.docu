@@ -271,8 +271,7 @@ DbDestination dest = new DbDestination(&quot;DestinationTable&quot;);
 //Link everything together
 source.LinkTo(dest);
 //Start the data flow
-source.Execute();
-dest.Wait()
+Network.Execute(source);
 </code></pre>
 <h3 id="connection-manager">Connection manager</h3>
 <h4 id="connection-strings">Connection strings</h4>
@@ -363,7 +362,7 @@ public static void Main() {
     JsonDestination dest = new JsonDestination&lt;CsvType&gt;(&quot;test.json&quot;);
     dest.ResourceType = ResourceType.File; //Default is Http for json
     source.LinkTo(dest);
-    source.Execute();
+    Network.Execute(source);
 }
 </code></pre>
 <h3 id="read-more">Read more</h3>

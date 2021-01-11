@@ -275,9 +275,7 @@ In our example it looks like this:
 
 ```C#
 //Execute the data flow synchronously
-sourceOrderData.Execute();
-destOrderTable.Wait();
-destRating.Wait();
+Network.Execute(sourceOrderData);
 ```
 
 ## Checking the result

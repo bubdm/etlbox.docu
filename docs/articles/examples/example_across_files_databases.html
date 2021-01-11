@@ -333,8 +333,7 @@ specifies your data type.</p>
 CsvDestination&lt;NameListElement&gt; destCSV = new CsvDestination&lt;NameListElement&gt;(&quot;Export.csv&quot;);
 destCSV.Configuration.Delimiter = &quot;;&quot;;
 sourceTable.LinkTo(destCSV);
-sourceTable.Execute();
-destCSV.Wait();
+Network.Execute(sourceTable);
 </code></pre>
 <p>You will find a file called <code>Export.csv</code> in your output directory. As you have
 perhaps noted, we changed the default csv separator from &quot;,&quot; to &quot;;&quot; by changing the configuration.

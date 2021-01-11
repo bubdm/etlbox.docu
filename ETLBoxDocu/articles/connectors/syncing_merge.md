@@ -108,7 +108,7 @@ DbSource<MyMergeRow> source = new DbSource<MyMergeRow>(connection, "SourceTable"
 DbMerge<MyMergeRow> merge = new DbMerge<MyMergeRow>(connection, "DestinationTable");
 merge.DeltaMode = DeltaMode.Full;
 source.LinkTo(merge);
-source.Execute();
+Network.Execute(source);
 ```
 
 In this example, we will start the scenario "Full". That means that we will load all data from the source, and expect
@@ -218,9 +218,7 @@ DBMerge<MyMergeRow> merge = new DBMerge<MyMergeRow>(connection, "DestinationTabl
 DbDestination<MyMergeRow> delta = new DbDestination<MyMergeRow>(connection, "DeltaTable");
 source.LinkTo(merge);
 merge.LinkTo(delta);
-source.Execute();
-merge.Wait();
-delta.Wait();
+Network.Execute(source);
 ```
 
 The DeltaTable now will look like this:

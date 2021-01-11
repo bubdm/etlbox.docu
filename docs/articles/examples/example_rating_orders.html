@@ -418,9 +418,7 @@ and then we can use the <code>Wait()</code> or <code>Completion()</code> method 
 got all data and the completion message from the source.</p>
 <p>In our example it looks like this:</p>
 <pre><code class="lang-C#">//Execute the data flow synchronously
-sourceOrderData.Execute();
-destOrderTable.Wait();
-destRating.Wait();
+Network.Execute(sourceOrderData);
 </code></pre>
 <h2 id="checking-the-result">Checking the result</h2>
 <p>Now you can connect to your database and look into the tables customer_rating and orders. You will find in there the orders from the csv file, including a customer key

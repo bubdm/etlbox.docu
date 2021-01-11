@@ -146,7 +146,7 @@ schemaValidation.XmlSchema = xsdMarkup;
 source.LinkTo(schemaValidation);
 schemaValidation.LinkTo(dest);
 schemaValidation.LinkErrorTo(error);
-source.Execute();
+Network.Execute(source);
 ```
 
 

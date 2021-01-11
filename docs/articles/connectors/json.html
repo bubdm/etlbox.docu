@@ -355,7 +355,7 @@ RowTransformation&lt;ExpandoObject&gt; trans = new RowTransformation&lt;ExpandoO
 DbDestination&lt;ExpandoObject&gt; dest = new DbDestination&lt;ExpandoObject&gt;(Connection, &quot;DynamicJson&quot;);
 
 source.LinkTo(trans).LinkTo(dest);
-source.Execute();
+Network.Execute(source);
 </code></pre>
 <h3 id="3rd-party-libraries">3rd party libraries</h3>
 <p>It is based on the <code>Newtonsoft.Json</code> and the <code>JsonSerializer</code></p>

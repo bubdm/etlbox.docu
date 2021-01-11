@@ -39,7 +39,7 @@ public static void Main()
 
     source.LinkTo(dest);
 
-    source.Execute();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Id: {row.Id} Value: {row.Value}");
@@ -79,7 +79,7 @@ public static void Main()
 
     source.LinkTo(dest);
 
-    source.Execute();
+    Network.Execute(source);
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($"Id: {row.Id} Value: {row.Value}");
@@ -114,7 +114,7 @@ public static void Main()
 
     source.LinkTo(dest);
 
-    source.Execute();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Id: {row[0]} Value: {row[1]}");
@@ -166,7 +166,7 @@ public static void Main()
     dest.WriteAction = (row, progressCount) => rows.Add(row);
 
     source.LinkTo(dest);
-    source.Execute();
+    Network.Execute(source);
             
     string json = JsonConvert.SerializeObject(rows, Formatting.Indented);
 

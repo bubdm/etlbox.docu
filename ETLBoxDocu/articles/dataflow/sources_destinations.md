@@ -78,8 +78,7 @@ DbDestination dest = new DbDestination("DestinationTable");
 //Link everything together
 source.LinkTo(dest);
 //Start the data flow
-source.Execute();
-dest.Wait()
+Network.Execute(source);
 ```
 
 ### Connection manager
@@ -215,7 +214,7 @@ public static void Main() {
     JsonDestination dest = new JsonDestination<CsvType>("test.json");
     dest.ResourceType = ResourceType.File; //Default is Http for json
     source.LinkTo(dest);
-    source.Execute();
+    Network.Execute(source);
 }
 ```
 
