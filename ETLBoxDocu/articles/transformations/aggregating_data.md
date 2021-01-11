@@ -42,8 +42,7 @@ public static void Main()
     var dest = new MemoryDestination<MyAggRow>();
 
     source.LinkTo<MyAggRow>(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);    
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Sum:{row.AggValue}");
@@ -79,8 +78,7 @@ public static void Main()
     var dest = new MemoryDestination();
 
     source.LinkTo(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($"Sum:{row.AggValue}");
@@ -137,8 +135,7 @@ public static void Main()
     var dest = new MemoryDestination<MyAggRow2>();
 
     source.LinkTo<MyAggRow2>(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Sum:{row.AggValue}");
@@ -187,8 +184,7 @@ public static void Main()
     var dest = new MemoryDestination<MyAggRow3>();
 
     source.LinkTo<MyAggRow3>(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
@@ -244,8 +240,7 @@ public static void Main()
     var dest = new MemoryDestination();
 
     source.LinkTo(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
@@ -294,8 +289,7 @@ public static void Main()
     var dest = new MemoryDestination<MyAggRow4>();
 
     source.LinkTo<MyAggRow4>(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Sum for {row.Group}:{row.AggValue}");
@@ -416,8 +410,7 @@ public static void Main()
     var dest = new MemoryDestination<AveragePerDay>();
 
     source.LinkTo<AveragePerDay>(block).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Day:{row.Day} Totals:{row.TotalOrders} Average:{row.AveragePrice}");

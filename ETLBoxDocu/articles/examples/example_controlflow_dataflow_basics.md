@@ -165,8 +165,7 @@ After linking the components, we want to have the source reading the input data.
 The destination should wait until it received all data.
 
 ```C#
-source.Execute();
-dest.Wait();
+Network.Execute(source);
 ```
 
 Finally, we check if the data was successfully loaded into the table and write it into the console output. 

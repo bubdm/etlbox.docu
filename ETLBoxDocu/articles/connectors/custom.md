@@ -40,7 +40,6 @@ public static void Main()
     source.LinkTo(dest);
 
     source.Execute();
-    dest.Wait();
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Id: {row.Id} Value: {row.Value}");
@@ -81,7 +80,6 @@ public static void Main()
     source.LinkTo(dest);
 
     source.Execute();
-    dest.Wait();
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($"Id: {row.Id} Value: {row.Value}");
@@ -117,7 +115,6 @@ public static void Main()
     source.LinkTo(dest);
 
     source.Execute();
-    dest.Wait();
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Id: {row[0]} Value: {row[1]}");
@@ -170,7 +167,6 @@ public static void Main()
 
     source.LinkTo(dest);
     source.Execute();
-    dest.Wait();
             
     string json = JsonConvert.SerializeObject(rows, Formatting.Indented);
 

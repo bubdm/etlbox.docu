@@ -153,25 +153,16 @@ several sources. Even sources can split data across their destinations - you can
 Now we will give the source the command to start reading data. 
 
 ```C#
-  source.Execute();
+  Network.Execute(source);
 ``` 
 
 This code will execute as an synchronous task - though the data flow itself will run in it's own thread.
-This method will continue execution when all data was read from the source and posted into the data flow. This does not mean that your data has arrived at the destination
-yet - but reading from the source was done successfully when this method returns. To operate totally asynchronously, you can use the `ExecuteAsync()` method. 
+To operate totally asynchronously, you can use the `ExecuteAsync()` method. Each component does expose a `public Task Completion` property, which gives you information if the component is still running or already completed.  
 
+*Note* By default, source.Execute() on any of the source components is a shortcut for `Network.Execute(source);` .
+The `Network.Execute(params DataFlowComponent[])` was introduced with version 2.3.0. You will find the use of both methods throughout this documentation. If you are using more than one source component, the recommendation is to use the Network.Execute(..) method. 
 
-Now we want to wait for the Data Flow pipeline to finish. So we add this line to our code
-
-```C#
-dest.Wait();
-```
-
-When `dest.Wait()` returns, all data was read from the source and written into the database table.  To operate totally asynchronously, you can use the `Completion` property to 
-receive a Task object for further handling. 
-
-*If you are new to the .NET Task parallel library (TPL) and asynchronous programming, I recommend to use the `Execute()` & `Wait()` pattern to run your data flows. 
-If you want to use `ExecuteAsny()` and `Completion`, learn more about [Asynchronous programming with async and await here.](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
+If you are interested in .NET Task parallel library (TPL) and asynchronous programming, learn more about [Asynchronous programming with async and await here.](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
 
 ## View the full code
 

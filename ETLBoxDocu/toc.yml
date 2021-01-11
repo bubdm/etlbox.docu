@@ -4,9 +4,9 @@
   href: api/
   homepage: api/index.md
 - name: Pricing
-  href: articles/pricing/pricing.md
-  homepage: articles/pricing/pricing.md
+  href: articles/buy/pricing.md
+  homepage: articles/buy/pricing.md
 - name: Contact
-  href: articles/pricing/contact.md
-  homepage: articles/pricing/contact.md
+  href: articles/buy/contact.md
+  homepage: articles/buy/contact.md
 

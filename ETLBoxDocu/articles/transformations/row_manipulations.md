@@ -33,8 +33,7 @@ public static void Main()
     var dest = new MemoryDestination<MyRow>();
 
     source.LinkTo(rowTrans).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"InputValue:{row.InputValue} Result:{row.Result}");
@@ -79,8 +78,7 @@ public static void Main()
     var dest = new MemoryDestination<MyArray>();
 
     source.LinkTo<MyArray>(rowTrans).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Col1:{row.Col1} Col2:{row.Col2}");
@@ -122,8 +120,7 @@ Normally, you would create an object the contains the properties Id and Value to
     var dest = new VoidDestination();
 
     source.LinkTo(rowTrans).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     //Output
     //Id:1 Value:A
@@ -194,8 +191,7 @@ public static void Main()
     var dest = new MemoryDestination<MyRow>();
 
     source.LinkTo(duplication).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Value:{row.Value}");
@@ -277,8 +273,7 @@ public static void Main()
     var dest = new MemoryDestination<MyRow>();
 
     source.LinkTo(multi).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Char:{row.Char}");
@@ -341,8 +336,7 @@ public static void Main()
     var dest = new MemoryDestination<MyChar>();
 
     source.LinkTo<MyChar>(multi).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Char:{row.Char}");

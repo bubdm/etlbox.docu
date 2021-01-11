@@ -109,8 +109,6 @@ MemoryDestination<ETLBoxError> errorDest = new MemoryDestination<ETLBoxError>();
 source.LinkTo(dest);
 source.LinkErrorTo(errorDest);
 source.Execute();
-dest.Wait();
-errorDest.Wait();
 ```
 
 `LinkErrorTo` only accepts transformations or destinations that have the input type `ETLBoxError`. It will contain
@@ -180,19 +178,66 @@ to post all data into the network and then return use the Post() method instead.
 
 ```C#
 //Prepare the flow
-DbSource source = new DbSource("SourceTable");
+DbSource source1 = new DbSource1("SourceTable1");
+DbSource source2 = new DbSource2("SourceTable2");
 RowTransformation rowTrans = new RowTransformation( row => row );
-DbDestination dest = new DbDestination("DestTable");
-source.LinkTo(row);
+DbDestination dest1 = new DbDestination("DestTable");
+DbDestination dest2 = new DbDestination("DestTable");
+
+//Link the flow
+source1.LinkTo(row);
+source2.LinkTo(row);
+row.LinkTo(dest1, row => row.Value < 10);
+row.LinkTo(dest2, row => row.Value >= 10);
 
 //Execute the whole data flow
-source.Execute();
+Network.Execute(source1, source2);
 ```
 
-The Execute() method on the source will block execution until data is read from the source and posted into the data flow.
-Also, it will block exeuction until all data has arrived at the destination. Under the hood,
-this method is a shortcut for the `Network.Execute(params DataFlowComponent[])`
+The `Network.Execute(params DataFlowComponent[])` method will execute the whole data flow and block exeuction until all data has arrived at *all destinations*. 
 
+Please note that you don't have to pass all sources into the Network class. You only have to pass at least *one* component into the Execute method that is part of the network. The following statement also would execute the *whole* data flow:
+
+```C#
+Network.Execute(source1);
+Network.Execute(row);
+Network.Execute(source1, source2, row, dest1, dest2);
+Network.Execute(source1, row, dest2);
+...
+```
+
+#### Using the shortcut on the sources
+
+There is a shortcut for the Network.Execute(..) method.
+Every data flow source does offer an Execute() method. This will trigger the corresponding Network.Execute() method, and will pass the source itself. 
+For the example above, you could also trigger the *whole* network like this:
+
+```C#
+source1.Execute();
+```
+
+```C#
+source2.Execute();
+```
+
+Or run the execution on for both: 
+```C#
+source1.Execute();
+source2.Execute();
+```
+
+Though the second execution wouldn't do nothing, as the whole network was already execute.
+
+In versions < 2.3.0, the examples where always using an Execute()/Wait() pattern like this:
+
+```C#
+source1.Execute();
+source2.Execute();
+dest1.Wait();
+dest2.Wat();
+```
+
+This pattern will still work, but after the execution of source1 the network would be already run and complete. The rest of the code blocks will then immediately return, doing nothing. 
 
 ## Asynchronous execution
 
@@ -203,20 +248,55 @@ in separate task(s) in the background.
 ### Example async execution
 
 ```C#
-DbSource source = new DbSource("SourceTable");
+//Prepare the flow
+DbSource source1 = new DbSource1("SourceTable1");
+DbSource source2 = new DbSource2("SourceTable2");
 RowTransformation rowTrans = new RowTransformation( row => row );
-DbDestination dest = new DbDestination("DestTable");
+DbDestination dest1 = new DbDestination("DestTable");
+DbDestination dest2 = new DbDestination("DestTable");
 
-source.LinkTo(row).LinkTo(dest);
+//Link the flow
+source1.LinkTo(row);
+source2.LinkTo(row);
+row.LinkTo(dest1, row => row.Value < 10);
+row.LinkTo(dest2, row => row.Value >= 10);
 
-source.ExecuteAsync();
-Task destTask = dest.Completion;
+//Execute the whole data flow
+Task networkCompletion = Network.ExecuteAsync(source1, source2);
 
-destTask.Wait();
-//if the destination completes, the source is 
+//Now you can wait for the whole network
+networkCompletion.Wait();
 ```
 
-The `ExecuteAsync()` method will return a Task which completes when all data is read from the source and posted in the data flow.
+#### Using completion tasks on the components
+
+Of course if you want more control over your network you can use the Completion property that exposes the current task of each data flow component. 
+
+E.g. you can trigger your flow like this:
+
+```
+source1.ExecuteAsync();
+source2.ExecuteAsync();
+Task destTask1 = dest1.Completion;
+Task destTask1 = dest2.Completion;
+
+Task.WaitAll(destTask1, destTask2);
+```
+
+or like this:
+
+```C#
+Task sourceTask1 = source1.ExecuteAsync();
+Task sourceTask2 = source2.Completion;
+Task rowTask = row.Completion;
+Task destTask1 = dest1.Completion;
+Task destTask1 = dest2.Completion;
+
+Task.WaitAll(destTask1, destTask2, sourceTask1, sourceTask2, rowTask);
+```
+
+The `ExecuteAsync()` method will return a Task which completes when all data is read from the source and posted in the data flow. This is the same task that the `Completion` property holds. 
 You don't have to wait for this task (but of course you can). But if a destination is completed, all its predecessors are also completed. 
-The `Completion` property will return a Task which completes when all data has arrived in the component. Every component has the Completion property. 
+
+The `Completion` property will return a Task which is completed when all data has be processed by the component. 
 

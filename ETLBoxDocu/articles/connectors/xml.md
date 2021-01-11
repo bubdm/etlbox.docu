@@ -147,8 +147,6 @@ source.LinkTo(schemaValidation);
 schemaValidation.LinkTo(dest);
 schemaValidation.LinkErrorTo(error);
 source.Execute();
-dest.Wait();
-error.Wait()
 ```
 
 

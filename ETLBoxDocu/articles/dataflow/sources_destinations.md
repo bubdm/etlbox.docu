@@ -200,8 +200,7 @@ public static void Main() {
     JsonDestination<CsvType> dest = new JsonDestination<CsvType>("test.json");
     dest.ResourceType = ResourceType.File;  //Default is Http for json
     source.LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 }
 ```
 
@@ -217,7 +216,6 @@ public static void Main() {
     dest.ResourceType = ResourceType.File; //Default is Http for json
     source.LinkTo(dest);
     source.Execute();
-    dest.Wait();
 }
 ```
 

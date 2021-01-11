@@ -41,8 +41,7 @@ No we link the components together and execute the data flow.
 ```C#
 sourceCSV.LinkTo(importDest);
 
-sourceCSV.Execute();
-importDest.Wait();
+Network.Execute(sourceCSV);
 ```
 
 In our demo we start the data flow with `Execute()` - this will read all data from the source 
@@ -216,8 +215,7 @@ object. But this way this example demonstrated the power of the RowTransformatio
 Finally, we execute the data flow and wait for the completion. 
 
 ```C#
-source.Execute();
-dest.Wait();
+Network.Execute(source);
 ```
 
 The destination table on Sql Server should now look like this:

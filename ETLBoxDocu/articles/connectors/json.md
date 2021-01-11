@@ -191,7 +191,6 @@ DbDestination<ExpandoObject> dest = new DbDestination<ExpandoObject>(Connection,
 
 source.LinkTo(trans).LinkTo(dest);
 source.Execute();
-dest.Wait();
 ```
 
 ### 3rd party libraries

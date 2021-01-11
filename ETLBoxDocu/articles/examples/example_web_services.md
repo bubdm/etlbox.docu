@@ -62,8 +62,7 @@ JsonSource<Todo> source = new JsonSource<Todo>("https://jsonplaceholder.typicode
 MemoryDestination<Todo> dest = new MemoryDestination<Todo>(200);
 
 source.LinkTo(dest);
-source.Execute();
-dest.Wait();
+Network.Execute(source);
 
 //dest.Data will now contain all items from the web service
 ```

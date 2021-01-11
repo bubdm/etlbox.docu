@@ -187,9 +187,7 @@ public static void Main()
     source2.LinkTo(join.RightInput);
     join.LinkTo(dest);
 
-    source1.Execute();
-    source2.Execute();
-    dest.Wait();
+    Network.Execute(source1, source2);    
 
     foreach (var row in dest.Data)
         Console.WriteLine(row.FullName);
@@ -260,9 +258,7 @@ public void JoinWithComparisonExample()
     source2.LinkTo(join.RightInput);
     join.LinkTo(dest);
 
-    source1.Execute();
-    source2.Execute();
-    dest.Wait();
+    Network.Execute(source1, source2);
 
     foreach (var row in dest.Data)
         Console.WriteLine(row.FullName);
@@ -347,9 +343,7 @@ public static void Main()
     source2.LinkTo(join.PassingTarget);
     join.LinkTo(dest);
 
-    source1.Execute();
-    source2.Execute();
-    dest.Wait();
+    Network.Execute(source1, source2);
 
     foreach (var row in dest.Data)
         Console.WriteLine(row.FullName);

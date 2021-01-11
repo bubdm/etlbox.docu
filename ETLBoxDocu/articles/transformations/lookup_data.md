@@ -130,8 +130,7 @@ public class Customer
     var dest = new MemoryDestination<Order>();
 
     orderSource.LinkTo(lookup).LinkTo(dest);
-    orderSource.Execute();
-    dest.Wait();
+    Network.Execute(orderSource);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
@@ -182,8 +181,7 @@ public static void Main()
     var dest = new MemoryDestination<Order>();
 
     orderSource.LinkTo(lookup).LinkTo(dest);
-    orderSource.Execute();
-    dest.Wait();
+    Network.Execute(orderSource);
 
     foreach (var row in dest.Data)
         Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
@@ -232,8 +230,7 @@ This is how the code looks like using the ExpandoObject:
     var dest = new MemoryDestination();
 
     orderSource.LinkTo(lookup).LinkTo(dest);
-    orderSource.Execute();
-    dest.Wait();
+    Network.Execute(orderSource);
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($"Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}");
