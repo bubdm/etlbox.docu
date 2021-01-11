@@ -58,10 +58,10 @@
                           <a href="../../api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/pricing.html" title="Pricing">Pricing</a>
+                          <a href="../../articles/buy/pricing.html" title="Pricing">Pricing</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/contact.html" title="Contact">Contact</a>
+                          <a href="../../articles/buy/contact.html" title="Contact">Contact</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -235,8 +235,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyRow&gt;();
 
     source.LinkTo(rowTrans).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;InputValue:{row.InputValue} Result:{row.Result}&quot;);
@@ -275,8 +274,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyArray&gt;();
 
     source.LinkTo&lt;MyArray&gt;(rowTrans).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Col1:{row.Col1} Col2:{row.Col2}&quot;);
@@ -328,8 +326,7 @@ public static void Main()
     var dest = new VoidDestination();
 
     source.LinkTo(rowTrans).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     //Output
     //Id:1 Value:A
@@ -381,8 +378,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyRow&gt;();
 
     source.LinkTo(duplication).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Value:{row.Value}&quot;);
@@ -447,8 +443,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyRow&gt;();
 
     source.LinkTo(multi).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Char:{row.Char}&quot;);
@@ -500,8 +495,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyChar&gt;();
 
     source.LinkTo&lt;MyChar&gt;(multi).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Char:{row.Char}&quot;);

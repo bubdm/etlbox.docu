@@ -58,10 +58,10 @@
                           <a href="../../api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/pricing.html" title="Pricing">Pricing</a>
+                          <a href="../../articles/buy/pricing.html" title="Pricing">Pricing</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/contact.html" title="Contact">Contact</a>
+                          <a href="../../articles/buy/contact.html" title="Contact">Contact</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -323,8 +323,7 @@ public class Customer
     var dest = new MemoryDestination&lt;Order&gt;();
 
     orderSource.LinkTo(lookup).LinkTo(dest);
-    orderSource.Execute();
-    dest.Wait();
+    Network.Execute(orderSource);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}&quot;);
@@ -368,8 +367,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;Order&gt;();
 
     orderSource.LinkTo(lookup).LinkTo(dest);
-    orderSource.Execute();
-    dest.Wait();
+    Network.Execute(orderSource);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}&quot;);
@@ -413,8 +411,7 @@ public static void Main()
     var dest = new MemoryDestination();
 
     orderSource.LinkTo(lookup).LinkTo(dest);
-    orderSource.Execute();
-    dest.Wait();
+    Network.Execute(orderSource);
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($&quot;Order:{row.OrderNumber} Name:{row.CustomerName} Id:{row.CustomerId}&quot;);

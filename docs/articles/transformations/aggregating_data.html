@@ -58,10 +58,10 @@
                           <a href="../../api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/pricing.html" title="Pricing">Pricing</a>
+                          <a href="../../articles/buy/pricing.html" title="Pricing">Pricing</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/contact.html" title="Contact">Contact</a>
+                          <a href="../../articles/buy/contact.html" title="Contact">Contact</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -241,8 +241,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyAggRow&gt;();
 
     source.LinkTo&lt;MyAggRow&gt;(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);    
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Sum:{row.AggValue}&quot;);
@@ -274,8 +273,7 @@ Of course you can do this also with normal objects. This is alternative to the a
     var dest = new MemoryDestination();
 
     source.LinkTo(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($&quot;Sum:{row.AggValue}&quot;);
@@ -325,8 +323,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyAggRow2&gt;();
 
     source.LinkTo&lt;MyAggRow2&gt;(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Sum:{row.AggValue}&quot;);
@@ -368,8 +365,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyAggRow3&gt;();
 
     source.LinkTo&lt;MyAggRow3&gt;(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Sum for {row.Group}:{row.AggValue}&quot;);
@@ -420,8 +416,7 @@ public static void Main()
     var dest = new MemoryDestination();
 
     source.LinkTo(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (dynamic row in dest.Data)
         Console.WriteLine($&quot;Sum for {row.Group}:{row.AggValue}&quot;);
@@ -467,8 +462,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;MyAggRow4&gt;();
 
     source.LinkTo&lt;MyAggRow4&gt;(agg).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Sum for {row.Group}:{row.AggValue}&quot;);
@@ -566,8 +560,7 @@ public static void Main()
     var dest = new MemoryDestination&lt;AveragePerDay&gt;();
 
     source.LinkTo&lt;AveragePerDay&gt;(block).LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 
     foreach (var row in dest.Data)
         Console.WriteLine($&quot;Day:{row.Day} Totals:{row.TotalOrders} Average:{row.AveragePrice}&quot;);

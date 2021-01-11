@@ -58,10 +58,10 @@
                           <a href="../../api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/pricing.html" title="Pricing">Pricing</a>
+                          <a href="../../articles/buy/pricing.html" title="Pricing">Pricing</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/contact.html" title="Contact">Contact</a>
+                          <a href="../../articles/buy/contact.html" title="Contact">Contact</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -252,8 +252,7 @@ See <a href="https://jsonplaceholder.typicode.com">jsonplaceholder.typicode.com<
 MemoryDestination&lt;Todo&gt; dest = new MemoryDestination&lt;Todo&gt;(200);
 
 source.LinkTo(dest);
-source.Execute();
-dest.Wait();
+Network.Execute(source);
 
 //dest.Data will now contain all items from the web service
 </code></pre>

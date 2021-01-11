@@ -19964,12 +19964,12 @@ references:
   commentId: F:ETLBox.DataFlow.Transformations.CacheMode.Full
   fullName: ETLBox.DataFlow.Transformations.CacheMode.Full
   nameWithType: CacheMode.Full
-- uid: ETLBox.DataFlow.Transformations.CacheMode.PartialFromDb
-  name: PartialFromDb
-  href: api/ETLBox.DataFlow.Transformations.CacheMode.html#ETLBox_DataFlow_Transformations_CacheMode_PartialFromDb
-  commentId: F:ETLBox.DataFlow.Transformations.CacheMode.PartialFromDb
-  fullName: ETLBox.DataFlow.Transformations.CacheMode.PartialFromDb
-  nameWithType: CacheMode.PartialFromDb
+- uid: ETLBox.DataFlow.Transformations.CacheMode.Partial
+  name: Partial
+  href: api/ETLBox.DataFlow.Transformations.CacheMode.html#ETLBox_DataFlow_Transformations_CacheMode_Partial
+  commentId: F:ETLBox.DataFlow.Transformations.CacheMode.Partial
+  fullName: ETLBox.DataFlow.Transformations.CacheMode.Partial
+  nameWithType: CacheMode.Partial
 - uid: ETLBox.DataFlow.Transformations.ColumnRename
   name: ColumnRename
   href: api/ETLBox.DataFlow.Transformations.ColumnRename.html

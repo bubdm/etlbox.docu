@@ -9,9 +9,9 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Exceution, Linking and Completion | ETLBox - a lightweight ETL library for C#. </title>
+    <title>Royalty-free End-user License Agreement | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Exceution, Linking and Completion | ETLBox - a lightweight ETL library for C#. ">
+    <meta name="title" content="Royalty-free End-user License Agreement | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -110,8 +110,8 @@
                           <li class="">
                             <a href="../dataflow/transformations_overview.html" title="Transformations" class="">Transformations</a>
                           </li>
-                          <li class="active">
-                            <a href="../dataflow/linking_execution.html" title="Linking and execution" class="active">Linking and execution</a>
+                          <li class="">
+                            <a href="../dataflow/linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
                           </li>
                           <li class="">
                             <a href="../dataflow/generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
@@ -206,217 +206,61 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="exceution-linking-and-completion">Exceution, Linking and Completion</h1>
+<h1 id="royalty-free-end-user-license-agreement">Royalty-free End-user License Agreement</h1>
 
-<h2 id="linking-components">Linking components</h2>
-<p>Before you can execute a data flow, you need to link your source, transformation and destinations.
-The linking is quite easy - every source component and every transformation offers a LinkTo() method.
-This method accepts a target, which either is another transformation or a destination.</p>
-<p>Example of Linking a <code>DbSource</code> to a <code>RowTransformation</code> and the to a <code>DbDestination</code>.</p>
-<pre><code class="lang-C#">//Create the components
-DbSource source = new DbSource(&quot;SourceTable&quot;);
-RowTransformation rowTrans = new RowTransformation( row =&gt; row );
-DbDestination dest = new DbDestination(&quot;DestTable&quot;);
-
-//Link the components
-source.LinkTo(row);
-row.LinkTo(dest);
-</code></pre>
-<p>This will result in a flow which looks like this:</p>
-<p>DbSource --&gt; RowTransformation --&gt; DbDestination</p>
-<h3 id="fluent-notation">Fluent notation</h3>
-<p>There is also a chained notation available, which give you the same result:</p>
-<pre><code class="lang-C#">//Link the components
-source.LinkTo(row).LinkTo(dest);
-</code></pre>
-<p>This notation can be used most of the time - please note that it won't work with <code>Multicast</code> or <code>MergeJoin</code> as these
-components have more than one input respective output.</p>
-<p>If your transformation has a different output type than your input, you need to adjust the linking a little bit. The LinkTo
-accepts a type that defines the output of the linking.
-E.g. if you have a <code>RowTransformation&lt;InputType, OutputType&gt; row</code>, the linking would look like this:</p>
-<pre><code class="lang-C#">source.LinkTo&lt;OutputType&gt;(row).LinkTo(dest)
-</code></pre>
-<h2 id="predicates">Predicates</h2>
-<p>Whenever you link components in a data flow, you can add a filter expression to the link -
-this is called a predicate for the link.
-The filter expression is evaluated for every row that goes through the link.
-If the evaluated expression is true, data will pass into the linked component.
-If evaluated to false, the data flow will try the next link to send its data through.</p>
-<p><strong>Note:</strong> Data will be send only into one of the connected links. If there is more than one link,
-the first link that either has no predicate or which predicate returns true is used.</p>
-<p>If you need data send into two ore more connected components, you can use the Multicast:</p>
-<pre><code class="lang-C#">source.LinkTo(multicast);
-multicast.LinkTo(dest1, row =&gt; row.Value2 &lt;= 2);
-multicast.LinkTo(dest2,  row =&gt; row.Value2 &gt; 2);
-source.Execute();
-dest1.Wait();
-dest2.Wait();
-</code></pre>
-<h3 id="voiddestination">VoidDestination</h3>
-<p>Whenever you use predicates, sometime you end up with data which you don't want to write into a destination.
-Unfortunately, your DataFlow won't finish until all rows where written into any destination block. That's why
-there is a <code>VoidDestination</code> in ETLBox. Use this destination for all records for that you don't wish any further processing.</p>
-<pre><code class="lang-C#">VoidDestination voidDest = new VoidDestination(); 
-source.LinkTo(dest, row =&gt; row.Value &gt; 0);
-souce.Link(voidDest, row =&gt; row.Value &lt;= 0);
-</code></pre>
-<h4 id="implicit-use-of-voiddestination">Implicit use of VoidDestination</h4>
-<p>You don't have to define the <code>VoidDestinatin</code> explicitly. Assuming that we have a Database Source
-that we want to link to a database destination. But we only want to let data pass through where the
-a column is greater than 0. The rest we want to ignore. Normally, we would need to link the data twice like in
-the example above. But there is a short way to write it:</p>
-<pre><code class="lang-C#">source.LinkTo(dest, row =&gt; row.Value &gt; 0,  row =&gt; row.Value &lt;= 0);
-</code></pre>
-<p>Internally, this will create a <code>VoidDestination</code> when linking the components, but you don't have to deal with anymore.
-At the end, only records where the Value column is greater 0 will be written into the destination.</p>
-<h2 id="linking-errors">Linking errors</h2>
-<p>By default, exception won't be handled within you data flow components. Whenever within a source, transformation or
-a destination an error occurs, this exception will be thrown in your user code. You can use the normal try/catch block to handle
-these exceptions.</p>
-<p>If you want to handle exceptions within your data flow, some components offer the ability to redirect errors.
-Beside the normal <code>LinkTo</code> method, you can use the  <code>LinkErrorTo</code> to redirect erroneous records into a separate pipeline.</p>
-<p>Here an example for a database source, where error records are linked into a MemoryDestination:</p>
-<pre><code class="lang-C#">DbSource&lt;MySimpleRow&gt; source = new DbSource&lt;MySimpleRow&gt;(connection, &quot;SourceTable&quot;);
-DbDestination&lt;MySimpleRow&gt; dest = new DbDestination&lt;MySimpleRow&gt;(connection, &quot;DestinationTable&quot;);
-MemoryDestination&lt;ETLBoxError&gt; errorDest = new MemoryDestination&lt;ETLBoxError&gt;();
-source.LinkTo(dest);
-source.LinkErrorTo(errorDest);
-source.Execute();
-</code></pre>
-<p><code>LinkErrorTo</code> only accepts transformations or destinations that have the input type <code>ETLBoxError</code>. It will contain
-the exception itself and an exception message, the time the error occurred, and the faulted record as json (if it was
-possible to convert it).</p>
-<p>ETLBoxError is defined like this:</p>
-<pre><code class="lang-C#">public class ETLBoxError
-{
-    public string ErrorText { get; set; }
-    public DateTime ReportTime { get; set; }
-    public string ExceptionType { get; set; }
-    public string RecordAsJson { get; set; }
-}
-</code></pre>
-<h3 id="createerrortabletask">CreateErrorTableTask</h3>
-<p>If you want to store your exception in a table in a database, ETLBox offers you a task that will automatically
-create this table for you.</p>
-<pre><code class="lang-C#">CreateErrorTableTask.Create(connection, &quot;etlbox_error&quot;);
-</code></pre>
-<p>The table will have three columns: ErrorText, RecordAsJson and ReportTime (with the right data type). Of course you can
-create you own table.</p>
-<h2 id="multiple-inputs">Multiple inputs</h2>
-<p>There is no restriction on the amount of inputs that a destination or transformation can have. Instead of having
-only single source, you can have multiple source for every component that can be linked.</p>
-<p>E.g. this is possible graph for you data flow:</p>
-<pre><code>DbSource1 ---&gt; RowTransformation1 -|
-DbSource2 -|-&gt; RowTransformation2 -|-&gt; DbDestination
-CsvSource -|
-</code></pre>
-<p>In this example graph, RowTransformation2 has two inputs: DbSource2 &amp; CsvSource. Also, DbDestination has two inputs:
-RowTransformation1 &amp; RowTransformation2. The DbDestination will complete when data from all sources
-(DbSource1, DbSource2, CsvSource) was written into the data flow and arrived at the DbDestination.</p>
-<p><em>Note</em>: When you want to merge you data of multiple source before any further processing, consider using the
-<code>MergeJoin</code>. If you want to split your data, you can use the <code>Multicast</code>.
-<a href="../transformations/broadcast_merge_join.html">Read more about these transformations here.</a></p>
-<h2 id="synchronous-execution">Synchronous Execution</h2>
-<p>The easiest way to execute a data flow is synchronous. That means that execution of your program is paused
-until all data was read from sources and written into all destinations. Using the synchronous execution also makes
-debugging a lot easier, as you don't have to deal with async programming and the specialties of exception
-handling with tasks.</p>
-<p><em>Note</em>: In the background, the data flow is always executed asynchronous! The underlying data flow engine
-is based on <code>Microsoft.TPL.Dataflow</code>. ETLBox will wrap this behavior into synchronous method calls.</p>
-<p><em>Note</em>: Starting with version 2.3.0, the Execute() on any source is a replace for the Network.Execute(comp) call.
-It will trigger all sources in the network to post their data and will also wait for all destinations. If you want to have a source
-to post all data into the network and then return use the Post() method instead.</p>
-<h3 id="example-sync-execution">Example sync execution</h3>
-<pre><code class="lang-C#">//Prepare the flow
-DbSource source1 = new DbSource1(&quot;SourceTable1&quot;);
-DbSource source2 = new DbSource2(&quot;SourceTable2&quot;);
-RowTransformation rowTrans = new RowTransformation( row =&gt; row );
-DbDestination dest1 = new DbDestination(&quot;DestTable&quot;);
-DbDestination dest2 = new DbDestination(&quot;DestTable&quot;);
-
-//Link the flow
-source1.LinkTo(row);
-source2.LinkTo(row);
-row.LinkTo(dest1, row =&gt; row.Value &lt; 10);
-row.LinkTo(dest2, row =&gt; row.Value &gt;= 10);
-
-//Execute the whole data flow
-Network.Execute(source1, source2);
-</code></pre>
-<p>The <code>Network.Execute(params DataFlowComponent[])</code> method will execute the whole data flow and block exeuction until all data has arrived at <em>all destinations</em>.</p>
-<p>Please note that you don't have to pass all sources into the Network class. You only have to pass at least <em>one</em> component into the Execute method that is part of the network. The following statement also would execute the <em>whole</em> data flow:</p>
-<pre><code class="lang-C#">Network.Execute(source1);
-Network.Execute(row);
-Network.Execute(source1, source2, row, dest1, dest2);
-Network.Execute(source1, row, dest2);
-...
-</code></pre>
-<h4 id="using-the-shortcut-on-the-sources">Using the shortcut on the sources</h4>
-<p>There is a shortcut for the Network.Execute(..) method.
-Every data flow source does offer an Execute() method. This will trigger the corresponding Network.Execute() method, and will pass the source itself.
-For the example above, you could also trigger the <em>whole</em> network like this:</p>
-<pre><code class="lang-C#">source1.Execute();
-</code></pre>
-<pre><code class="lang-C#">source2.Execute();
-</code></pre>
-<p>Or run the execution on for both:</p>
-<pre><code class="lang-C#">source1.Execute();
-source2.Execute();
-</code></pre>
-<p>Though the second execution wouldn't do nothing, as the whole network was already execute.</p>
-<p>In versions &lt; 2.3.0, the examples where always using an Execute()/Wait() pattern like this:</p>
-<pre><code class="lang-C#">source1.Execute();
-source2.Execute();
-dest1.Wait();
-dest2.Wat();
-</code></pre>
-<p>This pattern will still work, but after the execution of source1 the network would be already run and complete. The rest of the code blocks will then immediately return, doing nothing.</p>
-<h2 id="asynchronous-execution">Asynchronous execution</h2>
-<p>If you are familiar with async programming, you can also execute the data flow asynchronous. This means that
-execution of your program will continue while the data is read from the source and written into the destinations
-in separate task(s) in the background.</p>
-<h3 id="example-async-execution">Example async execution</h3>
-<pre><code class="lang-C#">//Prepare the flow
-DbSource source1 = new DbSource1(&quot;SourceTable1&quot;);
-DbSource source2 = new DbSource2(&quot;SourceTable2&quot;);
-RowTransformation rowTrans = new RowTransformation( row =&gt; row );
-DbDestination dest1 = new DbDestination(&quot;DestTable&quot;);
-DbDestination dest2 = new DbDestination(&quot;DestTable&quot;);
-
-//Link the flow
-source1.LinkTo(row);
-source2.LinkTo(row);
-row.LinkTo(dest1, row =&gt; row.Value &lt; 10);
-row.LinkTo(dest2, row =&gt; row.Value &gt;= 10);
-
-//Execute the whole data flow
-Task networkCompletion = Network.ExecuteAsync(source1, source2);
-
-//Now you can wait for the whole network
-networkCompletion.Wait();
-</code></pre>
-<h4 id="using-completion-tasks-on-the-components">Using completion tasks on the components</h4>
-<p>Of course if you want more control over your network you can use the Completion property that exposes the current task of each data flow component.</p>
-<p>E.g. you can trigger your flow like this:</p>
-<pre><code>source1.ExecuteAsync();
-source2.ExecuteAsync();
-Task destTask1 = dest1.Completion;
-Task destTask1 = dest2.Completion;
-
-Task.WaitAll(destTask1, destTask2);
-</code></pre>
-<p>or like this:</p>
-<pre><code class="lang-C#">Task sourceTask1 = source1.ExecuteAsync();
-Task sourceTask2 = source2.Completion;
-Task rowTask = row.Completion;
-Task destTask1 = dest1.Completion;
-Task destTask1 = dest2.Completion;
-
-Task.WaitAll(destTask1, destTask2, sourceTask1, sourceTask2, rowTask);
-</code></pre>
-<p>The <code>ExecuteAsync()</code> method will return a Task which completes when all data is read from the source and posted in the data flow. This is the same task that the <code>Completion</code> property holds.
-You don't have to wait for this task (but of course you can). But if a destination is completed, all its predecessors are also completed.</p>
-<p>The <code>Completion</code> property will return a Task which is completed when all data has be processed by the component.</p>
+<p>(C) 2020 ETLBox Office Andreas Lennartz</p>
+<p>THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.</p>
+<ol>
+<li>OWNERSHIP, LICENSE GRANT
+This is a license agreement and not an agreement for sale. We reserve ownership of all intellectual property rights inherent in or relating to the Software, which include, but are not limited to, all copyright, patent rights, all rights in relation to registered and unregistered trademarks (including service marks), confidential information (including trade secrets and know-how) and all rights other than those expressly granted by this License Agreement.</li>
+</ol>
+<p>Subject to the payment of the fee required and subject to the terms and conditions of this License Agreement, We grant to You a revocable, non- transferable and non-exclusive license (i) for Designated User(s) (as defined below) within Your organization to install and use the Software on any workstations used exclusively by such Designated User and (ii) for You to install and use the Software in connection with unlimited domains and sub-domains on unlimited servers, solely in connection with distribution of the Software in accordance with sections 3 and 4 below. This license is not sublicensable except as explicitly set forth herein. “Designated User(s)” shall mean Your employee(s) acting within the scope of their employment or Your consultant(s) or contractor(s) acting within the scope of the services they provide for You or on Your behalf for whom You have purchased a license to use the Software.</p>
+<ol start="2">
+<li><p>PERMITTED USES, SOURCE CODE, MODIFICATIONS
+We provide You with source code so that You can create Modifications of the original Software, where Modification means: a) any addition to or deletion from the contents of a file included in the original Software or previous Modifications created by You, or b) any new file that contains any part of the original Software or previous Modifications. While You retain all rights to any original work authored by You as part of the Modifications, We continue to own all copyright and other intellectual property rights in the Software.</p>
+</li>
+<li><p>DISTRIBUTION
+You may distribute the Software in any applications, frameworks, or elements (collectively referred to as an “Application” or “Applications”) that you develop using the Software in accordance with this License Agreement, provided that such distribution does not violate the restrictions set forth in section 4 of this License Agreement. You must not remove, obscure or interfere with any copyright, acknowledgment, attribution, trademark, warning or disclaimer statement affixed to, incorporated in or otherwise applied in connection with the Software.</p>
+</li>
+</ol>
+<p>You are required to ensure that the Software is not reused by or with any applications other than those with which You distribute it as permitted herein. For example, if You install the Software on a customer’s server, that customer is not permitted to use the Software independently of Your application, and must be informed as such.</p>
+<p>You will not owe Us any royalties for Your distribution of the Software in accordance with this License Agreement.</p>
+<ol start="4">
+<li>PROHIBITED USES
+You may not, without Our prior written consent, redistribute the Software or Modifications other than by including the Software or a portion thereof within Your own product, which must have substantially different functionality than the Software or Modifications and must not allow any third party to use the Software or Modifications, or any portions thereof, for software development or application development purposes. You are explicitly not allowed to redistribute the Software or Modifications as part of any product that can be described as a development toolkit or library, an application builder, a website builder or any product that is intended for use by software, application, or website developers or designers. You may not change or remove the copyright notice from any of the files included in the Software or Modifications.</li>
+</ol>
+<p>You may redistribute the Software as part of Your own products.</p>
+<p>UNDER NO CIRCUMSTANCES MAY YOU USE THE SOFTWARE FOR A PRODUCT THAT IS INTENDED FOR SOFTWARE OR APPLICATION DEVELOPMENT PURPOSES.</p>
+<ol start="5">
+<li><p>TERMINATION
+This License Agreement and Your right to use the Software and Modifications will terminate immediately without notice if You fail to comply with the terms and conditions of this License Agreement. Upon termination, You agree to immediately cease using and destroy the Software or Modifications, including all accompanying documents. The provisions of sections 4, 5, 6, 7, 8, 9, 10 and 11 will survive any termination of this License Agreement.</p>
+</li>
+<li><p>DISCLAIMER OF WARRANTIES
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE AND OUR SUPPLIERS DISCLAIM ALL WARRANTIES AND CONDITIONS, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT, WITH REGARD TO THE SOFTWARE. WE DO NOT GUARANTEE THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR-FREE, AND YOU ACKNOWLEDGE THAT IT IS NOT TECHNICALLY PRACTICABLE FOR US TO DO SO.</p>
+</li>
+<li><p>LIMITATION OF LIABILITIES
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE, OUR ENTIRE LIABILITY UNDER ANY PROVISION OF THIS LICENSE AGREEMENT SHALL BE LIMITED TO THE AMOUNT ACTUALLY PAID BY YOU FOR THE SOFTWARE.</p>
+</li>
+<li><p>VERIFICATION
+We or a certified auditor acting on Our behalf, may, upon its reasonable request and at its expense, audit You with respect to the use of the Software. Such audit may be conducted by mail, electronic means or through an in-person visit to Your place of business. Any such in-person audit shall be conducted during regular business hours at Your facilities and shall not unreasonably interfere with Your business activities. We shall not remove, copy, or redistribute any electronic material during the course of an audit. If an audit reveals that You are using the Software in a way that is in material violation of the terms of the License Agreement, then You shall pay Our reasonable costs of conducting the audit. In the case of a material violation, You agree to pay Us any amounts owing that are attributable to the unauthorized use. In the alternative, We reserve the right, at Our sole option, to terminate the licenses for the Software.</p>
+</li>
+<li><p>THIRD PARTY SOFTWARE
+The Software may contain third party open-source software which requires notices and/or additional terms and conditions. Such required third party software notices and/or additional terms and conditions are located in the NOTICES file accompanying the Software distribution (also available at <a href="https://www.hangfire.io/licensing/third-party.html">https://www.hangfire.io/licensing/third-party.html</a>), and are made a part of and incorporated by reference into this Agreement. By accepting this Agreement, you are also accepting the additional terms and conditions, if any, set forth therein.</p>
+</li>
+<li><p>PAYMENT AND TAXES
+If credit has been extended to You by Us, all payments under this License Agreement are due within thirty (30) days of the date We mail an invoice to You. If We have not extended credit to You, You shall be required to make payment concurrent with the delivery of the Software by Us. All amounts payable are gross amounts but exclusive of any value added tax, use tax, sales tax or similar tax. You shall be entitled to withhold from payments any applicable withholding taxes and comply with all applicable tax and employment legislation. Each party shall pay all taxes (including, but not limited to, taxes based upon its income) or levies imposed on it under applicable laws, regulations and tax treaties as a result of this Agreement and any payments made hereunder (including those required to be withheld or deducted from payments). Each party shall furnish evidence of such paid taxes as is sufficient to enable the other party to obtain any credits available to it, including original withholding tax certificates.</p>
+</li>
+<li><p>MISCELLANEOUS
+The license granted herein applies only to the version of the Software available when purchased in connection with the terms of this License Agreement. Any previous or subsequent license granted to You for use of the Software shall be governed by the terms and conditions of the agreement entered in connection with purchase of that version of the Software. You agree that you will comply with all applicable laws and regulations with respect to the Software, including without limitation all export and re-export control laws and regulations.</p>
+</li>
+</ol>
+<p>While redistributing the Software or Modifications thereof, You may choose to offer acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License Agreement. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on Our behalf. You agree to indemnify, defend, and hold Us harmless from and against any liability incurred by, or claims asserted against, Us (i) by reason of Your accepting any such support, warranty, indemnity or additional liability; or (ii) arising out of the use, reproduction or distribution of Your Application, except to the extent such claim is solely based on the inclusion of the Software therein.</p>
+<p>You agree to be identified as a customer of ours and You agree that We may refer to You by name, trade name and trademark, if applicable, and may briefly describe Your business in our marketing materials and web site.</p>
+<p>You may not assign this License Agreement without Our prior written consent, which will not be unreasonably withheld. This License Agreement will inure to the benefit of Our successors and assigns.</p>
+<p>You acknowledge that this License Agreement is complete and is the exclusive representation of our agreement. No oral or written information given by Us or on our behalf shall create a warranty or collateral contract, or in any way increase the scope of this License Agreement in any way, and You may not rely on any such oral or written information. No term or condition contained in any purchase order shall apply unless expressly accepted by Us in writing.</p>
+<p>There are no implied licenses or other implied rights granted under this License Agreement, and all rights, save for those expressly granted hereunder, shall remain with Us and our licensors. In addition, no licenses or immunities are granted to the combination of the Software and/or Modifications, as applicable, with any other software or hardware not delivered by Us to You under this License Agreement.</p>
+<p>If any provision in this License Agreement shall be determined to be invalid, such provision shall be deemed omitted; the remainder of this License Agreement shall continue in full force and effect. If any remedy provided is determined to have failed for its essential purpose, all limitations of liability and exclusions of damages set forth in this License Agreement shall remain in effect.</p>
+<p>This License Agreement may be modified only by a written instrument signed by an authorized representative of each party.</p>
 </article>
           </div>
           

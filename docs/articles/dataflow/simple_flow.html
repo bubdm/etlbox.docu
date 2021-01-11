@@ -58,10 +58,10 @@
                           <a href="../../api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/pricing.html" title="Pricing">Pricing</a>
+                          <a href="../../articles/buy/pricing.html" title="Pricing">Pricing</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/contact.html" title="Contact">Contact</a>
+                          <a href="../../articles/buy/contact.html" title="Contact">Contact</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -365,18 +365,13 @@ become an essential part of your creation. There are transformations that have m
 several sources. Even sources can split data across their destinations - you can defines rules how to split data as so called predicates.</p>
 <h3 id="executing-the-dataflow">Executing the dataflow</h3>
 <p>Now we will give the source the command to start reading data.</p>
-<pre><code class="lang-C#">  source.Execute();
+<pre><code class="lang-C#">  Network.Execute(source);
 </code></pre>
 <p>This code will execute as an synchronous task - though the data flow itself will run in it's own thread.
-This method will continue execution when all data was read from the source and posted into the data flow. This does not mean that your data has arrived at the destination
-yet - but reading from the source was done successfully when this method returns. To operate totally asynchronously, you can use the <code>ExecuteAsync()</code> method.</p>
-<p>Now we want to wait for the Data Flow pipeline to finish. So we add this line to our code</p>
-<pre><code class="lang-C#">dest.Wait();
-</code></pre>
-<p>When <code>dest.Wait()</code> returns, all data was read from the source and written into the database table.  To operate totally asynchronously, you can use the <code>Completion</code> property to
-receive a Task object for further handling.</p>
-<p>*If you are new to the .NET Task parallel library (TPL) and asynchronous programming, I recommend to use the <code>Execute()</code> &amp; <code>Wait()</code> pattern to run your data flows.
-If you want to use <code>ExecuteAsny()</code> and <code>Completion</code>, learn more about <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/">Asynchronous programming with async and await here.</a></p>
+To operate totally asynchronously, you can use the <code>ExecuteAsync()</code> method. Each component does expose a <code>public Task Completion</code> property, which gives you information if the component is still running or already completed.</p>
+<p><em>Note</em> By default, source.Execute() on any of the source components is a shortcut for <code>Network.Execute(source);</code> .
+The <code>Network.Execute(params DataFlowComponent[])</code> was introduced with version 2.3.0. You will find the use of both methods throughout this documentation. If you are using more than one source component, the recommendation is to use the Network.Execute(..) method.</p>
+<p>If you are interested in .NET Task parallel library (TPL) and asynchronous programming, learn more about <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/">Asynchronous programming with async and await here.</a></p>
 <h2 id="view-the-full-code">View the full code</h2>
 <p>This demo code is available online - <a href="https://github.com/etlbox/etlbox.demo/tree/main/SimpleFlow">view the full code on Github</a>.</p>
 </article>

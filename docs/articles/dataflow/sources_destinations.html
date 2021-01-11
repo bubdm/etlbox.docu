@@ -58,10 +58,10 @@
                           <a href="../../api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/pricing.html" title="Pricing">Pricing</a>
+                          <a href="../../articles/buy/pricing.html" title="Pricing">Pricing</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/contact.html" title="Contact">Contact</a>
+                          <a href="../../articles/buy/contact.html" title="Contact">Contact</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -352,8 +352,7 @@ public static void Main() {
     JsonDestination&lt;CsvType&gt; dest = new JsonDestination&lt;CsvType&gt;(&quot;test.json&quot;);
     dest.ResourceType = ResourceType.File;  //Default is Http for json
     source.LinkTo(dest);
-    source.Execute();
-    dest.Wait();
+    Network.Execute(source);
 }
 </code></pre>
 <h4 id="using-dynamic-objects">Using dynamic objects</h4>
@@ -365,7 +364,6 @@ public static void Main() {
     dest.ResourceType = ResourceType.File; //Default is Http for json
     source.LinkTo(dest);
     source.Execute();
-    dest.Wait();
 }
 </code></pre>
 <h3 id="read-more">Read more</h3>

@@ -58,10 +58,10 @@
                           <a href="../../api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/pricing.html" title="Pricing">Pricing</a>
+                          <a href="../../articles/buy/pricing.html" title="Pricing">Pricing</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/contact.html" title="Contact">Contact</a>
+                          <a href="../../articles/buy/contact.html" title="Contact">Contact</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -315,8 +315,7 @@ row.LinkTo(dest);
 </code></pre>
 <p>After linking the components, we want to have the source reading the input data.
 The destination should wait until it received all data.</p>
-<pre><code class="lang-C#">source.Execute();
-dest.Wait();
+<pre><code class="lang-C#">Network.Execute(source);
 </code></pre>
 <p>Finally, we check if the data was successfully loaded into the table and write it into the console output.
 We use the SQLTask for this and write the result into the output.</p>

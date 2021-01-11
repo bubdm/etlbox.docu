@@ -58,10 +58,10 @@
                           <a href="../../api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/pricing.html" title="Pricing">Pricing</a>
+                          <a href="../../articles/buy/pricing.html" title="Pricing">Pricing</a>
                       </li>
                       <li>
-                          <a href="../../articles/pricing/contact.html" title="Contact">Contact</a>
+                          <a href="../../articles/buy/contact.html" title="Contact">Contact</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -233,8 +233,7 @@ DbDestination importDest = new DbDestination(conMan, &quot;NameTable&quot;);
 <p>No we link the components together and execute the data flow.</p>
 <pre><code class="lang-C#">sourceCSV.LinkTo(importDest);
 
-sourceCSV.Execute();
-importDest.Wait();
+Network.Execute(sourceCSV);
 </code></pre>
 <p>In our demo we start the data flow with <code>Execute()</code> - this will read all data from the source
 and post it into the dataflow.  While reading data, incoming batches will already be written into the destination.
@@ -403,8 +402,7 @@ trans.LinkTo(dest);
 defined the property with <code>public string FullName =&gt; LastName + &quot;,&quot; + FirstName;</code> in your <code>NameListElement</code>
 object. But this way this example demonstrated the power of the RowTransformation a little bit.</p>
 <p>Finally, we execute the data flow and wait for the completion.</p>
-<pre><code class="lang-C#">source.Execute();
-dest.Wait();
+<pre><code class="lang-C#">Network.Execute(source);
 </code></pre>
 <p>The destination table on Sql Server should now look like this:</p>
 <table>
