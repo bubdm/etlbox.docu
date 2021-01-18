@@ -1,4 +1,4 @@
-﻿# Exceution, Linking and Completion
+﻿# Execution, Linking and Completion
 
 ## Linking components
 
