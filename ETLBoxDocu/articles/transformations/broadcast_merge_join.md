@@ -51,6 +51,9 @@ public static void Main()
 }
 ```
 
+The multicast will create clones of the objects by creating new instances and copying the properties from the input data. Fields, Static values and non public properties will be ignored. 
+If you want to customize how the clone is created, you can implement `ICloneable` on your object. 
+
 ### Splitting data 
 
 The Multicast is useful when you want to broadcast your data to all linked target. If you want to split up your data on the connected target, you don't need to use the Multicast. You can simple use predicates for this purpose.  Predicates allow you to let only certain data pass to a target.  This works because you can always link every component to more than one output component. But without Multicast or predicates in place, all message would be send only to the target that was linked first. 
