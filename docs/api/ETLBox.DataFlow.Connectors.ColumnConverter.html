@@ -9,10 +9,10 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TableData&lt;T&gt;
+    <title>Class ColumnConverter
    | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TableData&lt;T&gt;
+    <meta name="title" content="Class ColumnConverter
    | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
@@ -232,9 +232,6 @@
                           <li class="">
                             <a href="ETLBox.ControlFlow.TableData.html" title="TableData" class="">TableData</a>
                           </li>
-                          <li class="active">
-                            <a href="ETLBox.ControlFlow.TableData-1.html" title="TableData&lt;T&gt;" class="active">TableData&lt;T&gt;</a>
-                          </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.TableDefinition.html" title="TableDefinition" class="">TableDefinition</a>
                           </li>
@@ -244,9 +241,6 @@
                       <a href="ETLBox.ControlFlow.Tasks.html" title="ETLBox.ControlFlow.Tasks" class="">ETLBox.ControlFlow.Tasks</a>
                         
                         <ul class="nav level2">
-                          <li class="">
-                            <a href="ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html" title="CalculateDatabaseHashTask" class="">CalculateDatabaseHashTask</a>
-                          </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html" title="CleanUpSchemaTask" class="">CleanUpSchemaTask</a>
                           </li>
@@ -389,6 +383,9 @@
                             <a href="ETLBox.DataFlow.ExcelRange.html" title="ExcelRange" class="">ExcelRange</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.GenericTypeInfo.html" title="GenericTypeInfo" class="">GenericTypeInfo</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.GroupColumn.html" title="GroupColumn" class="">GroupColumn</a>
                           </li>
                           <li class="">
@@ -470,6 +467,9 @@
                             <a href="ETLBox.DataFlow.Network.html" title="Network" class="">Network</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
                           </li>
                           <li class="">
@@ -490,6 +490,9 @@
                       <a href="ETLBox.DataFlow.Connectors.html" title="ETLBox.DataFlow.Connectors" class="">ETLBox.DataFlow.Connectors</a>
                         
                         <ul class="nav level2">
+                          <li class="active">
+                            <a href="ETLBox.DataFlow.Connectors.ColumnConverter.html" title="ColumnConverter" class="active">ColumnConverter</a>
+                          </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination.html" title="ConcurrentMemoryDestination" class="">ConcurrentMemoryDestination</a>
                           </li>
@@ -773,9 +776,6 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="ETLBox.Helper.BatchLinq.html" title="BatchLinq" class="">BatchLinq</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.Helper.BulkSqlGenerator-1.html" title="BulkSqlGenerator&lt;T&gt;" class="">BulkSqlGenerator&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -798,6 +798,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.JsonProperty2JsonPath.MultipleResultsInPath.html" title="JsonProperty2JsonPath.MultipleResultsInPath" class="">JsonProperty2JsonPath.MultipleResultsInPath</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Helper.ListExtensions.html" title="ListExtensions" class="">ListExtensions</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.ObjectNameDescriptor.html" title="ObjectNameDescriptor" class="">ObjectNameDescriptor</a>
@@ -888,26 +891,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ETLBox.ControlFlow.TableData`1">
+            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter">
   
   
-  <h1 id="ETLBox_ControlFlow_TableData_1" data-uid="ETLBox.ControlFlow.TableData`1" class="text-break">Class TableData&lt;T&gt;
+  <h1 id="ETLBox_DataFlow_Connectors_ColumnConverter" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter" class="text-break">Class ColumnConverter
   </h1>
-  <div class="markdown level0 summary"><p>Defines a list of rows that can be inserted into a table</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TableData&lt;T&gt;</span></div>
-      <div class="level2"><a class="xref" href="ETLBox.ControlFlow.TableData.html">TableData</a></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="ETLBox.ControlFlow.ITableData.html">ITableData</a></div>
-    <div><span class="xref">System.Data.IDataReader</span></div>
-    <div><span class="xref">System.Data.IDataRecord</span></div>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div class="level1"><span class="xref">ColumnConverter</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -933,755 +927,29 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.ControlFlow.html">ETLBox.ControlFlow</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.DataFlow.Connectors.html">ETLBox.DataFlow.Connectors</a></h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
-  <h5 id="ETLBox_ControlFlow_TableData_1_syntax">Syntax</h5>
+  <h5 id="ETLBox_DataFlow_Connectors_ColumnConverter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TableData&lt;T&gt; : ITableData, IDataReader, IDataRecord, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ColumnConverter</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Object type of a row</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="constructors">Constructors
   </h3>
-  <a id="ETLBox_ControlFlow_TableData_1__ctor_" data-uid="ETLBox.ControlFlow.TableData`1.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1__ctor_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.TableData`1.#ctor(ETLBox.ControlFlow.TableDefinition)">TableData(TableDefinition)</h4>
+  <a id="ETLBox_DataFlow_Connectors_ColumnConverter__ctor_" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_ColumnConverter__ctor" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.#ctor">ColumnConverter()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TableData(TableDefinition definition)</code></pre>
+    <pre><code class="lang-csharp hljs">public ColumnConverter()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ETLBox.ControlFlow.TableDefinition.html">TableDefinition</a></td>
-        <td><span class="parametername">definition</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1__ctor_" data-uid="ETLBox.ControlFlow.TableData`1.#ctor*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1__ctor_ETLBox_ControlFlow_TableDefinition_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.#ctor(ETLBox.ControlFlow.TableDefinition,System.Int32)">TableData(TableDefinition, Int32)</h4>
+  <a id="ETLBox_DataFlow_Connectors_ColumnConverter__ctor_" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_ColumnConverter__ctor_System_String_System_Func_System_Object_System_Object__" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.#ctor(System.String,System.Func{System.Object,System.Object})">ColumnConverter(String, Func&lt;Object, Object&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TableData(TableDefinition definition, int estimatedBatchSize)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ETLBox.ControlFlow.TableDefinition.html">TableDefinition</a></td>
-        <td><span class="parametername">definition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">estimatedBatchSize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <a id="ETLBox_ControlFlow_TableData_1_ColumnMapping_" data-uid="ETLBox.ControlFlow.TableData`1.ColumnMapping*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_ColumnMapping" data-uid="ETLBox.ControlFlow.TableData`1.ColumnMapping">ColumnMapping</h4>
-  <div class="markdown level1 summary"><p>The column mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IColumnMappingCollection ColumnMapping { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Data.IColumnMappingCollection</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_CurrentRow_" data-uid="ETLBox.ControlFlow.TableData`1.CurrentRow*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_CurrentRow" data-uid="ETLBox.ControlFlow.TableData`1.CurrentRow">CurrentRow</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object[] CurrentRow { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_Depth_" data-uid="ETLBox.ControlFlow.TableData`1.Depth*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_Depth" data-uid="ETLBox.ControlFlow.TableData`1.Depth">Depth</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Depth { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_DestinationTableName_" data-uid="ETLBox.ControlFlow.TableData`1.DestinationTableName*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_DestinationTableName" data-uid="ETLBox.ControlFlow.TableData`1.DestinationTableName">DestinationTableName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string DestinationTableName { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_FieldCount_" data-uid="ETLBox.ControlFlow.TableData`1.FieldCount*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_FieldCount" data-uid="ETLBox.ControlFlow.TableData`1.FieldCount">FieldCount</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FieldCount { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_IsClosed_" data-uid="ETLBox.ControlFlow.TableData`1.IsClosed*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_IsClosed" data-uid="ETLBox.ControlFlow.TableData`1.IsClosed">IsClosed</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsClosed { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_Item_" data-uid="ETLBox.ControlFlow.TableData`1.Item*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_Item_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object this[int i] { get; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_Item_" data-uid="ETLBox.ControlFlow.TableData`1.Item*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_Item_System_String_" data-uid="ETLBox.ControlFlow.TableData`1.Item(System.String)">Item[String]</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object this[string name] { get; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_ReadIndex_" data-uid="ETLBox.ControlFlow.TableData`1.ReadIndex*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_ReadIndex" data-uid="ETLBox.ControlFlow.TableData`1.ReadIndex">ReadIndex</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ReadIndex { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_RecordsAffected_" data-uid="ETLBox.ControlFlow.TableData`1.RecordsAffected*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_RecordsAffected" data-uid="ETLBox.ControlFlow.TableData`1.RecordsAffected">RecordsAffected</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int RecordsAffected { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_Rows_" data-uid="ETLBox.ControlFlow.TableData`1.Rows*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_Rows" data-uid="ETLBox.ControlFlow.TableData`1.Rows">Rows</h4>
-  <div class="markdown level1 summary"><p>Rows/Columns ready for bulk insert</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;object[]&gt; Rows { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Object</span>[]&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <a id="ETLBox_ControlFlow_TableData_1_ClearData_" data-uid="ETLBox.ControlFlow.TableData`1.ClearData*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_ClearData" data-uid="ETLBox.ControlFlow.TableData`1.ClearData">ClearData()</h4>
-  <div class="markdown level1 summary"><p>Clears the internal list that holds the data and rewinds the pointer for the reader to the start</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ClearData()</code></pre>
-  </div>
-  <a id="ETLBox_ControlFlow_TableData_1_Close_" data-uid="ETLBox.ControlFlow.TableData`1.Close*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_Close" data-uid="ETLBox.ControlFlow.TableData`1.Close">Close()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
-  </div>
-  <a id="ETLBox_ControlFlow_TableData_1_Dispose_" data-uid="ETLBox.ControlFlow.TableData`1.Dispose*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_Dispose" data-uid="ETLBox.ControlFlow.TableData`1.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-  </div>
-  <a id="ETLBox_ControlFlow_TableData_1_Dispose_" data-uid="ETLBox.ControlFlow.TableData`1.Dispose*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_Dispose_System_Boolean_" data-uid="ETLBox.ControlFlow.TableData`1.Dispose(System.Boolean)">Dispose(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">disposing</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetBoolean_" data-uid="ETLBox.ControlFlow.TableData`1.GetBoolean*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetBoolean_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetBoolean(System.Int32)">GetBoolean(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool GetBoolean(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetByte_" data-uid="ETLBox.ControlFlow.TableData`1.GetByte*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetByte_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetByte(System.Int32)">GetByte(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte GetByte(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetBytes_" data-uid="ETLBox.ControlFlow.TableData`1.GetBytes*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetBytes_System_Int32_System_Int64_System_Byte___System_Int32_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">GetBytes(Int32, Int64, Byte[], Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">fieldOffset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td><span class="parametername">buffer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">bufferoffset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">length</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetChar_" data-uid="ETLBox.ControlFlow.TableData`1.GetChar*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetChar_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetChar(System.Int32)">GetChar(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public char GetChar(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Char</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetChars_" data-uid="ETLBox.ControlFlow.TableData`1.GetChars*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetChars_System_Int32_System_Int64_System_Char___System_Int32_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">GetChars(Int32, Int64, Char[], Int32, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td><span class="parametername">fieldoffset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Char</span>[]</td>
-        <td><span class="parametername">buffer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">bufferoffset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">length</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetData_" data-uid="ETLBox.ControlFlow.TableData`1.GetData*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetData_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetData(System.Int32)">GetData(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDataReader GetData(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Data.IDataReader</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetDataTypeName_" data-uid="ETLBox.ControlFlow.TableData`1.GetDataTypeName*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetDataTypeName_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetDataTypeName(System.Int32)">GetDataTypeName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetDataTypeName(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetDataTypeName_" data-uid="ETLBox.ControlFlow.TableData`1.GetDataTypeName*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetDataTypeName_System_String_" data-uid="ETLBox.ControlFlow.TableData`1.GetDataTypeName(System.String)">GetDataTypeName(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetDataTypeName(string columnName)</code></pre>
+    <pre><code class="lang-csharp hljs">public ColumnConverter(string columnName, Func&lt;object, object&gt; conversionFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1698,9 +966,24 @@
         <td><span class="parametername">columnName</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">conversionFunc</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="ETLBox_DataFlow_Connectors_ColumnConverter_ColumnName_" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_ColumnConverter_ColumnName" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName">ColumnName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ColumnName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -1715,32 +998,15 @@
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetDateTime_" data-uid="ETLBox.ControlFlow.TableData`1.GetDateTime*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetDateTime_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetDateTime(System.Int32)">GetDateTime(Int32)</h4>
+  <a id="ETLBox_DataFlow_Connectors_ColumnConverter_ConversionFunc_" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_ColumnConverter_ConversionFunc" data-uid="ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc">ConversionFunc</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime GetDateTime(int i)</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;object, object&gt; ConversionFunc { get; set; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -1750,653 +1016,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Object</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetDecimal_" data-uid="ETLBox.ControlFlow.TableData`1.GetDecimal*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetDecimal_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetDecimal(System.Int32)">GetDecimal(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public decimal GetDecimal(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Decimal</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetDouble_" data-uid="ETLBox.ControlFlow.TableData`1.GetDouble*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetDouble_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetDouble(System.Int32)">GetDouble(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double GetDouble(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetFieldType_" data-uid="ETLBox.ControlFlow.TableData`1.GetFieldType*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetFieldType_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetFieldType(System.Int32)">GetFieldType(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Type GetFieldType(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetFloat_" data-uid="ETLBox.ControlFlow.TableData`1.GetFloat*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetFloat_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetFloat(System.Int32)">GetFloat(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float GetFloat(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetGuid_" data-uid="ETLBox.ControlFlow.TableData`1.GetGuid*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetGuid_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetGuid(System.Int32)">GetGuid(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Guid GetGuid(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Guid</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetInt16_" data-uid="ETLBox.ControlFlow.TableData`1.GetInt16*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetInt16_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetInt16(System.Int32)">GetInt16(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public short GetInt16(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int16</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetInt32_" data-uid="ETLBox.ControlFlow.TableData`1.GetInt32*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetInt32_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetInt32(System.Int32)">GetInt32(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int GetInt32(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetInt64_" data-uid="ETLBox.ControlFlow.TableData`1.GetInt64*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetInt64_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetInt64(System.Int32)">GetInt64(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long GetInt64(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetName_" data-uid="ETLBox.ControlFlow.TableData`1.GetName*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetName_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetName(System.Int32)">GetName(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetName(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetOrdinal_" data-uid="ETLBox.ControlFlow.TableData`1.GetOrdinal*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetOrdinal_System_String_" data-uid="ETLBox.ControlFlow.TableData`1.GetOrdinal(System.String)">GetOrdinal(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int GetOrdinal(string name)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetSchemaTable_" data-uid="ETLBox.ControlFlow.TableData`1.GetSchemaTable*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetSchemaTable" data-uid="ETLBox.ControlFlow.TableData`1.GetSchemaTable">GetSchemaTable()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DataTable GetSchemaTable()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Data.DataTable</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetString_" data-uid="ETLBox.ControlFlow.TableData`1.GetString*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetString_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetString(System.Int32)">GetString(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetString(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetValue_" data-uid="ETLBox.ControlFlow.TableData`1.GetValue*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetValue_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.GetValue(System.Int32)">GetValue(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object GetValue(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_GetValues_" data-uid="ETLBox.ControlFlow.TableData`1.GetValues*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_GetValues_System_Object___" data-uid="ETLBox.ControlFlow.TableData`1.GetValues(System.Object[])">GetValues(Object[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int GetValues(object[] values)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span>[]</td>
-        <td><span class="parametername">values</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_IsDBNull_" data-uid="ETLBox.ControlFlow.TableData`1.IsDBNull*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_IsDBNull_System_Int32_" data-uid="ETLBox.ControlFlow.TableData`1.IsDBNull(System.Int32)">IsDBNull(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDBNull(int i)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_NextResult_" data-uid="ETLBox.ControlFlow.TableData`1.NextResult*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_NextResult" data-uid="ETLBox.ControlFlow.TableData`1.NextResult">NextResult()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool NextResult()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_TableData_1_Read_" data-uid="ETLBox.ControlFlow.TableData`1.Read*"></a>
-  <h4 id="ETLBox_ControlFlow_TableData_1_Read" data-uid="ETLBox.ControlFlow.TableData`1.Read">Read()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Read()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="ETLBox.ControlFlow.ITableData.html">ITableData</a>
-  </div>
-  <div>
-      <span class="xref">System.Data.IDataReader</span>
-  </div>
-  <div>
-      <span class="xref">System.Data.IDataRecord</span>
-  </div>
-  <div>
-      <span class="xref">System.IDisposable</span>
-  </div>
 </article>
           </div>
           

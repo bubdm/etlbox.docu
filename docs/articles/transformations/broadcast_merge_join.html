@@ -111,7 +111,7 @@
                             <a href="../dataflow/transformations_overview.html" title="Transformations" class="">Transformations</a>
                           </li>
                           <li class="">
-                            <a href="../dataflow/linking_execution.html" title="Linking and execution" class="">Linking and execution</a>
+                            <a href="../dataflow/linking_execution.html" title="Execution, linking and Completion" class="">Execution, linking and Completion</a>
                           </li>
                           <li class="">
                             <a href="../dataflow/generic_nongeneric.html" title="Working with data types" class="">Working with data types</a>
@@ -253,6 +253,8 @@ public static void Main()
     //2B
 }
 </code></pre>
+<p>The multicast will create clones of the objects by creating new instances and copying the properties from the input data. Fields, Static values and non public properties will be ignored.
+If you want to customize how the clone is created, you can implement <code>ICloneable</code> on your object.</p>
 <h3 id="splitting-data">Splitting data</h3>
 <p>The Multicast is useful when you want to broadcast your data to all linked target. If you want to split up your data on the connected target, you don't need to use the Multicast. You can simple use predicates for this purpose.  Predicates allow you to let only certain data pass to a target.  This works because you can always link every component to more than one output component. But without Multicast or predicates in place, all message would be send only to the target that was linked first.</p>
 <p>Predicates are conditions that describe to which target the data is send if the condition evaluates to true. Let's modify the example above so that we send the row with the Id 1 or smaller to destination 1 and the row with Id 2 or higher to destination 2.</p>

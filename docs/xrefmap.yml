@@ -236,19 +236,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.Connection.AccessOdbcConnectionManager.ReadTableDefinition
   nameWithType: AccessOdbcConnectionManager.ReadTableDefinition
-- uid: ETLBox.Connection.AccessOdbcConnectionManager.SupportComputedColumns
-  name: SupportComputedColumns
-  href: api/ETLBox.Connection.AccessOdbcConnectionManager.html#ETLBox_Connection_AccessOdbcConnectionManager_SupportComputedColumns
-  commentId: P:ETLBox.Connection.AccessOdbcConnectionManager.SupportComputedColumns
-  fullName: ETLBox.Connection.AccessOdbcConnectionManager.SupportComputedColumns
-  nameWithType: AccessOdbcConnectionManager.SupportComputedColumns
-- uid: ETLBox.Connection.AccessOdbcConnectionManager.SupportComputedColumns*
-  name: SupportComputedColumns
-  href: api/ETLBox.Connection.AccessOdbcConnectionManager.html#ETLBox_Connection_AccessOdbcConnectionManager_SupportComputedColumns_
-  commentId: Overload:ETLBox.Connection.AccessOdbcConnectionManager.SupportComputedColumns
-  isSpec: "True"
-  fullName: ETLBox.Connection.AccessOdbcConnectionManager.SupportComputedColumns
-  nameWithType: AccessOdbcConnectionManager.SupportComputedColumns
 - uid: ETLBox.Connection.AccessOdbcConnectionManager.SupportDatabases
   name: SupportDatabases
   href: api/ETLBox.Connection.AccessOdbcConnectionManager.html#ETLBox_Connection_AccessOdbcConnectionManager_SupportDatabases
@@ -757,19 +744,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.Connection.Db2ConnectionManager.SupportProcedures
   nameWithType: Db2ConnectionManager.SupportProcedures
-- uid: ETLBox.Connection.Db2ConnectionManager.SupportSchemas
-  name: SupportSchemas
-  href: api/ETLBox.Connection.Db2ConnectionManager.html#ETLBox_Connection_Db2ConnectionManager_SupportSchemas
-  commentId: P:ETLBox.Connection.Db2ConnectionManager.SupportSchemas
-  fullName: ETLBox.Connection.Db2ConnectionManager.SupportSchemas
-  nameWithType: Db2ConnectionManager.SupportSchemas
-- uid: ETLBox.Connection.Db2ConnectionManager.SupportSchemas*
-  name: SupportSchemas
-  href: api/ETLBox.Connection.Db2ConnectionManager.html#ETLBox_Connection_Db2ConnectionManager_SupportSchemas_
-  commentId: Overload:ETLBox.Connection.Db2ConnectionManager.SupportSchemas
+- uid: ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert
+  name: UseSqlBulkInsert
+  href: api/ETLBox.Connection.Db2ConnectionManager.html#ETLBox_Connection_Db2ConnectionManager_UseSqlBulkInsert
+  commentId: P:ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert
+  fullName: ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert
+  nameWithType: Db2ConnectionManager.UseSqlBulkInsert
+- uid: ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert*
+  name: UseSqlBulkInsert
+  href: api/ETLBox.Connection.Db2ConnectionManager.html#ETLBox_Connection_Db2ConnectionManager_UseSqlBulkInsert_
+  commentId: Overload:ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert
   isSpec: "True"
-  fullName: ETLBox.Connection.Db2ConnectionManager.SupportSchemas
-  nameWithType: Db2ConnectionManager.SupportSchemas
+  fullName: ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert
+  nameWithType: Db2ConnectionManager.UseSqlBulkInsert
 - uid: ETLBox.Connection.Db2ConnectionString
   name: Db2ConnectionString
   href: api/ETLBox.Connection.Db2ConnectionString.html
@@ -1169,6 +1156,24 @@ references:
   fullName.vb: ETLBox.Connection.DbConnectionManager(Of Connection).ConnectionString
   nameWithType: DbConnectionManager<Connection>.ConnectionString
   nameWithType.vb: DbConnectionManager(Of Connection).ConnectionString
+- uid: ETLBox.Connection.DbConnectionManager`1.CopyBaseAttributes(ETLBox.Connection.DbConnectionManager{`0})
+  name: CopyBaseAttributes(DbConnectionManager<Connection>)
+  href: api/ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_CopyBaseAttributes_ETLBox_Connection_DbConnectionManager__0__
+  commentId: M:ETLBox.Connection.DbConnectionManager`1.CopyBaseAttributes(ETLBox.Connection.DbConnectionManager{`0})
+  name.vb: CopyBaseAttributes(DbConnectionManager(Of Connection))
+  fullName: ETLBox.Connection.DbConnectionManager<Connection>.CopyBaseAttributes(ETLBox.Connection.DbConnectionManager<Connection>)
+  fullName.vb: ETLBox.Connection.DbConnectionManager(Of Connection).CopyBaseAttributes(ETLBox.Connection.DbConnectionManager(Of Connection))
+  nameWithType: DbConnectionManager<Connection>.CopyBaseAttributes(DbConnectionManager<Connection>)
+  nameWithType.vb: DbConnectionManager(Of Connection).CopyBaseAttributes(DbConnectionManager(Of Connection))
+- uid: ETLBox.Connection.DbConnectionManager`1.CopyBaseAttributes*
+  name: CopyBaseAttributes
+  href: api/ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_CopyBaseAttributes_
+  commentId: Overload:ETLBox.Connection.DbConnectionManager`1.CopyBaseAttributes
+  isSpec: "True"
+  fullName: ETLBox.Connection.DbConnectionManager<Connection>.CopyBaseAttributes
+  fullName.vb: ETLBox.Connection.DbConnectionManager(Of Connection).CopyBaseAttributes
+  nameWithType: DbConnectionManager<Connection>.CopyBaseAttributes
+  nameWithType.vb: DbConnectionManager(Of Connection).CopyBaseAttributes
 - uid: ETLBox.Connection.DbConnectionManager`1.CreateCommand(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})
   name: CreateCommand(String, IEnumerable<QueryParameter>)
   href: api/ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_CreateCommand_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__
@@ -1538,23 +1543,6 @@ references:
   fullName.vb: ETLBox.Connection.DbConnectionManager(Of Connection).State
   nameWithType: DbConnectionManager<Connection>.State
   nameWithType.vb: DbConnectionManager(Of Connection).State
-- uid: ETLBox.Connection.DbConnectionManager`1.SupportComputedColumns
-  name: SupportComputedColumns
-  href: api/ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_SupportComputedColumns
-  commentId: P:ETLBox.Connection.DbConnectionManager`1.SupportComputedColumns
-  fullName: ETLBox.Connection.DbConnectionManager<Connection>.SupportComputedColumns
-  fullName.vb: ETLBox.Connection.DbConnectionManager(Of Connection).SupportComputedColumns
-  nameWithType: DbConnectionManager<Connection>.SupportComputedColumns
-  nameWithType.vb: DbConnectionManager(Of Connection).SupportComputedColumns
-- uid: ETLBox.Connection.DbConnectionManager`1.SupportComputedColumns*
-  name: SupportComputedColumns
-  href: api/ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_SupportComputedColumns_
-  commentId: Overload:ETLBox.Connection.DbConnectionManager`1.SupportComputedColumns
-  isSpec: "True"
-  fullName: ETLBox.Connection.DbConnectionManager<Connection>.SupportComputedColumns
-  fullName.vb: ETLBox.Connection.DbConnectionManager(Of Connection).SupportComputedColumns
-  nameWithType: DbConnectionManager<Connection>.SupportComputedColumns
-  nameWithType.vb: DbConnectionManager(Of Connection).SupportComputedColumns
 - uid: ETLBox.Connection.DbConnectionManager`1.SupportDatabases
   name: SupportDatabases
   href: api/ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_SupportDatabases
@@ -2343,19 +2331,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.Connection.IConnectionManager.State
   nameWithType: IConnectionManager.State
-- uid: ETLBox.Connection.IConnectionManager.SupportComputedColumns
-  name: SupportComputedColumns
-  href: api/ETLBox.Connection.IConnectionManager.html#ETLBox_Connection_IConnectionManager_SupportComputedColumns
-  commentId: P:ETLBox.Connection.IConnectionManager.SupportComputedColumns
-  fullName: ETLBox.Connection.IConnectionManager.SupportComputedColumns
-  nameWithType: IConnectionManager.SupportComputedColumns
-- uid: ETLBox.Connection.IConnectionManager.SupportComputedColumns*
-  name: SupportComputedColumns
-  href: api/ETLBox.Connection.IConnectionManager.html#ETLBox_Connection_IConnectionManager_SupportComputedColumns_
-  commentId: Overload:ETLBox.Connection.IConnectionManager.SupportComputedColumns
-  isSpec: "True"
-  fullName: ETLBox.Connection.IConnectionManager.SupportComputedColumns
-  nameWithType: IConnectionManager.SupportComputedColumns
 - uid: ETLBox.Connection.IConnectionManager.SupportDatabases
   name: SupportDatabases
   href: api/ETLBox.Connection.IConnectionManager.html#ETLBox_Connection_IConnectionManager_SupportDatabases
@@ -3445,6 +3420,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.Connection.OleDbConnectionManager.ConnectionManagerType
   nameWithType: OleDbConnectionManager.ConnectionManagerType
+- uid: ETLBox.Connection.OleDbConnectionManager.DoPrepareCommand
+  name: DoPrepareCommand
+  href: api/ETLBox.Connection.OleDbConnectionManager.html#ETLBox_Connection_OleDbConnectionManager_DoPrepareCommand
+  commentId: P:ETLBox.Connection.OleDbConnectionManager.DoPrepareCommand
+  fullName: ETLBox.Connection.OleDbConnectionManager.DoPrepareCommand
+  nameWithType: OleDbConnectionManager.DoPrepareCommand
+- uid: ETLBox.Connection.OleDbConnectionManager.DoPrepareCommand*
+  name: DoPrepareCommand
+  href: api/ETLBox.Connection.OleDbConnectionManager.html#ETLBox_Connection_OleDbConnectionManager_DoPrepareCommand_
+  commentId: Overload:ETLBox.Connection.OleDbConnectionManager.DoPrepareCommand
+  isSpec: "True"
+  fullName: ETLBox.Connection.OleDbConnectionManager.DoPrepareCommand
+  nameWithType: OleDbConnectionManager.DoPrepareCommand
 - uid: ETLBox.Connection.OleDbConnectionManager.IsOdbcOrOleDbConnection
   name: IsOdbcOrOleDbConnection
   href: api/ETLBox.Connection.OleDbConnectionManager.html#ETLBox_Connection_OleDbConnectionManager_IsOdbcOrOleDbConnection
@@ -4978,19 +4966,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.Connection.SQLiteConnectionManager.QE
   nameWithType: SQLiteConnectionManager.QE
-- uid: ETLBox.Connection.SQLiteConnectionManager.SupportComputedColumns
-  name: SupportComputedColumns
-  href: api/ETLBox.Connection.SQLiteConnectionManager.html#ETLBox_Connection_SQLiteConnectionManager_SupportComputedColumns
-  commentId: P:ETLBox.Connection.SQLiteConnectionManager.SupportComputedColumns
-  fullName: ETLBox.Connection.SQLiteConnectionManager.SupportComputedColumns
-  nameWithType: SQLiteConnectionManager.SupportComputedColumns
-- uid: ETLBox.Connection.SQLiteConnectionManager.SupportComputedColumns*
-  name: SupportComputedColumns
-  href: api/ETLBox.Connection.SQLiteConnectionManager.html#ETLBox_Connection_SQLiteConnectionManager_SupportComputedColumns_
-  commentId: Overload:ETLBox.Connection.SQLiteConnectionManager.SupportComputedColumns
-  isSpec: "True"
-  fullName: ETLBox.Connection.SQLiteConnectionManager.SupportComputedColumns
-  nameWithType: SQLiteConnectionManager.SupportComputedColumns
 - uid: ETLBox.Connection.SQLiteConnectionManager.SupportDatabases
   name: SupportDatabases
   href: api/ETLBox.Connection.SQLiteConnectionManager.html#ETLBox_Connection_SQLiteConnectionManager_SupportDatabases
@@ -5667,23 +5642,6 @@ references:
   fullName.vb: ETLBox.ControlFlow.DropTask(Of T).DropIfExists
   nameWithType: DropTask<T>.DropIfExists
   nameWithType.vb: DropTask(Of T).DropIfExists
-- uid: ETLBox.ControlFlow.DropTask`1.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.DropTask-1.html#ETLBox_ControlFlow_DropTask_1_Execute
-  commentId: M:ETLBox.ControlFlow.DropTask`1.Execute
-  fullName: ETLBox.ControlFlow.DropTask<T>.Execute()
-  fullName.vb: ETLBox.ControlFlow.DropTask(Of T).Execute()
-  nameWithType: DropTask<T>.Execute()
-  nameWithType.vb: DropTask(Of T).Execute()
-- uid: ETLBox.ControlFlow.DropTask`1.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.DropTask-1.html#ETLBox_ControlFlow_DropTask_1_Execute_
-  commentId: Overload:ETLBox.ControlFlow.DropTask`1.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.DropTask<T>.Execute
-  fullName.vb: ETLBox.ControlFlow.DropTask(Of T).Execute
-  nameWithType: DropTask<T>.Execute
-  nameWithType.vb: DropTask(Of T).Execute
 - uid: ETLBox.ControlFlow.DropTask`1.ObjectName
   name: ObjectName
   href: api/ETLBox.ControlFlow.DropTask-1.html#ETLBox_ControlFlow_DropTask_1_ObjectName
@@ -5771,19 +5729,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.IfExistsTask.DoesExist
   nameWithType: IfExistsTask.DoesExist
-- uid: ETLBox.ControlFlow.IfExistsTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.IfExistsTask.html#ETLBox_ControlFlow_IfExistsTask_Execute
-  commentId: M:ETLBox.ControlFlow.IfExistsTask.Execute
-  fullName: ETLBox.ControlFlow.IfExistsTask.Execute()
-  nameWithType: IfExistsTask.Execute()
-- uid: ETLBox.ControlFlow.IfExistsTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.IfExistsTask.html#ETLBox_ControlFlow_IfExistsTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.IfExistsTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.IfExistsTask.Execute
-  nameWithType: IfExistsTask.Execute
 - uid: ETLBox.ControlFlow.IfExistsTask.Exists
   name: Exists()
   href: api/ETLBox.ControlFlow.IfExistsTask.html#ETLBox_ControlFlow_IfExistsTask_Exists
@@ -5952,6 +5897,32 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.ITableData.CurrentRow
   nameWithType: ITableData.CurrentRow
+- uid: ETLBox.ControlFlow.ITableData.DataIndexForColumn
+  name: DataIndexForColumn
+  href: api/ETLBox.ControlFlow.ITableData.html#ETLBox_ControlFlow_ITableData_DataIndexForColumn
+  commentId: P:ETLBox.ControlFlow.ITableData.DataIndexForColumn
+  fullName: ETLBox.ControlFlow.ITableData.DataIndexForColumn
+  nameWithType: ITableData.DataIndexForColumn
+- uid: ETLBox.ControlFlow.ITableData.DataIndexForColumn*
+  name: DataIndexForColumn
+  href: api/ETLBox.ControlFlow.ITableData.html#ETLBox_ControlFlow_ITableData_DataIndexForColumn_
+  commentId: Overload:ETLBox.ControlFlow.ITableData.DataIndexForColumn
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.ITableData.DataIndexForColumn
+  nameWithType: ITableData.DataIndexForColumn
+- uid: ETLBox.ControlFlow.ITableData.Definition
+  name: Definition
+  href: api/ETLBox.ControlFlow.ITableData.html#ETLBox_ControlFlow_ITableData_Definition
+  commentId: P:ETLBox.ControlFlow.ITableData.Definition
+  fullName: ETLBox.ControlFlow.ITableData.Definition
+  nameWithType: ITableData.Definition
+- uid: ETLBox.ControlFlow.ITableData.Definition*
+  name: Definition
+  href: api/ETLBox.ControlFlow.ITableData.html#ETLBox_ControlFlow_ITableData_Definition_
+  commentId: Overload:ETLBox.ControlFlow.ITableData.Definition
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.ITableData.Definition
+  nameWithType: ITableData.Definition
 - uid: ETLBox.ControlFlow.ITableData.DestinationTableName
   name: DestinationTableName
   href: api/ETLBox.ControlFlow.ITableData.html#ETLBox_ControlFlow_ITableData_DestinationTableName
@@ -5978,6 +5949,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.ITableData.GetDataTypeName
   nameWithType: ITableData.GetDataTypeName
+- uid: ETLBox.ControlFlow.ITableData.KeepIdentity
+  name: KeepIdentity
+  href: api/ETLBox.ControlFlow.ITableData.html#ETLBox_ControlFlow_ITableData_KeepIdentity
+  commentId: P:ETLBox.ControlFlow.ITableData.KeepIdentity
+  fullName: ETLBox.ControlFlow.ITableData.KeepIdentity
+  nameWithType: ITableData.KeepIdentity
+- uid: ETLBox.ControlFlow.ITableData.KeepIdentity*
+  name: KeepIdentity
+  href: api/ETLBox.ControlFlow.ITableData.html#ETLBox_ControlFlow_ITableData_KeepIdentity_
+  commentId: Overload:ETLBox.ControlFlow.ITableData.KeepIdentity
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.ITableData.KeepIdentity
+  nameWithType: ITableData.KeepIdentity
 - uid: ETLBox.ControlFlow.ITableData.ReadIndex
   name: ReadIndex
   href: api/ETLBox.ControlFlow.ITableData.html#ETLBox_ControlFlow_ITableData_ReadIndex
@@ -6429,19 +6413,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.TableColumn.ComputedColumn
   nameWithType: TableColumn.ComputedColumn
-- uid: ETLBox.ControlFlow.TableColumn.DataSetColumn
-  name: DataSetColumn
-  href: api/ETLBox.ControlFlow.TableColumn.html#ETLBox_ControlFlow_TableColumn_DataSetColumn
-  commentId: P:ETLBox.ControlFlow.TableColumn.DataSetColumn
-  fullName: ETLBox.ControlFlow.TableColumn.DataSetColumn
-  nameWithType: TableColumn.DataSetColumn
-- uid: ETLBox.ControlFlow.TableColumn.DataSetColumn*
-  name: DataSetColumn
-  href: api/ETLBox.ControlFlow.TableColumn.html#ETLBox_ControlFlow_TableColumn_DataSetColumn_
-  commentId: Overload:ETLBox.ControlFlow.TableColumn.DataSetColumn
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableColumn.DataSetColumn
-  nameWithType: TableColumn.DataSetColumn
 - uid: ETLBox.ControlFlow.TableColumn.DataType
   name: DataType
   href: api/ETLBox.ControlFlow.TableColumn.html#ETLBox_ControlFlow_TableColumn_DataType
@@ -6572,19 +6543,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.TableColumn.NETDataType
   nameWithType: TableColumn.NETDataType
-- uid: ETLBox.ControlFlow.TableColumn.SourceColumn
-  name: SourceColumn
-  href: api/ETLBox.ControlFlow.TableColumn.html#ETLBox_ControlFlow_TableColumn_SourceColumn
-  commentId: P:ETLBox.ControlFlow.TableColumn.SourceColumn
-  fullName: ETLBox.ControlFlow.TableColumn.SourceColumn
-  nameWithType: TableColumn.SourceColumn
-- uid: ETLBox.ControlFlow.TableColumn.SourceColumn*
-  name: SourceColumn
-  href: api/ETLBox.ControlFlow.TableColumn.html#ETLBox_ControlFlow_TableColumn_SourceColumn_
-  commentId: Overload:ETLBox.ControlFlow.TableColumn.SourceColumn
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableColumn.SourceColumn
-  nameWithType: TableColumn.SourceColumn
 - uid: ETLBox.ControlFlow.TableData
   name: TableData
   href: api/ETLBox.ControlFlow.TableData.html
@@ -6610,715 +6568,572 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.TableData.TableData
   nameWithType: TableData.TableData
-- uid: ETLBox.ControlFlow.TableData`1
-  name: TableData<T>
-  href: api/ETLBox.ControlFlow.TableData-1.html
-  commentId: T:ETLBox.ControlFlow.TableData`1
-  name.vb: TableData(Of T)
-  fullName: ETLBox.ControlFlow.TableData<T>
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T)
-  nameWithType: TableData<T>
-  nameWithType.vb: TableData(Of T)
-- uid: ETLBox.ControlFlow.TableData`1.#ctor(ETLBox.ControlFlow.TableDefinition)
-  name: TableData(TableDefinition)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1__ctor_ETLBox_ControlFlow_TableDefinition_
-  commentId: M:ETLBox.ControlFlow.TableData`1.#ctor(ETLBox.ControlFlow.TableDefinition)
-  fullName: ETLBox.ControlFlow.TableData<T>.TableData(ETLBox.ControlFlow.TableDefinition)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).TableData(ETLBox.ControlFlow.TableDefinition)
-  nameWithType: TableData<T>.TableData(TableDefinition)
-  nameWithType.vb: TableData(Of T).TableData(TableDefinition)
-- uid: ETLBox.ControlFlow.TableData`1.#ctor(ETLBox.ControlFlow.TableDefinition,System.Int32)
-  name: TableData(TableDefinition, Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1__ctor_ETLBox_ControlFlow_TableDefinition_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.#ctor(ETLBox.ControlFlow.TableDefinition,System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.TableData(ETLBox.ControlFlow.TableDefinition, System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).TableData(ETLBox.ControlFlow.TableDefinition, System.Int32)
-  nameWithType: TableData<T>.TableData(TableDefinition, Int32)
-  nameWithType.vb: TableData(Of T).TableData(TableDefinition, Int32)
-- uid: ETLBox.ControlFlow.TableData`1.#ctor*
-  name: TableData
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1__ctor_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.#ctor
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.TableData
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).TableData
-  nameWithType: TableData<T>.TableData
-  nameWithType.vb: TableData(Of T).TableData
-- uid: ETLBox.ControlFlow.TableData`1.ClearData
-  name: ClearData()
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_ClearData
-  commentId: M:ETLBox.ControlFlow.TableData`1.ClearData
-  fullName: ETLBox.ControlFlow.TableData<T>.ClearData()
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).ClearData()
-  nameWithType: TableData<T>.ClearData()
-  nameWithType.vb: TableData(Of T).ClearData()
-- uid: ETLBox.ControlFlow.TableData`1.ClearData*
-  name: ClearData
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_ClearData_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.ClearData
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.ClearData
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).ClearData
-  nameWithType: TableData<T>.ClearData
-  nameWithType.vb: TableData(Of T).ClearData
-- uid: ETLBox.ControlFlow.TableData`1.Close
+- uid: ETLBox.ControlFlow.TableData.Close
   name: Close()
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Close
-  commentId: M:ETLBox.ControlFlow.TableData`1.Close
-  fullName: ETLBox.ControlFlow.TableData<T>.Close()
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Close()
-  nameWithType: TableData<T>.Close()
-  nameWithType.vb: TableData(Of T).Close()
-- uid: ETLBox.ControlFlow.TableData`1.Close*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Close
+  commentId: M:ETLBox.ControlFlow.TableData.Close
+  fullName: ETLBox.ControlFlow.TableData.Close()
+  nameWithType: TableData.Close()
+- uid: ETLBox.ControlFlow.TableData.Close*
   name: Close
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Close_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.Close
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Close_
+  commentId: Overload:ETLBox.ControlFlow.TableData.Close
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.Close
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Close
-  nameWithType: TableData<T>.Close
-  nameWithType.vb: TableData(Of T).Close
-- uid: ETLBox.ControlFlow.TableData`1.ColumnMapping
+  fullName: ETLBox.ControlFlow.TableData.Close
+  nameWithType: TableData.Close
+- uid: ETLBox.ControlFlow.TableData.ColumnConverters
+  name: ColumnConverters
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_ColumnConverters
+  commentId: P:ETLBox.ControlFlow.TableData.ColumnConverters
+  fullName: ETLBox.ControlFlow.TableData.ColumnConverters
+  nameWithType: TableData.ColumnConverters
+- uid: ETLBox.ControlFlow.TableData.ColumnConverters*
+  name: ColumnConverters
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_ColumnConverters_
+  commentId: Overload:ETLBox.ControlFlow.TableData.ColumnConverters
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.TableData.ColumnConverters
+  nameWithType: TableData.ColumnConverters
+- uid: ETLBox.ControlFlow.TableData.ColumnMapping
   name: ColumnMapping
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_ColumnMapping
-  commentId: P:ETLBox.ControlFlow.TableData`1.ColumnMapping
-  fullName: ETLBox.ControlFlow.TableData<T>.ColumnMapping
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).ColumnMapping
-  nameWithType: TableData<T>.ColumnMapping
-  nameWithType.vb: TableData(Of T).ColumnMapping
-- uid: ETLBox.ControlFlow.TableData`1.ColumnMapping*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_ColumnMapping
+  commentId: P:ETLBox.ControlFlow.TableData.ColumnMapping
+  fullName: ETLBox.ControlFlow.TableData.ColumnMapping
+  nameWithType: TableData.ColumnMapping
+- uid: ETLBox.ControlFlow.TableData.ColumnMapping*
   name: ColumnMapping
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_ColumnMapping_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.ColumnMapping
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_ColumnMapping_
+  commentId: Overload:ETLBox.ControlFlow.TableData.ColumnMapping
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.ColumnMapping
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).ColumnMapping
-  nameWithType: TableData<T>.ColumnMapping
-  nameWithType.vb: TableData(Of T).ColumnMapping
-- uid: ETLBox.ControlFlow.TableData`1.CurrentRow
+  fullName: ETLBox.ControlFlow.TableData.ColumnMapping
+  nameWithType: TableData.ColumnMapping
+- uid: ETLBox.ControlFlow.TableData.CurrentRow
   name: CurrentRow
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_CurrentRow
-  commentId: P:ETLBox.ControlFlow.TableData`1.CurrentRow
-  fullName: ETLBox.ControlFlow.TableData<T>.CurrentRow
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).CurrentRow
-  nameWithType: TableData<T>.CurrentRow
-  nameWithType.vb: TableData(Of T).CurrentRow
-- uid: ETLBox.ControlFlow.TableData`1.CurrentRow*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_CurrentRow
+  commentId: P:ETLBox.ControlFlow.TableData.CurrentRow
+  fullName: ETLBox.ControlFlow.TableData.CurrentRow
+  nameWithType: TableData.CurrentRow
+- uid: ETLBox.ControlFlow.TableData.CurrentRow*
   name: CurrentRow
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_CurrentRow_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.CurrentRow
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_CurrentRow_
+  commentId: Overload:ETLBox.ControlFlow.TableData.CurrentRow
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.CurrentRow
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).CurrentRow
-  nameWithType: TableData<T>.CurrentRow
-  nameWithType.vb: TableData(Of T).CurrentRow
-- uid: ETLBox.ControlFlow.TableData`1.Depth
+  fullName: ETLBox.ControlFlow.TableData.CurrentRow
+  nameWithType: TableData.CurrentRow
+- uid: ETLBox.ControlFlow.TableData.DataIndexForColumn
+  name: DataIndexForColumn
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_DataIndexForColumn
+  commentId: P:ETLBox.ControlFlow.TableData.DataIndexForColumn
+  fullName: ETLBox.ControlFlow.TableData.DataIndexForColumn
+  nameWithType: TableData.DataIndexForColumn
+- uid: ETLBox.ControlFlow.TableData.DataIndexForColumn*
+  name: DataIndexForColumn
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_DataIndexForColumn_
+  commentId: Overload:ETLBox.ControlFlow.TableData.DataIndexForColumn
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.TableData.DataIndexForColumn
+  nameWithType: TableData.DataIndexForColumn
+- uid: ETLBox.ControlFlow.TableData.Definition
+  name: Definition
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Definition
+  commentId: P:ETLBox.ControlFlow.TableData.Definition
+  fullName: ETLBox.ControlFlow.TableData.Definition
+  nameWithType: TableData.Definition
+- uid: ETLBox.ControlFlow.TableData.Definition*
+  name: Definition
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Definition_
+  commentId: Overload:ETLBox.ControlFlow.TableData.Definition
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.TableData.Definition
+  nameWithType: TableData.Definition
+- uid: ETLBox.ControlFlow.TableData.Depth
   name: Depth
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Depth
-  commentId: P:ETLBox.ControlFlow.TableData`1.Depth
-  fullName: ETLBox.ControlFlow.TableData<T>.Depth
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Depth
-  nameWithType: TableData<T>.Depth
-  nameWithType.vb: TableData(Of T).Depth
-- uid: ETLBox.ControlFlow.TableData`1.Depth*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Depth
+  commentId: P:ETLBox.ControlFlow.TableData.Depth
+  fullName: ETLBox.ControlFlow.TableData.Depth
+  nameWithType: TableData.Depth
+- uid: ETLBox.ControlFlow.TableData.Depth*
   name: Depth
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Depth_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.Depth
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Depth_
+  commentId: Overload:ETLBox.ControlFlow.TableData.Depth
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.Depth
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Depth
-  nameWithType: TableData<T>.Depth
-  nameWithType.vb: TableData(Of T).Depth
-- uid: ETLBox.ControlFlow.TableData`1.DestinationTableName
+  fullName: ETLBox.ControlFlow.TableData.Depth
+  nameWithType: TableData.Depth
+- uid: ETLBox.ControlFlow.TableData.DestinationTableName
   name: DestinationTableName
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_DestinationTableName
-  commentId: P:ETLBox.ControlFlow.TableData`1.DestinationTableName
-  fullName: ETLBox.ControlFlow.TableData<T>.DestinationTableName
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).DestinationTableName
-  nameWithType: TableData<T>.DestinationTableName
-  nameWithType.vb: TableData(Of T).DestinationTableName
-- uid: ETLBox.ControlFlow.TableData`1.DestinationTableName*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_DestinationTableName
+  commentId: P:ETLBox.ControlFlow.TableData.DestinationTableName
+  fullName: ETLBox.ControlFlow.TableData.DestinationTableName
+  nameWithType: TableData.DestinationTableName
+- uid: ETLBox.ControlFlow.TableData.DestinationTableName*
   name: DestinationTableName
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_DestinationTableName_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.DestinationTableName
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_DestinationTableName_
+  commentId: Overload:ETLBox.ControlFlow.TableData.DestinationTableName
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.DestinationTableName
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).DestinationTableName
-  nameWithType: TableData<T>.DestinationTableName
-  nameWithType.vb: TableData(Of T).DestinationTableName
-- uid: ETLBox.ControlFlow.TableData`1.Dispose
+  fullName: ETLBox.ControlFlow.TableData.DestinationTableName
+  nameWithType: TableData.DestinationTableName
+- uid: ETLBox.ControlFlow.TableData.Dispose
   name: Dispose()
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Dispose
-  commentId: M:ETLBox.ControlFlow.TableData`1.Dispose
-  fullName: ETLBox.ControlFlow.TableData<T>.Dispose()
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Dispose()
-  nameWithType: TableData<T>.Dispose()
-  nameWithType.vb: TableData(Of T).Dispose()
-- uid: ETLBox.ControlFlow.TableData`1.Dispose(System.Boolean)
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Dispose
+  commentId: M:ETLBox.ControlFlow.TableData.Dispose
+  fullName: ETLBox.ControlFlow.TableData.Dispose()
+  nameWithType: TableData.Dispose()
+- uid: ETLBox.ControlFlow.TableData.Dispose(System.Boolean)
   name: Dispose(Boolean)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Dispose_System_Boolean_
-  commentId: M:ETLBox.ControlFlow.TableData`1.Dispose(System.Boolean)
-  fullName: ETLBox.ControlFlow.TableData<T>.Dispose(System.Boolean)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Dispose(System.Boolean)
-  nameWithType: TableData<T>.Dispose(Boolean)
-  nameWithType.vb: TableData(Of T).Dispose(Boolean)
-- uid: ETLBox.ControlFlow.TableData`1.Dispose*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Dispose_System_Boolean_
+  commentId: M:ETLBox.ControlFlow.TableData.Dispose(System.Boolean)
+  fullName: ETLBox.ControlFlow.TableData.Dispose(System.Boolean)
+  nameWithType: TableData.Dispose(Boolean)
+- uid: ETLBox.ControlFlow.TableData.Dispose*
   name: Dispose
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Dispose_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.Dispose
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Dispose_
+  commentId: Overload:ETLBox.ControlFlow.TableData.Dispose
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.Dispose
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Dispose
-  nameWithType: TableData<T>.Dispose
-  nameWithType.vb: TableData(Of T).Dispose
-- uid: ETLBox.ControlFlow.TableData`1.FieldCount
+  fullName: ETLBox.ControlFlow.TableData.Dispose
+  nameWithType: TableData.Dispose
+- uid: ETLBox.ControlFlow.TableData.FieldCount
   name: FieldCount
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_FieldCount
-  commentId: P:ETLBox.ControlFlow.TableData`1.FieldCount
-  fullName: ETLBox.ControlFlow.TableData<T>.FieldCount
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).FieldCount
-  nameWithType: TableData<T>.FieldCount
-  nameWithType.vb: TableData(Of T).FieldCount
-- uid: ETLBox.ControlFlow.TableData`1.FieldCount*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_FieldCount
+  commentId: P:ETLBox.ControlFlow.TableData.FieldCount
+  fullName: ETLBox.ControlFlow.TableData.FieldCount
+  nameWithType: TableData.FieldCount
+- uid: ETLBox.ControlFlow.TableData.FieldCount*
   name: FieldCount
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_FieldCount_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.FieldCount
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_FieldCount_
+  commentId: Overload:ETLBox.ControlFlow.TableData.FieldCount
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.FieldCount
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).FieldCount
-  nameWithType: TableData<T>.FieldCount
-  nameWithType.vb: TableData(Of T).FieldCount
-- uid: ETLBox.ControlFlow.TableData`1.GetBoolean(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.FieldCount
+  nameWithType: TableData.FieldCount
+- uid: ETLBox.ControlFlow.TableData.GetBoolean(System.Int32)
   name: GetBoolean(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetBoolean_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetBoolean(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetBoolean(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetBoolean(System.Int32)
-  nameWithType: TableData<T>.GetBoolean(Int32)
-  nameWithType.vb: TableData(Of T).GetBoolean(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetBoolean*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetBoolean_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetBoolean(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetBoolean(System.Int32)
+  nameWithType: TableData.GetBoolean(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetBoolean*
   name: GetBoolean
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetBoolean_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetBoolean
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetBoolean_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetBoolean
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetBoolean
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetBoolean
-  nameWithType: TableData<T>.GetBoolean
-  nameWithType.vb: TableData(Of T).GetBoolean
-- uid: ETLBox.ControlFlow.TableData`1.GetByte(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetBoolean
+  nameWithType: TableData.GetBoolean
+- uid: ETLBox.ControlFlow.TableData.GetByte(System.Int32)
   name: GetByte(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetByte_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetByte(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetByte(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetByte(System.Int32)
-  nameWithType: TableData<T>.GetByte(Int32)
-  nameWithType.vb: TableData(Of T).GetByte(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetByte*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetByte_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetByte(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetByte(System.Int32)
+  nameWithType: TableData.GetByte(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetByte*
   name: GetByte
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetByte_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetByte
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetByte_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetByte
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetByte
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetByte
-  nameWithType: TableData<T>.GetByte
-  nameWithType.vb: TableData(Of T).GetByte
-- uid: ETLBox.ControlFlow.TableData`1.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetByte
+  nameWithType: TableData.GetByte
+- uid: ETLBox.ControlFlow.TableData.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)
   name: GetBytes(Int32, Int64, Byte[], Int32, Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetBytes_System_Int32_System_Int64_System_Byte___System_Int32_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetBytes_System_Int32_System_Int64_System_Byte___System_Int32_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)
   name.vb: GetBytes(Int32, Int64, Byte(), Int32, Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetBytes(System.Int32, System.Int64, System.Byte[], System.Int32, System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetBytes(System.Int32, System.Int64, System.Byte(), System.Int32, System.Int32)
-  nameWithType: TableData<T>.GetBytes(Int32, Int64, Byte[], Int32, Int32)
-  nameWithType.vb: TableData(Of T).GetBytes(Int32, Int64, Byte(), Int32, Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetBytes*
+  fullName: ETLBox.ControlFlow.TableData.GetBytes(System.Int32, System.Int64, System.Byte[], System.Int32, System.Int32)
+  fullName.vb: ETLBox.ControlFlow.TableData.GetBytes(System.Int32, System.Int64, System.Byte(), System.Int32, System.Int32)
+  nameWithType: TableData.GetBytes(Int32, Int64, Byte[], Int32, Int32)
+  nameWithType.vb: TableData.GetBytes(Int32, Int64, Byte(), Int32, Int32)
+- uid: ETLBox.ControlFlow.TableData.GetBytes*
   name: GetBytes
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetBytes_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetBytes
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetBytes_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetBytes
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetBytes
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetBytes
-  nameWithType: TableData<T>.GetBytes
-  nameWithType.vb: TableData(Of T).GetBytes
-- uid: ETLBox.ControlFlow.TableData`1.GetChar(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetBytes
+  nameWithType: TableData.GetBytes
+- uid: ETLBox.ControlFlow.TableData.GetChar(System.Int32)
   name: GetChar(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetChar_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetChar(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetChar(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetChar(System.Int32)
-  nameWithType: TableData<T>.GetChar(Int32)
-  nameWithType.vb: TableData(Of T).GetChar(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetChar*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetChar_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetChar(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetChar(System.Int32)
+  nameWithType: TableData.GetChar(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetChar*
   name: GetChar
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetChar_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetChar
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetChar_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetChar
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetChar
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetChar
-  nameWithType: TableData<T>.GetChar
-  nameWithType.vb: TableData(Of T).GetChar
-- uid: ETLBox.ControlFlow.TableData`1.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetChar
+  nameWithType: TableData.GetChar
+- uid: ETLBox.ControlFlow.TableData.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)
   name: GetChars(Int32, Int64, Char[], Int32, Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetChars_System_Int32_System_Int64_System_Char___System_Int32_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetChars_System_Int32_System_Int64_System_Char___System_Int32_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)
   name.vb: GetChars(Int32, Int64, Char(), Int32, Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetChars(System.Int32, System.Int64, System.Char[], System.Int32, System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetChars(System.Int32, System.Int64, System.Char(), System.Int32, System.Int32)
-  nameWithType: TableData<T>.GetChars(Int32, Int64, Char[], Int32, Int32)
-  nameWithType.vb: TableData(Of T).GetChars(Int32, Int64, Char(), Int32, Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetChars*
+  fullName: ETLBox.ControlFlow.TableData.GetChars(System.Int32, System.Int64, System.Char[], System.Int32, System.Int32)
+  fullName.vb: ETLBox.ControlFlow.TableData.GetChars(System.Int32, System.Int64, System.Char(), System.Int32, System.Int32)
+  nameWithType: TableData.GetChars(Int32, Int64, Char[], Int32, Int32)
+  nameWithType.vb: TableData.GetChars(Int32, Int64, Char(), Int32, Int32)
+- uid: ETLBox.ControlFlow.TableData.GetChars*
   name: GetChars
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetChars_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetChars
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetChars_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetChars
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetChars
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetChars
-  nameWithType: TableData<T>.GetChars
-  nameWithType.vb: TableData(Of T).GetChars
-- uid: ETLBox.ControlFlow.TableData`1.GetData(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetChars
+  nameWithType: TableData.GetChars
+- uid: ETLBox.ControlFlow.TableData.GetData(System.Int32)
   name: GetData(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetData_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetData(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetData(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetData(System.Int32)
-  nameWithType: TableData<T>.GetData(Int32)
-  nameWithType.vb: TableData(Of T).GetData(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetData*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetData_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetData(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetData(System.Int32)
+  nameWithType: TableData.GetData(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetData*
   name: GetData
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetData_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetData
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetData_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetData
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetData
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetData
-  nameWithType: TableData<T>.GetData
-  nameWithType.vb: TableData(Of T).GetData
-- uid: ETLBox.ControlFlow.TableData`1.GetDataTypeName(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetData
+  nameWithType: TableData.GetData
+- uid: ETLBox.ControlFlow.TableData.GetDataTypeName(System.Int32)
   name: GetDataTypeName(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDataTypeName_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetDataTypeName(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDataTypeName(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDataTypeName(System.Int32)
-  nameWithType: TableData<T>.GetDataTypeName(Int32)
-  nameWithType.vb: TableData(Of T).GetDataTypeName(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetDataTypeName(System.String)
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDataTypeName_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetDataTypeName(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetDataTypeName(System.Int32)
+  nameWithType: TableData.GetDataTypeName(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetDataTypeName(System.String)
   name: GetDataTypeName(String)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDataTypeName_System_String_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetDataTypeName(System.String)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDataTypeName(System.String)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDataTypeName(System.String)
-  nameWithType: TableData<T>.GetDataTypeName(String)
-  nameWithType.vb: TableData(Of T).GetDataTypeName(String)
-- uid: ETLBox.ControlFlow.TableData`1.GetDataTypeName*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDataTypeName_System_String_
+  commentId: M:ETLBox.ControlFlow.TableData.GetDataTypeName(System.String)
+  fullName: ETLBox.ControlFlow.TableData.GetDataTypeName(System.String)
+  nameWithType: TableData.GetDataTypeName(String)
+- uid: ETLBox.ControlFlow.TableData.GetDataTypeName*
   name: GetDataTypeName
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDataTypeName_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetDataTypeName
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDataTypeName_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetDataTypeName
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDataTypeName
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDataTypeName
-  nameWithType: TableData<T>.GetDataTypeName
-  nameWithType.vb: TableData(Of T).GetDataTypeName
-- uid: ETLBox.ControlFlow.TableData`1.GetDateTime(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetDataTypeName
+  nameWithType: TableData.GetDataTypeName
+- uid: ETLBox.ControlFlow.TableData.GetDateTime(System.Int32)
   name: GetDateTime(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDateTime_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetDateTime(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDateTime(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDateTime(System.Int32)
-  nameWithType: TableData<T>.GetDateTime(Int32)
-  nameWithType.vb: TableData(Of T).GetDateTime(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetDateTime*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDateTime_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetDateTime(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetDateTime(System.Int32)
+  nameWithType: TableData.GetDateTime(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetDateTime*
   name: GetDateTime
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDateTime_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetDateTime
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDateTime_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetDateTime
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDateTime
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDateTime
-  nameWithType: TableData<T>.GetDateTime
-  nameWithType.vb: TableData(Of T).GetDateTime
-- uid: ETLBox.ControlFlow.TableData`1.GetDecimal(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetDateTime
+  nameWithType: TableData.GetDateTime
+- uid: ETLBox.ControlFlow.TableData.GetDecimal(System.Int32)
   name: GetDecimal(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDecimal_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetDecimal(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDecimal(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDecimal(System.Int32)
-  nameWithType: TableData<T>.GetDecimal(Int32)
-  nameWithType.vb: TableData(Of T).GetDecimal(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetDecimal*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDecimal_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetDecimal(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetDecimal(System.Int32)
+  nameWithType: TableData.GetDecimal(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetDecimal*
   name: GetDecimal
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDecimal_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetDecimal
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDecimal_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetDecimal
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDecimal
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDecimal
-  nameWithType: TableData<T>.GetDecimal
-  nameWithType.vb: TableData(Of T).GetDecimal
-- uid: ETLBox.ControlFlow.TableData`1.GetDouble(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetDecimal
+  nameWithType: TableData.GetDecimal
+- uid: ETLBox.ControlFlow.TableData.GetDouble(System.Int32)
   name: GetDouble(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDouble_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetDouble(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDouble(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDouble(System.Int32)
-  nameWithType: TableData<T>.GetDouble(Int32)
-  nameWithType.vb: TableData(Of T).GetDouble(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetDouble*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDouble_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetDouble(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetDouble(System.Int32)
+  nameWithType: TableData.GetDouble(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetDouble*
   name: GetDouble
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetDouble_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetDouble
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetDouble_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetDouble
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetDouble
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetDouble
-  nameWithType: TableData<T>.GetDouble
-  nameWithType.vb: TableData(Of T).GetDouble
-- uid: ETLBox.ControlFlow.TableData`1.GetFieldType(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetDouble
+  nameWithType: TableData.GetDouble
+- uid: ETLBox.ControlFlow.TableData.GetFieldType(System.Int32)
   name: GetFieldType(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetFieldType_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetFieldType(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetFieldType(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetFieldType(System.Int32)
-  nameWithType: TableData<T>.GetFieldType(Int32)
-  nameWithType.vb: TableData(Of T).GetFieldType(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetFieldType*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetFieldType_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetFieldType(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetFieldType(System.Int32)
+  nameWithType: TableData.GetFieldType(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetFieldType*
   name: GetFieldType
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetFieldType_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetFieldType
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetFieldType_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetFieldType
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetFieldType
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetFieldType
-  nameWithType: TableData<T>.GetFieldType
-  nameWithType.vb: TableData(Of T).GetFieldType
-- uid: ETLBox.ControlFlow.TableData`1.GetFloat(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetFieldType
+  nameWithType: TableData.GetFieldType
+- uid: ETLBox.ControlFlow.TableData.GetFloat(System.Int32)
   name: GetFloat(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetFloat_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetFloat(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetFloat(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetFloat(System.Int32)
-  nameWithType: TableData<T>.GetFloat(Int32)
-  nameWithType.vb: TableData(Of T).GetFloat(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetFloat*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetFloat_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetFloat(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetFloat(System.Int32)
+  nameWithType: TableData.GetFloat(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetFloat*
   name: GetFloat
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetFloat_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetFloat
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetFloat_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetFloat
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetFloat
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetFloat
-  nameWithType: TableData<T>.GetFloat
-  nameWithType.vb: TableData(Of T).GetFloat
-- uid: ETLBox.ControlFlow.TableData`1.GetGuid(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetFloat
+  nameWithType: TableData.GetFloat
+- uid: ETLBox.ControlFlow.TableData.GetGuid(System.Int32)
   name: GetGuid(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetGuid_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetGuid(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetGuid(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetGuid(System.Int32)
-  nameWithType: TableData<T>.GetGuid(Int32)
-  nameWithType.vb: TableData(Of T).GetGuid(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetGuid*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetGuid_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetGuid(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetGuid(System.Int32)
+  nameWithType: TableData.GetGuid(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetGuid*
   name: GetGuid
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetGuid_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetGuid
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetGuid_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetGuid
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetGuid
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetGuid
-  nameWithType: TableData<T>.GetGuid
-  nameWithType.vb: TableData(Of T).GetGuid
-- uid: ETLBox.ControlFlow.TableData`1.GetInt16(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetGuid
+  nameWithType: TableData.GetGuid
+- uid: ETLBox.ControlFlow.TableData.GetInt16(System.Int32)
   name: GetInt16(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetInt16_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetInt16(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetInt16(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetInt16(System.Int32)
-  nameWithType: TableData<T>.GetInt16(Int32)
-  nameWithType.vb: TableData(Of T).GetInt16(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetInt16*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetInt16_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetInt16(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetInt16(System.Int32)
+  nameWithType: TableData.GetInt16(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetInt16*
   name: GetInt16
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetInt16_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetInt16
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetInt16_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetInt16
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetInt16
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetInt16
-  nameWithType: TableData<T>.GetInt16
-  nameWithType.vb: TableData(Of T).GetInt16
-- uid: ETLBox.ControlFlow.TableData`1.GetInt32(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetInt16
+  nameWithType: TableData.GetInt16
+- uid: ETLBox.ControlFlow.TableData.GetInt32(System.Int32)
   name: GetInt32(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetInt32_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetInt32(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetInt32(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetInt32(System.Int32)
-  nameWithType: TableData<T>.GetInt32(Int32)
-  nameWithType.vb: TableData(Of T).GetInt32(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetInt32*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetInt32_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetInt32(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetInt32(System.Int32)
+  nameWithType: TableData.GetInt32(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetInt32*
   name: GetInt32
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetInt32_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetInt32
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetInt32_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetInt32
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetInt32
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetInt32
-  nameWithType: TableData<T>.GetInt32
-  nameWithType.vb: TableData(Of T).GetInt32
-- uid: ETLBox.ControlFlow.TableData`1.GetInt64(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetInt32
+  nameWithType: TableData.GetInt32
+- uid: ETLBox.ControlFlow.TableData.GetInt64(System.Int32)
   name: GetInt64(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetInt64_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetInt64(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetInt64(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetInt64(System.Int32)
-  nameWithType: TableData<T>.GetInt64(Int32)
-  nameWithType.vb: TableData(Of T).GetInt64(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetInt64*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetInt64_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetInt64(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetInt64(System.Int32)
+  nameWithType: TableData.GetInt64(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetInt64*
   name: GetInt64
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetInt64_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetInt64
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetInt64_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetInt64
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetInt64
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetInt64
-  nameWithType: TableData<T>.GetInt64
-  nameWithType.vb: TableData(Of T).GetInt64
-- uid: ETLBox.ControlFlow.TableData`1.GetName(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetInt64
+  nameWithType: TableData.GetInt64
+- uid: ETLBox.ControlFlow.TableData.GetName(System.Int32)
   name: GetName(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetName_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetName(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetName(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetName(System.Int32)
-  nameWithType: TableData<T>.GetName(Int32)
-  nameWithType.vb: TableData(Of T).GetName(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetName*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetName_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetName(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetName(System.Int32)
+  nameWithType: TableData.GetName(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetName*
   name: GetName
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetName_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetName
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetName_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetName
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetName
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetName
-  nameWithType: TableData<T>.GetName
-  nameWithType.vb: TableData(Of T).GetName
-- uid: ETLBox.ControlFlow.TableData`1.GetOrdinal(System.String)
+  fullName: ETLBox.ControlFlow.TableData.GetName
+  nameWithType: TableData.GetName
+- uid: ETLBox.ControlFlow.TableData.GetOrdinal(System.String)
   name: GetOrdinal(String)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetOrdinal_System_String_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetOrdinal(System.String)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetOrdinal(System.String)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetOrdinal(System.String)
-  nameWithType: TableData<T>.GetOrdinal(String)
-  nameWithType.vb: TableData(Of T).GetOrdinal(String)
-- uid: ETLBox.ControlFlow.TableData`1.GetOrdinal*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetOrdinal_System_String_
+  commentId: M:ETLBox.ControlFlow.TableData.GetOrdinal(System.String)
+  fullName: ETLBox.ControlFlow.TableData.GetOrdinal(System.String)
+  nameWithType: TableData.GetOrdinal(String)
+- uid: ETLBox.ControlFlow.TableData.GetOrdinal*
   name: GetOrdinal
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetOrdinal_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetOrdinal
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetOrdinal_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetOrdinal
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetOrdinal
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetOrdinal
-  nameWithType: TableData<T>.GetOrdinal
-  nameWithType.vb: TableData(Of T).GetOrdinal
-- uid: ETLBox.ControlFlow.TableData`1.GetSchemaTable
+  fullName: ETLBox.ControlFlow.TableData.GetOrdinal
+  nameWithType: TableData.GetOrdinal
+- uid: ETLBox.ControlFlow.TableData.GetSchemaTable
   name: GetSchemaTable()
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetSchemaTable
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetSchemaTable
-  fullName: ETLBox.ControlFlow.TableData<T>.GetSchemaTable()
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetSchemaTable()
-  nameWithType: TableData<T>.GetSchemaTable()
-  nameWithType.vb: TableData(Of T).GetSchemaTable()
-- uid: ETLBox.ControlFlow.TableData`1.GetSchemaTable*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetSchemaTable
+  commentId: M:ETLBox.ControlFlow.TableData.GetSchemaTable
+  fullName: ETLBox.ControlFlow.TableData.GetSchemaTable()
+  nameWithType: TableData.GetSchemaTable()
+- uid: ETLBox.ControlFlow.TableData.GetSchemaTable*
   name: GetSchemaTable
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetSchemaTable_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetSchemaTable
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetSchemaTable_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetSchemaTable
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetSchemaTable
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetSchemaTable
-  nameWithType: TableData<T>.GetSchemaTable
-  nameWithType.vb: TableData(Of T).GetSchemaTable
-- uid: ETLBox.ControlFlow.TableData`1.GetString(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetSchemaTable
+  nameWithType: TableData.GetSchemaTable
+- uid: ETLBox.ControlFlow.TableData.GetString(System.Int32)
   name: GetString(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetString_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetString(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetString(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetString(System.Int32)
-  nameWithType: TableData<T>.GetString(Int32)
-  nameWithType.vb: TableData(Of T).GetString(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetString*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetString_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetString(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetString(System.Int32)
+  nameWithType: TableData.GetString(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetString*
   name: GetString
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetString_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetString
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetString_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetString
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetString
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetString
-  nameWithType: TableData<T>.GetString
-  nameWithType.vb: TableData(Of T).GetString
-- uid: ETLBox.ControlFlow.TableData`1.GetValue(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetString
+  nameWithType: TableData.GetString
+- uid: ETLBox.ControlFlow.TableData.GetValue(System.Int32)
   name: GetValue(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetValue_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetValue(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.GetValue(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetValue(System.Int32)
-  nameWithType: TableData<T>.GetValue(Int32)
-  nameWithType.vb: TableData(Of T).GetValue(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.GetValue*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetValue_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.GetValue(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.GetValue(System.Int32)
+  nameWithType: TableData.GetValue(Int32)
+- uid: ETLBox.ControlFlow.TableData.GetValue*
   name: GetValue
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetValue_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetValue
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetValue_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetValue
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetValue
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetValue
-  nameWithType: TableData<T>.GetValue
-  nameWithType.vb: TableData(Of T).GetValue
-- uid: ETLBox.ControlFlow.TableData`1.GetValues(System.Object[])
+  fullName: ETLBox.ControlFlow.TableData.GetValue
+  nameWithType: TableData.GetValue
+- uid: ETLBox.ControlFlow.TableData.GetValues(System.Object[])
   name: GetValues(Object[])
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetValues_System_Object___
-  commentId: M:ETLBox.ControlFlow.TableData`1.GetValues(System.Object[])
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetValues_System_Object___
+  commentId: M:ETLBox.ControlFlow.TableData.GetValues(System.Object[])
   name.vb: GetValues(Object())
-  fullName: ETLBox.ControlFlow.TableData<T>.GetValues(System.Object[])
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetValues(System.Object())
-  nameWithType: TableData<T>.GetValues(Object[])
-  nameWithType.vb: TableData(Of T).GetValues(Object())
-- uid: ETLBox.ControlFlow.TableData`1.GetValues*
+  fullName: ETLBox.ControlFlow.TableData.GetValues(System.Object[])
+  fullName.vb: ETLBox.ControlFlow.TableData.GetValues(System.Object())
+  nameWithType: TableData.GetValues(Object[])
+  nameWithType.vb: TableData.GetValues(Object())
+- uid: ETLBox.ControlFlow.TableData.GetValues*
   name: GetValues
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_GetValues_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.GetValues
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_GetValues_
+  commentId: Overload:ETLBox.ControlFlow.TableData.GetValues
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.GetValues
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).GetValues
-  nameWithType: TableData<T>.GetValues
-  nameWithType.vb: TableData(Of T).GetValues
-- uid: ETLBox.ControlFlow.TableData`1.IsClosed
+  fullName: ETLBox.ControlFlow.TableData.GetValues
+  nameWithType: TableData.GetValues
+- uid: ETLBox.ControlFlow.TableData.IsClosed
   name: IsClosed
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_IsClosed
-  commentId: P:ETLBox.ControlFlow.TableData`1.IsClosed
-  fullName: ETLBox.ControlFlow.TableData<T>.IsClosed
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).IsClosed
-  nameWithType: TableData<T>.IsClosed
-  nameWithType.vb: TableData(Of T).IsClosed
-- uid: ETLBox.ControlFlow.TableData`1.IsClosed*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_IsClosed
+  commentId: P:ETLBox.ControlFlow.TableData.IsClosed
+  fullName: ETLBox.ControlFlow.TableData.IsClosed
+  nameWithType: TableData.IsClosed
+- uid: ETLBox.ControlFlow.TableData.IsClosed*
   name: IsClosed
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_IsClosed_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.IsClosed
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_IsClosed_
+  commentId: Overload:ETLBox.ControlFlow.TableData.IsClosed
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.IsClosed
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).IsClosed
-  nameWithType: TableData<T>.IsClosed
-  nameWithType.vb: TableData(Of T).IsClosed
-- uid: ETLBox.ControlFlow.TableData`1.IsDBNull(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.IsClosed
+  nameWithType: TableData.IsClosed
+- uid: ETLBox.ControlFlow.TableData.IsDBNull(System.Int32)
   name: IsDBNull(Int32)
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_IsDBNull_System_Int32_
-  commentId: M:ETLBox.ControlFlow.TableData`1.IsDBNull(System.Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.IsDBNull(System.Int32)
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).IsDBNull(System.Int32)
-  nameWithType: TableData<T>.IsDBNull(Int32)
-  nameWithType.vb: TableData(Of T).IsDBNull(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.IsDBNull*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_IsDBNull_System_Int32_
+  commentId: M:ETLBox.ControlFlow.TableData.IsDBNull(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.IsDBNull(System.Int32)
+  nameWithType: TableData.IsDBNull(Int32)
+- uid: ETLBox.ControlFlow.TableData.IsDBNull*
   name: IsDBNull
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_IsDBNull_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.IsDBNull
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_IsDBNull_
+  commentId: Overload:ETLBox.ControlFlow.TableData.IsDBNull
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.IsDBNull
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).IsDBNull
-  nameWithType: TableData<T>.IsDBNull
-  nameWithType.vb: TableData(Of T).IsDBNull
-- uid: ETLBox.ControlFlow.TableData`1.Item(System.Int32)
+  fullName: ETLBox.ControlFlow.TableData.IsDBNull
+  nameWithType: TableData.IsDBNull
+- uid: ETLBox.ControlFlow.TableData.Item(System.Int32)
   name: Item[Int32]
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Item_System_Int32_
-  commentId: P:ETLBox.ControlFlow.TableData`1.Item(System.Int32)
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Item_System_Int32_
+  commentId: P:ETLBox.ControlFlow.TableData.Item(System.Int32)
   name.vb: Item(Int32)
-  fullName: ETLBox.ControlFlow.TableData<T>.Item[System.Int32]
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Item(System.Int32)
-  nameWithType: TableData<T>.Item[Int32]
-  nameWithType.vb: TableData(Of T).Item(Int32)
-- uid: ETLBox.ControlFlow.TableData`1.Item(System.String)
+  fullName: ETLBox.ControlFlow.TableData.Item[System.Int32]
+  fullName.vb: ETLBox.ControlFlow.TableData.Item(System.Int32)
+  nameWithType: TableData.Item[Int32]
+  nameWithType.vb: TableData.Item(Int32)
+- uid: ETLBox.ControlFlow.TableData.Item(System.String)
   name: Item[String]
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Item_System_String_
-  commentId: P:ETLBox.ControlFlow.TableData`1.Item(System.String)
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Item_System_String_
+  commentId: P:ETLBox.ControlFlow.TableData.Item(System.String)
   name.vb: Item(String)
-  fullName: ETLBox.ControlFlow.TableData<T>.Item[System.String]
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Item(System.String)
-  nameWithType: TableData<T>.Item[String]
-  nameWithType.vb: TableData(Of T).Item(String)
-- uid: ETLBox.ControlFlow.TableData`1.Item*
+  fullName: ETLBox.ControlFlow.TableData.Item[System.String]
+  fullName.vb: ETLBox.ControlFlow.TableData.Item(System.String)
+  nameWithType: TableData.Item[String]
+  nameWithType.vb: TableData.Item(String)
+- uid: ETLBox.ControlFlow.TableData.Item*
   name: Item
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Item_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.Item
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Item_
+  commentId: Overload:ETLBox.ControlFlow.TableData.Item
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.Item
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Item
-  nameWithType: TableData<T>.Item
-  nameWithType.vb: TableData(Of T).Item
-- uid: ETLBox.ControlFlow.TableData`1.NextResult
+  fullName: ETLBox.ControlFlow.TableData.Item
+  nameWithType: TableData.Item
+- uid: ETLBox.ControlFlow.TableData.KeepIdentity
+  name: KeepIdentity
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_KeepIdentity
+  commentId: P:ETLBox.ControlFlow.TableData.KeepIdentity
+  fullName: ETLBox.ControlFlow.TableData.KeepIdentity
+  nameWithType: TableData.KeepIdentity
+- uid: ETLBox.ControlFlow.TableData.KeepIdentity*
+  name: KeepIdentity
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_KeepIdentity_
+  commentId: Overload:ETLBox.ControlFlow.TableData.KeepIdentity
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.TableData.KeepIdentity
+  nameWithType: TableData.KeepIdentity
+- uid: ETLBox.ControlFlow.TableData.NextResult
   name: NextResult()
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_NextResult
-  commentId: M:ETLBox.ControlFlow.TableData`1.NextResult
-  fullName: ETLBox.ControlFlow.TableData<T>.NextResult()
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).NextResult()
-  nameWithType: TableData<T>.NextResult()
-  nameWithType.vb: TableData(Of T).NextResult()
-- uid: ETLBox.ControlFlow.TableData`1.NextResult*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_NextResult
+  commentId: M:ETLBox.ControlFlow.TableData.NextResult
+  fullName: ETLBox.ControlFlow.TableData.NextResult()
+  nameWithType: TableData.NextResult()
+- uid: ETLBox.ControlFlow.TableData.NextResult*
   name: NextResult
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_NextResult_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.NextResult
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_NextResult_
+  commentId: Overload:ETLBox.ControlFlow.TableData.NextResult
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.NextResult
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).NextResult
-  nameWithType: TableData<T>.NextResult
-  nameWithType.vb: TableData(Of T).NextResult
-- uid: ETLBox.ControlFlow.TableData`1.Read
+  fullName: ETLBox.ControlFlow.TableData.NextResult
+  nameWithType: TableData.NextResult
+- uid: ETLBox.ControlFlow.TableData.Read
   name: Read()
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Read
-  commentId: M:ETLBox.ControlFlow.TableData`1.Read
-  fullName: ETLBox.ControlFlow.TableData<T>.Read()
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Read()
-  nameWithType: TableData<T>.Read()
-  nameWithType.vb: TableData(Of T).Read()
-- uid: ETLBox.ControlFlow.TableData`1.Read*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Read
+  commentId: M:ETLBox.ControlFlow.TableData.Read
+  fullName: ETLBox.ControlFlow.TableData.Read()
+  nameWithType: TableData.Read()
+- uid: ETLBox.ControlFlow.TableData.Read*
   name: Read
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Read_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.Read
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Read_
+  commentId: Overload:ETLBox.ControlFlow.TableData.Read
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.Read
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Read
-  nameWithType: TableData<T>.Read
-  nameWithType.vb: TableData(Of T).Read
-- uid: ETLBox.ControlFlow.TableData`1.ReadIndex
+  fullName: ETLBox.ControlFlow.TableData.Read
+  nameWithType: TableData.Read
+- uid: ETLBox.ControlFlow.TableData.ReadIndex
   name: ReadIndex
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_ReadIndex
-  commentId: P:ETLBox.ControlFlow.TableData`1.ReadIndex
-  fullName: ETLBox.ControlFlow.TableData<T>.ReadIndex
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).ReadIndex
-  nameWithType: TableData<T>.ReadIndex
-  nameWithType.vb: TableData(Of T).ReadIndex
-- uid: ETLBox.ControlFlow.TableData`1.ReadIndex*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_ReadIndex
+  commentId: P:ETLBox.ControlFlow.TableData.ReadIndex
+  fullName: ETLBox.ControlFlow.TableData.ReadIndex
+  nameWithType: TableData.ReadIndex
+- uid: ETLBox.ControlFlow.TableData.ReadIndex*
   name: ReadIndex
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_ReadIndex_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.ReadIndex
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_ReadIndex_
+  commentId: Overload:ETLBox.ControlFlow.TableData.ReadIndex
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.ReadIndex
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).ReadIndex
-  nameWithType: TableData<T>.ReadIndex
-  nameWithType.vb: TableData(Of T).ReadIndex
-- uid: ETLBox.ControlFlow.TableData`1.RecordsAffected
+  fullName: ETLBox.ControlFlow.TableData.ReadIndex
+  nameWithType: TableData.ReadIndex
+- uid: ETLBox.ControlFlow.TableData.RecordsAffected
   name: RecordsAffected
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_RecordsAffected
-  commentId: P:ETLBox.ControlFlow.TableData`1.RecordsAffected
-  fullName: ETLBox.ControlFlow.TableData<T>.RecordsAffected
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).RecordsAffected
-  nameWithType: TableData<T>.RecordsAffected
-  nameWithType.vb: TableData(Of T).RecordsAffected
-- uid: ETLBox.ControlFlow.TableData`1.RecordsAffected*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_RecordsAffected
+  commentId: P:ETLBox.ControlFlow.TableData.RecordsAffected
+  fullName: ETLBox.ControlFlow.TableData.RecordsAffected
+  nameWithType: TableData.RecordsAffected
+- uid: ETLBox.ControlFlow.TableData.RecordsAffected*
   name: RecordsAffected
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_RecordsAffected_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.RecordsAffected
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_RecordsAffected_
+  commentId: Overload:ETLBox.ControlFlow.TableData.RecordsAffected
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.RecordsAffected
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).RecordsAffected
-  nameWithType: TableData<T>.RecordsAffected
-  nameWithType.vb: TableData(Of T).RecordsAffected
-- uid: ETLBox.ControlFlow.TableData`1.Rows
+  fullName: ETLBox.ControlFlow.TableData.RecordsAffected
+  nameWithType: TableData.RecordsAffected
+- uid: ETLBox.ControlFlow.TableData.Rows
   name: Rows
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Rows
-  commentId: P:ETLBox.ControlFlow.TableData`1.Rows
-  fullName: ETLBox.ControlFlow.TableData<T>.Rows
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Rows
-  nameWithType: TableData<T>.Rows
-  nameWithType.vb: TableData(Of T).Rows
-- uid: ETLBox.ControlFlow.TableData`1.Rows*
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Rows
+  commentId: P:ETLBox.ControlFlow.TableData.Rows
+  fullName: ETLBox.ControlFlow.TableData.Rows
+  nameWithType: TableData.Rows
+- uid: ETLBox.ControlFlow.TableData.Rows*
   name: Rows
-  href: api/ETLBox.ControlFlow.TableData-1.html#ETLBox_ControlFlow_TableData_1_Rows_
-  commentId: Overload:ETLBox.ControlFlow.TableData`1.Rows
+  href: api/ETLBox.ControlFlow.TableData.html#ETLBox_ControlFlow_TableData_Rows_
+  commentId: Overload:ETLBox.ControlFlow.TableData.Rows
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.TableData<T>.Rows
-  fullName.vb: ETLBox.ControlFlow.TableData(Of T).Rows
-  nameWithType: TableData<T>.Rows
-  nameWithType.vb: TableData(Of T).Rows
+  fullName: ETLBox.ControlFlow.TableData.Rows
+  nameWithType: TableData.Rows
 - uid: ETLBox.ControlFlow.TableDefinition
   name: TableDefinition
   href: api/ETLBox.ControlFlow.TableDefinition.html
@@ -7443,130 +7258,6 @@ references:
   commentId: N:ETLBox.ControlFlow.Tasks
   fullName: ETLBox.ControlFlow.Tasks
   nameWithType: ETLBox.ControlFlow.Tasks
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask
-  name: CalculateDatabaseHashTask
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html
-  commentId: T:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask
-  nameWithType: CalculateDatabaseHashTask
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.#ctor
-  name: CalculateDatabaseHashTask()
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask__ctor
-  commentId: M:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.#ctor
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.CalculateDatabaseHashTask()
-  nameWithType: CalculateDatabaseHashTask.CalculateDatabaseHashTask()
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.#ctor(System.Collections.Generic.List{System.String})
-  name: CalculateDatabaseHashTask(List<String>)
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask__ctor_System_Collections_Generic_List_System_String__
-  commentId: M:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.#ctor(System.Collections.Generic.List{System.String})
-  name.vb: CalculateDatabaseHashTask(List(Of String))
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.CalculateDatabaseHashTask(System.Collections.Generic.List<System.String>)
-  fullName.vb: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.CalculateDatabaseHashTask(System.Collections.Generic.List(Of System.String))
-  nameWithType: CalculateDatabaseHashTask.CalculateDatabaseHashTask(List<String>)
-  nameWithType.vb: CalculateDatabaseHashTask.CalculateDatabaseHashTask(List(Of String))
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.#ctor*
-  name: CalculateDatabaseHashTask
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask__ctor_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.#ctor
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.CalculateDatabaseHashTask
-  nameWithType: CalculateDatabaseHashTask.CalculateDatabaseHashTask
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate
-  name: Calculate()
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_Calculate
-  commentId: M:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate()
-  nameWithType: CalculateDatabaseHashTask.Calculate()
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate(ETLBox.Connection.IConnectionManager,System.Collections.Generic.List{System.String})
-  name: Calculate(IConnectionManager, List<String>)
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_Calculate_ETLBox_Connection_IConnectionManager_System_Collections_Generic_List_System_String__
-  commentId: M:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate(ETLBox.Connection.IConnectionManager,System.Collections.Generic.List{System.String})
-  name.vb: Calculate(IConnectionManager, List(Of String))
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate(ETLBox.Connection.IConnectionManager, System.Collections.Generic.List<System.String>)
-  fullName.vb: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate(ETLBox.Connection.IConnectionManager, System.Collections.Generic.List(Of System.String))
-  nameWithType: CalculateDatabaseHashTask.Calculate(IConnectionManager, List<String>)
-  nameWithType.vb: CalculateDatabaseHashTask.Calculate(IConnectionManager, List(Of String))
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate(System.Collections.Generic.List{System.String})
-  name: Calculate(List<String>)
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_Calculate_System_Collections_Generic_List_System_String__
-  commentId: M:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate(System.Collections.Generic.List{System.String})
-  name.vb: Calculate(List(Of String))
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate(System.Collections.Generic.List<System.String>)
-  fullName.vb: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate(System.Collections.Generic.List(Of System.String))
-  nameWithType: CalculateDatabaseHashTask.Calculate(List<String>)
-  nameWithType.vb: CalculateDatabaseHashTask.Calculate(List(Of String))
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate*
-  name: Calculate
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_Calculate_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Calculate
-  nameWithType: CalculateDatabaseHashTask.Calculate
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.DatabaseHash
-  name: DatabaseHash
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_DatabaseHash
-  commentId: P:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.DatabaseHash
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.DatabaseHash
-  nameWithType: CalculateDatabaseHashTask.DatabaseHash
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.DatabaseHash*
-  name: DatabaseHash
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_DatabaseHash_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.DatabaseHash
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.DatabaseHash
-  nameWithType: CalculateDatabaseHashTask.DatabaseHash
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Execute()
-  nameWithType: CalculateDatabaseHashTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Execute
-  nameWithType: CalculateDatabaseHashTask.Execute
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.SchemaNames
-  name: SchemaNames
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_SchemaNames
-  commentId: P:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.SchemaNames
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.SchemaNames
-  nameWithType: CalculateDatabaseHashTask.SchemaNames
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.SchemaNames*
-  name: SchemaNames
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_SchemaNames_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.SchemaNames
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.SchemaNames
-  nameWithType: CalculateDatabaseHashTask.SchemaNames
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Sql
-  name: Sql
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_Sql
-  commentId: P:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Sql
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Sql
-  nameWithType: CalculateDatabaseHashTask.Sql
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Sql*
-  name: Sql
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_Sql_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Sql
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.Sql
-  nameWithType: CalculateDatabaseHashTask.Sql
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.TaskName
-  name: TaskName
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_TaskName
-  commentId: P:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.TaskName
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.TaskName
-  nameWithType: CalculateDatabaseHashTask.TaskName
-- uid: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.TaskName*
-  name: TaskName
-  href: api/ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html#ETLBox_ControlFlow_Tasks_CalculateDatabaseHashTask_TaskName_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.TaskName
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.TaskName
-  nameWithType: CalculateDatabaseHashTask.TaskName
 - uid: ETLBox.ControlFlow.Tasks.CleanUpSchemaTask
   name: CleanUpSchemaTask
   href: api/ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html
@@ -7623,19 +7314,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.CleanUp
   nameWithType: CleanUpSchemaTask.CleanUp
-- uid: ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html#ETLBox_ControlFlow_Tasks_CleanUpSchemaTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.Execute()
-  nameWithType: CleanUpSchemaTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html#ETLBox_ControlFlow_Tasks_CleanUpSchemaTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.Execute
-  nameWithType: CleanUpSchemaTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.SchemaName
   name: SchemaName
   href: api/ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html#ETLBox_ControlFlow_Tasks_CleanUpSchemaTask_SchemaName
@@ -7756,6 +7434,43 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Create
   nameWithType: CreateDatabaseTask.Create
+- uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists
+  name: CreateIfNotExists()
+  href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists
+  fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists()
+  nameWithType: CreateDatabaseTask.CreateIfNotExists()
+- uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String)
+  name: CreateIfNotExists(IConnectionManager, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager, System.String)
+  nameWithType: CreateDatabaseTask.CreateIfNotExists(IConnectionManager, String)
+- uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.String)
+  name: CreateIfNotExists(IConnectionManager, String, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager, System.String, System.String)
+  nameWithType: CreateDatabaseTask.CreateIfNotExists(IConnectionManager, String, String)
+- uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String)
+  name: CreateIfNotExists(String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String)
+  nameWithType: CreateDatabaseTask.CreateIfNotExists(String)
+- uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String,System.String)
+  name: CreateIfNotExists(String, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_System_String_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists(System.String, System.String)
+  nameWithType: CreateDatabaseTask.CreateIfNotExists(String, String)
+- uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists*
+  name: CreateIfNotExists
+  href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_CreateIfNotExists_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.CreateIfNotExists
+  nameWithType: CreateDatabaseTask.CreateIfNotExists
 - uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.DatabaseName
   name: DatabaseName
   href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_DatabaseName
@@ -7769,19 +7484,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.DatabaseName
   nameWithType: CreateDatabaseTask.DatabaseName
-- uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Execute()
-  nameWithType: CreateDatabaseTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.Execute
-  nameWithType: CreateDatabaseTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.CreateDatabaseTask.RecoveryModel
   name: RecoveryModel
   href: api/ETLBox.ControlFlow.Tasks.CreateDatabaseTask.html#ETLBox_ControlFlow_Tasks_CreateDatabaseTask_RecoveryModel
@@ -7914,19 +7616,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateIndexTask.CreateOrRecreate
   nameWithType: CreateIndexTask.CreateOrRecreate
-- uid: ETLBox.ControlFlow.Tasks.CreateIndexTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.CreateIndexTask.html#ETLBox_ControlFlow_Tasks_CreateIndexTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.CreateIndexTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.CreateIndexTask.Execute()
-  nameWithType: CreateIndexTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.CreateIndexTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.CreateIndexTask.html#ETLBox_ControlFlow_Tasks_CreateIndexTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateIndexTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CreateIndexTask.Execute
-  nameWithType: CreateIndexTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.CreateIndexTask.IN
   name: IN
   href: api/ETLBox.ControlFlow.Tasks.CreateIndexTask.html#ETLBox_ControlFlow_Tasks_CreateIndexTask_IN
@@ -8146,19 +7835,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateProcedureTask.CreateOrAlter
   nameWithType: CreateProcedureTask.CreateOrAlter
-- uid: ETLBox.ControlFlow.Tasks.CreateProcedureTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.CreateProcedureTask.html#ETLBox_ControlFlow_Tasks_CreateProcedureTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.CreateProcedureTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.CreateProcedureTask.Execute()
-  nameWithType: CreateProcedureTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.CreateProcedureTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.CreateProcedureTask.html#ETLBox_ControlFlow_Tasks_CreateProcedureTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateProcedureTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CreateProcedureTask.Execute
-  nameWithType: CreateProcedureTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.CreateProcedureTask.PN
   name: PN
   href: api/ETLBox.ControlFlow.Tasks.CreateProcedureTask.html#ETLBox_ControlFlow_Tasks_CreateProcedureTask_PN
@@ -8268,6 +7944,12 @@ references:
   commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor(System.String)
   fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateSchemaTask(System.String)
   nameWithType: CreateSchemaTask.CreateSchemaTask(String)
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor(System.String,System.String)
+  name: CreateSchemaTask(String, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_System_String_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor(System.String,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateSchemaTask(System.String, System.String)
+  nameWithType: CreateSchemaTask.CreateSchemaTask(String, String)
 - uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.#ctor*
   name: CreateSchemaTask
   href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask__ctor_
@@ -8275,18 +7957,49 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateSchemaTask
   nameWithType: CreateSchemaTask.CreateSchemaTask
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.AuthorizationUser
+  name: AuthorizationUser
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_AuthorizationUser
+  commentId: P:ETLBox.ControlFlow.Tasks.CreateSchemaTask.AuthorizationUser
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.AuthorizationUser
+  nameWithType: CreateSchemaTask.AuthorizationUser
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.AuthorizationUser*
+  name: AuthorizationUser
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_AuthorizationUser_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateSchemaTask.AuthorizationUser
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.AuthorizationUser
+  nameWithType: CreateSchemaTask.AuthorizationUser
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create
+  name: Create()
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create()
+  nameWithType: CreateSchemaTask.Create()
 - uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager,System.String)
   name: Create(IConnectionManager, String)
   href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_ETLBox_Connection_IConnectionManager_System_String_
   commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager,System.String)
   fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager, System.String)
   nameWithType: CreateSchemaTask.Create(IConnectionManager, String)
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager,System.String,System.String)
+  name: Create(IConnectionManager, String, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_ETLBox_Connection_IConnectionManager_System_String_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager,System.String,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(ETLBox.Connection.IConnectionManager, System.String, System.String)
+  nameWithType: CreateSchemaTask.Create(IConnectionManager, String, String)
 - uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(System.String)
   name: Create(String)
   href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_System_String_
   commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(System.String)
   fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(System.String)
   nameWithType: CreateSchemaTask.Create(String)
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(System.String,System.String)
+  name: Create(String, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_System_String_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(System.String,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create(System.String, System.String)
+  nameWithType: CreateSchemaTask.Create(String, String)
 - uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create*
   name: Create
   href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_Create_
@@ -8294,19 +8007,43 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Create
   nameWithType: CreateSchemaTask.Create
-- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Execute()
-  nameWithType: CreateSchemaTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateSchemaTask.Execute
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists
+  name: CreateIfNotExists()
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists()
+  nameWithType: CreateSchemaTask.CreateIfNotExists()
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String)
+  name: CreateIfNotExists(IConnectionManager, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager, System.String)
+  nameWithType: CreateSchemaTask.CreateIfNotExists(IConnectionManager, String)
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.String)
+  name: CreateIfNotExists(IConnectionManager, String, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager, System.String, System.String)
+  nameWithType: CreateSchemaTask.CreateIfNotExists(IConnectionManager, String, String)
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(System.String)
+  name: CreateIfNotExists(String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(System.String)
+  nameWithType: CreateSchemaTask.CreateIfNotExists(String)
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(System.String,System.String)
+  name: CreateIfNotExists(String, String)
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_System_String_System_String_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(System.String,System.String)
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists(System.String, System.String)
+  nameWithType: CreateSchemaTask.CreateIfNotExists(String, String)
+- uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists*
+  name: CreateIfNotExists
+  href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_CreateIfNotExists_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists
   isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.Execute
-  nameWithType: CreateSchemaTask.Execute
+  fullName: ETLBox.ControlFlow.Tasks.CreateSchemaTask.CreateIfNotExists
+  nameWithType: CreateSchemaTask.CreateIfNotExists
 - uid: ETLBox.ControlFlow.Tasks.CreateSchemaTask.ON
   name: ON
   href: api/ETLBox.ControlFlow.Tasks.CreateSchemaTask.html#ETLBox_ControlFlow_Tasks_CreateSchemaTask_ON
@@ -8393,6 +8130,99 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateTableTask
   nameWithType: CreateTableTask.CreateTableTask
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter
+  name: Alter()
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Alter
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.Alter
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter()
+  nameWithType: CreateTableTask.Alter()
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.TableDefinition)
+  name: Alter(IConnectionManager, TableDefinition)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_TableDefinition_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.TableDefinition)
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager, ETLBox.ControlFlow.TableDefinition)
+  nameWithType: CreateTableTask.Alter(IConnectionManager, TableDefinition)
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name: Alter(IConnectionManager, String, List<TableColumn>)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name.vb: Alter(IConnectionManager, String, List(Of TableColumn))
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager, System.String, System.Collections.Generic.List<ETLBox.ControlFlow.TableColumn>)
+  fullName.vb: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.Connection.IConnectionManager, System.String, System.Collections.Generic.List(Of ETLBox.ControlFlow.TableColumn))
+  nameWithType: CreateTableTask.Alter(IConnectionManager, String, List<TableColumn>)
+  nameWithType.vb: CreateTableTask.Alter(IConnectionManager, String, List(Of TableColumn))
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.ControlFlow.TableDefinition)
+  name: Alter(TableDefinition)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_ETLBox_ControlFlow_TableDefinition_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.ControlFlow.TableDefinition)
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(ETLBox.ControlFlow.TableDefinition)
+  nameWithType: CreateTableTask.Alter(TableDefinition)
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name: Alter(String, List<TableColumn>)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name.vb: Alter(String, List(Of TableColumn))
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(System.String, System.Collections.Generic.List<ETLBox.ControlFlow.TableColumn>)
+  fullName.vb: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter(System.String, System.Collections.Generic.List(Of ETLBox.ControlFlow.TableColumn))
+  nameWithType: CreateTableTask.Alter(String, List<TableColumn>)
+  nameWithType.vb: CreateTableTask.Alter(String, List(Of TableColumn))
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter*
+  name: Alter
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Alter_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateTableTask.Alter
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Alter
+  nameWithType: CreateTableTask.Alter
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfDifferent
+  name: AlterIfDifferent()
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfDifferent
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfDifferent
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfDifferent()
+  nameWithType: CreateTableTask.AlterIfDifferent()
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfDifferent*
+  name: AlterIfDifferent
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfDifferent_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfDifferent
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfDifferent
+  nameWithType: CreateTableTask.AlterIfDifferent
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.TableDefinition)
+  name: AlterIfNeeded(IConnectionManager, TableDefinition)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_TableDefinition_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.TableDefinition)
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager, ETLBox.ControlFlow.TableDefinition)
+  nameWithType: CreateTableTask.AlterIfNeeded(IConnectionManager, TableDefinition)
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name: AlterIfNeeded(IConnectionManager, String, List<TableColumn>)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name.vb: AlterIfNeeded(IConnectionManager, String, List(Of TableColumn))
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager, System.String, System.Collections.Generic.List<ETLBox.ControlFlow.TableColumn>)
+  fullName.vb: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.Connection.IConnectionManager, System.String, System.Collections.Generic.List(Of ETLBox.ControlFlow.TableColumn))
+  nameWithType: CreateTableTask.AlterIfNeeded(IConnectionManager, String, List<TableColumn>)
+  nameWithType.vb: CreateTableTask.AlterIfNeeded(IConnectionManager, String, List(Of TableColumn))
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.ControlFlow.TableDefinition)
+  name: AlterIfNeeded(TableDefinition)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_ETLBox_ControlFlow_TableDefinition_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.ControlFlow.TableDefinition)
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(ETLBox.ControlFlow.TableDefinition)
+  nameWithType: CreateTableTask.AlterIfNeeded(TableDefinition)
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name: AlterIfNeeded(String, List<TableColumn>)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name.vb: AlterIfNeeded(String, List(Of TableColumn))
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(System.String, System.Collections.Generic.List<ETLBox.ControlFlow.TableColumn>)
+  fullName.vb: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded(System.String, System.Collections.Generic.List(Of ETLBox.ControlFlow.TableColumn))
+  nameWithType: CreateTableTask.AlterIfNeeded(String, List<TableColumn>)
+  nameWithType.vb: CreateTableTask.AlterIfNeeded(String, List(Of TableColumn))
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded*
+  name: AlterIfNeeded
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_AlterIfNeeded_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.AlterIfNeeded
+  nameWithType: CreateTableTask.AlterIfNeeded
 - uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Columns
   name: Columns
   href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Columns
@@ -8449,6 +8279,49 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Create
   nameWithType: CreateTableTask.Create
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists
+  name: CreateIfNotExists()
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists()
+  nameWithType: CreateTableTask.CreateIfNotExists()
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.TableDefinition)
+  name: CreateIfNotExists(IConnectionManager, TableDefinition)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_TableDefinition_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.TableDefinition)
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager, ETLBox.ControlFlow.TableDefinition)
+  nameWithType: CreateTableTask.CreateIfNotExists(IConnectionManager, TableDefinition)
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name: CreateIfNotExists(IConnectionManager, String, List<TableColumn>)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name.vb: CreateIfNotExists(IConnectionManager, String, List(Of TableColumn))
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager, System.String, System.Collections.Generic.List<ETLBox.ControlFlow.TableColumn>)
+  fullName.vb: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.Connection.IConnectionManager, System.String, System.Collections.Generic.List(Of ETLBox.ControlFlow.TableColumn))
+  nameWithType: CreateTableTask.CreateIfNotExists(IConnectionManager, String, List<TableColumn>)
+  nameWithType.vb: CreateTableTask.CreateIfNotExists(IConnectionManager, String, List(Of TableColumn))
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.ControlFlow.TableDefinition)
+  name: CreateIfNotExists(TableDefinition)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_ETLBox_ControlFlow_TableDefinition_
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.ControlFlow.TableDefinition)
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(ETLBox.ControlFlow.TableDefinition)
+  nameWithType: CreateTableTask.CreateIfNotExists(TableDefinition)
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name: CreateIfNotExists(String, List<TableColumn>)
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__
+  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})
+  name.vb: CreateIfNotExists(String, List(Of TableColumn))
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(System.String, System.Collections.Generic.List<ETLBox.ControlFlow.TableColumn>)
+  fullName.vb: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists(System.String, System.Collections.Generic.List(Of ETLBox.ControlFlow.TableColumn))
+  nameWithType: CreateTableTask.CreateIfNotExists(String, List<TableColumn>)
+  nameWithType.vb: CreateTableTask.CreateIfNotExists(String, List(Of TableColumn))
+- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists*
+  name: CreateIfNotExists
+  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_CreateIfNotExists_
+  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists
+  isSpec: "True"
+  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.CreateIfNotExists
+  nameWithType: CreateTableTask.CreateIfNotExists
 - uid: ETLBox.ControlFlow.Tasks.CreateTableTask.DataTypeConverter
   name: DataTypeConverter
   href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_DataTypeConverter
@@ -8462,19 +8335,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.DataTypeConverter
   nameWithType: CreateTableTask.DataTypeConverter
-- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.CreateTableTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Execute()
-  nameWithType: CreateTableTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateTableTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.Execute
-  nameWithType: CreateTableTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.CreateTableTask.IgnoreCollation
   name: IgnoreCollation
   href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_IgnoreCollation
@@ -8540,19 +8400,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.TaskName
   nameWithType: CreateTableTask.TaskName
-- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.ThrowErrorIfTableExists
-  name: ThrowErrorIfTableExists
-  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_ThrowErrorIfTableExists
-  commentId: P:ETLBox.ControlFlow.Tasks.CreateTableTask.ThrowErrorIfTableExists
-  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.ThrowErrorIfTableExists
-  nameWithType: CreateTableTask.ThrowErrorIfTableExists
-- uid: ETLBox.ControlFlow.Tasks.CreateTableTask.ThrowErrorIfTableExists*
-  name: ThrowErrorIfTableExists
-  href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_ThrowErrorIfTableExists_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateTableTask.ThrowErrorIfTableExists
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CreateTableTask.ThrowErrorIfTableExists
-  nameWithType: CreateTableTask.ThrowErrorIfTableExists
 - uid: ETLBox.ControlFlow.Tasks.CreateTableTask.TN
   name: TN
   href: api/ETLBox.ControlFlow.Tasks.CreateTableTask.html#ETLBox_ControlFlow_Tasks_CreateTableTask_TN
@@ -8623,19 +8470,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.CreateViewTask.Definition
   nameWithType: CreateViewTask.Definition
-- uid: ETLBox.ControlFlow.Tasks.CreateViewTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.CreateViewTask.html#ETLBox_ControlFlow_Tasks_CreateViewTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.CreateViewTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.CreateViewTask.Execute()
-  nameWithType: CreateViewTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.CreateViewTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.CreateViewTask.html#ETLBox_ControlFlow_Tasks_CreateViewTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.CreateViewTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.CreateViewTask.Execute
-  nameWithType: CreateViewTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.CreateViewTask.Sql
   name: Sql
   href: api/ETLBox.ControlFlow.Tasks.CreateViewTask.html#ETLBox_ControlFlow_Tasks_CreateViewTask_Sql
@@ -9137,19 +8971,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.GetDatabaseListTask.DatabaseNames
   nameWithType: GetDatabaseListTask.DatabaseNames
-- uid: ETLBox.ControlFlow.Tasks.GetDatabaseListTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html#ETLBox_ControlFlow_Tasks_GetDatabaseListTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.GetDatabaseListTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.GetDatabaseListTask.Execute()
-  nameWithType: GetDatabaseListTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.GetDatabaseListTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html#ETLBox_ControlFlow_Tasks_GetDatabaseListTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.GetDatabaseListTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.GetDatabaseListTask.Execute
-  nameWithType: GetDatabaseListTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.GetDatabaseListTask.GetList
   name: GetList()
   href: api/ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html#ETLBox_ControlFlow_Tasks_GetDatabaseListTask_GetList
@@ -9618,19 +9439,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.RowCountTask.Count
   nameWithType: RowCountTask.Count
-- uid: ETLBox.ControlFlow.Tasks.RowCountTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.RowCountTask.html#ETLBox_ControlFlow_Tasks_RowCountTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.RowCountTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.RowCountTask.Execute()
-  nameWithType: RowCountTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.RowCountTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.RowCountTask.html#ETLBox_ControlFlow_Tasks_RowCountTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.RowCountTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.RowCountTask.Execute
-  nameWithType: RowCountTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.RowCountTask.HasRows
   name: HasRows
   href: api/ETLBox.ControlFlow.Tasks.RowCountTask.html#ETLBox_ControlFlow_Tasks_RowCountTask_HasRows
@@ -9874,19 +9682,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.SqlTask.BulkUpdate
   nameWithType: SqlTask.BulkUpdate
-- uid: ETLBox.ControlFlow.Tasks.SqlTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.SqlTask.html#ETLBox_ControlFlow_Tasks_SqlTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.SqlTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.SqlTask.Execute()
-  nameWithType: SqlTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.SqlTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.SqlTask.html#ETLBox_ControlFlow_Tasks_SqlTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.SqlTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.SqlTask.Execute
-  nameWithType: SqlTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.SqlTask.ExecuteNonQuery(ETLBox.Connection.IConnectionManager,System.String)
   name: ExecuteNonQuery(IConnectionManager, String)
   href: api/ETLBox.ControlFlow.Tasks.SqlTask.html#ETLBox_ControlFlow_Tasks_SqlTask_ExecuteNonQuery_ETLBox_Connection_IConnectionManager_System_String_
@@ -10275,19 +10070,6 @@ references:
   isSpec: "True"
   fullName: ETLBox.ControlFlow.Tasks.TruncateTableTask.TruncateTableTask
   nameWithType: TruncateTableTask.TruncateTableTask
-- uid: ETLBox.ControlFlow.Tasks.TruncateTableTask.Execute
-  name: Execute()
-  href: api/ETLBox.ControlFlow.Tasks.TruncateTableTask.html#ETLBox_ControlFlow_Tasks_TruncateTableTask_Execute
-  commentId: M:ETLBox.ControlFlow.Tasks.TruncateTableTask.Execute
-  fullName: ETLBox.ControlFlow.Tasks.TruncateTableTask.Execute()
-  nameWithType: TruncateTableTask.Execute()
-- uid: ETLBox.ControlFlow.Tasks.TruncateTableTask.Execute*
-  name: Execute
-  href: api/ETLBox.ControlFlow.Tasks.TruncateTableTask.html#ETLBox_ControlFlow_Tasks_TruncateTableTask_Execute_
-  commentId: Overload:ETLBox.ControlFlow.Tasks.TruncateTableTask.Execute
-  isSpec: "True"
-  fullName: ETLBox.ControlFlow.Tasks.TruncateTableTask.Execute
-  nameWithType: TruncateTableTask.Execute
 - uid: ETLBox.ControlFlow.Tasks.TruncateTableTask.Sql
   name: Sql
   href: api/ETLBox.ControlFlow.Tasks.TruncateTableTask.html#ETLBox_ControlFlow_Tasks_TruncateTableTask_Sql
@@ -10420,12 +10202,6 @@ references:
   commentId: M:ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(System.String)
   fullName: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(System.String)
   nameWithType: XmlaTask.ExecuteNonQuery(String)
-- uid: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(System.String,System.String)
-  name: ExecuteNonQuery(String, String)
-  href: api/ETLBox.ControlFlow.Tasks.XmlaTask.html#ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_System_String_System_String_
-  commentId: M:ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(System.String,System.String)
-  fullName: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery(System.String, System.String)
-  nameWithType: XmlaTask.ExecuteNonQuery(String, String)
 - uid: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteNonQuery*
   name: ExecuteNonQuery
   href: api/ETLBox.ControlFlow.Tasks.XmlaTask.html#ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteNonQuery_
@@ -10488,12 +10264,6 @@ references:
   commentId: M:ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(System.String)
   fullName: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(System.String)
   nameWithType: XmlaTask.ExecuteScalar(String)
-- uid: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(System.String,System.String)
-  name: ExecuteScalar(String, String)
-  href: api/ETLBox.ControlFlow.Tasks.XmlaTask.html#ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_System_String_System_String_
-  commentId: M:ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(System.String,System.String)
-  fullName: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(System.String, System.String)
-  nameWithType: XmlaTask.ExecuteScalar(String, String)
 - uid: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar*
   name: ExecuteScalar
   href: api/ETLBox.ControlFlow.Tasks.XmlaTask.html#ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar_
@@ -10519,15 +10289,6 @@ references:
   fullName.vb: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(Of T)(System.String)
   nameWithType: XmlaTask.ExecuteScalar<T>(String)
   nameWithType.vb: XmlaTask.ExecuteScalar(Of T)(String)
-- uid: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar``1(System.String,System.String)
-  name: ExecuteScalar<T>(String, String)
-  href: api/ETLBox.ControlFlow.Tasks.XmlaTask.html#ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalar__1_System_String_System_String_
-  commentId: M:ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar``1(System.String,System.String)
-  name.vb: ExecuteScalar(Of T)(String, String)
-  fullName: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar<T>(System.String, System.String)
-  fullName.vb: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalar(Of T)(System.String, System.String)
-  nameWithType: XmlaTask.ExecuteScalar<T>(String, String)
-  nameWithType.vb: XmlaTask.ExecuteScalar(Of T)(String, String)
 - uid: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(ETLBox.Connection.IConnectionManager,System.String)
   name: ExecuteScalarAsBool(IConnectionManager, String)
   href: api/ETLBox.ControlFlow.Tasks.XmlaTask.html#ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_ETLBox_Connection_IConnectionManager_System_String_
@@ -10540,12 +10301,6 @@ references:
   commentId: M:ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(System.String)
   fullName: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(System.String)
   nameWithType: XmlaTask.ExecuteScalarAsBool(String)
-- uid: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(System.String,System.String)
-  name: ExecuteScalarAsBool(String, String)
-  href: api/ETLBox.ControlFlow.Tasks.XmlaTask.html#ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_System_String_System_String_
-  commentId: M:ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(System.String,System.String)
-  fullName: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool(System.String, System.String)
-  nameWithType: XmlaTask.ExecuteScalarAsBool(String, String)
 - uid: ETLBox.ControlFlow.Tasks.XmlaTask.ExecuteScalarAsBool*
   name: ExecuteScalarAsBool
   href: api/ETLBox.ControlFlow.Tasks.XmlaTask.html#ETLBox_ControlFlow_Tasks_XmlaTask_ExecuteScalarAsBool_
@@ -10781,6 +10536,60 @@ references:
   commentId: N:ETLBox.DataFlow.Connectors
   fullName: ETLBox.DataFlow.Connectors
   nameWithType: ETLBox.DataFlow.Connectors
+- uid: ETLBox.DataFlow.Connectors.ColumnConverter
+  name: ColumnConverter
+  href: api/ETLBox.DataFlow.Connectors.ColumnConverter.html
+  commentId: T:ETLBox.DataFlow.Connectors.ColumnConverter
+  fullName: ETLBox.DataFlow.Connectors.ColumnConverter
+  nameWithType: ColumnConverter
+- uid: ETLBox.DataFlow.Connectors.ColumnConverter.#ctor
+  name: ColumnConverter()
+  href: api/ETLBox.DataFlow.Connectors.ColumnConverter.html#ETLBox_DataFlow_Connectors_ColumnConverter__ctor
+  commentId: M:ETLBox.DataFlow.Connectors.ColumnConverter.#ctor
+  fullName: ETLBox.DataFlow.Connectors.ColumnConverter.ColumnConverter()
+  nameWithType: ColumnConverter.ColumnConverter()
+- uid: ETLBox.DataFlow.Connectors.ColumnConverter.#ctor(System.String,System.Func{System.Object,System.Object})
+  name: ColumnConverter(String, Func<Object, Object>)
+  href: api/ETLBox.DataFlow.Connectors.ColumnConverter.html#ETLBox_DataFlow_Connectors_ColumnConverter__ctor_System_String_System_Func_System_Object_System_Object__
+  commentId: M:ETLBox.DataFlow.Connectors.ColumnConverter.#ctor(System.String,System.Func{System.Object,System.Object})
+  name.vb: ColumnConverter(String, Func(Of Object, Object))
+  fullName: ETLBox.DataFlow.Connectors.ColumnConverter.ColumnConverter(System.String, System.Func<System.Object, System.Object>)
+  fullName.vb: ETLBox.DataFlow.Connectors.ColumnConverter.ColumnConverter(System.String, System.Func(Of System.Object, System.Object))
+  nameWithType: ColumnConverter.ColumnConverter(String, Func<Object, Object>)
+  nameWithType.vb: ColumnConverter.ColumnConverter(String, Func(Of Object, Object))
+- uid: ETLBox.DataFlow.Connectors.ColumnConverter.#ctor*
+  name: ColumnConverter
+  href: api/ETLBox.DataFlow.Connectors.ColumnConverter.html#ETLBox_DataFlow_Connectors_ColumnConverter__ctor_
+  commentId: Overload:ETLBox.DataFlow.Connectors.ColumnConverter.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.ColumnConverter.ColumnConverter
+  nameWithType: ColumnConverter.ColumnConverter
+- uid: ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName
+  name: ColumnName
+  href: api/ETLBox.DataFlow.Connectors.ColumnConverter.html#ETLBox_DataFlow_Connectors_ColumnConverter_ColumnName
+  commentId: P:ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName
+  fullName: ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName
+  nameWithType: ColumnConverter.ColumnName
+- uid: ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName*
+  name: ColumnName
+  href: api/ETLBox.DataFlow.Connectors.ColumnConverter.html#ETLBox_DataFlow_Connectors_ColumnConverter_ColumnName_
+  commentId: Overload:ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.ColumnConverter.ColumnName
+  nameWithType: ColumnConverter.ColumnName
+- uid: ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc
+  name: ConversionFunc
+  href: api/ETLBox.DataFlow.Connectors.ColumnConverter.html#ETLBox_DataFlow_Connectors_ColumnConverter_ConversionFunc
+  commentId: P:ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc
+  fullName: ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc
+  nameWithType: ColumnConverter.ConversionFunc
+- uid: ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc*
+  name: ConversionFunc
+  href: api/ETLBox.DataFlow.Connectors.ColumnConverter.html#ETLBox_DataFlow_Connectors_ColumnConverter_ConversionFunc_
+  commentId: Overload:ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.ColumnConverter.ConversionFunc
+  nameWithType: ColumnConverter.ConversionFunc
 - uid: ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination
   name: ConcurrentMemoryDestination
   href: api/ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination.html
@@ -12167,6 +11976,23 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).CheckParameter
   nameWithType: DbDestination<TInput>.CheckParameter
   nameWithType.vb: DbDestination(Of TInput).CheckParameter
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.ColumnConverters
+  name: ColumnConverters
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_ColumnConverters
+  commentId: P:ETLBox.DataFlow.Connectors.DbDestination`1.ColumnConverters
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.ColumnConverters
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).ColumnConverters
+  nameWithType: DbDestination<TInput>.ColumnConverters
+  nameWithType.vb: DbDestination(Of TInput).ColumnConverters
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.ColumnConverters*
+  name: ColumnConverters
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_ColumnConverters_
+  commentId: Overload:ETLBox.DataFlow.Connectors.DbDestination`1.ColumnConverters
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.ColumnConverters
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).ColumnConverters
+  nameWithType: DbDestination<TInput>.ColumnConverters
+  nameWithType.vb: DbDestination(Of TInput).ColumnConverters
 - uid: ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping
   name: ColumnMapping
   href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping
@@ -12243,6 +12069,40 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).FinishWrite
   nameWithType: DbDestination<TInput>.FinishWrite
   nameWithType.vb: DbDestination(Of TInput).FinishWrite
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.KeepIdentity
+  name: KeepIdentity
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_KeepIdentity
+  commentId: P:ETLBox.DataFlow.Connectors.DbDestination`1.KeepIdentity
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.KeepIdentity
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).KeepIdentity
+  nameWithType: DbDestination<TInput>.KeepIdentity
+  nameWithType.vb: DbDestination(Of TInput).KeepIdentity
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.KeepIdentity*
+  name: KeepIdentity
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_KeepIdentity_
+  commentId: Overload:ETLBox.DataFlow.Connectors.DbDestination`1.KeepIdentity
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.KeepIdentity
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).KeepIdentity
+  nameWithType: DbDestination<TInput>.KeepIdentity
+  nameWithType.vb: DbDestination(Of TInput).KeepIdentity
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.PrepareParameter
+  name: PrepareParameter()
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_PrepareParameter
+  commentId: M:ETLBox.DataFlow.Connectors.DbDestination`1.PrepareParameter
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.PrepareParameter()
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).PrepareParameter()
+  nameWithType: DbDestination<TInput>.PrepareParameter()
+  nameWithType.vb: DbDestination(Of TInput).PrepareParameter()
+- uid: ETLBox.DataFlow.Connectors.DbDestination`1.PrepareParameter*
+  name: PrepareParameter
+  href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_PrepareParameter_
+  commentId: Overload:ETLBox.DataFlow.Connectors.DbDestination`1.PrepareParameter
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.Connectors.DbDestination<TInput>.PrepareParameter
+  fullName.vb: ETLBox.DataFlow.Connectors.DbDestination(Of TInput).PrepareParameter
+  nameWithType: DbDestination<TInput>.PrepareParameter
+  nameWithType.vb: DbDestination(Of TInput).PrepareParameter
 - uid: ETLBox.DataFlow.Connectors.DbDestination`1.PrepareWrite
   name: PrepareWrite()
   href: api/ETLBox.DataFlow.Connectors.DbDestination-1.html#ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite
@@ -12860,23 +12720,6 @@ references:
   fullName.vb: ETLBox.DataFlow.Connectors.DbSource(Of TOutput).ConnectionManager
   nameWithType: DbSource<TOutput>.ConnectionManager
   nameWithType.vb: DbSource(Of TOutput).ConnectionManager
-- uid: ETLBox.DataFlow.Connectors.DbSource`1.Limit
-  name: Limit
-  href: api/ETLBox.DataFlow.Connectors.DbSource-1.html#ETLBox_DataFlow_Connectors_DbSource_1_Limit
-  commentId: P:ETLBox.DataFlow.Connectors.DbSource`1.Limit
-  fullName: ETLBox.DataFlow.Connectors.DbSource<TOutput>.Limit
-  fullName.vb: ETLBox.DataFlow.Connectors.DbSource(Of TOutput).Limit
-  nameWithType: DbSource<TOutput>.Limit
-  nameWithType.vb: DbSource(Of TOutput).Limit
-- uid: ETLBox.DataFlow.Connectors.DbSource`1.Limit*
-  name: Limit
-  href: api/ETLBox.DataFlow.Connectors.DbSource-1.html#ETLBox_DataFlow_Connectors_DbSource_1_Limit_
-  commentId: Overload:ETLBox.DataFlow.Connectors.DbSource`1.Limit
-  isSpec: "True"
-  fullName: ETLBox.DataFlow.Connectors.DbSource<TOutput>.Limit
-  fullName.vb: ETLBox.DataFlow.Connectors.DbSource(Of TOutput).Limit
-  nameWithType: DbSource<TOutput>.Limit
-  nameWithType.vb: DbSource(Of TOutput).Limit
 - uid: ETLBox.DataFlow.Connectors.DbSource`1.OnExecutionDoAsyncWork
   name: OnExecutionDoAsyncWork()
   href: api/ETLBox.DataFlow.Connectors.DbSource-1.html#ETLBox_DataFlow_Connectors_DbSource_1_OnExecutionDoAsyncWork
@@ -15462,6 +15305,19 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.DataFlowComponent.Predecessors
   nameWithType: DataFlowComponent.Predecessors
+- uid: ETLBox.DataFlow.DataFlowComponent.PrepareParameter
+  name: PrepareParameter()
+  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_PrepareParameter
+  commentId: M:ETLBox.DataFlow.DataFlowComponent.PrepareParameter
+  fullName: ETLBox.DataFlow.DataFlowComponent.PrepareParameter()
+  nameWithType: DataFlowComponent.PrepareParameter()
+- uid: ETLBox.DataFlow.DataFlowComponent.PrepareParameter*
+  name: PrepareParameter
+  href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_PrepareParameter_
+  commentId: Overload:ETLBox.DataFlow.DataFlowComponent.PrepareParameter
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DataFlowComponent.PrepareParameter
+  nameWithType: DataFlowComponent.PrepareParameter
 - uid: ETLBox.DataFlow.DataFlowComponent.ProgressCount
   name: ProgressCount
   href: api/ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_ProgressCount
@@ -15768,6 +15624,23 @@ references:
   fullName.vb: ETLBox.DataFlow.DataFlowExecutableSource(Of TOutput).InitComponent
   nameWithType: DataFlowExecutableSource<TOutput>.InitComponent
   nameWithType.vb: DataFlowExecutableSource(Of TOutput).InitComponent
+- uid: ETLBox.DataFlow.DataFlowExecutableSource`1.Limit
+  name: Limit
+  href: api/ETLBox.DataFlow.DataFlowExecutableSource-1.html#ETLBox_DataFlow_DataFlowExecutableSource_1_Limit
+  commentId: P:ETLBox.DataFlow.DataFlowExecutableSource`1.Limit
+  fullName: ETLBox.DataFlow.DataFlowExecutableSource<TOutput>.Limit
+  fullName.vb: ETLBox.DataFlow.DataFlowExecutableSource(Of TOutput).Limit
+  nameWithType: DataFlowExecutableSource<TOutput>.Limit
+  nameWithType.vb: DataFlowExecutableSource(Of TOutput).Limit
+- uid: ETLBox.DataFlow.DataFlowExecutableSource`1.Limit*
+  name: Limit
+  href: api/ETLBox.DataFlow.DataFlowExecutableSource-1.html#ETLBox_DataFlow_DataFlowExecutableSource_1_Limit_
+  commentId: Overload:ETLBox.DataFlow.DataFlowExecutableSource`1.Limit
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DataFlowExecutableSource<TOutput>.Limit
+  fullName.vb: ETLBox.DataFlow.DataFlowExecutableSource(Of TOutput).Limit
+  nameWithType: DataFlowExecutableSource<TOutput>.Limit
+  nameWithType.vb: DataFlowExecutableSource(Of TOutput).Limit
 - uid: ETLBox.DataFlow.DataFlowExecutableSource`1.OnExecutionDoAsyncWork
   name: OnExecutionDoAsyncWork()
   href: api/ETLBox.DataFlow.DataFlowExecutableSource-1.html#ETLBox_DataFlow_DataFlowExecutableSource_1_OnExecutionDoAsyncWork
@@ -15819,6 +15692,23 @@ references:
   fullName.vb: ETLBox.DataFlow.DataFlowExecutableSource(Of TOutput).Post
   nameWithType: DataFlowExecutableSource<TOutput>.Post
   nameWithType.vb: DataFlowExecutableSource(Of TOutput).Post
+- uid: ETLBox.DataFlow.DataFlowExecutableSource`1.ProgressCountIsInLimit
+  name: ProgressCountIsInLimit
+  href: api/ETLBox.DataFlow.DataFlowExecutableSource-1.html#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit
+  commentId: P:ETLBox.DataFlow.DataFlowExecutableSource`1.ProgressCountIsInLimit
+  fullName: ETLBox.DataFlow.DataFlowExecutableSource<TOutput>.ProgressCountIsInLimit
+  fullName.vb: ETLBox.DataFlow.DataFlowExecutableSource(Of TOutput).ProgressCountIsInLimit
+  nameWithType: DataFlowExecutableSource<TOutput>.ProgressCountIsInLimit
+  nameWithType.vb: DataFlowExecutableSource(Of TOutput).ProgressCountIsInLimit
+- uid: ETLBox.DataFlow.DataFlowExecutableSource`1.ProgressCountIsInLimit*
+  name: ProgressCountIsInLimit
+  href: api/ETLBox.DataFlow.DataFlowExecutableSource-1.html#ETLBox_DataFlow_DataFlowExecutableSource_1_ProgressCountIsInLimit_
+  commentId: Overload:ETLBox.DataFlow.DataFlowExecutableSource`1.ProgressCountIsInLimit
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.DataFlowExecutableSource<TOutput>.ProgressCountIsInLimit
+  fullName.vb: ETLBox.DataFlow.DataFlowExecutableSource(Of TOutput).ProgressCountIsInLimit
+  nameWithType: DataFlowExecutableSource<TOutput>.ProgressCountIsInLimit
+  nameWithType.vb: DataFlowExecutableSource(Of TOutput).ProgressCountIsInLimit
 - uid: ETLBox.DataFlow.DataFlowExecutableSource`1.SourceBlock
   name: SourceBlock
   href: api/ETLBox.DataFlow.DataFlowExecutableSource-1.html#ETLBox_DataFlow_DataFlowExecutableSource_1_SourceBlock
@@ -16994,6 +16884,129 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.ExcelRange.StartRow
   nameWithType: ExcelRange.StartRow
+- uid: ETLBox.DataFlow.GenericTypeInfo
+  name: GenericTypeInfo
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html
+  commentId: T:ETLBox.DataFlow.GenericTypeInfo
+  fullName: ETLBox.DataFlow.GenericTypeInfo
+  nameWithType: GenericTypeInfo
+- uid: ETLBox.DataFlow.GenericTypeInfo.#ctor(System.Type)
+  name: GenericTypeInfo(Type)
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo__ctor_System_Type_
+  commentId: M:ETLBox.DataFlow.GenericTypeInfo.#ctor(System.Type)
+  fullName: ETLBox.DataFlow.GenericTypeInfo.GenericTypeInfo(System.Type)
+  nameWithType: GenericTypeInfo.GenericTypeInfo(Type)
+- uid: ETLBox.DataFlow.GenericTypeInfo.#ctor*
+  name: GenericTypeInfo
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo__ctor_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.#ctor
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.GenericTypeInfo
+  nameWithType: GenericTypeInfo.GenericTypeInfo
+- uid: ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes
+  name: ColumnMapAttributes
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_ColumnMapAttributes
+  commentId: P:ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes
+  fullName: ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes
+  nameWithType: GenericTypeInfo.ColumnMapAttributes
+- uid: ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes*
+  name: ColumnMapAttributes
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_ColumnMapAttributes_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes
+  nameWithType: GenericTypeInfo.ColumnMapAttributes
+- uid: ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo(ETLBox.DataFlow.PropertyAttributes)
+  name: GatherTypeInfo(PropertyAttributes)
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_GatherTypeInfo_ETLBox_DataFlow_PropertyAttributes_
+  commentId: M:ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo(ETLBox.DataFlow.PropertyAttributes)
+  fullName: ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo(ETLBox.DataFlow.PropertyAttributes)
+  nameWithType: GenericTypeInfo.GatherTypeInfo(PropertyAttributes)
+- uid: ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo*
+  name: GatherTypeInfo
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_GatherTypeInfo_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo
+  nameWithType: GenericTypeInfo.GatherTypeInfo
+- uid: ETLBox.DataFlow.GenericTypeInfo.IsArray
+  name: IsArray
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_IsArray
+  commentId: P:ETLBox.DataFlow.GenericTypeInfo.IsArray
+  fullName: ETLBox.DataFlow.GenericTypeInfo.IsArray
+  nameWithType: GenericTypeInfo.IsArray
+- uid: ETLBox.DataFlow.GenericTypeInfo.IsArray*
+  name: IsArray
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_IsArray_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.IsArray
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.IsArray
+  nameWithType: GenericTypeInfo.IsArray
+- uid: ETLBox.DataFlow.GenericTypeInfo.IsDynamic
+  name: IsDynamic
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_IsDynamic
+  commentId: P:ETLBox.DataFlow.GenericTypeInfo.IsDynamic
+  fullName: ETLBox.DataFlow.GenericTypeInfo.IsDynamic
+  nameWithType: GenericTypeInfo.IsDynamic
+- uid: ETLBox.DataFlow.GenericTypeInfo.IsDynamic*
+  name: IsDynamic
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_IsDynamic_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.IsDynamic
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.IsDynamic
+  nameWithType: GenericTypeInfo.IsDynamic
+- uid: ETLBox.DataFlow.GenericTypeInfo.IsPoco
+  name: IsPoco
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_IsPoco
+  commentId: P:ETLBox.DataFlow.GenericTypeInfo.IsPoco
+  fullName: ETLBox.DataFlow.GenericTypeInfo.IsPoco
+  nameWithType: GenericTypeInfo.IsPoco
+- uid: ETLBox.DataFlow.GenericTypeInfo.IsPoco*
+  name: IsPoco
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_IsPoco_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.IsPoco
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.IsPoco
+  nameWithType: GenericTypeInfo.IsPoco
+- uid: ETLBox.DataFlow.GenericTypeInfo.Properties
+  name: Properties
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_Properties
+  commentId: P:ETLBox.DataFlow.GenericTypeInfo.Properties
+  fullName: ETLBox.DataFlow.GenericTypeInfo.Properties
+  nameWithType: GenericTypeInfo.Properties
+- uid: ETLBox.DataFlow.GenericTypeInfo.Properties*
+  name: Properties
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_Properties_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.Properties
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.Properties
+  nameWithType: GenericTypeInfo.Properties
+- uid: ETLBox.DataFlow.GenericTypeInfo.PropertiesByName
+  name: PropertiesByName
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_PropertiesByName
+  commentId: P:ETLBox.DataFlow.GenericTypeInfo.PropertiesByName
+  fullName: ETLBox.DataFlow.GenericTypeInfo.PropertiesByName
+  nameWithType: GenericTypeInfo.PropertiesByName
+- uid: ETLBox.DataFlow.GenericTypeInfo.PropertiesByName*
+  name: PropertiesByName
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_PropertiesByName_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.PropertiesByName
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.PropertiesByName
+  nameWithType: GenericTypeInfo.PropertiesByName
+- uid: ETLBox.DataFlow.GenericTypeInfo.PropertyNames
+  name: PropertyNames
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_PropertyNames
+  commentId: P:ETLBox.DataFlow.GenericTypeInfo.PropertyNames
+  fullName: ETLBox.DataFlow.GenericTypeInfo.PropertyNames
+  nameWithType: GenericTypeInfo.PropertyNames
+- uid: ETLBox.DataFlow.GenericTypeInfo.PropertyNames*
+  name: PropertyNames
+  href: api/ETLBox.DataFlow.GenericTypeInfo.html#ETLBox_DataFlow_GenericTypeInfo_PropertyNames_
+  commentId: Overload:ETLBox.DataFlow.GenericTypeInfo.PropertyNames
+  isSpec: "True"
+  fullName: ETLBox.DataFlow.GenericTypeInfo.PropertyNames
+  nameWithType: GenericTypeInfo.PropertyNames
 - uid: ETLBox.DataFlow.GroupColumn
   name: GroupColumn
   href: api/ETLBox.DataFlow.GroupColumn.html
@@ -18414,6 +18427,78 @@ references:
   isSpec: "True"
   fullName: ETLBox.DataFlow.Network.StartNodes
   nameWithType: Network.StartNodes
+- uid: ETLBox.DataFlow.PropertyAttributes
+  name: PropertyAttributes
+  href: api/ETLBox.DataFlow.PropertyAttributes.html
+  commentId: T:ETLBox.DataFlow.PropertyAttributes
+  fullName: ETLBox.DataFlow.PropertyAttributes
+  nameWithType: PropertyAttributes
+- uid: ETLBox.DataFlow.PropertyAttributes.AggregateColumn
+  name: AggregateColumn
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_AggregateColumn
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.AggregateColumn
+  fullName: ETLBox.DataFlow.PropertyAttributes.AggregateColumn
+  nameWithType: PropertyAttributes.AggregateColumn
+- uid: ETLBox.DataFlow.PropertyAttributes.ColumnMap
+  name: ColumnMap
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_ColumnMap
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.ColumnMap
+  fullName: ETLBox.DataFlow.PropertyAttributes.ColumnMap
+  nameWithType: PropertyAttributes.ColumnMap
+- uid: ETLBox.DataFlow.PropertyAttributes.CompareColumn
+  name: CompareColumn
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_CompareColumn
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.CompareColumn
+  fullName: ETLBox.DataFlow.PropertyAttributes.CompareColumn
+  nameWithType: PropertyAttributes.CompareColumn
+- uid: ETLBox.DataFlow.PropertyAttributes.DeleteColumn
+  name: DeleteColumn
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_DeleteColumn
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.DeleteColumn
+  fullName: ETLBox.DataFlow.PropertyAttributes.DeleteColumn
+  nameWithType: PropertyAttributes.DeleteColumn
+- uid: ETLBox.DataFlow.PropertyAttributes.DistinctColumn
+  name: DistinctColumn
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_DistinctColumn
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.DistinctColumn
+  fullName: ETLBox.DataFlow.PropertyAttributes.DistinctColumn
+  nameWithType: PropertyAttributes.DistinctColumn
+- uid: ETLBox.DataFlow.PropertyAttributes.GroupColumn
+  name: GroupColumn
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_GroupColumn
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.GroupColumn
+  fullName: ETLBox.DataFlow.PropertyAttributes.GroupColumn
+  nameWithType: PropertyAttributes.GroupColumn
+- uid: ETLBox.DataFlow.PropertyAttributes.IdColumn
+  name: IdColumn
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_IdColumn
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.IdColumn
+  fullName: ETLBox.DataFlow.PropertyAttributes.IdColumn
+  nameWithType: PropertyAttributes.IdColumn
+- uid: ETLBox.DataFlow.PropertyAttributes.MatchColum
+  name: MatchColum
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_MatchColum
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.MatchColum
+  fullName: ETLBox.DataFlow.PropertyAttributes.MatchColum
+  nameWithType: PropertyAttributes.MatchColum
+- uid: ETLBox.DataFlow.PropertyAttributes.None
+  name: None
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_None
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.None
+  fullName: ETLBox.DataFlow.PropertyAttributes.None
+  nameWithType: PropertyAttributes.None
+- uid: ETLBox.DataFlow.PropertyAttributes.RetrieveColumn
+  name: RetrieveColumn
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_RetrieveColumn
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.RetrieveColumn
+  fullName: ETLBox.DataFlow.PropertyAttributes.RetrieveColumn
+  nameWithType: PropertyAttributes.RetrieveColumn
+- uid: ETLBox.DataFlow.PropertyAttributes.UpdateColumn
+  name: UpdateColumn
+  href: api/ETLBox.DataFlow.PropertyAttributes.html#ETLBox_DataFlow_PropertyAttributes_UpdateColumn
+  commentId: F:ETLBox.DataFlow.PropertyAttributes.UpdateColumn
+  fullName: ETLBox.DataFlow.PropertyAttributes.UpdateColumn
+  nameWithType: PropertyAttributes.UpdateColumn
 - uid: ETLBox.DataFlow.ResourceType
   name: ResourceType
   href: api/ETLBox.DataFlow.ResourceType.html
@@ -19982,15 +20067,15 @@ references:
   commentId: M:ETLBox.DataFlow.Transformations.ColumnRename.#ctor
   fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename()
   nameWithType: ColumnRename.ColumnRename()
-- uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMap})
-  name: ColumnRename(IEnumerable<ColumnMap>)
-  href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor_System_Collections_Generic_IEnumerable_ETLBox_DataFlow_ColumnMap__
-  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMap})
-  name.vb: ColumnRename(IEnumerable(Of ColumnMap))
-  fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.IEnumerable<ETLBox.DataFlow.ColumnMap>)
-  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.IEnumerable(Of ETLBox.DataFlow.ColumnMap))
-  nameWithType: ColumnRename.ColumnRename(IEnumerable<ColumnMap>)
-  nameWithType.vb: ColumnRename.ColumnRename(IEnumerable(Of ColumnMap))
+- uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.ICollection{ETLBox.DataFlow.ColumnMap})
+  name: ColumnRename(ICollection<ColumnMap>)
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor_System_Collections_Generic_ICollection_ETLBox_DataFlow_ColumnMap__
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename.#ctor(System.Collections.Generic.ICollection{ETLBox.DataFlow.ColumnMap})
+  name.vb: ColumnRename(ICollection(Of ColumnMap))
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.ICollection<ETLBox.DataFlow.ColumnMap>)
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename.ColumnRename(System.Collections.Generic.ICollection(Of ETLBox.DataFlow.ColumnMap))
+  nameWithType: ColumnRename.ColumnRename(ICollection<ColumnMap>)
+  nameWithType.vb: ColumnRename.ColumnRename(ICollection(Of ColumnMap))
 - uid: ETLBox.DataFlow.Transformations.ColumnRename.#ctor*
   name: ColumnRename
   href: api/ETLBox.DataFlow.Transformations.ColumnRename.html#ETLBox_DataFlow_Transformations_ColumnRename__ctor_
@@ -20015,15 +20100,15 @@ references:
   fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename()
   nameWithType: ColumnRename<TInput>.ColumnRename()
   nameWithType.vb: ColumnRename(Of TInput).ColumnRename()
-- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMap})
-  name: ColumnRename(IEnumerable<ColumnMap>)
-  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_System_Collections_Generic_IEnumerable_ETLBox_DataFlow_ColumnMap__
-  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.IEnumerable{ETLBox.DataFlow.ColumnMap})
-  name.vb: ColumnRename(IEnumerable(Of ColumnMap))
-  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnRename(System.Collections.Generic.IEnumerable<ETLBox.DataFlow.ColumnMap>)
-  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename(System.Collections.Generic.IEnumerable(Of ETLBox.DataFlow.ColumnMap))
-  nameWithType: ColumnRename<TInput>.ColumnRename(IEnumerable<ColumnMap>)
-  nameWithType.vb: ColumnRename(Of TInput).ColumnRename(IEnumerable(Of ColumnMap))
+- uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.ICollection{ETLBox.DataFlow.ColumnMap})
+  name: ColumnRename(ICollection<ColumnMap>)
+  href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_System_Collections_Generic_ICollection_ETLBox_DataFlow_ColumnMap__
+  commentId: M:ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.ICollection{ETLBox.DataFlow.ColumnMap})
+  name.vb: ColumnRename(ICollection(Of ColumnMap))
+  fullName: ETLBox.DataFlow.Transformations.ColumnRename<TInput>.ColumnRename(System.Collections.Generic.ICollection<ETLBox.DataFlow.ColumnMap>)
+  fullName.vb: ETLBox.DataFlow.Transformations.ColumnRename(Of TInput).ColumnRename(System.Collections.Generic.ICollection(Of ETLBox.DataFlow.ColumnMap))
+  nameWithType: ColumnRename<TInput>.ColumnRename(ICollection<ColumnMap>)
+  nameWithType.vb: ColumnRename(Of TInput).ColumnRename(ICollection(Of ColumnMap))
 - uid: ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor*
   name: ColumnRename
   href: api/ETLBox.DataFlow.Transformations.ColumnRename-1.html#ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_
@@ -23317,28 +23402,6 @@ references:
   commentId: N:ETLBox.Helper
   fullName: ETLBox.Helper
   nameWithType: ETLBox.Helper
-- uid: ETLBox.Helper.BatchLinq
-  name: BatchLinq
-  href: api/ETLBox.Helper.BatchLinq.html
-  commentId: T:ETLBox.Helper.BatchLinq
-  fullName: ETLBox.Helper.BatchLinq
-  nameWithType: BatchLinq
-- uid: ETLBox.Helper.BatchLinq.Batch*
-  name: Batch
-  href: api/ETLBox.Helper.BatchLinq.html#ETLBox_Helper_BatchLinq_Batch_
-  commentId: Overload:ETLBox.Helper.BatchLinq.Batch
-  isSpec: "True"
-  fullName: ETLBox.Helper.BatchLinq.Batch
-  nameWithType: BatchLinq.Batch
-- uid: ETLBox.Helper.BatchLinq.Batch``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
-  name: Batch<T>(IEnumerable<T>, Int32)
-  href: api/ETLBox.Helper.BatchLinq.html#ETLBox_Helper_BatchLinq_Batch__1_System_Collections_Generic_IEnumerable___0__System_Int32_
-  commentId: M:ETLBox.Helper.BatchLinq.Batch``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
-  name.vb: Batch(Of T)(IEnumerable(Of T), Int32)
-  fullName: ETLBox.Helper.BatchLinq.Batch<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
-  fullName.vb: ETLBox.Helper.BatchLinq.Batch(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
-  nameWithType: BatchLinq.Batch<T>(IEnumerable<T>, Int32)
-  nameWithType.vb: BatchLinq.Batch(Of T)(IEnumerable(Of T), Int32)
 - uid: ETLBox.Helper.BulkSqlGenerator`1
   name: BulkSqlGenerator<T>
   href: api/ETLBox.Helper.BulkSqlGenerator-1.html
@@ -24094,6 +24157,28 @@ references:
   isSpec: "True"
   fullName: ETLBox.Helper.JsonProperty2JsonPath.Validate
   nameWithType: JsonProperty2JsonPath.Validate
+- uid: ETLBox.Helper.ListExtensions
+  name: ListExtensions
+  href: api/ETLBox.Helper.ListExtensions.html
+  commentId: T:ETLBox.Helper.ListExtensions
+  fullName: ETLBox.Helper.ListExtensions
+  nameWithType: ListExtensions
+- uid: ETLBox.Helper.ListExtensions.Batch*
+  name: Batch
+  href: api/ETLBox.Helper.ListExtensions.html#ETLBox_Helper_ListExtensions_Batch_
+  commentId: Overload:ETLBox.Helper.ListExtensions.Batch
+  isSpec: "True"
+  fullName: ETLBox.Helper.ListExtensions.Batch
+  nameWithType: ListExtensions.Batch
+- uid: ETLBox.Helper.ListExtensions.Batch``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: Batch<T>(IEnumerable<T>, Int32)
+  href: api/ETLBox.Helper.ListExtensions.html#ETLBox_Helper_ListExtensions_Batch__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  commentId: M:ETLBox.Helper.ListExtensions.Batch``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name.vb: Batch(Of T)(IEnumerable(Of T), Int32)
+  fullName: ETLBox.Helper.ListExtensions.Batch<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  fullName.vb: ETLBox.Helper.ListExtensions.Batch(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  nameWithType: ListExtensions.Batch<T>(IEnumerable<T>, Int32)
+  nameWithType.vb: ListExtensions.Batch(Of T)(IEnumerable(Of T), Int32)
 - uid: ETLBox.Helper.ObjectNameDescriptor
   name: ObjectNameDescriptor
   href: api/ETLBox.Helper.ObjectNameDescriptor.html

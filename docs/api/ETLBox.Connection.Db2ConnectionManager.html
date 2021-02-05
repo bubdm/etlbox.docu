@@ -233,9 +233,6 @@
                             <a href="ETLBox.ControlFlow.TableData.html" title="TableData" class="">TableData</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.ControlFlow.TableData-1.html" title="TableData&lt;T&gt;" class="">TableData&lt;T&gt;</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.ControlFlow.TableDefinition.html" title="TableDefinition" class="">TableDefinition</a>
                           </li>
                         </ul>  </li>
@@ -244,9 +241,6 @@
                       <a href="ETLBox.ControlFlow.Tasks.html" title="ETLBox.ControlFlow.Tasks" class="">ETLBox.ControlFlow.Tasks</a>
                         
                         <ul class="nav level2">
-                          <li class="">
-                            <a href="ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html" title="CalculateDatabaseHashTask" class="">CalculateDatabaseHashTask</a>
-                          </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html" title="CleanUpSchemaTask" class="">CleanUpSchemaTask</a>
                           </li>
@@ -389,6 +383,9 @@
                             <a href="ETLBox.DataFlow.ExcelRange.html" title="ExcelRange" class="">ExcelRange</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.GenericTypeInfo.html" title="GenericTypeInfo" class="">GenericTypeInfo</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.GroupColumn.html" title="GroupColumn" class="">GroupColumn</a>
                           </li>
                           <li class="">
@@ -470,6 +467,9 @@
                             <a href="ETLBox.DataFlow.Network.html" title="Network" class="">Network</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
                           </li>
                           <li class="">
@@ -490,6 +490,9 @@
                       <a href="ETLBox.DataFlow.Connectors.html" title="ETLBox.DataFlow.Connectors" class="">ETLBox.DataFlow.Connectors</a>
                         
                         <ul class="nav level2">
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Connectors.ColumnConverter.html" title="ColumnConverter" class="">ColumnConverter</a>
+                          </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination.html" title="ConcurrentMemoryDestination" class="">ConcurrentMemoryDestination</a>
                           </li>
@@ -773,9 +776,6 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="ETLBox.Helper.BatchLinq.html" title="BatchLinq" class="">BatchLinq</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.Helper.BulkSqlGenerator-1.html" title="BulkSqlGenerator&lt;T&gt;" class="">BulkSqlGenerator&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -798,6 +798,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.JsonProperty2JsonPath.MultipleResultsInPath.html" title="JsonProperty2JsonPath.MultipleResultsInPath" class="">JsonProperty2JsonPath.MultipleResultsInPath</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Helper.ListExtensions.html" title="ListExtensions" class="">ListExtensions</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.ObjectNameDescriptor.html" title="ObjectNameDescriptor" class="">ObjectNameDescriptor</a>
@@ -935,7 +938,7 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
       <a class="xref" href="ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_PP">DbConnectionManager&lt;DB2Connection&gt;.PP</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_SupportComputedColumns">DbConnectionManager&lt;DB2Connection&gt;.SupportComputedColumns</a>
+      <a class="xref" href="ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_SupportSchemas">DbConnectionManager&lt;DB2Connection&gt;.SupportSchemas</a>
     </div>
     <div>
       <a class="xref" href="ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_IsOdbcOrOleDbConnection">DbConnectionManager&lt;DB2Connection&gt;.IsOdbcOrOleDbConnection</a>
@@ -975,6 +978,9 @@ Uses the official Db2 ADO.NET driver for .NET Core.</p>
     </div>
     <div>
       <a class="xref" href="ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_CloneIfAllowed">DbConnectionManager&lt;DB2Connection&gt;.CloneIfAllowed()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_CopyBaseAttributes_ETLBox_Connection_DbConnectionManager__0__">DbConnectionManager&lt;DB2Connection&gt;.CopyBaseAttributes(DbConnectionManager&lt;DB2Connection&gt;)</a>
     </div>
     <div>
       <a class="xref" href="ETLBox.Connection.DbConnectionManager-1.html#ETLBox_Connection_DbConnectionManager_1_Open">DbConnectionManager&lt;DB2Connection&gt;.Open()</a>
@@ -1223,7 +1229,8 @@ A database in ETLBox means a schema in MySql.</p>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection&gt;.SupportDatabases</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_SupportProcedures_" data-uid="ETLBox.Connection.Db2ConnectionManager.SupportProcedures*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_SupportProcedures" data-uid="ETLBox.Connection.Db2ConnectionManager.SupportProcedures">SupportProcedures</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Indicates if the database supports procedures</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1246,16 +1253,16 @@ A database in ETLBox means a schema in MySql.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection&gt;.SupportProcedures</span></div>
-  <a id="ETLBox_Connection_Db2ConnectionManager_SupportSchemas_" data-uid="ETLBox.Connection.Db2ConnectionManager.SupportSchemas*"></a>
-  <h4 id="ETLBox_Connection_Db2ConnectionManager_SupportSchemas" data-uid="ETLBox.Connection.Db2ConnectionManager.SupportSchemas">SupportSchemas</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports schemas
-In MySql, this is false because the schema here is a database in ETLBox.
-Use <a class="xref" href="ETLBox.Connection.IConnectionManager.html#ETLBox_Connection_IConnectionManager_SupportDatabases">SupportDatabases</a> instead</p>
+  <a id="ETLBox_Connection_Db2ConnectionManager_UseSqlBulkInsert_" data-uid="ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert*"></a>
+  <h4 id="ETLBox_Connection_Db2ConnectionManager_UseSqlBulkInsert" data-uid="ETLBox.Connection.Db2ConnectionManager.UseSqlBulkInsert">UseSqlBulkInsert</h4>
+  <div class="markdown level1 summary"><p>By default bulk inserts are done using the DB2BulkCopy.
+This provides better performance, but it won't support Transactions and foreign key constraints.
+If you need support for transactions or constraints, set this flag to true.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportSchemas { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool UseSqlBulkInsert { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1272,8 +1279,6 @@ Use <a class="xref" href="ETLBox.Connection.IConnectionManager.html#ETLBox_Conne
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection&gt;.SupportSchemas</span></div>
   <h3 id="methods">Methods
   </h3>
   <a id="ETLBox_Connection_Db2ConnectionManager_AfterBulkInsert_" data-uid="ETLBox.Connection.Db2ConnectionManager.AfterBulkInsert*"></a>
@@ -1441,7 +1446,8 @@ Use <a class="xref" href="ETLBox.Connection.IConnectionManager.html#ETLBox_Conne
   <div><span class="xref">ETLBox.Connection.DbConnectionManager&lt;IBM.Data.DB2.Core.DB2Connection&gt;.BulkSelect(ETLBox.ControlFlow.ITableData, System.Collections.Generic.ICollection&lt;System.String&gt;, System.Action, System.Action, System.Action&lt;System.Object&gt;[])</span></div>
   <a id="ETLBox_Connection_Db2ConnectionManager_BulkUpdate_" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkUpdate*"></a>
   <h4 id="ETLBox_Connection_Db2ConnectionManager_BulkUpdate_ETLBox_ControlFlow_ITableData_System_Collections_Generic_ICollection_System_String__System_Collections_Generic_ICollection_System_String__" data-uid="ETLBox.Connection.Db2ConnectionManager.BulkUpdate(ETLBox.ControlFlow.ITableData,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.ICollection{System.String})">BulkUpdate(ITableData, ICollection&lt;String&gt;, ICollection&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs a bulk update</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1460,7 +1466,8 @@ Use <a class="xref" href="ETLBox.Connection.IConnectionManager.html#ETLBox_Conne
       <tr>
         <td><a class="xref" href="ETLBox.ControlFlow.ITableData.html">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>Batch of data</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>

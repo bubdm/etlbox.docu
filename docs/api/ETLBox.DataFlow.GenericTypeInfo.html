@@ -9,10 +9,10 @@
   	</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class BatchLinq
+    <title>Class GenericTypeInfo
    | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class BatchLinq
+    <meta name="title" content="Class GenericTypeInfo
    | ETLBox - a lightweight ETL library for C#. ">
     <meta name="generator" content="docfx 2.54.0.0">
     
@@ -233,9 +233,6 @@
                             <a href="ETLBox.ControlFlow.TableData.html" title="TableData" class="">TableData</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.ControlFlow.TableData-1.html" title="TableData&lt;T&gt;" class="">TableData&lt;T&gt;</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.ControlFlow.TableDefinition.html" title="TableDefinition" class="">TableDefinition</a>
                           </li>
                         </ul>  </li>
@@ -244,9 +241,6 @@
                       <a href="ETLBox.ControlFlow.Tasks.html" title="ETLBox.ControlFlow.Tasks" class="">ETLBox.ControlFlow.Tasks</a>
                         
                         <ul class="nav level2">
-                          <li class="">
-                            <a href="ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html" title="CalculateDatabaseHashTask" class="">CalculateDatabaseHashTask</a>
-                          </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html" title="CleanUpSchemaTask" class="">CleanUpSchemaTask</a>
                           </li>
@@ -388,6 +382,9 @@
                           <li class="">
                             <a href="ETLBox.DataFlow.ExcelRange.html" title="ExcelRange" class="">ExcelRange</a>
                           </li>
+                          <li class="active">
+                            <a href="ETLBox.DataFlow.GenericTypeInfo.html" title="GenericTypeInfo" class="active">GenericTypeInfo</a>
+                          </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.GroupColumn.html" title="GroupColumn" class="">GroupColumn</a>
                           </li>
@@ -470,6 +467,9 @@
                             <a href="ETLBox.DataFlow.Network.html" title="Network" class="">Network</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
                           </li>
                           <li class="">
@@ -490,6 +490,9 @@
                       <a href="ETLBox.DataFlow.Connectors.html" title="ETLBox.DataFlow.Connectors" class="">ETLBox.DataFlow.Connectors</a>
                         
                         <ul class="nav level2">
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Connectors.ColumnConverter.html" title="ColumnConverter" class="">ColumnConverter</a>
+                          </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination.html" title="ConcurrentMemoryDestination" class="">ConcurrentMemoryDestination</a>
                           </li>
@@ -772,9 +775,6 @@
                       <a href="ETLBox.Helper.html" title="ETLBox.Helper" class="">ETLBox.Helper</a>
                         
                         <ul class="nav level2">
-                          <li class="active">
-                            <a href="ETLBox.Helper.BatchLinq.html" title="BatchLinq" class="active">BatchLinq</a>
-                          </li>
                           <li class="">
                             <a href="ETLBox.Helper.BulkSqlGenerator-1.html" title="BulkSqlGenerator&lt;T&gt;" class="">BulkSqlGenerator&lt;T&gt;</a>
                           </li>
@@ -798,6 +798,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.JsonProperty2JsonPath.MultipleResultsInPath.html" title="JsonProperty2JsonPath.MultipleResultsInPath" class="">JsonProperty2JsonPath.MultipleResultsInPath</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Helper.ListExtensions.html" title="ListExtensions" class="">ListExtensions</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.ObjectNameDescriptor.html" title="ObjectNameDescriptor" class="">ObjectNameDescriptor</a>
@@ -888,17 +891,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ETLBox.Helper.BatchLinq">
+            <article class="content wrap" id="_content" data-uid="ETLBox.DataFlow.GenericTypeInfo">
   
   
-  <h1 id="ETLBox_Helper_BatchLinq" data-uid="ETLBox.Helper.BatchLinq" class="text-break">Class BatchLinq
+  <h1 id="ETLBox_DataFlow_GenericTypeInfo" data-uid="ETLBox.DataFlow.GenericTypeInfo" class="text-break">Class GenericTypeInfo
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BatchLinq</span></div>
+    <div class="level1"><span class="xref">GenericTypeInfo</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -924,21 +927,21 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.Helper.html">ETLBox.Helper</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ETLBox.DataFlow.html">ETLBox.DataFlow</a></h6>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
-  <h5 id="ETLBox_Helper_BatchLinq_syntax">Syntax</h5>
+  <h5 id="ETLBox_DataFlow_GenericTypeInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class BatchLinq</code></pre>
+    <pre><code class="lang-csharp hljs">public class GenericTypeInfo</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
-  <a id="ETLBox_Helper_BatchLinq_Batch_" data-uid="ETLBox.Helper.BatchLinq.Batch*"></a>
-  <h4 id="ETLBox_Helper_BatchLinq_Batch__1_System_Collections_Generic_IEnumerable___0__System_Int32_" data-uid="ETLBox.Helper.BatchLinq.Batch``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">Batch&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</h4>
+  <a id="ETLBox_DataFlow_GenericTypeInfo__ctor_" data-uid="ETLBox.DataFlow.GenericTypeInfo.#ctor*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo__ctor_System_Type_" data-uid="ETLBox.DataFlow.GenericTypeInfo.#ctor(System.Type)">GenericTypeInfo(Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;IEnumerable&lt;T&gt;&gt; Batch&lt;T&gt;(this IEnumerable&lt;T&gt; source, int size)</code></pre>
+    <pre><code class="lang-csharp hljs">public GenericTypeInfo(Type type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -951,13 +954,204 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td><span class="parametername">source</span></td>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_ColumnMapAttributes_" data-uid="ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_ColumnMapAttributes" data-uid="ETLBox.DataFlow.GenericTypeInfo.ColumnMapAttributes">ColumnMapAttributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ColumnMap&gt; ColumnMapAttributes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">size</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnMap.html">ColumnMap</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_IsArray_" data-uid="ETLBox.DataFlow.GenericTypeInfo.IsArray*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_IsArray" data-uid="ETLBox.DataFlow.GenericTypeInfo.IsArray">IsArray</h4>
+  <div class="markdown level1 summary"><p>Indicates if the type is an array (e.g. string[])</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsArray { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_IsDynamic_" data-uid="ETLBox.DataFlow.GenericTypeInfo.IsDynamic*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_IsDynamic" data-uid="ETLBox.DataFlow.GenericTypeInfo.IsDynamic">IsDynamic</h4>
+  <div class="markdown level1 summary"><p>Indicates if the type is an ExpandoObject</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDynamic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_IsPoco_" data-uid="ETLBox.DataFlow.GenericTypeInfo.IsPoco*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_IsPoco" data-uid="ETLBox.DataFlow.GenericTypeInfo.IsPoco">IsPoco</h4>
+  <div class="markdown level1 summary"><p>Indicates if the type is an strong type object (Plain old CLR object)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPoco { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_Properties_" data-uid="ETLBox.DataFlow.GenericTypeInfo.Properties*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_Properties" data-uid="ETLBox.DataFlow.GenericTypeInfo.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>Property info of the type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;PropertyInfo&gt; Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Reflection.PropertyInfo</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_PropertiesByName_" data-uid="ETLBox.DataFlow.GenericTypeInfo.PropertiesByName*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_PropertiesByName" data-uid="ETLBox.DataFlow.GenericTypeInfo.PropertiesByName">PropertiesByName</h4>
+  <div class="markdown level1 summary"><p>Property info of the type by property name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, PropertyInfo&gt; PropertiesByName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Reflection.PropertyInfo</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_PropertyNames_" data-uid="ETLBox.DataFlow.GenericTypeInfo.PropertyNames*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_PropertyNames" data-uid="ETLBox.DataFlow.GenericTypeInfo.PropertyNames">PropertyNames</h4>
+  <div class="markdown level1 summary"><p>Property names of the type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; PropertyNames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="ETLBox_DataFlow_GenericTypeInfo_GatherTypeInfo_" data-uid="ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo*"></a>
+  <h4 id="ETLBox_DataFlow_GenericTypeInfo_GatherTypeInfo_ETLBox_DataFlow_PropertyAttributes_" data-uid="ETLBox.DataFlow.GenericTypeInfo.GatherTypeInfo(ETLBox.DataFlow.PropertyAttributes)">GatherTypeInfo(PropertyAttributes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GenericTypeInfo GatherTypeInfo(PropertyAttributes propertyAttributes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.DataFlow.PropertyAttributes.html">PropertyAttributes</a></td>
+        <td><span class="parametername">propertyAttributes</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -972,22 +1166,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
+        <td><a class="xref" href="ETLBox.DataFlow.GenericTypeInfo.html">GenericTypeInfo</a></td>
         <td></td>
       </tr>
     </tbody>

@@ -233,9 +233,6 @@
                             <a href="ETLBox.ControlFlow.TableData.html" title="TableData" class="">TableData</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.ControlFlow.TableData-1.html" title="TableData&lt;T&gt;" class="">TableData&lt;T&gt;</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.ControlFlow.TableDefinition.html" title="TableDefinition" class="">TableDefinition</a>
                           </li>
                         </ul>  </li>
@@ -244,9 +241,6 @@
                       <a href="ETLBox.ControlFlow.Tasks.html" title="ETLBox.ControlFlow.Tasks" class="">ETLBox.ControlFlow.Tasks</a>
                         
                         <ul class="nav level2">
-                          <li class="">
-                            <a href="ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html" title="CalculateDatabaseHashTask" class="">CalculateDatabaseHashTask</a>
-                          </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html" title="CleanUpSchemaTask" class="">CleanUpSchemaTask</a>
                           </li>
@@ -389,6 +383,9 @@
                             <a href="ETLBox.DataFlow.ExcelRange.html" title="ExcelRange" class="">ExcelRange</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.GenericTypeInfo.html" title="GenericTypeInfo" class="">GenericTypeInfo</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.GroupColumn.html" title="GroupColumn" class="">GroupColumn</a>
                           </li>
                           <li class="">
@@ -470,6 +467,9 @@
                             <a href="ETLBox.DataFlow.Network.html" title="Network" class="">Network</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
                           </li>
                           <li class="">
@@ -490,6 +490,9 @@
                       <a href="ETLBox.DataFlow.Connectors.html" title="ETLBox.DataFlow.Connectors" class="">ETLBox.DataFlow.Connectors</a>
                         
                         <ul class="nav level2">
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Connectors.ColumnConverter.html" title="ColumnConverter" class="">ColumnConverter</a>
+                          </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination.html" title="ConcurrentMemoryDestination" class="">ConcurrentMemoryDestination</a>
                           </li>
@@ -773,9 +776,6 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="ETLBox.Helper.BatchLinq.html" title="BatchLinq" class="">BatchLinq</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.Helper.BulkSqlGenerator-1.html" title="BulkSqlGenerator&lt;T&gt;" class="">BulkSqlGenerator&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -798,6 +798,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.JsonProperty2JsonPath.MultipleResultsInPath.html" title="JsonProperty2JsonPath.MultipleResultsInPath" class="">JsonProperty2JsonPath.MultipleResultsInPath</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Helper.ListExtensions.html" title="ListExtensions" class="">ListExtensions</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.ObjectNameDescriptor.html" title="ObjectNameDescriptor" class="">ObjectNameDescriptor</a>
@@ -978,6 +981,9 @@ loaded source data and uses this record to enrich the ingoing data.</p>
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
     </div>
     <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_SetCompletionTask">DataFlowComponent.SetCompletionTask()</a>
@@ -1306,7 +1312,7 @@ E.g. property that stores the integer value 7 would match with a string &quot;7&
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;MatchColumn&gt; MatchColumns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ICollection&lt;MatchColumn&gt; MatchColumns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1318,7 +1324,7 @@ E.g. property that stores the integer value 7 would match with a string &quot;7&
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ETLBox.DataFlow.MatchColumn.html">MatchColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.MatchColumn.html">MatchColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1432,7 +1438,7 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;RetrieveColumn&gt; RetrieveColumns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ICollection&lt;RetrieveColumn&gt; RetrieveColumns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1444,7 +1450,7 @@ the <a class="xref" href="ETLBox.DataFlow.Transformations.LookupTransformation-2
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ETLBox.DataFlow.RetrieveColumn.html">RetrieveColumn</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.RetrieveColumn.html">RetrieveColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

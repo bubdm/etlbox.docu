@@ -233,9 +233,6 @@
                             <a href="ETLBox.ControlFlow.TableData.html" title="TableData" class="">TableData</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.ControlFlow.TableData-1.html" title="TableData&lt;T&gt;" class="">TableData&lt;T&gt;</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.ControlFlow.TableDefinition.html" title="TableDefinition" class="">TableDefinition</a>
                           </li>
                         </ul>  </li>
@@ -244,9 +241,6 @@
                       <a href="ETLBox.ControlFlow.Tasks.html" title="ETLBox.ControlFlow.Tasks" class="">ETLBox.ControlFlow.Tasks</a>
                         
                         <ul class="nav level2">
-                          <li class="">
-                            <a href="ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html" title="CalculateDatabaseHashTask" class="">CalculateDatabaseHashTask</a>
-                          </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html" title="CleanUpSchemaTask" class="">CleanUpSchemaTask</a>
                           </li>
@@ -389,6 +383,9 @@
                             <a href="ETLBox.DataFlow.ExcelRange.html" title="ExcelRange" class="">ExcelRange</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.GenericTypeInfo.html" title="GenericTypeInfo" class="">GenericTypeInfo</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.GroupColumn.html" title="GroupColumn" class="">GroupColumn</a>
                           </li>
                           <li class="">
@@ -470,6 +467,9 @@
                             <a href="ETLBox.DataFlow.Network.html" title="Network" class="">Network</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
                           </li>
                           <li class="">
@@ -490,6 +490,9 @@
                       <a href="ETLBox.DataFlow.Connectors.html" title="ETLBox.DataFlow.Connectors" class="">ETLBox.DataFlow.Connectors</a>
                         
                         <ul class="nav level2">
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Connectors.ColumnConverter.html" title="ColumnConverter" class="">ColumnConverter</a>
+                          </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination.html" title="ConcurrentMemoryDestination" class="">ConcurrentMemoryDestination</a>
                           </li>
@@ -773,9 +776,6 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="ETLBox.Helper.BatchLinq.html" title="BatchLinq" class="">BatchLinq</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.Helper.BulkSqlGenerator-1.html" title="BulkSqlGenerator&lt;T&gt;" class="">BulkSqlGenerator&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -798,6 +798,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.JsonProperty2JsonPath.MultipleResultsInPath.html" title="JsonProperty2JsonPath.MultipleResultsInPath" class="">JsonProperty2JsonPath.MultipleResultsInPath</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Helper.ListExtensions.html" title="ListExtensions" class="">ListExtensions</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.ObjectNameDescriptor.html" title="ObjectNameDescriptor" class="">ObjectNameDescriptor</a>
@@ -1250,7 +1253,8 @@ Inserts are done in batches (using Bulk insert or an equivalent INSERT statement
   <h3 id="fields">Fields
   </h3>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_DEFAULT_BATCH_SIZE_ODBC_OLEDB" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.DEFAULT_BATCH_SIZE_ODBC_OLEDB">DEFAULT_BATCH_SIZE_ODBC_OLEDB</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The default batch sized used for ODBC or OleDb connections. Only use if BatchSize is not set manually.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1298,13 +1302,14 @@ manager.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping*"></a>
-  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping">ColumnMapping</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_ColumnConverters_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ColumnConverters*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_ColumnConverters" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ColumnConverters">ColumnConverters</h4>
+  <div class="markdown level1 summary"><p>Use a column converter</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ColumnMap&gt; ColumnMapping { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ICollection&lt;ColumnConverter&gt; ColumnConverters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1316,7 +1321,34 @@ manager.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnMap.html">ColumnMap</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.Connectors.ColumnConverter.html">ColumnConverter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_ColumnMapping" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.ColumnMapping">ColumnMapping</h4>
+  <div class="markdown level1 summary"><p>Column mapping to map property to column names. CurrentName represents the property name
+and NewName the database column name.
+E.g. if the value of property &quot;Id&quot; should be written into the database column &quot;Key&quot;,
+then you can simply add a column mapping: CurrentName: &quot;Id&quot; -&gt; NewName: &quot;Key&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;ColumnMap&gt; ColumnMapping { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnMap.html">ColumnMap</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1367,6 +1399,32 @@ only to use the columns in the provided definition.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="ETLBox.ControlFlow.TableDefinition.html">TableDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_KeepIdentity_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.KeepIdentity*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_KeepIdentity" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.KeepIdentity">KeepIdentity</h4>
+  <div class="markdown level1 summary"><p>By default, identity columns (a.k.a auto increment or serial columns) are ignored
+when writing into the destination. If set to true, the DbDestination will try to overwrite
+identity values (if there is a corresponding property with a new id value in the data object)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool KeepIdentity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1471,6 +1529,16 @@ with a default name that can be overwritten.</p>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">ETLBox.DataFlow.DataFlowBatchDestination&lt;TInput&gt;.FinishWrite()</span></div>
+  <a id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareParameter_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareParameter*"></a>
+  <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareParameter" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareParameter">PrepareParameter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void PrepareParameter()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
   <a id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite_" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareWrite*"></a>
   <h4 id="ETLBox_DataFlow_Connectors_DbDestination_1_PrepareWrite" data-uid="ETLBox.DataFlow.Connectors.DbDestination`1.PrepareWrite">PrepareWrite()</h4>
   <div class="markdown level1 summary"></div>

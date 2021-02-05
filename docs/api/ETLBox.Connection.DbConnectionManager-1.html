@@ -233,9 +233,6 @@
                             <a href="ETLBox.ControlFlow.TableData.html" title="TableData" class="">TableData</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.ControlFlow.TableData-1.html" title="TableData&lt;T&gt;" class="">TableData&lt;T&gt;</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.ControlFlow.TableDefinition.html" title="TableDefinition" class="">TableDefinition</a>
                           </li>
                         </ul>  </li>
@@ -244,9 +241,6 @@
                       <a href="ETLBox.ControlFlow.Tasks.html" title="ETLBox.ControlFlow.Tasks" class="">ETLBox.ControlFlow.Tasks</a>
                         
                         <ul class="nav level2">
-                          <li class="">
-                            <a href="ETLBox.ControlFlow.Tasks.CalculateDatabaseHashTask.html" title="CalculateDatabaseHashTask" class="">CalculateDatabaseHashTask</a>
-                          </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.CleanUpSchemaTask.html" title="CleanUpSchemaTask" class="">CleanUpSchemaTask</a>
                           </li>
@@ -389,6 +383,9 @@
                             <a href="ETLBox.DataFlow.ExcelRange.html" title="ExcelRange" class="">ExcelRange</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.GenericTypeInfo.html" title="GenericTypeInfo" class="">GenericTypeInfo</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.GroupColumn.html" title="GroupColumn" class="">GroupColumn</a>
                           </li>
                           <li class="">
@@ -470,6 +467,9 @@
                             <a href="ETLBox.DataFlow.Network.html" title="Network" class="">Network</a>
                           </li>
                           <li class="">
+                            <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
                           </li>
                           <li class="">
@@ -490,6 +490,9 @@
                       <a href="ETLBox.DataFlow.Connectors.html" title="ETLBox.DataFlow.Connectors" class="">ETLBox.DataFlow.Connectors</a>
                         
                         <ul class="nav level2">
+                          <li class="">
+                            <a href="ETLBox.DataFlow.Connectors.ColumnConverter.html" title="ColumnConverter" class="">ColumnConverter</a>
+                          </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.Connectors.ConcurrentMemoryDestination.html" title="ConcurrentMemoryDestination" class="">ConcurrentMemoryDestination</a>
                           </li>
@@ -773,9 +776,6 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="ETLBox.Helper.BatchLinq.html" title="BatchLinq" class="">BatchLinq</a>
-                          </li>
-                          <li class="">
                             <a href="ETLBox.Helper.BulkSqlGenerator-1.html" title="BulkSqlGenerator&lt;T&gt;" class="">BulkSqlGenerator&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -798,6 +798,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.JsonProperty2JsonPath.MultipleResultsInPath.html" title="JsonProperty2JsonPath.MultipleResultsInPath" class="">JsonProperty2JsonPath.MultipleResultsInPath</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Helper.ListExtensions.html" title="ListExtensions" class="">ListExtensions</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Helper.ObjectNameDescriptor.html" title="ObjectNameDescriptor" class="">ObjectNameDescriptor</a>
@@ -1316,30 +1319,6 @@ E.g. SqlServer uses: ']' and Postgres: '&quot;'</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_Connection_DbConnectionManager_1_SupportComputedColumns_" data-uid="ETLBox.Connection.DbConnectionManager`1.SupportComputedColumns*"></a>
-  <h4 id="ETLBox_Connection_DbConnectionManager_1_SupportComputedColumns" data-uid="ETLBox.Connection.DbConnectionManager`1.SupportComputedColumns">SupportComputedColumns</h4>
-  <div class="markdown level1 summary"><p>Indicates if the database supports computed columns</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool SupportComputedColumns { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_Connection_DbConnectionManager_1_SupportDatabases_" data-uid="ETLBox.Connection.DbConnectionManager`1.SupportDatabases*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_1_SupportDatabases" data-uid="ETLBox.Connection.DbConnectionManager`1.SupportDatabases">SupportDatabases</h4>
   <div class="markdown level1 summary"><p>Indicates if database server does support multiple databases.
@@ -1815,6 +1794,31 @@ and <a class="xref" href="ETLBox.Connection.IConnectionManager.html#ETLBox_Conne
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CommitTransaction()</code></pre>
   </div>
+  <a id="ETLBox_Connection_DbConnectionManager_1_CopyBaseAttributes_" data-uid="ETLBox.Connection.DbConnectionManager`1.CopyBaseAttributes*"></a>
+  <h4 id="ETLBox_Connection_DbConnectionManager_1_CopyBaseAttributes_ETLBox_Connection_DbConnectionManager__0__" data-uid="ETLBox.Connection.DbConnectionManager`1.CopyBaseAttributes(ETLBox.Connection.DbConnectionManager{`0})">CopyBaseAttributes(DbConnectionManager&lt;Connection&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyBaseAttributes(DbConnectionManager&lt;Connection&gt; original)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.Connection.DbConnectionManager-1.html">DbConnectionManager</a>&lt;Connection&gt;</td>
+        <td><span class="parametername">original</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Connection_DbConnectionManager_1_CreateCommand_" data-uid="ETLBox.Connection.DbConnectionManager`1.CreateCommand*"></a>
   <h4 id="ETLBox_Connection_DbConnectionManager_1_CreateCommand_System_String_System_Collections_Generic_IEnumerable_ETLBox_ControlFlow_QueryParameter__" data-uid="ETLBox.Connection.DbConnectionManager`1.CreateCommand(System.String,System.Collections.Generic.IEnumerable{ETLBox.ControlFlow.QueryParameter})">CreateCommand(String, IEnumerable&lt;QueryParameter&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a underlying ADO.NET command.</p>
