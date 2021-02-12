@@ -145,7 +145,7 @@ All prices are net without VAT. Prices only apply for business customers.
     <div class="col-lg-6 col-md-6 col-sm-7">
         <div class="plan">
             <div class="plan-title" style="background-color: #f0ad4e">
-                <h2>Enterprise</h2>
+                <h2>ENTERPRISE</h2>
             </div>
             <div class="plan-body">
                 <div class="plan-features">
@@ -183,7 +183,7 @@ All prices are net without VAT. Prices only apply for business customers.
     <div class="col-lg-6 col-md-6 col-sm-9">
         <div class="plan">
             <div class="plan-title" style="background-color: #3d3c22">
-                <h2>Redistributable</h2>
+                <h2>REDISTRIBUTABLE</h2>
             </div>
             <div class="plan-body">
                 <div class="plan-features">
