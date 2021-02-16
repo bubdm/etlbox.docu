@@ -367,8 +367,8 @@ var source = new DbSource<MyInputRow>();
 var map = new ColumnRename<MyInputRow>();
 map.ColumnMapping = new List<ColumnMap>()
 {
-    new ColumnMap() { CurrentName = "OldCol1", NewName = "Col1" },
-    new ColumnMap() { CurrentName = "OldCol2", NewName = "Col2" }
+    new ColumnMap() { PropertyName = "OldCol1", DbColumnName = "Col1" },
+    new ColumnMap() { PropertyName = "OldCol2", DbColumnName = "Col2" }
 };
 var dest = new DbDestination(SqlConnection, "ColumnRenameDest");
 
