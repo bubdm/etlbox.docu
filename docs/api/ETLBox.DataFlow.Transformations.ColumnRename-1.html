@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ColumnRename&lt;TInput&gt;
    | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -113,13 +113,19 @@
                             <a href="ETLBox.Connection.Db2ConnectionString.html" title="Db2ConnectionString" class="">Db2ConnectionString</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.Connection.DbConnectionManager-1.html" title="DbConnectionManager&lt;Connection&gt;" class="">DbConnectionManager&lt;Connection&gt;</a>
+                            <a href="ETLBox.Connection.DbConnectionManager-3.html" title="DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;" class="">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.DbConnectionString-2.html" title="DbConnectionString&lt;T, TBuilder&gt;" class="">DbConnectionString&lt;T, TBuilder&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IConnectionManager.html" title="IConnectionManager" class="">IConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManager-2.html" title="IConnectionManager&lt;TConnection, TTransaction&gt;" class="">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManagerDbObjects.html" title="IConnectionManagerDbObjects" class="">IConnectionManagerDbObjects</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IDbConnectionString.html" title="IDbConnectionString" class="">IDbConnectionString</a>
@@ -282,6 +288,15 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html" title="GetDatabaseListTask" class="">GetDatabaseListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetListTask.html" title="GetListTask" class="">GetListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetTableListTask.html" title="GetTableListTask" class="">GetTableListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetViewListTask.html" title="GetViewListTask" class="">GetViewListTask</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.html" title="IfDatabaseExistsTask" class="">IfDatabaseExistsTask</a>
@@ -468,6 +483,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.RenameColumn.html" title="RenameColumn" class="">RenameColumn</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
@@ -983,9 +1001,6 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
       <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_InitBufferObjects">DataFlowComponent.InitBufferObjects()</a>
     </div>
     <div>
-      <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a>
-    </div>
-    <div>
       <a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_SetCompletionTask">DataFlowComponent.SetCompletionTask()</a>
     </div>
     <div>
@@ -1115,12 +1130,12 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
     <pre><code class="lang-csharp hljs">public ColumnRename()</code></pre>
   </div>
   <a id="ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_System_Collections_Generic_ICollection_ETLBox_DataFlow_ColumnMap__" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.ICollection{ETLBox.DataFlow.ColumnMap})">ColumnRename(ICollection&lt;ColumnMap&gt;)</h4>
+  <h4 id="ETLBox_DataFlow_Transformations_ColumnRename_1__ctor_System_Collections_Generic_ICollection_ETLBox_DataFlow_RenameColumn__" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.#ctor(System.Collections.Generic.ICollection{ETLBox.DataFlow.RenameColumn})">ColumnRename(ICollection&lt;RenameColumn&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ColumnRename(ICollection&lt;ColumnMap&gt; columnMap)</code></pre>
+    <pre><code class="lang-csharp hljs">public ColumnRename(ICollection&lt;RenameColumn&gt; renameColumns)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1133,42 +1148,14 @@ existing ColumnMap attributes. For arrays provide the array index and the new na
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnMap.html">ColumnMap</a>&gt;</td>
-        <td><span class="parametername">columnMap</span></td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.RenameColumn.html">RenameColumn</a>&gt;</td>
+        <td><span class="parametername">renameColumns</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <a id="ETLBox_DataFlow_Transformations_ColumnRename_1_ColumnMapping_" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.ColumnMapping*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_ColumnRename_1_ColumnMapping" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.ColumnMapping">ColumnMapping</h4>
-  <div class="markdown level1 summary"><p>The column mapping defines how existing properties or columns are renamed.
-For objects and dynamic object provide a mapping with the old and the new name.
-The mapping can also be automatically retrieved from
-existing ColumnMap attributes - in this case, leave it empty.
-For arrays provide the array index and the new name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ICollection&lt;ColumnMap&gt; ColumnMapping { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.ColumnMap.html">ColumnMap</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_DataFlow_Transformations_ColumnRename_1_ProgressCount_" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.ProgressCount*"></a>
   <h4 id="ETLBox_DataFlow_Transformations_ColumnRename_1_ProgressCount" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.ProgressCount">ProgressCount</h4>
   <div class="markdown level1 summary"></div>
@@ -1192,13 +1179,18 @@ For arrays provide the array index and the new name.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_DataFlow_Transformations_ColumnRename_1_RemoveColumns_" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.RemoveColumns*"></a>
-  <h4 id="ETLBox_DataFlow_Transformations_ColumnRename_1_RemoveColumns" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.RemoveColumns">RemoveColumns</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="ETLBox_DataFlow_Transformations_ColumnRename_1_RenameColumns_" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.RenameColumns*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_ColumnRename_1_RenameColumns" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.RenameColumns">RenameColumns</h4>
+  <div class="markdown level1 summary"><p>The column mapping defines how existing properties or columns are renamed.
+For objects and dynamic object provide a mapping with the old and the new name.
+The mapping can also be automatically retrieved from
+existing ColumnMap attributes - in this case, leave it empty.
+For arrays provide the array index and the new name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ICollection&lt;string&gt; RemoveColumns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ICollection&lt;RenameColumn&gt; RenameColumns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1210,7 +1202,7 @@ For arrays provide the array index and the new name.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="ETLBox.DataFlow.RenameColumn.html">RenameColumn</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1393,6 +1385,16 @@ with a default name that can be overwritten.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_DataFlow_Transformations_ColumnRename_1_PrepareParameter_" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.PrepareParameter*"></a>
+  <h4 id="ETLBox_DataFlow_Transformations_ColumnRename_1_PrepareParameter" data-uid="ETLBox.DataFlow.Transformations.ColumnRename`1.PrepareParameter">PrepareParameter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void PrepareParameter()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ETLBox.DataFlow.DataFlowComponent.html#ETLBox_DataFlow_DataFlowComponent_PrepareParameter">DataFlowComponent.PrepareParameter()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
@@ -1424,7 +1426,8 @@ with a default name that can be overwritten.</p>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

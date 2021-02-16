@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CreateTableTask
    | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -113,13 +113,19 @@
                             <a href="ETLBox.Connection.Db2ConnectionString.html" title="Db2ConnectionString" class="">Db2ConnectionString</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.Connection.DbConnectionManager-1.html" title="DbConnectionManager&lt;Connection&gt;" class="">DbConnectionManager&lt;Connection&gt;</a>
+                            <a href="ETLBox.Connection.DbConnectionManager-3.html" title="DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;" class="">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.DbConnectionString-2.html" title="DbConnectionString&lt;T, TBuilder&gt;" class="">DbConnectionString&lt;T, TBuilder&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IConnectionManager.html" title="IConnectionManager" class="">IConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManager-2.html" title="IConnectionManager&lt;TConnection, TTransaction&gt;" class="">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManagerDbObjects.html" title="IConnectionManagerDbObjects" class="">IConnectionManagerDbObjects</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IDbConnectionString.html" title="IDbConnectionString" class="">IDbConnectionString</a>
@@ -282,6 +288,15 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html" title="GetDatabaseListTask" class="">GetDatabaseListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetListTask.html" title="GetListTask" class="">GetListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetTableListTask.html" title="GetTableListTask" class="">GetTableListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetViewListTask.html" title="GetViewListTask" class="">GetViewListTask</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.html" title="IfDatabaseExistsTask" class="">IfDatabaseExistsTask</a>
@@ -468,6 +483,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.RenameColumn.html" title="RenameColumn" class="">RenameColumn</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
@@ -1807,6 +1825,152 @@ Throws an exception if the table already exists.</p>
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter">CreateOrAlter()</h4>
+  <div class="markdown level1 summary"><p>Executes the table creation or execute the corresponding alter statements to adjust the table.
+If the table is empty, the new table is always dropped and recreated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateOrAlter()</code></pre>
+  </div>
+  <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,ETLBox.ControlFlow.TableDefinition)">CreateOrAlter(IConnectionManager, TableDefinition)</h4>
+  <div class="markdown level1 summary"><p>Creates a table if the table doesn't exist or alters a table using ALTER TABLE statements.
+If the table does not contain any rows, it will be dropped and created again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateOrAlter(IConnectionManager connectionManager, TableDefinition tableDefinition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.Connection.IConnectionManager.html">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ETLBox.ControlFlow.TableDefinition.html">TableDefinition</a></td>
+        <td><span class="parametername">tableDefinition</span></td>
+        <td><p>The definition of the table containing table name and columns.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_ETLBox_Connection_IConnectionManager_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter(ETLBox.Connection.IConnectionManager,System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateOrAlter(IConnectionManager, String, List&lt;TableColumn&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a table if the table doesn't exist or alters a table using ALTER TABLE statements.
+If the table does not contain any rows, it will be dropped and created again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateOrAlter(IConnectionManager connectionManager, string tableName, List&lt;TableColumn&gt; columns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.Connection.IConnectionManager.html">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td><p>The connection manager of the database you want to connect</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The name of the table</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><span class="parametername">columns</span></td>
+        <td><p>The columns of the table</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_ETLBox_ControlFlow_TableDefinition_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter(ETLBox.ControlFlow.TableDefinition)">CreateOrAlter(TableDefinition)</h4>
+  <div class="markdown level1 summary"><p>Creates a table if the table doesn't exist or alters a table using ALTER TABLE statements.
+If the table does not contain any rows, it will be dropped and created again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateOrAlter(TableDefinition tableDefinition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.ControlFlow.TableDefinition.html">TableDefinition</a></td>
+        <td><span class="parametername">tableDefinition</span></td>
+        <td><p>The definition of the table containing table name and columns.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_CreateTableTask_CreateOrAlter_System_String_System_Collections_Generic_List_ETLBox_ControlFlow_TableColumn__" data-uid="ETLBox.ControlFlow.Tasks.CreateTableTask.CreateOrAlter(System.String,System.Collections.Generic.List{ETLBox.ControlFlow.TableColumn})">CreateOrAlter(String, List&lt;TableColumn&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a table if the table doesn't exist or alters a table using ALTER TABLE statements.
+If the table does not contain any rows, it will be dropped and created again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateOrAlter(string tableName, List&lt;TableColumn&gt; columns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td><p>The name of the table</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="ETLBox.ControlFlow.TableColumn.html">TableColumn</a>&gt;</td>
+        <td><span class="parametername">columns</span></td>
+        <td><p>The columns of the table</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="ETLBox.ControlFlow.ILoggableTask.html">ILoggableTask</a>
@@ -1817,7 +1981,8 @@ Throws an exception if the table already exists.</p>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

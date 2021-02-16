@@ -12,7 +12,7 @@
     <title>Row transformations and manipulations | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Row transformations and manipulations | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -508,18 +508,19 @@ public static void Main()
 }
 </code></pre>
 <h3 id="columnrename">ColumnRename</h3>
-<p>This transformation let you rename the properties names of your ingoing data.</p>
-<p>You should always provide a column mapping.
-The ColumnMapping contains information about the renaming - this should be the old and the new name for each column (except arrays). If you don't provide a mapping, ColumnRename will try to retrieve the mapping automatically from existing ColumnMap attributes on your object. If this is not possible, it will just convert your ingoing data type into an ExpandoObject.</p>
+<p>This transformation let you rename the properties names of your ingoing data. Also, you can remove columns from your flow.</p>
+<p>You should always provide a list of renaming columns, either by providing this list manually
+via the <code>RenameColumnns</code> properties or by having the <code>RenameColum</code> attribute on the corresponding properties in your strongly typed object.</p>
+<p>The RenameColumns contains information about the renaming - this should be the old and the new name for each column (except arrays, where you can define an ArrayIndex). If you want to remove a column, you need to provide the current name and set a flag for removing the column. If no mapping is provided, it will just convert your ingoing data type into an ExpandoObject.</p>
 <p>This transformation works with objects, ExpandoObjects and arrays as input data type. It will always output an ExpandoObject with the new mapped property names.</p>
-<p>If you have an array as input type, instead of providing the old name you need to enter the array index and the new name.</p>
 <h4 id="example">Example</h4>
-<pre><code>var source = new DbSource&lt;MyInputRow&gt;();
+<pre><code class="lang-C#">var source = new DbSource&lt;MyInputRow&gt;();
 var map = new ColumnRename&lt;MyInputRow&gt;();
-map.ColumnMapping = new List&lt;ColumnMap&gt;()
+map.RenameColumns = new []
 {
-    new ColumnMap() { CurrentName = &quot;OldCol1&quot;, NewName = &quot;Col1&quot; },
-    new ColumnMap() { CurrentName = &quot;OldCol2&quot;, NewName = &quot;Col2&quot; }
+    new RenameColumn() { CurrentName = &quot;OldCol1&quot;, NewName = &quot;Col1&quot; },
+    new RenameColumn() { CurrentName = &quot;OldCol2&quot;, NewName = &quot;Col2&quot; },
+    new RenameColumn() { CurrentName = &quot;OldCol3&quot;, RemoveColumn = true }
 };
 var dest = new DbDestination(SqlConnection, &quot;ColumnRenameDest&quot;);
 
@@ -530,7 +531,7 @@ source.LinkTo&lt;ExpandoObject&gt;(map).LinkTo(dest);
 <h3 id="columnrename-api-documentation">ColumnRename Api documentation</h3>
 <p>The full class documentation can be found in the Api documentation.</p>
 <ul>
-<li>If the input types is an array or object, <a href="https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename-1.html">use the RowMultiplication that accepts one data type</a>.</li>
+<li>If the input types is an array or object, <a href="https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename-1.html">use the ColumnRename that accepts one data type</a>.</li>
 <li>If the input type is an ExpandoObject, <a href="https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename.html">use the default implementation</a>.</li>
 </ul>
 </myrow></article>
@@ -539,7 +540,8 @@ source.LinkTo&lt;ExpandoObject&gt;(map).LinkTo(dest);
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

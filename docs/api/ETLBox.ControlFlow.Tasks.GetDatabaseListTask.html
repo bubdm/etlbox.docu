@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GetDatabaseListTask
    | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -113,13 +113,19 @@
                             <a href="ETLBox.Connection.Db2ConnectionString.html" title="Db2ConnectionString" class="">Db2ConnectionString</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.Connection.DbConnectionManager-1.html" title="DbConnectionManager&lt;Connection&gt;" class="">DbConnectionManager&lt;Connection&gt;</a>
+                            <a href="ETLBox.Connection.DbConnectionManager-3.html" title="DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;" class="">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.DbConnectionString-2.html" title="DbConnectionString&lt;T, TBuilder&gt;" class="">DbConnectionString&lt;T, TBuilder&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IConnectionManager.html" title="IConnectionManager" class="">IConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManager-2.html" title="IConnectionManager&lt;TConnection, TTransaction&gt;" class="">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManagerDbObjects.html" title="IConnectionManagerDbObjects" class="">IConnectionManagerDbObjects</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IDbConnectionString.html" title="IDbConnectionString" class="">IDbConnectionString</a>
@@ -282,6 +288,15 @@
                           </li>
                           <li class="active">
                             <a href="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html" title="GetDatabaseListTask" class="active">GetDatabaseListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetListTask.html" title="GetListTask" class="">GetListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetTableListTask.html" title="GetTableListTask" class="">GetTableListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetViewListTask.html" title="GetViewListTask" class="">GetViewListTask</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.html" title="IfDatabaseExistsTask" class="">IfDatabaseExistsTask</a>
@@ -468,6 +483,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.RenameColumn.html" title="RenameColumn" class="">RenameColumn</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
@@ -905,7 +923,8 @@ In MySql, this will return a list of all schemas.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html">LoggableTask</a></div>
     <div class="level2"><a class="xref" href="ETLBox.ControlFlow.ControlFlowTask.html">ControlFlowTask</a></div>
-    <div class="level3"><span class="xref">GetDatabaseListTask</span></div>
+    <div class="level3"><a class="xref" href="ETLBox.ControlFlow.Tasks.GetListTask.html">GetListTask</a></div>
+    <div class="level4"><span class="xref">GetDatabaseListTask</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -913,6 +932,15 @@ In MySql, this will return a list of all schemas.</p>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ETLBox.ControlFlow.Tasks.GetListTask.html#ETLBox_ControlFlow_Tasks_GetListTask_ObjectNames">GetListTask.ObjectNames</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.ControlFlow.Tasks.GetListTask.html#ETLBox_ControlFlow_Tasks_GetListTask_RetrieveAll">GetListTask.RetrieveAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="ETLBox.ControlFlow.Tasks.GetListTask.html#ETLBox_ControlFlow_Tasks_GetListTask_Sql">GetListTask.Sql</a>
+    </div>
     <div>
       <a class="xref" href="ETLBox.ControlFlow.ControlFlowTask.html#ETLBox_ControlFlow_ControlFlowTask_ConnectionManager">ControlFlowTask.ConnectionManager</a>
     </div>
@@ -966,7 +994,7 @@ In MySql, this will return a list of all schemas.</p>
   <h6><strong>Assembly</strong>: ETLBox.dll</h6>
   <h5 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GetDatabaseListTask : ControlFlowTask, ILoggableTask</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GetDatabaseListTask : GetListTask, ILoggableTask</code></pre>
   </div>
   <h5 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_examples"><strong>Examples</strong></h5>
   <pre><code>GetDatabaseListTask.List();</code></pre>
@@ -983,59 +1011,9 @@ In MySql, this will return a list of all schemas.</p>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_DatabaseNames_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.DatabaseNames*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_DatabaseNames" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.DatabaseNames">DatabaseNames</h4>
-  <div class="markdown level1 summary"><p>A list containing all databases after executing.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; DatabaseNames { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_Sql_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.Sql*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_Sql" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.Sql">Sql</h4>
-  <div class="markdown level1 summary"><p>The sql code generated to query all database names</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sql { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_TaskName_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.TaskName*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_TaskName" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.TaskName">TaskName</h4>
-  <div class="markdown level1 summary"><p>A name to identify the task or component. Every component or task comes
-with a default name that can be overwritten.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1057,40 +1035,17 @@ with a default name that can be overwritten.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="ETLBox.ControlFlow.LoggableTask.html#ETLBox_ControlFlow_LoggableTask_TaskName">LoggableTask.TaskName</a></div>
+  <div><a class="xref" href="ETLBox.ControlFlow.Tasks.GetListTask.html#ETLBox_ControlFlow_Tasks_GetListTask_TaskName">GetListTask.TaskName</a></div>
   <h3 id="methods">Methods
   </h3>
-  <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_GetList_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.GetList*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_GetList" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.GetList">GetList()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GetDatabaseListTask GetList()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html">GetDatabaseListTask</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_List_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.List*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_List" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.List">List()</h4>
+  <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_ListAll_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.ListAll*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_ListAll" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.ListAll">ListAll()</h4>
   <div class="markdown level1 summary"><p>Runs sql code to determine all user database names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; List()</code></pre>
+    <pre><code class="lang-csharp hljs">public static List&lt;ObjectNameDescriptor&gt; ListAll()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1102,20 +1057,20 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="ETLBox.Helper.ObjectNameDescriptor.html">ObjectNameDescriptor</a>&gt;</td>
         <td><p>A list of all user database names</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_List_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.List*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_List_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.List(ETLBox.Connection.IConnectionManager)">List(IConnectionManager)</h4>
+  <a id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_ListAll_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.ListAll*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_GetDatabaseListTask_ListAll_ETLBox_Connection_IConnectionManager_" data-uid="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.ListAll(ETLBox.Connection.IConnectionManager)">ListAll(IConnectionManager)</h4>
   <div class="markdown level1 summary"><p>Runs sql code to determine all user database names.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; List(IConnectionManager connectionManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public static List&lt;ObjectNameDescriptor&gt; ListAll(IConnectionManager connectionManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1145,7 +1100,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="ETLBox.Helper.ObjectNameDescriptor.html">ObjectNameDescriptor</a>&gt;</td>
         <td><p>A list of all user database names</p>
 </td>
       </tr>
@@ -1161,7 +1116,8 @@ with a default name that can be overwritten.</p>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RowCountTask
    | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -113,13 +113,19 @@
                             <a href="ETLBox.Connection.Db2ConnectionString.html" title="Db2ConnectionString" class="">Db2ConnectionString</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.Connection.DbConnectionManager-1.html" title="DbConnectionManager&lt;Connection&gt;" class="">DbConnectionManager&lt;Connection&gt;</a>
+                            <a href="ETLBox.Connection.DbConnectionManager-3.html" title="DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;" class="">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.DbConnectionString-2.html" title="DbConnectionString&lt;T, TBuilder&gt;" class="">DbConnectionString&lt;T, TBuilder&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IConnectionManager.html" title="IConnectionManager" class="">IConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManager-2.html" title="IConnectionManager&lt;TConnection, TTransaction&gt;" class="">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManagerDbObjects.html" title="IConnectionManagerDbObjects" class="">IConnectionManagerDbObjects</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IDbConnectionString.html" title="IDbConnectionString" class="">IDbConnectionString</a>
@@ -282,6 +288,15 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html" title="GetDatabaseListTask" class="">GetDatabaseListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetListTask.html" title="GetListTask" class="">GetListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetTableListTask.html" title="GetTableListTask" class="">GetTableListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetViewListTask.html" title="GetViewListTask" class="">GetViewListTask</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.html" title="IfDatabaseExistsTask" class="">IfDatabaseExistsTask</a>
@@ -468,6 +483,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.RenameColumn.html" title="RenameColumn" class="">RenameColumn</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
@@ -1127,39 +1145,14 @@ You can pass a a filter condition for the count.</p>
       </tr>
     </tbody>
   </table>
-  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows">HasRows</h4>
-  <div class="markdown level1 summary"><p>Indicates if the table contains rows - only has a value after the execution</p>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_DirtyRead_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.DirtyRead*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_DirtyRead" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.DirtyRead">DirtyRead</h4>
+  <div class="markdown level1 summary"><p>Will do the row count also on uncommitted reads.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? HasRows { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_NoLock_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.NoLock*"></a>
-  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_NoLock" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.NoLock">NoLock</h4>
-  <div class="markdown level1 summary"><p>NoLock does a normal COUNT(*) using the nolock - option which avoid tables locks when reading from the table
-(but while counting the tables new data could be inserted, which could lead to wrong results).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool NoLock { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool DirtyRead { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1172,6 +1165,30 @@ You can pass a a filter condition for the count.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasAnyRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasAnyRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasAnyRows" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasAnyRows">HasAnyRows</h4>
+  <div class="markdown level1 summary"><p>Indicates if the table contains rows - only has a value after the execution</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? HasAnyRows { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1327,7 +1344,8 @@ with a default name that can be overwritten.</p>
   </h3>
   <a id="ETLBox_ControlFlow_Tasks_RowCountTask_Count_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count*"></a>
   <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_Count" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.Count">Count()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Performs the row count</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1354,7 +1372,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? Count(IConnectionManager connectionManager, string tableName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Count(IConnectionManager connectionManager, string tableName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1388,7 +1406,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1399,7 +1417,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? Count(IConnectionManager connectionManager, string tableName, RowCountOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Count(IConnectionManager connectionManager, string tableName, RowCountOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1438,7 +1456,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1449,7 +1467,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? Count(IConnectionManager connectionManager, string tableName, string condition)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Count(IConnectionManager connectionManager, string tableName, string condition)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1488,7 +1506,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1499,7 +1517,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? Count(IConnectionManager connectionManager, string tableName, string condition, RowCountOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Count(IConnectionManager connectionManager, string tableName, string condition, RowCountOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1543,7 +1561,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1554,7 +1572,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? Count(string tableName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Count(string tableName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1583,7 +1601,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1594,7 +1612,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? Count(string tableName, RowCountOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Count(string tableName, RowCountOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1628,7 +1646,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1639,7 +1657,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? Count(string tableName, string condition)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Count(string tableName, string condition)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1673,7 +1691,7 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1684,7 +1702,7 @@ with a default name that can be overwritten.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? Count(string tableName, string condition, RowCountOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Count(string tableName, string condition, RowCountOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1723,7 +1741,411 @@ with a default name that can be overwritten.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows">HasRows()</h4>
+  <div class="markdown level1 summary"><p>Checks if the table has at least one (matching) row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RowCountTask HasRows()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.ControlFlow.Tasks.RowCountTask.html">RowCountTask</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String)">HasRows(IConnectionManager, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRows(IConnectionManager connectionManager, string tableName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.Connection.IConnectionManager.html">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(IConnectionManager, String, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRows(IConnectionManager connectionManager, string tableName, RowCountOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.Connection.IConnectionManager.html">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ETLBox.ControlFlow.Tasks.RowCountOptions.html">RowCountOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,System.String)">HasRows(IConnectionManager, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRows(IConnectionManager connectionManager, string tableName, string condition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.Connection.IConnectionManager.html">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_ETLBox_Connection_IConnectionManager_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(ETLBox.Connection.IConnectionManager,System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(IConnectionManager, String, String, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRows(IConnectionManager connectionManager, string tableName, string condition, RowCountOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ETLBox.Connection.IConnectionManager.html">IConnectionManager</a></td>
+        <td><span class="parametername">connectionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ETLBox.ControlFlow.Tasks.RowCountOptions.html">RowCountOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String)">HasRows(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRows(string tableName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(String, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRows(string tableName, RowCountOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ETLBox.ControlFlow.Tasks.RowCountOptions.html">RowCountOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_System_String_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,System.String)">HasRows(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRows(string tableName, string condition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows*"></a>
+  <h4 id="ETLBox_ControlFlow_Tasks_RowCountTask_HasRows_System_String_System_String_ETLBox_ControlFlow_Tasks_RowCountOptions_" data-uid="ETLBox.ControlFlow.Tasks.RowCountTask.HasRows(System.String,System.String,ETLBox.ControlFlow.Tasks.RowCountOptions)">HasRows(String, String, RowCountOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRows(string tableName, string condition, RowCountOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">tableName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">condition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ETLBox.ControlFlow.Tasks.RowCountOptions.html">RowCountOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1738,7 +2160,8 @@ with a default name that can be overwritten.</p>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

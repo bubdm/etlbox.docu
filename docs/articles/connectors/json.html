@@ -12,7 +12,7 @@
     <title>Xml | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Xml | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -209,6 +209,8 @@
 <h1 id="xml">Xml</h1>
 
 <h2 id="json-connector-package">Json connector package</h2>
+<h3 id="3rd-party-libraries">3rd party libraries</h3>
+<p>The json connector package is based on <a href="https://www.newtonsoft.com/json">Json.NET by Newtonsoft</a>.</p>
 <h3 id="jsonsource">JsonSource</h3>
 <p>Json Source let you read a json.</p>
 <p>Here an example for a json file:</p>
@@ -357,15 +359,14 @@ DbDestination&lt;ExpandoObject&gt; dest = new DbDestination&lt;ExpandoObject&gt;
 source.LinkTo(trans).LinkTo(dest);
 Network.Execute(source);
 </code></pre>
-<h3 id="3rd-party-libraries">3rd party libraries</h3>
-<p>It is based on the <code>Newtonsoft.Json</code> and the <code>JsonSerializer</code></p>
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DataTypeConverter
    | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -113,13 +113,19 @@
                             <a href="ETLBox.Connection.Db2ConnectionString.html" title="Db2ConnectionString" class="">Db2ConnectionString</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.Connection.DbConnectionManager-1.html" title="DbConnectionManager&lt;Connection&gt;" class="">DbConnectionManager&lt;Connection&gt;</a>
+                            <a href="ETLBox.Connection.DbConnectionManager-3.html" title="DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;" class="">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.DbConnectionString-2.html" title="DbConnectionString&lt;T, TBuilder&gt;" class="">DbConnectionString&lt;T, TBuilder&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IConnectionManager.html" title="IConnectionManager" class="">IConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManager-2.html" title="IConnectionManager&lt;TConnection, TTransaction&gt;" class="">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManagerDbObjects.html" title="IConnectionManagerDbObjects" class="">IConnectionManagerDbObjects</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IDbConnectionString.html" title="IDbConnectionString" class="">IDbConnectionString</a>
@@ -282,6 +288,15 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html" title="GetDatabaseListTask" class="">GetDatabaseListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetListTask.html" title="GetListTask" class="">GetListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetTableListTask.html" title="GetTableListTask" class="">GetTableListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetViewListTask.html" title="GetViewListTask" class="">GetViewListTask</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.html" title="IfDatabaseExistsTask" class="">IfDatabaseExistsTask</a>
@@ -468,6 +483,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.RenameColumn.html" title="RenameColumn" class="">RenameColumn</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
@@ -1113,6 +1131,56 @@ E.g. the method would return the .NET type string for the sql type 'CHAR(10)'</p
       </tr>
     </tbody>
   </table>
+  <a id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName*"></a>
+  <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertAliasName_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertAliasName(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertAliasName(String, ConnectionManagerType)</h4>
+  <div class="markdown level1 summary"><p>Converts a data type alias name (e.g. an alias name
+like &quot;varchar(10)&quot; ) to the original database type name (&quot;character varying&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string TryConvertAliasName(string dataTypeName, ConnectionManagerType connectionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dataTypeName</span></td>
+        <td><p>The database alias type name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ETLBox.Connection.ConnectionManagerType.html">ConnectionManagerType</a></td>
+        <td><span class="parametername">connectionType</span></td>
+        <td><p>Which database (e.g. Postgres, MySql, ...)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The type name converted to an original database type name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType*"></a>
   <h4 id="ETLBox_Helper_DataTypeConverter_TryConvertDbDataType_System_String_ETLBox_Connection_ConnectionManagerType_" data-uid="ETLBox.Helper.DataTypeConverter.TryConvertDbDataType(System.String,ETLBox.Connection.ConnectionManagerType)">TryConvertDbDataType(String, ConnectionManagerType)</h4>
   <div class="markdown level1 summary"><p>Tries to convert the data type from the TableColumn into a database specific type.</p>
@@ -1222,7 +1290,8 @@ E.g. the data type 'INT' would be converted to 'INTEGER' for SQLite connections.
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

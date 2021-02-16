@@ -12,7 +12,7 @@
     <title>Transformations | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Transformations | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -280,15 +280,30 @@ You can provide a column mapping with the old and the new name for each column. 
 <p>If you have an array as input type, instead of providing the old name you need to enter the array index and the new name.</p>
 <pre><code>var source = new DbSource&lt;MyInputRow&gt;();
 var map = new ColumnRename&lt;MyInputRow&gt;();
-map.ColumnMapping = new List&lt;ColumnMapping&gt;()
+map.RenameColumns = new []
 {
-    new ColumnMapping(&quot;OldCol1&quot;,&quot;Col1&quot;),
-    new ColumnMapping(&quot;OldCol2&quot;,&quot;Col2&quot;),
+    new RenameColumn() { CurrentName = &quot;OldCol1&quot;, NewName = &quot;Col1&quot;),
+    new RenameColumn() { CurrentName = &quot;OldCol2&quot;, RemoveColumn = true)
 };
 var dest = new DbDestination(SqlConnection, &quot;ColumnRenameDest&quot;);
 
 source.LinkTo&lt;ExpandoObject&gt;(map).LinkTo(dest);
 </code></pre>
+<h3 id="cachedrowtransformation">CachedRowTransformation</h3>
+<p>The CachedRowTransformation has the same functionality as the RowTransformation, but offers additionally a cache manager object to access previously processed  data rows.</p>
+<p>The following example will check for an incoming row if a record with the same id was already processed within the previous 10 records. If so, it will return null, other wise the record. A predicate expression the LinkTo method will send null values into a void destination.</p>
+<pre><code class="lang-C#">CachedRowTransformation&lt;MyRow&gt; cachedRowTrans = new CachedRowTransformation&lt;MyRow&gt;();
+(cachedRowTrans.CacheManager as MemoryCache&lt;MyRow, MyRow&gt;).MaxCacheSize = 10;
+rowTrans.TransformationFunc =
+    (row, cachedRows) =&gt;
+    {
+        foreach (var prevRow in cachedRows)
+            if (prevRow.Id == row.Id)
+                return null;
+        return row;
+    };
+</code></pre>
+<p>cachedRowTrans.LinkTo(dest, row =&gt; row != null, row =&gt; row == null);</p>
 <h2 id="data-lookup">Data lookup</h2>
 <h3 id="lookuptransformation">LookupTransformation</h3>
 <p>The lookup transformation enriches the incoming data with data from the lookup source. To achieve this, all or some data from the lookup source is read into memory when the first record arrives. For each incoming row, the lookup tries to find a matching record in the in-memory table. If found, it uses this pre-loaded record to add additional data to the ingoing row.</p>
@@ -388,6 +403,48 @@ source.LinkTo&lt;MyAggRow&gt;(agg).LinkTo(dest);
     });
 </code></pre>
 <h2 id="other-transformations">Other transformations</h2>
+<h3 id="batchtransformation">BatchTransformation</h3>
+<p>The normal RowTransformation will execute custom code for every processed row. Sometimes it can be beneficial not only to process every row, but batches of incoming. For this purpose you can use the BatchTransformation. (Note: if you want to modify all of your input data at once, take a look at the BlockTransformation).</p>
+<pre><code class="lang-C#">BatchTransformation&lt;MyInputRow,MyOutputRow&gt; batchtrans = new BatchTransformation&lt;MyInputRow,MyOutputRow&gt;();
+batchtrans.BatchSize = 3;
+batchtrans.BatchTransformationFunc =
+    batchdata =&gt;
+    {
+        List&lt;MyOutputRow&gt; result = new List&lt;MyOutputRow&gt;();
+        foreach (var row in batchdata)
+            result.Add(new MyOutputRow(row));
+        return result;
+    };
+</code></pre>
+<h3 id="cachedbatchtransformation">CachedBatchTransformation</h3>
+<p>The CachedBatchTransformation has the same functionality as the BatchTransformation, but offers additionally a cache manager object to access previously processed batches of data.</p>
+<pre><code class="lang-C#">CachedBatchTransformation&lt;MyRow&gt; batchtrans = new CachedBatchTransformation&lt;MyRow&gt;();
+var cm = (MemoryCache&lt;MyRow,MyRow&gt;)batchtrans.CacheManager;
+cm.MaxCacheSize = 100;
+batchtrans.BatchSize = 5;
+batchtrans.BatchTransformationFunc =
+    (batchdata, cache) =&gt;
+    {
+        List&lt;MyRow&gt; result = new List&lt;MyRow&gt;();
+        foreach (var row in batchdata)
+            if (!(cache.Any(cacheRow =&gt; cacheRow.Id == row.Id)))
+                result.Add(new MyOutputRow(row));
+        return result;
+    };
+</code></pre>
+<h3 id="distinct">Distinct</h3>
+<p>The Distinct transformation will filter out duplicate records. For each incoming row, the distinct will create a hash value based on the values in the properties. This hash value will be stored in an internal list. If another record with the same hash values arrives, this record will be filtered out as it is a duplicate.
+By default, all public properties are used for the hash value generation. You can use the attribute DistinctColumn to specify particular properties.</p>
+<pre><code class="lang-C#">public class MyRow
+{
+    [DistinctColumn]
+    public int DistinctId { get; set; }
+
+    public string OtherValue { get; set; } 
+}
+
+Distinct&lt;MyRow&gt; trans = new Distinct&lt;MyRow&gt;();
+</code></pre>
 <h3 id="sort">Sort</h3>
 <p>A sort will wait for all data to arrive and then sort the data based on the given sort method. This is a blocking transformation, because data can only be sorted when all records are available in memory.</p>
 <pre><code class="lang-C#">Comparison&lt;MySimpleRow&gt; comp = new Comparison&lt;MySimpleRow&gt;(
@@ -416,7 +473,8 @@ schemaValidation.LinkErrorTo(error);
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace ETLBox.DataFlow
    | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -113,13 +113,19 @@
                             <a href="ETLBox.Connection.Db2ConnectionString.html" title="Db2ConnectionString" class="">Db2ConnectionString</a>
                           </li>
                           <li class="">
-                            <a href="ETLBox.Connection.DbConnectionManager-1.html" title="DbConnectionManager&lt;Connection&gt;" class="">DbConnectionManager&lt;Connection&gt;</a>
+                            <a href="ETLBox.Connection.DbConnectionManager-3.html" title="DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;" class="">DbConnectionManager&lt;TConnection, TTransaction, TParameter&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.DbConnectionString-2.html" title="DbConnectionString&lt;T, TBuilder&gt;" class="">DbConnectionString&lt;T, TBuilder&gt;</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IConnectionManager.html" title="IConnectionManager" class="">IConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManager-2.html" title="IConnectionManager&lt;TConnection, TTransaction&gt;" class="">IConnectionManager&lt;TConnection, TTransaction&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.Connection.IConnectionManagerDbObjects.html" title="IConnectionManagerDbObjects" class="">IConnectionManagerDbObjects</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.Connection.IDbConnectionString.html" title="IDbConnectionString" class="">IDbConnectionString</a>
@@ -282,6 +288,15 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.GetDatabaseListTask.html" title="GetDatabaseListTask" class="">GetDatabaseListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetListTask.html" title="GetListTask" class="">GetListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetTableListTask.html" title="GetTableListTask" class="">GetTableListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.ControlFlow.Tasks.GetViewListTask.html" title="GetViewListTask" class="">GetViewListTask</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.ControlFlow.Tasks.IfDatabaseExistsTask.html" title="IfDatabaseExistsTask" class="">IfDatabaseExistsTask</a>
@@ -468,6 +483,9 @@
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.PropertyAttributes.html" title="PropertyAttributes" class="">PropertyAttributes</a>
+                          </li>
+                          <li class="">
+                            <a href="ETLBox.DataFlow.RenameColumn.html" title="RenameColumn" class="">RenameColumn</a>
                           </li>
                           <li class="">
                             <a href="ETLBox.DataFlow.ResourceType.html" title="ResourceType" class="">ResourceType</a>
@@ -904,11 +922,12 @@
       <section><p>This attribute is used to identify the aggregation property for aggregations.</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.ColumnMap.html">ColumnMap</a></h4>
-      <section><p>This attribute defines a column name to which the value of the property is mapped when writing or reading
-from a database or using the ColumnRename transformation.
-By default, when reading from a database source the mapping which property stores data of which column
-is resolved by the property names. Using this attribute, you can specify the column name that maps to a property.
-In the ColumnRename transformation, this property is used to rename a column.</p>
+      <section><p>This attribute defines the mapping between property names in the objects and column names
+in the database.
+By default, when reading or writing data from/into a database, properties in your objects
+are mapped to database columns with the same name (case-sensitive). Using this attribute, you can
+add your own mapping. (E.g. a property &quot;Prop1&quot; is mapped by default to the database column &quot;Prop1&quot;.
+Create a column mapping to change the mapping to &quot;Column1&quot;)</p>
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.CompareColumn.html">CompareColumn</a></h4>
       <section><p>This attribute defines if the column is included in the comparison to identify
@@ -1003,6 +1022,10 @@ and the properties use to identify equal object flagged with the UpdateColumn at
 </section>
       <h4><a class="xref" href="ETLBox.DataFlow.Network.html">Network</a></h4>
       <section></section>
+      <h4><a class="xref" href="ETLBox.DataFlow.RenameColumn.html">RenameColumn</a></h4>
+      <section><p>This property can be used in the ColumnRename transformation to rename a column.
+You can rename a property in either your strong typed or dynamic object.</p>
+</section>
       <h4><a class="xref" href="ETLBox.DataFlow.RetrieveColumn.html">RetrieveColumn</a></h4>
       <section><p>This attribute defines that this property is used to store the lookup value of the property from the object
 used in the Source for a Lookup identified by the given lookupSourcePropertyName.</p>
@@ -1093,7 +1116,8 @@ E.g. you can read Json data from a file or via http from a web service.</p>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

@@ -12,7 +12,7 @@
     <title> ETLBox | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content=" ETLBox | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -268,9 +268,7 @@ multicast.LinkTo(sqlDest, row =&gt; row.FilterValue &gt; 0);
 multicast.LinkTo(csvDest, row =&gt; row.FilterValue &lt; 0);
 </code></pre>
 <p>Finally, start the dataflow at the source and wait for the destinations to rececive all data (and the completion message from the source).</p>
-<pre><code class="lang-C#">source.Execute();
-sqlDest.Wait();
-csvDest.Wait();
+<pre><code class="lang-C#">Network.Execute(source);
 </code></pre>
 <h3 id="data-integration">Data integration</h3>
 <p>The heart of an ETL framework is it's ability to integrate with other systems.
@@ -287,7 +285,7 @@ The following table shows which types of sources and destination are supported o
 <tbody>
 <tr>
 <td>Databases</td>
-<td>Sql Server, Postgres, SQLite, MySql, MariaDb, Oracle</td>
+<td>Sql Server, Postgres, SQLite, MySql, MariaDb, Oracle, Db2</td>
 <td>Full support</td>
 </tr>
 <tr>
@@ -317,7 +315,7 @@ The following table shows which types of sources and destination are supported o
 </tr>
 <tr>
 <td>Cloud Services</td>
-<td>Tested with Azure</td>
+<td>Tested with Azurek</td>
 <td>Full support</td>
 </tr>
 <tr>
@@ -358,22 +356,27 @@ only store the row that is currently processed in memory (plus some more in the 
 </tr>
 <tr>
 <td>Multicast</td>
-<td>Distinct</td>
-<td></td>
-</tr>
-<tr>
-<td>RowDuplication</td>
 <td>Aggregation</td>
 <td></td>
 </tr>
 <tr>
-<td>RowMultiplication</td>
+<td>RowDuplication</td>
 <td>BatchTransformation</td>
 <td></td>
 </tr>
 <tr>
-<td>CachedRowTransformation</td>
+<td>RowMultiplication</td>
 <td>CachedBatchTransformation</td>
+<td></td>
+</tr>
+<tr>
+<td>CachedRowTransformation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Distinct</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -384,7 +387,7 @@ only store the row that is currently processed in memory (plus some more in the 
 </tbody>
 </table>
 <p><em>RowTransformation</em>: This transformation let you modfiy each data record with your custom written C# code</p>
-<p><em>ColumnRename</em>: Allows you to rename your columns or propertie names.</p>
+<p><em>ColumnRename</em>: Allows you to rename column names in your data flow.</p>
 <p><em>MergeJoin</em>: Join your incoming data into one. Works best with sorted input. You can either always join two rows from the inpts,
 or define a match function which determines when the incoming rows are equal and should be joined.</p>
 <p><em>RowDuplication</em>: Simple duplicate your input row x times - additionally, you can add your own condition when to duplicate.</p>
@@ -429,8 +432,6 @@ The connectors are in separate packages - depending on your needs, choose the ri
 E.g., if you want to connect to SqlServer, use <a href="https://www.nuget.org/packages/ETLBox.SqlServer/">ETLBox.SqlServer</a>, and if you also
 need to access Csv files then add <a href="https://www.nuget.org/packages/ETLBox.Csv/">ETLBox.Csv</a>.</p>
 <p>The free versions allows you to process up to 10.000 records per connector in a DataFlow.</p>
-<p>If you are interest in the sources, you can clone the <a href="https://github.com/etlbox/etlbox">main ETLBox repository from github</a>.
-Please note that the connectors are not open source. If you need access to the source code, please contact us.</p>
 <span class="hideOnWebsite">
 <p><a href="https://etlbox.net">See the ETLBox Project website</a> for <a href="https://etlbox.net/articles/getting_started.html">introductional articles</a> and a <a href="https://etlbox.net/api/index.html">complete API documentation</a>. Enjoy!</p>
 </span>
@@ -440,7 +441,8 @@ Please note that the connectors are not open source. If you need access to the s
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

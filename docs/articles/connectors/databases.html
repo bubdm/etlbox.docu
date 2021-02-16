@@ -12,7 +12,7 @@
     <title>Database integration | ETLBox - a lightweight ETL library for C#. </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Database integration | ETLBox - a lightweight ETL library for C#. ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -216,10 +216,11 @@
 <li>SQLite (Native, Odbc)</li>
 <li>Oracle (Native, Odbc)</li>
 <li>MySql (Native, Odbc)</li>
+<li>Db2 (Native)</li>
 <li>MariaDb (Native, Odbc)</li>
 <li>Microsoft Access (only Odbc)</li>
 </ul>
-<p>There is a limited support for other databases as well - you can use the generic Odbc or OleDb driver to access these databaes.</p>
+<p>There is a limited support for other databases as well - you can use the generic Odbc or OleDb driver to access these databases.</p>
 <h2 id="connection-manager">Connection Manager</h2>
 <p>While you will always have access to the DbSource and DbDestination when you added ETLBox as package reference, you can't do much with them as you will need the right connection manager to connect with your database.  For Sql Server you would need the SqlConnectionManager, and for MySql the MySqlConnectionManager.</p>
 <p>Here the example code for creating a connection manager for Postgres:</p>
@@ -268,14 +269,6 @@ SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=.;Inte
 DbDestination&lt;MyRow&gt; dest = new DbDestination&lt;MyRow&gt;(connMan, &quot;DestinationTable&quot;);
 </code></pre>
 <p>If your table has the columns Id and/or Value, the data of your flow will be written into this columns.</p>
-<h3 id="column-mapping">Column Mapping</h3>
-<p>Of course the properties in the object and the columns can differ - ETLBox will only load columns from a source where it can find the right property. If the data type is different,
-ETLBox will try to automatically convert the data. If the names are different, you can use the attribute ColumnMap to define the matching columns name for a property.
-In our example, we could replace the property Id with a property Key - in order to still read data from the Id column, we add the ColumnMap attribute. Also, if we change
-the data type to string, ETLBox will automatically convert the integer values into a string.</p>
-<pre><code class="lang-C#">[ColumnMap(&quot;Id&quot;)]
-public string Key { get;set; }
-</code></pre>
 <h3 id="using-dynamic-objects">Using dynamic objects</h3>
 <p>Of course you can also use the default implementation of the DbDestination to write data into a table.</p>
 <pre><code class="lang-C#">SqlConnectionManager connMan = new SqlConnectionManager(&quot;Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;&quot;);
@@ -295,6 +288,23 @@ You can play around with the batch size to gain higher performance. 1000 rows pe
 If you encounter the issue that inserted the data into the destinations takes to long, try to reduce the batch size significantly.</p>
 <h4 id="odbc-and-oledb-connections">Odbc and OleDb connections</h4>
 <p>If you leave the default value for batch size set, it will be changed to 100 rows for Odbc and OleDb connections. As the connection here is much slower than &quot;native&quot; connections, and bulk inserts need to be translated into &quot;INSERT INTO&quot; statements, 100 rows per batch leads to a much better performance than 1000 rows.</p>
+<h2 id="column-mapping">Column Mapping</h2>
+<p>Of course the properties in the object and the columns can differ - ETLBox will only load columns from a source where it can find the right property. If the data type is different,
+ETLBox will try to automatically convert the data. If the names are different, you can use the attribute ColumnMap to define the matching columns name for a property.
+In our example, we could replace the property Id with a property Key - in order to still read data from the Id column, we add the ColumnMap attribute. Also, if we change
+the data type to string, ETLBox will automatically convert the integer values into a string.</p>
+<pre><code class="lang-C#">[ColumnMap(&quot;Id&quot;)]
+public string Key { get;set; }
+</code></pre>
+<h3 id="column-mapping-with-expandoobject">Column Mapping with ExpandoObject</h3>
+<p>If you use the default implementation of DbSource/DbDestination, then the ExpanoObject will be used internally. This dynamic object doesn't allow you to set attributes as decorators for property. Instead you can pass the attributes manually to the <code>ColumnMapping</code> property.</p>
+<pre><code class="lang-C#">var source = new DbSource(connectionManager, &quot;TableName&quot;);
+source.ColumnMapping = new[]
+{
+    new ColumnMap() {DbColumnName = &quot;Col1&quot;, PropertyName = &quot;Id&quot;},
+    new ColumnMap() {DbColumnName = &quot;Col2&quot;, PropertyName = &quot;Text&quot;}
+};
+</code></pre>
 <h2 id="default-connectionmanager">Default ConnectionManager</h2>
 <p>Every component or task related to a database operation needs to have a connection managers set in order
 to connect to the right database. Sometimes it can be cumbersome to pass the same connection manager over and over
@@ -419,7 +429,8 @@ var DbSource&lt;type&gt; = new DbSource&lt;type&gt;() {
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
