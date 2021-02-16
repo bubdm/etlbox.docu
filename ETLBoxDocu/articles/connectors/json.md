@@ -2,6 +2,10 @@
 
 ## Json connector package
 
+### 3rd party libraries
+
+The json connector package is based on [Json.NET by Newtonsoft](https://www.newtonsoft.com/json).
+
 ### JsonSource
 
 Json Source let you read a json. 
@@ -192,7 +196,3 @@ DbDestination<ExpandoObject> dest = new DbDestination<ExpandoObject>(Connection,
 source.LinkTo(trans).LinkTo(dest);
 Network.Execute(source);
 ```
-
-### 3rd party libraries
-
-It is based on the `Newtonsoft.Json` and the `JsonSerializer`

@@ -9,10 +9,11 @@ These database are currently supported with ETLBox:
 - SQLite (Native, Odbc)
 - Oracle (Native, Odbc)
 - MySql (Native, Odbc)
+- Db2 (Native)
 - MariaDb (Native, Odbc)
 - Microsoft Access (only Odbc)
 
-There is a limited support for other databases as well - you can use the generic Odbc or OleDb driver to access these databaes. 
+There is a limited support for other databases as well - you can use the generic Odbc or OleDb driver to access these databases. 
 
 ## Connection Manager
 
@@ -95,18 +96,6 @@ DbDestination<MyRow> dest = new DbDestination<MyRow>(connMan, "DestinationTable"
 
 If your table has the columns Id and/or Value, the data of your flow will be written into this columns.
 
-### Column Mapping 
-
-Of course the properties in the object and the columns can differ - ETLBox will only load columns from a source where it can find the right property. If the data type is different,
-ETLBox will try to automatically convert the data. If the names are different, you can use the attribute ColumnMap to define the matching columns name for a property. 
-In our example, we could replace the property Id with a property Key - in order to still read data from the Id column, we add the ColumnMap attribute. Also, if we change
-the data type to string, ETLBox will automatically convert the integer values into a string. 
-
-```C#
-[ColumnMap("Id")]
-public string Key { get;set; }
-```
-
 ### Using dynamic objects
 
 Of course you can also use the default implementation of the DbDestination to write data into a table. 
@@ -140,6 +129,31 @@ If you encounter the issue that inserted the data into the destinations takes to
 
 If you leave the default value for batch size set, it will be changed to 100 rows for Odbc and OleDb connections. As the connection here is much slower than "native" connections, and bulk inserts need to be translated into "INSERT INTO" statements, 100 rows per batch leads to a much better performance than 1000 rows. 
 
+
+## Column Mapping 
+
+Of course the properties in the object and the columns can differ - ETLBox will only load columns from a source where it can find the right property. If the data type is different,
+ETLBox will try to automatically convert the data. If the names are different, you can use the attribute ColumnMap to define the matching columns name for a property. 
+In our example, we could replace the property Id with a property Key - in order to still read data from the Id column, we add the ColumnMap attribute. Also, if we change
+the data type to string, ETLBox will automatically convert the integer values into a string. 
+
+```C#
+[ColumnMap("Id")]
+public string Key { get;set; }
+```
+
+### Column Mapping with ExpandoObject
+
+If you use the default implementation of DbSource/DbDestination, then the ExpanoObject will be used internally. This dynamic object doesn't allow you to set attributes as decorators for property. Instead you can pass the attributes manually to the `ColumnMapping` property.
+
+```C#
+var source = new DbSource(connectionManager, "TableName");
+source.ColumnMapping = new[]
+{
+    new ColumnMap() {DbColumnName = "Col1", PropertyName = "Id"},
+    new ColumnMap() {DbColumnName = "Col2", PropertyName = "Text"}
+};
+```
 
 ## Default ConnectionManager
 

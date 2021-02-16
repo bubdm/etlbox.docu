@@ -351,24 +351,25 @@ public static void Main()
 
 ### ColumnRename
 
-This transformation let you rename the properties names of your ingoing data. 
+This transformation let you rename the properties names of your ingoing data. Also, you can remove columns from your flow.
 
-You should always provide a column mapping.
-The ColumnMapping contains information about the renaming - this should be the old and the new name for each column (except arrays). If you don't provide a mapping, ColumnRename will try to retrieve the mapping automatically from existing ColumnMap attributes on your object. If this is not possible, it will just convert your ingoing data type into an ExpandoObject.  
+You should always provide a list of renaming columns, either by providing this list manually
+via the `RenameColumnns` properties or by having the `RenameColum` attribute on the corresponding properties in your strongly typed object. 
+
+The RenameColumns contains information about the renaming - this should be the old and the new name for each column (except arrays, where you can define an ArrayIndex). If you want to remove a column, you need to provide the current name and set a flag for removing the column. If no mapping is provided, it will just convert your ingoing data type into an ExpandoObject. 
 
 This transformation works with objects, ExpandoObjects and arrays as input data type. It will always output an ExpandoObject with the new mapped property names.    
 
-If you have an array as input type, instead of providing the old name you need to enter the array index and the new name. 
-
 #### Example
 
-```
+```C#
 var source = new DbSource<MyInputRow>();
 var map = new ColumnRename<MyInputRow>();
-map.ColumnMapping = new List<ColumnMap>()
+map.RenameColumns = new []
 {
-    new ColumnMap() { PropertyName = "OldCol1", DbColumnName = "Col1" },
-    new ColumnMap() { PropertyName = "OldCol2", DbColumnName = "Col2" }
+    new RenameColumn() { CurrentName = "OldCol1", NewName = "Col1" },
+    new RenameColumn() { CurrentName = "OldCol2", NewName = "Col2" },
+    new RenameColumn() { CurrentName = "OldCol3", RemoveColumn = true }
 };
 var dest = new DbDestination(SqlConnection, "ColumnRenameDest");
 
@@ -383,6 +384,6 @@ The ColumnRename is a non blocking transformation and has an input buffer for in
 
 The full class documentation can be found in the Api documentation.
 
-- If the input types is an array or object, [use the RowMultiplication that accepts one data type](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename-1.html).
+- If the input types is an array or object, [use the ColumnRename that accepts one data type](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename-1.html).
 - If the input type is an ExpandoObject, [use the default implementation](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename.html).
 

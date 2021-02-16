@@ -106,15 +106,35 @@ If you have an array as input type, instead of providing the old name you need t
 ```
 var source = new DbSource<MyInputRow>();
 var map = new ColumnRename<MyInputRow>();
-map.ColumnMapping = new List<ColumnMapping>()
+map.RenameColumns = new []
 {
-    new ColumnMapping("OldCol1","Col1"),
-    new ColumnMapping("OldCol2","Col2"),
+    new RenameColumn() { CurrentName = "OldCol1", NewName = "Col1"),
+    new RenameColumn() { CurrentName = "OldCol2", RemoveColumn = true)
 };
 var dest = new DbDestination(SqlConnection, "ColumnRenameDest");
 
 source.LinkTo<ExpandoObject>(map).LinkTo(dest);
 ```
+
+### CachedRowTransformation
+
+The CachedRowTransformation has the same functionality as the RowTransformation, but offers additionally a cache manager object to access previously processed  data rows.
+
+The following example will check for an incoming row if a record with the same id was already processed within the previous 10 records. If so, it will return null, other wise the record. A predicate expression the LinkTo method will send null values into a void destination. 
+
+```C#
+CachedRowTransformation<MyRow> cachedRowTrans = new CachedRowTransformation<MyRow>();
+(cachedRowTrans.CacheManager as MemoryCache<MyRow, MyRow>).MaxCacheSize = 10;
+rowTrans.TransformationFunc =
+    (row, cachedRows) =>
+    {
+        foreach (var prevRow in cachedRows)
+            if (prevRow.Id == row.Id)
+                return null;
+        return row;
+    };
+```
+cachedRowTrans.LinkTo(dest, row => row != null, row => row == null);
 
 ## Data lookup
 
@@ -250,6 +270,60 @@ BlockTransformation<InputType> block = new BlockTransformation<InputType>(
 ```
 
 ## Other transformations
+
+### BatchTransformation
+
+The normal RowTransformation will execute custom code for every processed row. Sometimes it can be beneficial not only to process every row, but batches of incoming. For this purpose you can use the BatchTransformation. (Note: if you want to modify all of your input data at once, take a look at the BlockTransformation).
+
+```C#
+BatchTransformation<MyInputRow,MyOutputRow> batchtrans = new BatchTransformation<MyInputRow,MyOutputRow>();
+batchtrans.BatchSize = 3;
+batchtrans.BatchTransformationFunc =
+    batchdata =>
+    {
+        List<MyOutputRow> result = new List<MyOutputRow>();
+        foreach (var row in batchdata)
+            result.Add(new MyOutputRow(row));
+        return result;
+    };
+```
+
+### CachedBatchTransformation
+
+The CachedBatchTransformation has the same functionality as the BatchTransformation, but offers additionally a cache manager object to access previously processed batches of data. 
+
+```C#
+CachedBatchTransformation<MyRow> batchtrans = new CachedBatchTransformation<MyRow>();
+var cm = (MemoryCache<MyRow,MyRow>)batchtrans.CacheManager;
+cm.MaxCacheSize = 100;
+batchtrans.BatchSize = 5;
+batchtrans.BatchTransformationFunc =
+    (batchdata, cache) =>
+    {
+        List<MyRow> result = new List<MyRow>();
+        foreach (var row in batchdata)
+            if (!(cache.Any(cacheRow => cacheRow.Id == row.Id)))
+                result.Add(new MyOutputRow(row));
+        return result;
+    };
+```
+
+### Distinct
+
+The Distinct transformation will filter out duplicate records. For each incoming row, the distinct will create a hash value based on the values in the properties. This hash value will be stored in an internal list. If another record with the same hash values arrives, this record will be filtered out as it is a duplicate.
+By default, all public properties are used for the hash value generation. You can use the attribute DistinctColumn to specify particular properties.
+
+```C#
+public class MyRow
+{
+    [DistinctColumn]
+    public int DistinctId { get; set; }
+
+    public string OtherValue { get; set; } 
+}
+
+Distinct<MyRow> trans = new Distinct<MyRow>();
+```
 
 ### Sort
 

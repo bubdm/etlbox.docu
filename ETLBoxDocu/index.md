@@ -60,7 +60,7 @@
     <div class="buttons-unit-small">
       <a class="version-link" href="https://www.youtube.com/watch?v=CsWZuRpl6PA"><i class="glyphicon glyphicon-film"></i>See the video</a><span> 
       | 
-      </span><a class="github-link" href="https://github.com/etlbox/etlbox"><i class="glyphicon glyphicon-file"></i>View in Github</a>
+      </span><a class="github-link" href="https://etlbox.net/articles/buy/contact.html"><i class="glyphicon glyphicon-file"></i>Request a trial</a>
     </div>
     <div class="minitext">
     A lightweight ETL (extract, transform, load) toolbox and data integration library for .NET
@@ -78,7 +78,7 @@
         <i class="glyphicon glyphicon-random"></i>
         <section>
           <h2>Create sophisticated data flows</h2>
-          <p class="lead">Read and write data from flatfiles, databases (e.g. Sql Server, SQLite, MySql or Postgres) or webservices. 
+          <p class="lead">Read and write data from databases, flat files or web services. 
           Harmonize, filter, aggregate, validate and clean the data in-memory with 
           highly customizable transformations and write them into any destination. 
           </p>
@@ -93,7 +93,7 @@
       <div class="col-md-8 col-md-offset-2 text-center">
         <i class="glyphicon glyphicon-console"></i>
         <section>
-          <h2>Use your favourite programming language</h2>
+          <h2>Code ETL with your programming language</h2>
           <p class="lead">ETLBox allows you to create advanced ETL processes with your .NET language of choice, 
           doesn't matter if it is C#, F# or Visual Basic.</p>
         </section>
