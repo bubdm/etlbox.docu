@@ -387,3 +387,37 @@ The full class documentation can be found in the Api documentation.
 - If the input types is an array or object, [use the ColumnRename that accepts one data type](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename-1.html).
 - If the input type is an ExpandoObject, [use the default implementation](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename.html).
 
+
+### CachedRowTransformation
+
+The CachedRowTransformation does basically the same as the RowTransformation, but has a cache to access previously processed  data rows.
+
+The CachedRowTransformation comes with a default CacheManager which stores already processed rows in memory. 
+
+#### Example 
+
+The following example will write the content of the cached records into the Console output.
+The MaxCacheSize of the cache manager is set to 10, so you will never get more than 10 lines of output written here. 
+
+```C#
+CachedRowTransformation<MyRow> cachedRowTrans = new CachedRowTransformation<MyRow>();
+cachedRowTrans.MaxCacheSize = 10;
+rowTrans.TransformationFunc =
+    (row, cachedRows) =>
+    {
+        foreach (var prevRow in cachedRows)
+            Console.WriteLine("Already processed row: " + prevRow.Id);
+        return row;
+    };
+```
+
+### Non Blocking transformation 
+
+The CachedRowTransformation is a non blocking transformation and has an input buffer for incoming data. Additionally, the memory consumption will depend on the cache size. The default cache size for the MemoryCache is To restrict the number of rows stored in the input buffer, set the `MaxBufferSize` property to a value greater than 0.
+
+### ColumnRename Api documentation
+
+The full class documentation can be found in the Api documentation.
+
+- If the input types is an array or object, [use the ColumnRename that accepts one data type](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename-1.html).
+- If the input type is an ExpandoObject, [use the default implementation](https://etlbox.net/api/ETLBox.DataFlow.Transformations.ColumnRename.html).

@@ -155,6 +155,41 @@ source.ColumnMapping = new[]
 };
 ```
 
+## Column Converters
+
+Both DbSource and DbDestination allows the use of column converters.
+These are special converter function that are executed for every record in a particular column. 
+The idea of this converters is to do special data conversion directly in the soruce/destination which are not supported 
+by ETLBox. E.g. for SqlServer, it is quite common to use a date format like "20200101". This date format is not supported by
+the C# DateTime object, so you need to define your own column conversion function if you want to write this date format directly from a string value into a DbDestination. 
+
+Here is an example how to write the string value "20200101" into a database column "DateCol". 
+
+```C#
+/*
+  CREATE TABLE TestTable (
+      DateCol DATETIME NULL
+  )
+*/
+
+public class MyRow
+{
+    public string DateCol { get; set; } = "20200101";
+}
+
+DbDestination<MyRow> dest = new DbDestination<MyRow>(conn, "TestTable");
+
+dest.ColumnConverters = new[] {    
+    new ColumnConverter("DateCol", dateCol => {
+        if (dateCol == null) 
+            return new DateTime(1990, 1, 1);
+        else
+            return DateTime.ParseExact((string)dateCol, "yyyyMMdd", CultureInfo.InvariantCulture);
+    })    
+};
+```
+
+
 ## Default ConnectionManager
 
 Every component or task related to a database operation needs to have a connection managers set in order

@@ -124,7 +124,7 @@ The following example will check for an incoming row if a record with the same i
 
 ```C#
 CachedRowTransformation<MyRow> cachedRowTrans = new CachedRowTransformation<MyRow>();
-(cachedRowTrans.CacheManager as MemoryCache<MyRow, MyRow>).MaxCacheSize = 10;
+cachedRowTrans.MaxCacheSize = 10;
 rowTrans.TransformationFunc =
     (row, cachedRows) =>
     {
@@ -294,8 +294,7 @@ The CachedBatchTransformation has the same functionality as the BatchTransformat
 
 ```C#
 CachedBatchTransformation<MyRow> batchtrans = new CachedBatchTransformation<MyRow>();
-var cm = (MemoryCache<MyRow,MyRow>)batchtrans.CacheManager;
-cm.MaxCacheSize = 100;
+batchtrans.MaxCacheSize = 100;
 batchtrans.BatchSize = 5;
 batchtrans.BatchTransformationFunc =
     (batchdata, cache) =>
