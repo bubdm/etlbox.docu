@@ -1,10 +1,21 @@
 ﻿# Release notes
 
+## Version 2.3.2
+
+### Features 
+
+*General*: 
+- Auto generated xml documentation added to package - now visible with Intellisense or when browsing package content.
+
+*DataFlow*: 
+- ExcelSource exposes parsed header names in FieldHeaders property.
+- DbSource has ColumnConverters property
+
 ## Version 2.3.1
 
 ### Features
 
-*Connections*:
+*ConnectionManagers*:
 - ODBC/OleDb now have ConnectionManagerType property settable. 
 
 *ControlFlow*:
