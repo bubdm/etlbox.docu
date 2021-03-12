@@ -62,8 +62,8 @@ The easiest (and recommended) way to implement the interface on a POCO is to inh
 You will automatically have all the necessary implementation details to pass the object to a `DbMerge`.
 Only three things are left to do here: 
 1. You need to flag the properties that identify the unique Id columns with the attribute `IdColumn`
-2. You need to flag the properties used when comparing the values of a record to decide if it really needs to be updated
-with the attribute `CompareColumn`
+2. Optional: You can flag the properties used when comparing the values of a record to decide if it really needs to be updated
+with the attribute `CompareColumn`. Otherwise all non-id columns are used for comparison. 
 3. Optional: You can flag the properties that you want to have updated in the target with the `UpdateColumn` attribute. If this is omitted,
 all non-Id columns are updated. 
 
